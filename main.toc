@@ -1,0 +1,81 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {chapter}{\numberline {2}Neutrino Physics}{3}
+\contentsline {section}{\numberline {2.1}Neutrino Discovery}{3}
+\contentsline {section}{\numberline {2.2}Neutrino Oscillations Evidence}{6}
+\contentsline {subsection}{\numberline {2.2.1}Solar Neutrinos}{6}
+\contentsline {subsection}{\numberline {2.2.2}Atmospheric Neutrinos}{9}
+\contentsline {subsection}{\numberline {2.2.3}Reactor Neutrinos}{9}
+\contentsline {subsection}{\numberline {2.2.4}Accelerator Neutrinos}{10}
+\contentsline {section}{\numberline {2.3}Oscillation Theory}{11}
+\contentsline {subsection}{\numberline {2.3.1}Neutrino Interactions in Long Baseline Oscillation Experiments}{17}
+\contentsline {section}{\numberline {2.4}Current Experimental Status}{22}
+\contentsline {subsection}{\numberline {2.4.1}Open Questions}{23}
+\contentsline {chapter}{\numberline {3}The T2K Experiment}{25}
+\contentsline {section}{\numberline {3.1}Beamline}{26}
+\contentsline {subsection}{\numberline {3.1.1}Neutrino Beamline}{27}
+\contentsline {subsection}{\numberline {3.1.2}Off Axis Technique}{30}
+\contentsline {subsection}{\numberline {3.1.3}The Neutrino Flux Simulation}{32}
+\contentsline {section}{\numberline {3.2}Near Detectors}{32}
+\contentsline {subsection}{\numberline {3.2.1}INGRID}{32}
+\contentsline {subsection}{\numberline {3.2.2}ND280}{35}
+\contentsline {subsubsection}{\numberline {3.2.2.1}The Fine Grained Detectors}{36}
+\contentsline {subsubsection}{\numberline {3.2.2.2}The Time Projection Chambers}{37}
+\contentsline {subsubsection}{\numberline {3.2.2.3}The $\pi ^0$ Detector}{39}
+\contentsline {subsubsection}{\numberline {3.2.2.4}The Electromagnetic Calorimeter}{40}
+\contentsline {subsubsection}{\numberline {3.2.2.5}The UA1 Magnet and Side Muon Range Detector}{41}
+\contentsline {subsubsection}{\numberline {3.2.2.6}The Data Acquisition System}{42}
+\contentsline {subsection}{\numberline {3.2.3}Near Detector Simulation}{42}
+\contentsline {section}{\numberline {3.3}Super-Kamiokande}{42}
+\contentsline {subsection}{\numberline {3.3.1}Far Detector Simulation}{45}
+\contentsline {chapter}{\numberline {4}Statistical Treatment}{47}
+\contentsline {section}{\numberline {4.1}Bayesian Inference and the T2K Likelihood}{47}
+\contentsline {section}{\numberline {4.2}Monte Carlo Methods}{49}
+\contentsline {section}{\numberline {4.3}Markov Chain Monte Carlo}{50}
+\contentsline {subsection}{\numberline {4.3.1}The Metropolis Hastings Algorithm}{51}
+\contentsline {subsection}{\numberline {4.3.2}Step Proposal}{52}
+\contentsline {subsection}{\numberline {4.3.3}Chain Diagnostics}{53}
+\contentsline {section}{\numberline {4.4}Postfit Treatment}{56}
+\contentsline {subsection}{\numberline {4.4.1}Parameter Value Extraction}{57}
+\contentsline {subsection}{\numberline {4.4.2}Postfit Covariance}{59}
+\contentsline {subsection}{\numberline {4.4.3}Posterior Predictions}{60}
+\contentsline {subsection}{\numberline {4.4.4}Goodness of Fit}{60}
+\contentsline {chapter}{\numberline {5}The Near Detector Fit Setup}{63}
+\contentsline {section}{\numberline {5.1}Motivation}{63}
+\contentsline {section}{\numberline {5.2}Selections}{65}
+\contentsline {subsection}{\numberline {5.2.1}FHC $\nu _{\mu }$}{66}
+\contentsline {subsection}{\numberline {5.2.2}RHC $\mathaccentV {bar}016{\nu _{\mu }}$}{70}
+\contentsline {subsection}{\numberline {5.2.3}RHC $\nu _{\mu }$}{71}
+\contentsline {subsection}{\numberline {5.2.4}Updating to RHC Multi $\pi $ Samples}{71}
+\contentsline {section}{\numberline {5.3}Binning}{72}
+\contentsline {subsection}{\numberline {5.3.1}Non-Uniform Rectangular Binning Studies}{75}
+\contentsline {section}{\numberline {5.4}Systematics}{77}
+\contentsline {subsection}{\numberline {5.4.1}Interaction}{80}
+\contentsline {subsubsection}{\numberline {5.4.1.1}Binding Energy}{83}
+\contentsline {subsection}{\numberline {5.4.2}Flux}{88}
+\contentsline {subsection}{\numberline {5.4.3}Detector}{93}
+\contentsline {subsubsection}{\numberline {5.4.3.1}Detector Binning}{98}
+\contentsline {section}{\numberline {5.5}Prefit Corrections and Scalings}{101}
+\contentsline {section}{\numberline {5.6}Data}{102}
+\contentsline {chapter}{\numberline {6}2020 Near Detector Fit Results}{109}
+\contentsline {section}{\numberline {6.1}Nominal MC}{109}
+\contentsline {section}{\numberline {6.2}Log Likelihood Scans}{109}
+\contentsline {section}{\numberline {6.3}Parameter Variations}{109}
+\contentsline {section}{\numberline {6.4}Asimov Fit}{109}
+\contentsline {section}{\numberline {6.5}Data Fit}{109}
+\contentsline {section}{\numberline {6.6}Cross Group Validations}{109}
+\contentsline {section}{\numberline {6.7}Posterior Predictions}{109}
+\contentsline {section}{\numberline {6.8}Finer Fit and Detector Binning}{109}
+\contentsline {subsection}{\numberline {6.8.1}Asimov Fits}{109}
+\contentsline {subsection}{\numberline {6.8.2}Data Fits}{109}
+\contentsline {subsection}{\numberline {6.8.3}Posterior Predictions}{109}
+\contentsline {section}{\numberline {6.9}Oscillation Parameter Sensitivity}{109}
+\contentsline {chapter}{\numberline {7}Conclusions}{111}
+\contentsline {chapter}{Appendices}{113}
+\contentsline {chapter}{\numberline {A}Selection Binning}{115}
+\contentsline {chapter}{\numberline {B}Alternative Fit Studies}{119}
+\contentsline {section}{\numberline {B.1}FGD1 and FGD2 Only Fits}{119}
+\contentsline {section}{\numberline {B.2}FHC and RHC Only Fits}{119}
+\contentsline {section}{\numberline {B.3}New and Old Data Only Fits}{119}
+\contentsline {section}{\numberline {B.4}Flat MAQE Prior and Less $Q^2$ Freedom}{119}
+\contentsline {chapter}{\numberline {C}RHC Multi Pi Samples Validation}{121}

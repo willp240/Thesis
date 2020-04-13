@@ -1,0 +1,78 @@
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Flux of solar neutrinos at Earth as a function of energy for different production mechanisms, according to Bahcall's solar model. Figure from \cite {behcallflux}.\relax }}{7}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces The atmospheric neutrino flux as a function of angle from the first 414 days of Super-Kamiokande data. The boxes represent the prediction, the crosses represent the measured counts. Figure from \cite {skfluxatmos}.\relax }}{10}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces The flavour content and mass differences of the three mass eigenstates, for both the normal and inverted hierarchys. Figure from \cite {hierarchyplot}.\relax }}{12}
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Feynman diagrams for NC electron elastic scattering (left) and CC elastic scattering (right). The NC interaction can occur for any neutrino flavour $\alpha = e, \mu , \tau $, whereas the CC interaction can only occur for an incoming $\nu _{e}$.\relax }}{18}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces Feynman diagram for CCQE (left), CC RES (center), and CC DIS (right) interactions. \relax }}{19}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces Breakdown of the CC $\nu _\mu $ cross-section for QE, RES, and DIS interactions, along with data from various experiments. Figure from \cite {nuxsec}. \relax }}{19}
+\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces Feynman diagram for a 2ph2 interaction. As they both produce 0$\pi $ final states, these events form a background to CCQE interactions. \relax }}{20}
+\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces Feynman diagram for a CC COH $\pi $ production interaction. \relax }}{21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces The T2K experiment: Neutrinos are produced on the east coast of Japan, and are measured 280m upstream by the near detectors, and 295km away at the far detector, SK.\relax }}{25}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The J-PARC accelerator complex, with the three main accelerators labelled.\relax }}{26}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The T2K neutrino beamline.\relax }}{27}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Side view of the secondary beamline, showing the target station and focusing horns, decay volume, and beam dump.\relax }}{28}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Prediction of ND280 event rate broken down by neutrino species.\relax }}{29}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces The total accumulated POT and beam power at T2K for runs 2-9.\relax }}{30}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Energy of neutrinos produced in two-body decay as a function of pion energy, for a variety of different off-axis angles.\relax }}{31}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Effect of off-axis angle on the predicted neutrino flux, normalised to arbitrary units, along with the oscillation and survival probabilities of $\nu _{e}$ and $\nu _{\mu }$ respectively.\relax }}{31}
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces The T2K near detector suite, 280 m from the beam soure. \relax }}{33}
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces INGRID and MUMON measurements of the beam direction and event rate for runs 1-9.\relax }}{33}
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces The horizontal, vertical, and off-axis modules of the INGRID detector.\relax }}{34}
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces The composition of an INGRID module.\relax }}{34}
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces The composition of the proton module in the INGRID detector.\relax }}{35}
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces Exploded view of ND280, showing it's sub-detectors.\relax }}{36}
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces Integrated deposited energy as a function of range for particles stopping in FGD1. The scatter plot shows data while the curves show the MC predictions for protons, muons, and pions.\relax }}{38}
+\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces Schematic diagram of a TPC module.\relax }}{38}
+\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces Energy loss as a function of momentum for particles in one TPC. The scatter plot shows data while the curves show the MC predictions for protons, electrons, muons, and pions.\relax }}{39}
+\contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces A schematic diagram of the side on view of the P0D.\relax }}{40}
+\contentsline {figure}{\numberline {\relax 3.19}{\ignorespaces The Super-Kamiokande detector within the Kamioka mine.\relax }}{43}
+\contentsline {figure}{\numberline {\relax 3.20}{\ignorespaces SK ID event display, showing the Cherenkov ring PMT hits for an a) electron, and b) muon neutrino event. \relax }}{44}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces The autocorrelation function for a low energy flux at parameter, at different values for the scaling applied to the step size.\relax }}{54}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces The traces for a low energy flux parameter for different scalings of the step size. The red lines show the mean for the second half of the chain.\relax }}{55}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces The batched means for a low energy flux at parameter. The red line shows the total mean.\relax }}{55}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces The trace of the first 50,000 steps of high energy flux parameter, showing the initial burn-in phase before reaching the stationary distribution.\relax }}{56}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Trace of the different contributions to the LLH for 6 merged chains each of 600,000 steps in total. The LLHs all converge within $\sim $20,000 steps, though 150,000 are rejected as burn-in to ensure the stationary distribution has been reached.\relax }}{57}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces The 1-dimensional marginalised distribution for two fit parameters, showing the different methods of parameter extraction. The red lines show the prior central values, the gold lines show the fitted Gaussian distributions, and the black lines show the highest posterior density point.\relax }}{58}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces The 2-dimensional marginalised distributions for two pairs of fit parameters.\relax }}{59}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces The pre and postfit cross-section parameter uncertainties from a near detector only, and joint near and far detector fit for the 2018 Oscillation Analysis. The prior uncertainties are significantly reduced by the near detector only fit, but the inclusion of SK data does provide any further constraint.\relax }}{64}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces The predicted event rate at SK, with and without the near detector fit constraint. Using near detector data to reduce systematics narrows the uncertainty on the prediction, allowing more precise oscillation measurements to be made. \relax }}{64}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Uniform rectangular binning of MC events for T2K runs 2-8.\relax }}{74}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces True vs reconstructed lepton kinematic variables of CC-inclusive MC events from T2K runs 2-8.\relax }}{76}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces The RMS of the true vs reconstructed lepton kinematic variables for CC-inclusive MC events from T2K runs 2-8, at different values of the true variables.\relax }}{77}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Non-uniform rectangular binning of MC events for T2K runs 2-8.\relax }}{78}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Comparison of LLH scans using uniform and non-uniform rectangular fit binning, for two selected interaction and beam parameters.\relax }}{79}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces The cross-section covariance matrix.\relax }}{85}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Removal energy (`$E$') at different values of the initial nucleon momentum (`k') for the ground state in the SF model. Figure from \cite {tn344}.\relax }}{85}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Ratio of the FGD1 FHC CC0$\pi $ sample with $E_{b}\nu C$ parameter set to $\pm 1\sigma $ to the nominal MC.\relax }}{87}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Posterior distributions from the binding energy parameters from an Asimov fit.\relax }}{88}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Posterior distributions from the binding energy parameters from a data fit.\relax }}{89}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Posterior distributions from the binding energy parameters from fit to fluctuated Asimov data.\relax }}{90}
+\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Relative sizes of the sources of flux uncertainties in the ND280 flux parameters.\relax }}{91}
+\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces Relative sizes of the sources of flux uncertainties in the SK flux parameters.\relax }}{92}
+\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces The flux covariance matrix.\relax }}{93}
+\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Distribution of number of events in selected Gaussian distributed bins after 2000 throws of all detector systematics. The red and green lines show Gaussians fitted with and without the MC statistical uncertainty included, and the dotted black line shows the nominal number of events.\relax }}{97}
+\contentsline {figure}{\numberline {\relax 5.18}{\ignorespaces Distribution of number of events in selected non-Gaussian distributed bins after 2000 throws of all detector systematics. The red and green lines show Gaussians fitted with and without the MC statistical uncertainty included, and the dotted black line shows the nominal number of events.\relax }}{98}
+\contentsline {figure}{\numberline {\relax 5.19}{\ignorespaces Distribution of number of events in selected bins after 2000 throws of all detector systematics but the pion SI. The red and green lines show Gaussians fitted with and without the MC statistical uncertainty included, and the dotted black line shows the nominal number of events.\relax }}{99}
+\contentsline {figure}{\numberline {\relax 5.20}{\ignorespaces Flux parameters for fake data fits using different detector binnings.\relax }}{104}
+\contentsline {figure}{\numberline {\relax 5.21}{\ignorespaces Interaction parameters for fake data fits using different detector binnings.\relax }}{105}
+\contentsline {figure}{\numberline {\relax 5.22}{\ignorespaces SK posterior predictive distributions from near detector fits using different binnings for the detector covariance.\relax }}{106}
+\contentsline {figure}{\numberline {\relax 5.23}{\ignorespaces The ND280 detector covariance matrix with 574 merged bins.\relax }}{107}
+\contentsline {figure}{\numberline {\relax 5.24}{\ignorespaces The ND280 detector covariance matrix with the full 3071-bin non-uniform fit binning.\relax }}{107}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Non-uniform rectangular binning used in this analysis for each sample. The x-axis is reduced to better show the smaller bins at low momentum and high angle.\relax }}{116}
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Non-uniform rectangular binning used in this analysis for each sample.\relax }}{117}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax C.1}{\ignorespaces Fux parameters for Asimov fits using FHC only data.\relax }}{123}
+\contentsline {figure}{\numberline {\relax C.2}{\ignorespaces Interaction parameters for data fits using FHC only data.\relax }}{124}
+\contentsline {figure}{\numberline {\relax C.3}{\ignorespaces Flux parameters for Asimov fits using FHC and RHC data.\relax }}{125}
+\contentsline {figure}{\numberline {\relax C.4}{\ignorespaces Interaction parameters for Asimov fits using FHC and RHC data.\relax }}{126}
+\contentsline {figure}{\numberline {\relax C.5}{\ignorespaces Flux parameters for data fits using FHC and RHC data.\relax }}{127}
+\contentsline {figure}{\numberline {\relax C.6}{\ignorespaces Interaction parameters for data fits using FHC and RHC data.\relax }}{128}

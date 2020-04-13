@@ -1,0 +1,88 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: MyBibFile.bib
+Warning--empty journal in Abe:2018uyc
+Warning--empty journal in acciarri2016longbaseline
+Warning--empty title in bethe1934neutrino
+Warning--empty title in pauli
+Warning--empty title in fermi
+Warning--empty title in cowan
+Warning--empty title in universalN
+Warning--empty title in CKM
+Warning--empty title in CKM2
+Warning--empty title in kamiokande
+Warning--empty title in gallex
+Warning--empty title in sage
+Warning--empty title in snoresult
+Warning--empty title in reines
+Warning--empty title in imb
+Warning--empty title in kamiokande2
+Warning--empty title in reno
+Warning--empty title in doublechooz
+Warning--empty journal in dayabay
+Warning--empty title in k2k
+Warning--empty title in minos
+Warning--empty title in nova
+Warning--empty title in opera
+Warning--empty title in lsnd
+Warning--empty title in karmen
+Warning--empty title in icarus
+Warning--empty title in miniboone1
+Warning--empty title in miniboone2
+Warning--empty title in pmns
+Warning--empty title in msw
+Warning--empty title in models
+Warning--empty title in microboone
+Warning--can't use both volume and number fields in stereo
+Warning--can't use both volume and number fields in juno
+Warning--empty title in nova2016
+Warning--empty title in wagasci
+Warning--empty title in babymind
+Warning--empty journal in jparc
+Warning--empty title in mumon
+Warning--empty journal in Enuoffaxis
+Warning--empty title in neut
+You've used 105 entries,
+            1791 wiz_defined-function locations,
+            998 strings with 14637 characters,
+and the built_in function-call counts, 20891 in all, are:
+= -- 1784
+> -- 891
+< -- 8
++ -- 336
+- -- 231
+* -- 1377
+:= -- 3447
+add.period$ -- 284
+call.type$ -- 105
+change.case$ -- 71
+chr.to.int$ -- 0
+cite$ -- 146
+duplicate$ -- 965
+empty$ -- 2111
+format.name$ -- 231
+if$ -- 4598
+int.to.chr$ -- 0
+int.to.str$ -- 105
+missing$ -- 105
+newline$ -- 494
+num.names$ -- 105
+pop$ -- 196
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 450
+stack$ -- 0
+substring$ -- 1283
+swap$ -- 148
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 41
+while$ -- 182
+width$ -- 108
+write$ -- 1080
+(There were 41 warnings)
