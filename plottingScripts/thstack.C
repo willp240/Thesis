@@ -41,6 +41,7 @@ void thstack(std::string filename) {
     std::string title[13] = {"", "CCQE", "2p2h", "CC 1#pi", "CC coherent", "CC mult-#pi", "CC DIS", "CC miscellaneous", "NC 1#pi^{0}", "NC 1#pi^{#pm}", "NC coherent", "NC other", "NC 1#gamma"}; 
 
     TLegend *leg = new TLegend(0.0, 0.0, 1.0, 1.0);
+    TLegend *leg2 = new TLegend(0.0, 0.0, 1.0, 1.0);
 
     for(int s=0; s<18; s++){
       
@@ -196,7 +197,10 @@ void thstack(std::string filename) {
 	  projY->SetLineColor(projY->GetFillColor());
 
 	  if(s==0){
-	    leg->AddEntry(projX, title[m].c_str(), "f");
+	    if(m<6)
+	      leg->AddEntry(projX, title[m].c_str(), "f");
+	    else
+	      leg2->AddEntry(projX, title[m].c_str(), "f");
 	  }
 	  
 	  MomStack->Add(projX);
@@ -207,6 +211,9 @@ void thstack(std::string filename) {
       if(s==0){
 	leg->Draw();
 	c->Print((std::string("legend.pdf")).c_str());
+	c->Clear();
+	leg2->Draw();
+        c->Print((std::string("legend2.pdf")).c_str());
       }
       
       int maxX;
