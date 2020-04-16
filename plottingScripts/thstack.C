@@ -216,7 +216,7 @@ void thstack(std::string filename) {
 	maxX=4000;
       else if(s==4||s==13)
 	maxX=2500;
-      else if(s==8||s==17)
+      else if(s==7||s==16)
 	maxX=1500;
 
 
@@ -255,7 +255,7 @@ void thstack(std::string filename) {
       datratioX->GetXaxis()->SetLabelSize(0.12);
       datratioX->GetXaxis()->SetTitleSize(0.15);
       datratioX->Draw("e");
-      TLine *line = new TLine(datratioX->GetXaxis()->GetXmin(), 1.0, 5000, 1.0);
+      TLine *line = new TLine(datratioX->GetXaxis()->GetXmin(), 1.0, maxX, 1.0);
       line->SetLineColor(kRed);
       line->Draw("same");
       c->Print((samp[s]+std::string("_p.pdf")).c_str());
