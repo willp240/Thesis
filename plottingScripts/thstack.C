@@ -36,7 +36,6 @@ void thstack(std::string filename) {
 
     
     std::string samp[18] = {"FGD1_numuCC_0pi", "FGD1_numuCC_1pi", "FGD1_numuCC_other", "FGD1_anti-numuCC_0pi", "FGD1_anti-numuCC_1pi", "FGD1_anti-numuCC_other", "FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode", "FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode", "FGD1_NuMuBkg_CCother_in_AntiNu_Mode", "FGD2_numuCC_0pi", "FGD2_numuCC_1pi", "FGD2_numuCC_other", "FGD2_anti-numuCC_0pi","FGD2_anti-numuCC_1pi", "FGD2_anti-numuCC_other", "FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode", "FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode", "FGD2_NuMuBkg_CCother_in_AntiNu_Mode"};  
-    
     std::string mode[13] = {"", "CCQE", "2p2h", "CC1pi", "CCcoh", "CCMpi", "CCDIS", "CCMisc", "NC1pi0", "NC1pipm", "NCcoh", "NCoth", "NC1gam"};
 
     std::string title[13] = {"", "CCQE", "2p2h", "CC 1#pi", "CC coherent", "CC mult-#pi", "CC DIS", "CC miscellaneous", "NC 1#pi^{0}", "NC 1#pi^{#pm}", "NC coherent", "NC other", "NC 1#gamma"}; 
@@ -209,6 +208,13 @@ void thstack(std::string filename) {
 	leg->Draw();
 	c->Print((std::string("legend.pdf")).c_str());
       }
+      
+      int maxX;
+      if(s<2 || (s>8 && s<12))
+	maxX=5000;
+      else
+	maxX=3000;
+
 
       gPad->Clear();
 
@@ -224,7 +230,7 @@ void thstack(std::string filename) {
       dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
       dathistX->GetYaxis()->SetTitle("Events/MeV");
       dathistX->GetYaxis()->SetTitleOffset(0.8);
-      dathistX->GetXaxis()->SetRangeUser(0,5000);
+      dathistX->GetXaxis()->SetRangeUser(0,maxX);
       dathistX->GetYaxis()->SetRangeUser(0.1,1.25*dathistX->GetMaximum());
       dathistX->GetYaxis()->SetLabelSize(0.05);
       dathistX->GetYaxis()->SetTitleSize(0.07);
@@ -237,7 +243,7 @@ void thstack(std::string filename) {
       datratioX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
       datratioX->GetYaxis()->SetTitle("Data/MC ");
       datratioX->GetYaxis()->SetTitleOffset(0.36);
-      datratioX->GetXaxis()->SetRangeUser(0,5000);
+      datratioX->GetXaxis()->SetRangeUser(0,maxX);
       datratioX->GetYaxis()->SetRangeUser(0.01,1.99);
       datratioX->GetYaxis()->SetNdivisions(305);
       datratioX->GetYaxis()->SetLabelSize(0.1);
