@@ -212,8 +212,12 @@ void thstack(std::string filename) {
       int maxX;
       if(s<2 || (s>8 && s<12))
 	maxX=5000;
-      else
-	maxX=3000;
+      else if(s==3||s==12||s==5||s==14||s==6||s==15||s==8||s==17)
+	maxX=4000;
+      else if(s==4||s==13)
+	maxX=2500;
+      else if(s==8||s==17)
+	maxX=1500;
 
 
       gPad->Clear();
