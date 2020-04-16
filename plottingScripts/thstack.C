@@ -43,7 +43,7 @@ void thstack(std::string filename) {
 
     TLegend *leg = new TLegend(0.0, 0.0, 1.0, 1.0);
 
-    for(int s=0; s<2; s++){
+    for(int s=0; s<18; s++){
       
       // Stacks for the projected samples
       std::string momname = samp[s]+"_x";
