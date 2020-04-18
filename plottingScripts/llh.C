@@ -37,7 +37,7 @@ void llh(std::string file0) {
   h0->GetZaxis()->SetRangeUser(-1,100);
   h0->SetTitle("");
   h0->GetXaxis()->SetNoExponent(1);
-  c->Print("llh_sam.png");
+  //  c->Print("llh_sam.png");
 
   pos->Draw("LogL_systematic_total_flux_cov:step>>h1(1000,0,800000,300,0,120)","LogL_systematic_total_flux_cov<1000");
   TH1D *h1 = (TH1D*)gDirectory->Get("h1");
@@ -49,7 +49,7 @@ void llh(std::string file0) {
   h1->GetZaxis()->SetRangeUser(-1,250);
   h1->SetTitle("");
   h1->GetXaxis()->SetNoExponent(1);
-  c->Print("llh_flux.png");
+  c->Print("llh_fluxdat.png");
 
   pos->Draw("LogL_systematic_xsec_cov:step>>h2(1000,0,800000,300,0,30)","LogL_systematic_xsec_cov<1000");
   TH1D *h2 = (TH1D*)gDirectory->Get("h2");
@@ -61,7 +61,7 @@ void llh(std::string file0) {
   h2->GetZaxis()->SetRangeUser(-1,150);
   h2->SetTitle("");
   h2->GetXaxis()->SetNoExponent(1);
-  c->Print("llh_xsec.png");
+  //c->Print("llh_xsec.png");
 
   pos->Draw("LogL_systematic_nddet_cov:step>>h3(1000,0,800000,300,0,400)","LogL_systematic_nddet_cov<1000");
   TH1D *h3 = (TH1D*)gDirectory->Get("h3");
@@ -73,5 +73,5 @@ void llh(std::string file0) {
   h3->GetZaxis()->SetRangeUser(-1,400);
   h3->SetTitle("");
   h3->GetXaxis()->SetNoExponent(1);
-  c->Print("llh_nddet.png");
+  //c->Print("llh_nddet.png");
 }

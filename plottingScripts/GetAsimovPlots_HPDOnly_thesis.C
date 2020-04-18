@@ -272,7 +272,7 @@ void GetAsimovPlots_HPDOnly_thesis(std::string FileName1) {
   canv->Clear();
   leg->Draw();
   //  canv->Print((FileName1+".pdf").c_str());
-  canv->Print("asmv_leg.pdf");
+  canv->Print("dat_leg.pdf");
   delete leg;
 
   int nBins = One->GetXaxis()->GetNbins();
@@ -337,7 +337,7 @@ void GetAsimovPlots_HPDOnly_thesis(std::string FileName1) {
     ss << i;
     std::string fluxnum = ss.str();
 
-    canv->Print(("asmvflux"+fluxnum+".pdf").c_str());   
+    canv->Print(("datflux"+fluxnum+".pdf").c_str());   
     //    canv->Print((FileName1+".pdf").c_str());
 
     nFluxParams += OneCopy[i]->GetXaxis()->GetNbins();
@@ -388,6 +388,11 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
   Two->SetBinContent(nFluxParams+25,-999);
   Two->SetBinError(nFluxParams+25,0);
 
+  //Flat prior for low Q2s
+  for (int i=11; i<16; i++) {
+    One->SetBinError(nFluxParams+i,2.0);
+  }
+  
 
   // Do some fancy replacements
   PrettifyTitles(One);
@@ -472,7 +477,7 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     std::string xsecnum = ss.str();
 
     //    canv->Print((FileName1+".pdf").c_str());
-    canv->Print(("asmvxsec"+xsecnum+".pdf").c_str());    
+    canv->Print(("datxsec"+xsecnum+".pdf").c_str());    
 
     delete axis;
     delete line;

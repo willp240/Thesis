@@ -44,7 +44,7 @@ void th2polys(std::string file0) {
     hist->GetZaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetTitle("P_{#mu}, MeV");
     hist->Draw("colz");
-    c->Print((std::string("th2polys/TH2Poly_")+name+std::string(".pdf")).c_str());
+    c->Print((std::string("NomMC_")+name+std::string(".pdf")).c_str());
     std::cout << "got " << name << std::endl;
   }
 }
