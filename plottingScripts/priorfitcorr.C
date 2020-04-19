@@ -12,7 +12,7 @@
 #include <algorithm>
 #include "TColor.h"
 
-void postfitcorr(std::string file0) {
+void priorfitcorr(std::string file0) {
 
   TCanvas *c = new TCanvas("canv", "canv", 3000, 2550);
   TFile *file_ = TFile::Open(file0.c_str());
@@ -78,7 +78,7 @@ void postfitcorr(std::string file0) {
   cov2->GetZaxis()->SetTitle("Covariance");
   cov2->GetZaxis()->SetTitleOffset(1.5);
   cov2->Draw("colz");
-  c->Print((std::string("datpostfitcov")+std::string(".pdf")).c_str());  
+  c->Print((std::string("datpriorfitcov")+std::string(".pdf")).c_str());  
 
 }
 
