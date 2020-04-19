@@ -1253,10 +1253,101 @@ Posterior predictions are produced using the method described in Section \ref{se
 
 %update 2d ratios to data better than prior predictions
 %data, prior pred mc, post pred mc rates with errors and LLH
+\begin{center}
+\begin{table}[h]
+\center
+\begin{tabular}{c||c c|c c}
+\hline \hline
+\textbf{Sample} & \multicolumn{2}{c|}{\textbf{Event Rates}} & \multicolumn{2}{c}{\textbf{-2LLH}}\\
+& \multicolumn{1}{c}{\textbf{Posterior}} & \multicolumn{1}{c|}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}} & \multicolumn{1}{c}{\textbf{Prior}}\\
+\hline
+\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 & 33443 & 1.20 \\ 
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 & 7713 & 0.92 \\ 
+\textbf{FGD1 FHC $\nu$ CC Other} & 99730 & 7031.47 & 8026 & 1.14 \\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 & 33156 & 1.20 \\
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 & 6281 & 0.93\\
+\textbf{FGD2 FHC $\nu$ CC Other} & 94164 & 6454.68 & 7700 & 1.19 \\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 6980.48 & 8388 & 1.20\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 & 698 & 1.04\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 & 1472 & 1.20\\ \hline
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 112390 & 6771.47 & 8334 & 1.23\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 8533 & 603.301 & 650 & 1.08\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 15616 & 1135.13 & 1335 & 1.18\\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 41789 & 2916.3 & 3594 & 1.23\\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 14304 & 1115.99 & 1111 & 1.00\\
+\textbf{FGD1 RHC $\nu$ CC Other} & 12733 & 1031.87 & 1344 & 1.30\\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 41554 & 2901.65 & 3433 & 1.18\\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 11472 & 898.111 & 926 & 1.03\\ 
+\textbf{FGD2 RHC $\nu$ CC Other} & 11954 & 962.735 & 1245 & 1.29\\ \hline
+\textbf{Total} & 1882090 & 111293 & 128849 & 1.16\\ \hline\hline
+\end{tabular}
+\caption{Prior and posterior predictive event rates and log likelihood to data.}
+\label{tab:prederror}
+\end{table}
+\end{center}
 %frac error table
+
+\begin{center}
+\begin{table}[h]
+\center
+\begin{tabular}{c||c c}
+\hline \hline
+\textbf{Sample} & \multicolumn{2}{c}{$\delta N/N$}\\
+& \multicolumn{1}{c}{\textbf{Posterior}} & \multicolumn{1}{c}{\textbf{Prior}} \\
+\hline\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 \\ 
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 \\ 
+\textbf{FGD1 FHC $\nu$ CC Other} & 99730 & 7031.47 \\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 \\
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 \\
+\textbf{FGD2 FHC $\nu$ CC Other} & 94164 & 6454.68 \\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 6980.48 \\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 \\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 \\ \hline
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 112390 & 6771.47 \\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 8533 & 603.301 \\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 15616 & 1135.13 \\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 41789 & 2916.3 \\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 14304 & 1115.99 \\
+\textbf{FGD1 RHC $\nu$ CC Other} & 12733 & 1031.87 \\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 41554 & 2901.65 \\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 11472 & 898.111\\ 
+\textbf{FGD2 RHC $\nu$ CC Other} & 11954 & 962.735 \\ \hline
+\textbf{Total} & 1882090 & 111293 \\ \hline\hline
+\end{tabular}
+\caption{Fractional uncertainties on the prior and posterior predictive event rates.}
+\label{tab:predrates}
+\end{table}
+\end{center}
+
 %say what p values are 
 %p value plots + table
-%LLH dists
+\begin{center}
+\begin{table}[h]
+\center
+\begin{tabular}{c||c c}
+\hline \hline
+\textbf{Sample} & \multicolumn{2}{c}{\textbf{p-value}} \\
+& \multicolumn{1}{c}{\textbf{FGD1}} & \multicolumn{1}{c}{\textbf{FGD2}} \\
+\hline\hline
+\textbf{FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 \\ 
+\textbf{FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 \\ 
+\textbf{FHC $\nu$ CC Other} & 99730 & 7031.47 \\ \hline
+\textbf{RHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 \\
+\textbf{RHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 \\
+\textbf{RHC $\nu$ CC Other} & 94164 & 6454.68 \\ \hline
+\textbf{RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 115456\\
+\textbf{RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 \\
+\textbf{RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 \\
+\textbf{Total} & \multicolumn{2}{c}{0.00}\\ \hline\hline
+\end{tabular}
+\caption{Posterior predictive p-values for each sample.}
+\label{tab:prederror}
+\end{table}
+\end{center}
+
+%LLH dists say to investigate low pvalue
 %SK PP need files and script, table of event rates and errors
 
 \section{Finer Fit and Detector Binning}\label{sec:newbin}
