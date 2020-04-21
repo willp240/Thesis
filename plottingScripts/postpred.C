@@ -40,10 +40,11 @@ void postpred(std::string file0) {
     hist->GetZaxis()->SetTitleOffset(1.0);
     hist->GetXaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetRangeUser(0,5000);
+    hist->GetYaxis()->SetRangeUser(0.7,1.0);
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetTitle("P_{#mu}, MeV");
     hist->Draw("colz");
-    c->Print((std::string("priorpred_")+samp_us[s]+std::string(".pdf")).c_str());
+    c->Print((std::string("postpred_")+samp_us[s]+std::string(".pdf")).c_str());
   }
 }
