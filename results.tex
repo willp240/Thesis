@@ -1,13 +1,13 @@
 \chapter{2020 Near Detector Fit Results}\label{sec:2020Fit}
 
-The results of the analysis are presented in this Chapter, starting with the nominal MC prediction and fit validations in Sections \ref{sec:nommc}, \ref{sec:llhscan}, \ref{sec:sigvar}, and \ref{sec:asimov}. The data fit is presented in \ref{sec:datafit}, and the posterior predictive distributions and p values are are shown in \ref{sec:postpred}. Results from fits with updated binnings are then compared in Section \ref{sec:newbin}.
+The results of the analysis are presented in this Chapter, starting with the nominal MC prediction and fit validations in Sections \ref{sec:nommc}, \ref{sec:llhscan}, \ref{sec:sigvar}, and \ref{sec:asimov}. The data fit is presented in \ref{sec:datafit}, and the posterior predictive distributions and p-values are are shown in \ref{sec:postpred}. Results from fits with updated binnings are then compared in Section \ref{sec:newbin}.
 
 \section{Nominal MC}\label{sec:nommc}
 
-The data, unweighted MC, and nominal MC event rates for each sample are shown in Table \ref{tab:nomrates}. The CC 0$\pi$ samples are consistently underestimated in the MC prediction by $\sim$20$\%$, the CC 1$\pi$ samples are overestimated by $\sim$10$\%$ for FHC and underestimated by $\sim$5-10$\%$ for RHC, and the CC Other samples are underestimated by $\sim$20-30$\%$. The differences to data are consistent across to the FGDs to within $\sim$2$\%$. Overall, the MC prediction is $16\%$ lower than the observed data.
+The data, unweighted MC, and nominal MC event rates for each sample are shown in Table \ref{tab:nomrates}. The CC 0$\pi$ samples are consistently underestimated in the MC prediction by $\sim$20$\%$, the CC 1$\pi$ samples are overestimated by $\sim$10$\%$ for FHC and underestimated by $\sim$5-10$\%$ for RHC, and the CC Other samples are underestimated by $\sim$20-30$\%$. The differences to data are consistent across the FGDs to within $\sim$2$\%$. Overall, the MC prediction is $16\%$ lower than the observed data.
 
 \begin{center}
-\begin{table}[h]
+\begin{table}
 \center
 \begin{tabular}{l||c|c|c|c}
 \hline \hline
@@ -161,7 +161,7 @@ The projection of these distributions onto the $p_{\mu}$ axis are shown in Figur
 
 The CC 0$\pi$ and CC Other samples show oscillatory behaviour in the ratio of data to MC at low momentum. The ratio is consistently $>1$, but is slightly increased at the peak momentum for FHC and RHC $\nu$, and decreased at the peak for RHC $\bar{\nu}$. The ratio for the CC 1$\pi$ samples is more flat in momentum, but shows a small oscillation $<1$ at low momentum for FHC $\nu$, and $>1$ for RHC $\nu$ and $\bar{\nu}$. The behaviour is similar across the FGDs.
 
-The FHC $\nu$ and RHC $\bar{\nu}$ CC 0$\pi$ samples are dominated by the target interaction modes CCQE and 2p2h. However, for RHC $\nu$, there is a large contamination of CC 1$\pi$ events. The FHC $\nu$ and RHC $\bar{\nu}$ CC 1$\pi$ samples are dominated by the target interaction modes CC 1$\pi$, CC coherent, and CC mult-$\pi$. For RHC, $\nu$ the 1$\pi$ sample has a significant number of CC DIS events. The CC Other samples are populated by mainly the target interaction modes CC DIS, CC mult-$\pi$, and CC miscellaneous, but with a significant number CC $1\pi$ and CC coherent events for FHC $\nu$ and RHC $\bar{\nu}$.
+The FHC $\nu$ and RHC $\bar{\nu}$ CC 0$\pi$ samples are dominated by the target interaction modes CCQE and 2p2h. However, for RHC $\nu$, there is a large contamination of CC 1$\pi$ events. The FHC $\nu$ and RHC $\bar{\nu}$ CC 1$\pi$ samples are dominated by the target interaction modes CC 1$\pi$, CC coherent, and CC mult-$\pi$, but for RHC $\nu$, the 1$\pi$ sample has a significant number of CC DIS events. The CC Other samples are populated by mainly the target interaction modes CC DIS, CC mult-$\pi$, and CC miscellaneous, but with a significant number CC $1\pi$ and CC coherent events for FHC $\nu$ and RHC $\bar{\nu}$.
 
 \begin{figure}
 \centering
@@ -419,7 +419,7 @@ The CC 0$\pi$ and CC Other samples again show oscillatory behaviour in the ratio
 
 \section{Log-likelihood Scans}\label{sec:llhscan}
 
-As described in Section \ref{sec:extrac}, the marginalisation effects from extracting correlated and non-Gaussian parameters from the full posterior distribution can cause the fit to appear biased. A full Asimov fit alone, described in Section \ref{sec:asimov}, is therefore not a good method of validating the framework. log-likelihood scans are therefore also run as part of the validations. The nominal MC is set as the data, and each systematic parameter is varied one at a time to 150 equally spaced points from -1$\sigma$ to +1$\sigma$. At each step, the MC is reweighted and the total likelihood from all contributions calculated. Only the diagonal terms of the covariance matrices are used for the penalty contribution, as otherwise varying one parameter alone could invoke significant penalties from correlations. The scans are therefore not a fully accurate measure of the sensitivity of the fit to constrain each systematic, but a useful validation of the framework.
+As described in Section \ref{sec:extrac}, the marginalisation effects from extracting correlated and non-Gaussian parameters from the full posterior distribution can cause the fit to appear biased. A full Asimov fit alone, described in Section \ref{sec:asimov}, is therefore not a good method of validating the framework. Log-likelihood scans are therefore also run as part of the validations. The nominal MC is set as the data, and each systematic parameter is varied one at a time to 150 equally spaced points from -1$\sigma$ to +1$\sigma$. At each step, the MC is reweighted and the total likelihood from all contributions calculated. Only the diagonal terms of the covariance matrices are used for the penalty contribution, as otherwise varying one parameter alone could invoke significant penalties from correlations. The scans are therefore not a fully accurate measure of the sensitivity of the fit to constrain each systematic, but a useful validation of the framework.
 
 After each scan, the parameter is reset, and the next parameter in question varied. The likelihood response is expected to be fairly Gaussian for each parameter, as the prior uncertainty is either Gaussian or flat, and most parameters are expected to have a symmetric effect on the number of events in individual bins. The minimum should be at the prior central value of the parameter, and the log-likelihood here should be 0, as at this point the reweighted MC is identical to the nominal MC. No variation of a single parameter should be able to produce a set of distributions more similar to the nominal MC than itself.
 
@@ -447,7 +447,7 @@ The log-likelihood scans for four selected interaction parameters are shown in F
   \includegraphics[width=0.7\linewidth]{figs/llh/CC_DIS_MultPi_Norm_Nubar_llh.pdf}
   \caption{CC DIS and mult-$\pi$ normalisation}
 \end{subfigure}
-\caption{log-likelihood scans for selected interaction parameters.}
+\caption{Log-likelihood scans for selected interaction parameters.}
 \label{fig:llhxsec}
 \end{figure}
 
@@ -475,7 +475,7 @@ The log-likelihood scans for four selected flux parameters are shown in Figure \
   \includegraphics[width=0.7\linewidth]{figs/llh/b_52_llh.pdf}
   \caption{SK RHC $\bar{\nu_{\mu}}$ 0.5-0.6 GeV}
 \end{subfigure}
-\caption{log-likelihood scans for selected flux parameters.}
+\caption{Log-likelihood scans for selected flux parameters.}
 \label{fig:llhflux}
 \end{figure}
 
@@ -503,7 +503,7 @@ The log-likelihood scans for four selected ND280 detector parameters are shown i
   \includegraphics[width=0.7\linewidth]{figs/llh/ndd_556_llh.pdf}
   \caption{FGD1 RHC $\nu_{\mu}$ CC Other: 600-30000 MeV, -1.0-0.7}
 \end{subfigure}
-\caption{log-likelihood scans for selected ND280 detector parameters.}
+\caption{Log-likelihood scans for selected ND280 detector parameters.}
 \label{fig:llhdet}
 \end{figure}
 
@@ -511,7 +511,7 @@ The log-likelihood scans for four selected ND280 detector parameters are shown i
 
 As a further validation of the fitting framework and models, the parameters are again each set to $\pm1\sigma$, one by one, while all others are held at nominal. Instead of the change in likelihood, here the effect on the event distributions in $p_{\mu}$-cos$\theta_{\mu}$ is inspected. 
 
-One varied interaction parameter for each sample is shown in Figure \ref{fig:sigvars}. The combinations of parameter and sample were selected such that the parameter controls interactions targeted by the sample. The parameter in question is set to $+1\sigma$ above its nominal value, and the ratio of the nominal MC to the reweighted MC is taken.
+One varied interaction parameter for each sample is shown in Figure \ref{fig:sigvars}. The combinations of parameter and sample were selected such that the parameter controls interactions targeted by the sample. The parameter in question is set to $+1\sigma$ above its nominal value, and the ratio of the reweighted MC to the nominal MC is taken.
 
 \begin{figure}
 \centering
@@ -634,7 +634,7 @@ The 2p2h $\nu$ normalisation, $Q^2$ normalisations, and $M^{QE}_A$ parameters al
 
 The $\pi$ FSI, and 2p2h Shape $^{12}C$ parameters reduce the number of events in the shown samples, despite being set higher than nominal. This is because as they are not normalisation parameters, the weight applied can be lower for a higher parameter value. The AGKY mult-$\pi$, C$^{A}_{5}$, $M^{RES}_{A}$, BY DIS, BY mult-$\pi$, and $I_{1/2}$ uncertainties are all shape parameters which cause an increase in events in the samples shown when set to $+1\sigma$. E$_{b}$ $^{16}O$ $\bar{\nu}$ causes an increase in events at low momentum, and decrease at higher momentum, as the events are directly shifted and not just reweighted.
 
-The DIS normalisations, CC coh $^{16}O$, and CC Misc. normalisations all increase events at high angle when set to $+1\sigma$. The DIS normalisations effect higher momentum events, as would be expected as DIS events tend to involve higher energies. The CC Misc. parameter has a large impact despite only affecting a small number of events, because of it's large uncertainty. When it is set to $+1\sigma$ it therefore is significantly higher than at nominal.
+The DIS normalisations, CC coh $^{16}O$, and CC misc. normalisations all increase events at high angle when set to $+1\sigma$. The DIS normalisations effect higher momentum events, as would be expected as DIS events tend to involve higher energies. The CC misc. parameter has a large impact despite only affecting a small number of events, because of it's large uncertainty. When it is set to $+1\sigma$ it therefore is significantly higher than at nominal.
 
 All the variations are causing changes to the event distributions in the regions each parameter would be expected to. The total number of events in each sample at each variation is compared between the near detector fitting groups to verify that each parameter is behaving in the same way in each framework.
 
@@ -642,7 +642,7 @@ All the variations are causing changes to the event distributions in the regions
 
 For an Asimov fit\footnote{Named after the Isaac Asimov short story, \textit{Franchise}, in which an individual is chosen as the sole voter as their views represent those of the whole population.}, the nominal MC prediction is set to be the `data'. The MC is then fitted to itself. This is completely unphysical, as there can be a non-integer number of `data' events, but means there are no statistical fluctuations in the dataset, and the expected result of the fit is known. Therefore any deviations from the expected result indicate problems with the fitter. The results can also be used to obtain the maximum sensitivity of the fit. The constraint on each parameter shows the reduction in systematic uncertainties that would be achieved if the models perfectly described the true data.
 
-The results of the Asimov fit for the flux parameters are shown in Figure \ref{fig:asmvfluxSK}. As described in Section \ref{sec:stats}, the fit does not find a single best-fit set of parameters, but single parameter values are extracted from the posterior distribution by marginalising over all but one parameter, one by one. Marginalisation effects cause the postfit parameter values to not exactly equal the nominal inputs, but these are very small. The flux parameters with the largest discrepancies are those that apply to rarer events at ND280, such as for high energies, and so are constrained mostly by the prior uncertainty only. The constraint on the SK flux parameters comes entirely from the correlation with the ND280 flux parameters, and so the postfit values have the same behaviour.
+The results of the Asimov fit for the flux parameters are shown in Figure \ref{fig:asmvfluxSK}. As described in Section \ref{sec:stats}, the fit does not find a single best-fit set of parameters, but single parameter values are extracted from the posterior distribution by marginalising over all but one parameter, one by one. Marginalisation effects cause the postfit parameter values to not exactly equal the nominal inputs, but the discrepancies are small. The flux parameters with the largest discrepancies are those that apply to rarer events at ND280, such as for high energies, and so are constrained mostly by the prior uncertainty only. The constraint on the SK flux parameters comes entirely from the correlation with the ND280 flux parameters, and so the postfit values have the same behaviour.
 
 \begin{figure}
 \centering
@@ -753,9 +753,7 @@ The results of the Asimov fit for the flux parameters are shown in Figure \ref{f
 \label{fig:asmvfluxSK}
 \end{figure}
 
-The 2p2h energy dependence and low $\pi$ momentum $I_{1/2}$ parameters are not fitted at the near detector so aren't shown here.
-
-The results for the interaction parameters are shown in Figure \ref{fig:asmvxsec}. All parameters stay close to their nominal values, as would be expected. There are several parameters which show small deviations, but these are again parameters which are not well constrained, such as NC 1$\gamma$, as there are few events of the relevant interaction mode at ND280.
+The results for the interaction parameters are shown in Figure \ref{fig:asmvxsec}. All parameters stay close to their nominal values, as would be expected. There are several parameters which show small deviations, but these are again parameters which are not well constrained, such as NC 1$\gamma$, as there are few events of the relevant interaction mode at ND280. The 2p2h energy dependence and low $\pi$ momentum $I_{1/2}$ parameters are not fitted at the near detector so aren't shown here.
 
 \begin{figure}
 \centering
@@ -813,8 +811,8 @@ The postfit covariance matrix for flux and interaction parameters is shown in Fi
 
 Prior predictions are produced using a similar method to the posterior predictions described in Section \ref{sec:postpred}. However, instead of using draws from the Markov Chain, correlated throws of the fit parameters are made. For each of 2000 throws, the nominal MC is reweighted to the thrown parameter values. Each bin in each sample therefore has 2000 different number of events, from which the central value and uncertainty is used to build the prediction in the same way as for the posterior predictions. This method has the advantage of incorporating the prior uncertainties when inspecting how well the nominal model fits the data, which just looking at the nominal MC does not do. 
 
-The ratio of the prior predictive $p_{\mu}$-cos$\theta_{\mu}$ distributions to data for each sample are shown in Figure \ref{fig:priorpreds}. As expected from comparisons of the nominal MC to data, the prior predictive distributions underestimate the data significantly. If the nominal model perfectly described the data with small uncertainties the fit would not be needed. The prior predictions are compared to the posterior predictions, and data, in Table \ref{}.
-\red{update these plots}
+The ratios of data to the prior predictive $p_{\mu}$-cos$\theta_{\mu}$ distributions for each sample are shown in Figure \ref{fig:priorpreds}. As expected from comparisons of the nominal MC to data, the prior predictive distributions underestimate the data significantly, particularly in the peak region at low $p_{\mu}$ and high cos$\theta_{\mu}$. At higher momentum there are regions of significant overestimation as well, particularly for the CC 1$\pi$ samples. The levels of discrepancy are not concerning though, if the nominal model perfectly described the data with small uncertainties the fit would not be needed. The prior predictions are compared to the posterior predictions, and data, in Table \ref{fig:predrates}.
+
 \begin{figure}
 \centering
 \begin{subfigure}{.32\textwidth}
@@ -934,11 +932,11 @@ The ratio of the prior predictive $p_{\mu}$-cos$\theta_{\mu}$ distributions to d
 
 \subsection{Fit Results}
 
-The MC was then fitted to the real data. The postfit flux parameter values are shown in Figure \ref{fig:datfluxSK}. For the FHC $\nu_{\mu}$ and $\bar{\nu_{\mu}}$, there is a pull of $\sim$10$\%$ below 1 GeV. The pull decreases as the energy decreases, and falls below nominal at higher energies. A similarly high pull is seen for the FHC $\nu_e$ parameters, but this is fairly constant in energy. For the FHC $\bar{\nu_e}$ and RHC $\nu_e$, the pull is $\sim10\%$ for the high energy parameter, but the low energy parameter is close to its nominal value.
+The MC was then fitted to the real data. The postfit flux parameter values are shown in Figure \ref{fig:datfluxSK}. For FHC $\nu_{\mu}$ and $\bar{\nu_{\mu}}$, there is a pull of $\sim$10$\%$ below 1 GeV. The pull decreases as the energy decreases, and falls below nominal at higher energies. A similarly high pull is seen for the FHC $\nu_e$ parameters, but this is fairly constant in energy. For FHC $\bar{\nu_e}$ and RHC $\nu_e$, the pull is $\sim10\%$ for the high energy parameter, but the low energy parameter is close to its nominal value.
 
 The RHC $\bar{\nu_{\mu}}$ parameters are also pulled significantly upwards, to $\sim$15$\%$. The pull oscillates around $\sim$10$\%$ as energy increases. The RHC $\bar{\nu_e}$ parameters oscillate around nominal below 1 GeV, but increase to $\sim$10$\%$ at higher energies. The RHC $\nu_{\mu}$ parameters are pulled to $\sim$10$\%$, but are closer to nominal above 2.5 GeV. Similar behaviour is seen for the ND280 and SK parameters, as would be expected due to their prefit correlations.
 
-Although many of the flux parameters are pulled significantly away from their prior central values, and beyond the prefit $\pm1\sigma$ range, these results are not too concerning. As the flux parameters are so strongly correlated, a pull in one translates to many of them moving. The flux penalty contribution to the log-likelihood at each step in the Markov Chain is shown in Figure \ref{fig:llh_fluxdat}. The stationary distribution is at -2LLH$\approx$50, which for 100 flux parameters corresponds to $\sim1\chi^2$ per degree of freedom.
+Although many of the flux parameters are pulled significantly away from their prior central values, and beyond the prefit $\pm1\sigma$ range, these results do not represent a strong bias in the fit. As the flux parameters are so strongly correlated, a pull in one translates to many of them moving. The flux penalty contribution to the log-likelihood at each step in the Markov Chain is shown in Figure \ref{fig:llh_fluxdat}. The stationary distribution is at -2LLH$\approx$50, which for 100 flux parameters corresponds to $\sim1\chi^2$ per degree of freedom.
 
 \begin{figure}
 \centering
@@ -1061,9 +1059,9 @@ The $Q^2$ normalisations all sit slightly above their prior central values, and 
 
 The 1D distributions for the E$_b$ parameters are shown in Figure \ref{fig:Ebdata}. Although the distributions are non-Gaussian, making it difficult to extract a single central value, the highest posterior density, and arithmetic means are all within $1\sigma$ of the prior.
 
-The $M^A_{RES}$ parameter is pulled down, beyond the prior uncertainty, while the other single $\pi$ production are all consistent with their nominal values. This could suggest $M^A_{RES}$ is soaking up deficiencies in the single $\pi$ production model.
+The $M^A_{RES}$ parameter is pulled down, beyond the prior uncertainty, while the other single $\pi$ production parameters are all consistent with their nominal values. This could suggest $M^A_{RES}$ is soaking up deficiencies in the single $\pi$ production model.
 
-There is tension between the BY corrections, with the BY DIS parameter being pulled to edge of its 100$\%$ prior uncertainty, and the BY mult-$\pi$ parameter staying at its nominal value. The CC misc. parameter is also pushed high, but also has a large prior uncertainty. The other parameters targeting events in the CC Other samples are very consistent with their prior central values. 
+There is tension between the BY corrections, with the BY DIS parameter being pulled to the edge of its 100$\%$ prior uncertainty, and the BY mult-$\pi$ parameter staying at its nominal value. The CC misc. parameter is also pushed high, but also has a large prior uncertainty. The other parameters targeting events in the CC Other samples are very consistent with their prior central values. 
 
 The CC coherent, NC, and $\pi$ FSI parameters are all within $1\sigma$ of their nominal values, apart from NC Other ND280, which has very little constraint from ND280 data due to low statistics. 
 
@@ -1127,7 +1125,7 @@ The $Q^2$ normalisations, DIS and mult-$\pi$, and $\pi$ FSI parameters all have 
 
 \section{Posterior Predictions}\label{sec:respostpred}
 
-Posterior predictions are produced using the method described in Section \ref{sec:postpred}. The ratios to data for each sample are shown in Figure \ref{fig:postpreds}. The postfit model does not perfectly describe the data, with all samples showing substantial discrepancies. However, there is significant improvement compared to prior predictions in Figure \ref{fig:priorpreds}. Particularly in areas of high $Q^2$, at low $p_{\mu}$ and high cos$\theta_{\mu}$, the prediction is closer to data. This is confirmed by the reduction in -2LLH for the posterior prediction compared to for the prior prediction, shown in Table \ref{tab:predrates}. The uncertainties on the event rate for all samples is also reduced significantly. The fractional errors in Table \ref{tab:prederr} show the overall ND280 event rate uncertainty has been reduced from X$\%$ to Y$\%$ by the fit.
+Posterior predictions are produced using the method described in Section \ref{sec:postpred}. The ratios of data to the posterior prediction for each sample are shown in Figure \ref{fig:postpreds}. The postfit model does not perfectly describe the data, with all samples showing substantial discrepancies. However, there is significant improvement compared to prior predictions in Figure \ref{fig:priorpreds}. Particularly in areas of high $Q^2$, at low $p_{\mu}$ and high cos$\theta_{\mu}$, the prediction is closer to data. At high $p_{\mu}$ and low cos$\theta_{\mu}$ there are still regions of underestimation in the CC 0$\pi$ and CC Other samples, and overestimation in CC 1$\pi$, but these are less strong than for the prior prediction. This is confirmed by the reduction in -2LLH for the posterior prediction compared to for the prior prediction, shown in Table \ref{tab:predrates}. The uncertainties on the event rate for all samples is also reduced significantly. The fractional errors in Table \ref{tab:prederr} show the overall ND280 event rate uncertainty has been reduced from $1.1\%$ $0.3\%$ by the fit.
 
 \begin{figure}
 \centering
@@ -1247,14 +1245,15 @@ Posterior predictions are produced using the method described in Section \ref{se
 \end{figure}
 
 \begin{center}
-\begin{table}[h]
+\begin{table}
 \center
+\begin{adjustbox}{max width=1.1\textwidth,center}
 \begin{tabular}{S||
                 r
-                c
+                p{0.26cm}
                 r
-                r
-                c
+                |r
+                p{0.26cm}
                 r
                 |r
                 r}
@@ -1283,13 +1282,14 @@ Posterior predictions are produced using the method described in Section \ref{se
 \textbf{FGD2 RHC $\nu$ CC Other} &   1031.5& $\pm$ &109.8 & 1188.2& $\pm$ &15.7 & 93.41 & 54.26\\ \hline
 \textbf{Total} & 109664.1& $\pm$ &1243.2 & 128517.5& $\pm$ &377.1 & 7671.17 & 4787.17 \\ \hline\hline
 \end{tabular}
+\end{adjustbox}
 \caption{Prior and posterior predictive event rates and log-likelihood to data.}
 \label{tab:predrates}
 \end{table}
 \end{center}
 
 \begin{center}
-\begin{table}[h]
+\begin{table}
 \center
 \begin{tabular}{l||c c}
 \hline \hline
@@ -1323,9 +1323,9 @@ Posterior predictions are produced using the method described in Section \ref{se
 
 \subsection{Posterior Predictive p-values}
 
-Posterior predictive p-values were calculated using the methods described in Section \ref{sec:pval}. Discouragingly, the total p-value is 0.00 for both methods, as shown in Figure \ref{fig:pval}. The individual p-values for each sample are $<5\%$ for the majority of samples, as shown in Table \ref{tab:pval}. All but one CC 0$\pi$ samples have a p-value $<5\%$, and for RHC $\bar{\nu}$ the p-values$=0.0\%$. The FGD2 RHC $\nu$ is the only CC 0$\pi$ with a `good' p-value. The CC $1\pi$ samples are generally higher, but are $<5\%$ for FGD2 FHC $\nu$, and both RHC $\nu$ samples. For CC Other, only the FGD1 RHC $\bar{\nu}$ and RHC $\nu$ samples have p-values $>0.05\%$. The p-values are not consistent across FGD1 and 2, suggesting differences in how well the two modelled.
+Posterior predictive p-values were calculated using the methods described in Section \ref{sec:pval}. Discouragingly, the total p-value is 0.00 for both methods, as shown in Figure \ref{fig:pval}. Furthermore, the individual p-values are low for the majority of samples, as shown in Table \ref{tab:pval}. All but one of the CC 0$\pi$ samples have a p-value $<5\%$, and for RHC $\bar{\nu}$ the p-values $=0.0\%$. The FGD2 RHC $\nu$ is the only CC 0$\pi$ with a `good' p-value. The CC $1\pi$ samples are generally higher, but are $<5\%$ for FGD2 FHC $\nu$, and both RHC $\nu$ samples. For CC Other, only the FGD1 RHC $\bar{\nu}$ and RHC $\nu$ samples have p-values $>0.05\%$. The p-values are not consistent across FGD1 and 2, suggesting differences in how well the two modelled.
 
-The two methods of calculating the p-value are consistent. Although they are not identical for all samples, they follow the same trends and within $3\%$ of each other for every sample. This suggests the 2000 draws are describe the posterior distribution sufficiently.
+The two methods of calculating the p-value are consistent. Although they are not all identical, they follow the same trends and are within are $3\%$ of each other for every sample. This suggests the 2000 drawn steps describe the posterior distribution sufficiently.
 
 \begin{figure}
 \centering
@@ -1336,7 +1336,7 @@ The two methods of calculating the p-value are consistent. Although they are not
 As the total p-values are constructed from the sum of all the sample likelihoods, a high likelihood for one sample can dominate the overall p-value. A low p-value for a single sample can therefore drive the total p-value to be 0.0$\%$. The total p-value should therefore not be interpreted as an average across all samples, and so the final value of 0.0$\%$ does not mean that the model is entirely unsuitable to fit to all the data, just that there is at least one region of kinematic phase space which is not well described by the posterior.
 
 \begin{center}
-\begin{table}[h]
+\begin{table}
 \center
 \begin{tabular}{l||c c}
 \hline \hline
@@ -1369,9 +1369,11 @@ As the total p-values are constructed from the sum of all the sample likelihoods
 \end{table}
 \end{center}
 
-To investigate the cause of the low p-values, the LLH contribution from each bin were inspected for each sample, as shown in Figure \ref{fig:llhconts}. As would be expected there are more regions with higher contribution in the samples with low p-values. For example, comparing the FGD1 and FGD2 RHC $\bar{\nu}$ samples, there are clearly larger contributions from several bins in FGD2, which has a significantly lower p-value, which don't appear for FGD1. However, it is difficult to identify any definitive trends which could explain all the low goodness-of-fits. Comparing the CC 0$\pi$ samples, the low p-value FHC $\nu$ and RHC $\bar{\nu}$ all have sporadic high contributing bins, but these aren't dissimilar from what is seen for FGD1 RHC $\nu$ which has a larger p-value. The FGD2 RHC $\nu$ sample does have a much smaller and more uniform distribution of log-likelihood contribution though, in line with it's higher p-value. For CC $1\pi$, the distributions for the low p-value RHC $\nu$ samples both have large contributions from individual bins, but in different regions of $p_{\mu}$-cos$\theta_{\mu}$ space. The FHC $\nu$ and RHC $\bar{\nu}$ are more uniform, but there is a large contribution from one bin in the peak for FGD1 FHC $\nu$ despite the high p-value.
+To investigate the cause of the low p-values, the LLH contributions from each bin were inspected for each sample, as shown in Figure \ref{fig:llhconts}. As would be expected there are more regions with higher contribution in the samples with low p-values. For example, comparing the FGD1 and FGD2 RHC $\bar{\nu}$ samples, there are clearly larger contributions from several bins in FGD2, which has a significantly lower p-value, which don't appear for FGD1. However, it is difficult to identify any definitive trends which could explain all the low goodness-of-fits. Comparing the CC 0$\pi$ samples, the low p-value FHC $\nu$ and RHC $\bar{\nu}$ all have sporadic high contributing bins, but these aren't dissimilar from what is seen for FGD1 RHC $\nu$ which has a larger p-value. The FGD2 RHC $\nu$ sample does have a much smaller and more uniform distribution of log-likelihood contribution though, in line with it's higher p-value.
 
-Overall the high log-likelihoods aren't coming from a consistent region in $p_{\mu}$-cos$\theta_{\mu}$, so the low p-values are not just being driven by a single set of kinematics being badly modelled or reconstructed. 
+For CC $1\pi$, the distributions for the low p-value RHC $\nu$ samples both have large contributions from individual bins, but in different regions of $p_{\mu}$-cos$\theta_{\mu}$ space. The FHC $\nu$ and RHC $\bar{\nu}$ log-likelihood distributions are more uniform, but there is a large contribution from one bin in the peak for FGD1 FHC $\nu$ despite the high p-value.
+
+Overall the high log-likelihoods aren't coming from a consistent region in $p_{\mu}$-cos$\theta_{\mu}$, so the low p-values are not just driven by a single set of kinematics being badly modelled or reconstructed. 
 
 \begin{figure}
 \centering
@@ -1497,7 +1499,7 @@ As discussed in Section \ref{sec:postpred}, there is no definitive gauge for wha
 To see the effect of the near detector fit on the full oscillation analysis, posterior predictive event rates at SK were produced. The same process is used as for the near detector posterior distributions, using 2000 draws from the near detector Markov Chain, but reweighting the nominal MC for SK rather than ND280. Only the 50 SK flux parameters, and interaction parameters which apply to SK events (not parameters for $^{12}C$ or ND280 only) are propagated. Nominal values for the SK detector uncertainties, described in \cite{}, and the oscillation parameters in Table \ref{tab:oscpar}, are used to produce these predictions.
 
 \begin{center}
-\begin{table}[h]
+\begin{table}
 \center
 \begin{tabular}{c||c}
 \hline \hline
