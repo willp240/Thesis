@@ -39,13 +39,13 @@ void th2polysReset(std::string file0) {
     hist->GetXaxis()->SetTitleOffset(1.1);
     hist->GetZaxis()->SetTitleOffset(1.0);
     hist->GetXaxis()->SetTitleSize(0.05);
-    hist->GetXaxis()->SetRangeUser(0,5000);
+    //    hist->GetXaxis()->SetRangeUser(0,5000);
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
-    hist->GetXaxis()->SetTitle("P_{#mu}, MeV");
+    hist->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     hist->Reset("");
     hist->Draw();
-    c->Print((std::string("th2polys/TH2PolyReset5000_")+name+std::string(".pdf")).c_str());
+    c->Print((std::string("th2polys/TH2PolyReset_")+name+std::string(".pdf")).c_str());
     std::cout << "got " << name << std::endl;
   }
 }

@@ -45,6 +45,7 @@ void angres(std::string file0) {
   h2->GetXaxis()->SetLabelSize(0.03);
   h2->GetYaxis()->SetLabelSize(0.03);
   h2->GetZaxis()->SetTitle("Events");
+  h2->GetZaxis()->SetRangeUser(0,400);
   h2->SetTitle("");
   h2->GetYaxis()->SetTitle("True cos #theta_{#mu}");
   h2->GetXaxis()->SetNdivisions(1005);

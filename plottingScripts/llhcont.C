@@ -44,7 +44,7 @@ void llhcont(std::string file0) {
     hist->GetYaxis()->SetRangeUser(0.7,1.0);
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
-    hist->GetXaxis()->SetTitle("p_{#mu}, MeV");
+    hist->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     hist->GetZaxis()->SetTitle("-2LLH_{Sample} x sign(MC-Data)");
     hist->Draw("colz");
     c->Print((std::string("llhcont_")+samp_us[s]+std::string(".pdf")).c_str());

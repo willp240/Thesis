@@ -41,9 +41,9 @@ void corr(std::string file0) {
   pos->Draw("xsec_0:xsec_20>>h1(200,0.75,1.05,200,0.94,1.1)","step>200000");
   TH1D *h1 = (TH1D*)gDirectory->Get("h1");
   h1->Draw("colz");
-  h1->GetYaxis()->SetTitle("MAQE");
+  h1->GetYaxis()->SetTitle("#it{M_{A}^{QE}}");
   h1->GetYaxis()->SetTitleOffset(1.0);
-  h1->GetXaxis()->SetTitle("MARES");
+  h1->GetXaxis()->SetTitle("#it{M_{A}^{RES}}");
   h1->GetZaxis()->SetRangeUser(-1,h1->GetMaximum());
   h1->SetTitle("");
   h1->GetXaxis()->SetNoExponent(1);

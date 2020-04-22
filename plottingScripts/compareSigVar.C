@@ -1,4 +1,4 @@
-// Compare sigma variations to nominal
+B0;95;0c// Compare sigma variations to nominal
 // .L compareSigVar.C+g // in root
 // compareSigVar("filename.root" 
 // ********************************
@@ -77,6 +77,7 @@ void compareSigVar(std::string filename) {
   else
     m3sig->GetZaxis()->SetRangeUser(1-fabs(1-minz),1+fabs(1-minz));
   m3sig->GetXaxis()->SetRangeUser(0,5000);
+  m3sig->GetXaxis()->SetTitle("p_{#mu} (MeV)");
   m3sig->GetXaxis()->SetTitleOffset(1.1);
   m3sig->GetYaxis()->SetTitleOffset(1.1);
   m3sig->GetZaxis()->SetTitleOffset(1.5);
@@ -96,6 +97,7 @@ void compareSigVar(std::string filename) {
   else
     m1sig->GetZaxis()->SetRangeUser(1-fabs(1-minz),1+fabs(1-minz));
   m1sig->GetXaxis()->SetRangeUser(0,5000);
+  m1sig->GetXaxis()->SetTitle("p_{#mu} (MeV)");
   m1sig->GetXaxis()->SetTitleOffset(1.1);
   m1sig->GetYaxis()->SetTitleOffset(1.1);
   m1sig->GetZaxis()->SetTitleOffset(1.5);
@@ -115,6 +117,7 @@ void compareSigVar(std::string filename) {
   else
     p1sig->GetZaxis()->SetRangeUser(1-fabs(1-minz),1+fabs(1-minz));
   p1sig->GetXaxis()->SetRangeUser(0,5000);
+  p1sig->GetXaxis()->SetTitle("p_{#mu} (MeV)");
   p1sig->GetXaxis()->SetTitleOffset(1.1);
   p1sig->GetYaxis()->SetTitleOffset(1.1);
   p1sig->GetZaxis()->SetTitleOffset(1.5);
@@ -134,6 +137,7 @@ void compareSigVar(std::string filename) {
   else
     p3sig->GetZaxis()->SetRangeUser(1-fabs(1-minz),1+fabs(1-minz));
   p3sig->GetXaxis()->SetRangeUser(0,5000);
+  p3sig->GetXaxis()->SetTitle("p_{#mu} (MeV)");
   p3sig->GetXaxis()->SetTitleOffset(1.1);
   p3sig->GetYaxis()->SetTitleOffset(1.1);
   p3sig->GetZaxis()->SetTitleOffset(1.5);
