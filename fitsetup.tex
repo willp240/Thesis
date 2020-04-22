@@ -25,7 +25,7 @@ There are degeneracies between the flux, cross-section, and detector efficiency 
 \caption{The predicted event rate at SK, with and without the near detector fit constraint. Using near detector data to reduce systematics narrows the uncertainty on the prediction, allowing more precise oscillation measurements to be made. }\label{fig:ndconstraint}
 \end{figure}
 
-The parametrised models of the beam, cross-section, and near detector detector efficiencies used in the near detector fit are produced by different groups within T2K. The beam group uses data from beamline monitors and the on-axis INGRID to provide the beam flux model, the Systematics, Selections, and Validations (SSV) group provide a model of ND280 detector systematics, and the Neutrino Interactions Working Group (NIWG) provide the interaction model. For the full joint near and far detector fits, the T2K-SK group provides the SK detector model and selections. The parameters of these models affect the log likelihood in the fit through Equation \ref{eqn:systllh}.
+The parametrised models of the beam, cross-section, and near detector detector efficiencies used in the near detector fit are produced by different groups within T2K. The beam group uses data from beamline monitors and the on-axis INGRID to provide the beam flux model, the Systematics, Selections, and Validations (SSV) group provide a model of ND280 detector systematics, and the Neutrino Interactions Working Group (NIWG) provide the interaction model. For the full joint near and far detector fits, the T2K-SK group provides the SK detector model and selections. The parameters of these models affect the log-likelihood in the fit through Equation \ref{eqn:systllh}.
 
 MaCh3 is one of two groups that fit near detector data at T2K. The Beam And ND280 Flux extrapolation task Force (BANFF) also perform near detector fits, but use MINUIT to find the global minimum of the likelihood by gradient descent, in contrast to MaCh3's use of MCMC to sample the probability distribution discussed in section \ref{sec:mcmc}. The BANFF postfit covariance is propagated to two of the three far detector fitting groups at T2K. This has the disadvantage of assuming that the systematics are not Gaussian. MaCh3, by doing joint near and far detector fits, does not assume any shape on the systematics. However, to validate the model and fitting framework, near detector only fits are ran to compare with the BANFF.
 
@@ -288,7 +288,7 @@ ND280 events are binned in the reconstructed momentum and angle of the outgoing 
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_numuCC_other}
-  \caption{FGD2 $\nu_{\mu}$ Other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
   \label{fig:th2dFGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -467,7 +467,7 @@ The distribution of events binned by the scheme produced using the algorithm are
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_numuCC_other}
-  \caption{FGD2 $\nu_{\mu}$ Other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
   \label{fig:th2polyFGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -559,7 +559,7 @@ Further studies could be undergone to develop a non-rectangular fit binning. For
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/2p2h_shape_O_sampolyLLH}
-  \caption{2p2h Shape O}
+  \caption{2p2h Shape $^{16}O$}
   \label{fig:2p2h_shape_O_sampolyLLH}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
@@ -619,9 +619,9 @@ The nominal MC is generated using a Spectral Function (SF) nuclear model from \c
 The neutrino energy of CCQE events is calculated using Equation \ref{eqn:erec}, which is highly dependent on having an accurate value of the binding energy of the target nuclei. 4 parameters are used to fit the binding energies (for target $^{12}C/^{16}O$ and $\nu/\bar{\nu}$). These are neither shape nor normalisation parameters, and are described in more detail in Section \ref{sec:eb}.
 
 \item \textbf{2-particle-2-hole:}\\
-2p2h interactions are generated in NEUT using the NIEVES model \cite{Nieves}. Two shape parameters apply to 2p2h interactions, one for events on $^{12}C$ and one for events on $^{16}O$.  At one extreme it is entirely non-pionless-$\Delta$-decay-like in accordance with the NIEVES model, and at the other extreme the shape is entirely pionless-$\Delta$-decay-like, in accordance with the Martini model\cite{Martini}. These two shape parameters have a 30$\%$ correlation.
+2p2h interactions are generated in NEUT using the Nieves model \cite{Nieves}. Two shape parameters apply to 2p2h interactions, one for events on $^{12}C$ and one for events on $^{16}O$.  At one extreme it is entirely non-pionless-$\Delta$-decay-like in accordance with the Nieves model, and at the other extreme the shape is entirely pionless-$\Delta$-decay-like, in accordance with the Martini model\cite{Martini}. These two shape parameters have a 30$\%$ correlation.
 
-There are additional shape parameters, to account for differences in the energy dependence of 2p2h interactions. At one extreme the shape is entirely consistent with the NIEVES model, and at the other it is consistent with the Martini model. There are 4 of these parameters in total: $\nu/\bar{\nu}$ and high/low $E_{\nu}$. However, studies showed these could not be constrained using near detector data alone, so are fixed in near detector only fits. For the joint near and far detector fits in the oscillation analysis, the parameters are free in the fit. 
+There are additional shape parameters, to account for differences in the energy dependence of 2p2h interactions. At one extreme the shape is entirely consistent with the Nieves model, and at the other it is consistent with the Martini model. There are 4 of these parameters in total: $\nu/\bar{\nu}$ and high/low $E_{\nu}$. However, studies showed these could not be constrained using near detector data alone, so are fixed in near detector only fits. For the joint near and far detector fits in the oscillation analysis, the parameters are free in the fit. 
 
 Three normalisations are also applied, one for $\nu$ events, one for $\bar{\nu}$, and one for $^{12}C \rightarrow ^{16}O$ scaling. The latter is applied to events on $^{16}O$ multiplicatively with the other normalisations.
 
@@ -681,11 +681,11 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \hline
 \textbf{2p2h Norm $\bar{\nu}$} & 2p2h, $\bar{\nu}$ & 1.0 & 1.0 & Flat & Norm.\\
 \hline
-\textbf{2p2h Norm C to O} & 2p2h on O & 1.0 & 0.2 & Gaus & Norm.\\
+\textbf{2p2h Norm $^{12}C$ to $^{16}O$} & 2p2h on $^{16}O$ & 1.0 & 0.2 & Gaus & Norm.\\
 \hline
-\textbf{2p2h Shape C} & 2p2h on C & 1.0 & 3.0 & Gaus & Shape\\
+\textbf{2p2h Shape $^{12}C$} & 2p2h on $^{12}C$ & 1.0 & 3.0 & Gaus & Shape\\
 \hline
-\textbf{2p2h Shape O} & 2p2h on O & 1.0 & 3.0 & Gaus & Shape\\
+\textbf{2p2h Shape $^{16}O$} & 2p2h on$^{16}O$ & 1.0 & 3.0 & Gaus & Shape\\
 \hline
 \textbf{2p2h E dep low E $\nu$} & - & - & - & - & -\\
 \hline
@@ -711,13 +711,13 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \hline
 \textbf{$Q^2$ 7} & CCQE; $Q^{2}<1.0$ GeV$^{2}$ & 1.0 & 0.40 & Gaus & Norm.\\
 \hline
-\textbf{$E_{b} \nu C$} & CCQE on C; $E_{\nu} < 4$ GeV; $\nu$ & 27 (25) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \nu C$} & CCQE on $^{12}C$; $E_{\nu} < 4$ GeV; $\nu$ & 27 (25) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
-\textbf{$E_{b} \bar{\nu} C$} & CCQE on C; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 25 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \bar{\nu} C$} & CCQE on $^{12}C$; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 25 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
-\textbf{$E_{b} \nu O$} & CCQE on O; $E_{\nu} < 4$ GeV; $\nu$ & 31 (27) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \nu O$} & CCQE on $^{16}O$; $E_{\nu} < 4$ GeV; $\nu$ & 31 (27) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
-\textbf{$E_{b} \bar{\nu} O$} & CCQE on O; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 27 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \bar{\nu} O$} & CCQE on $^{16}O$; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 27 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
 \textbf{$M^{RES}_{A}$} & CC Res, NC $\pi^{0}$, NC $\pi^{\pm}$ & 1.07 (0.95) GeV & 0.15 GeV & Gaus & Shape\\
 \hline
@@ -747,9 +747,9 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \hline
 \textbf{CC DIS, multi-$\pi$ norm $\bar{\nu}$} & CC DIS, CC multi-$\pi$, $\bar{\nu}$ & 1.0 & 0.065 & Gaus & Norm.\\
 \hline
-\textbf{CC coh C} & CC Coherent on C & 1.0 & 0.3 & Gaus & Norm.\\
+\textbf{CC coh$^{12}C$} & CC Coherent on $^{12}C$ & 1.0 & 0.3 & Gaus & Norm.\\
 \hline
-\textbf{CC coh O} & CC Coherent on O & 1.0 & 0.3 &  Gaus & Norm.\\
+\textbf{CC coh $^{16}O$} & CC Coherent on $^{16}O$& 1.0 & 0.3 &  Gaus & Norm.\\
 \hline
 \textbf{NC coh} & NC Coherent & 1.0 & 0.3 & Gaus & Norm.\\
 \hline
@@ -839,22 +839,22 @@ To validate the implementation of this new type of parameter, Asimov fits (where
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuAsmv}
-  \caption{$E_{b}\nu C$.}
+  \caption{$E_{b}\nu C$}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarAsmv}
-  \caption{$E_{b}\bar{\nu}C$.}
+  \caption{$E_{b}\bar{\nu}C$}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuAsmv}
-  \caption{$E_{b}\nu O$.}
+  \caption{$E_{b}\nu O$}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarAsmv}
-  \caption{$E_{b}\bar{\nu}O$.}
+  \caption{$E_{b}\bar{\nu}O$}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from an Asimov fit.}
 \label{fig:Ebasimov}
@@ -867,22 +867,22 @@ However, for fits to data the posteriors contain many discontinuities as shown i
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuData}
-  \caption{$E_{b}\nu C$.}
+  \caption{$E_{b}\nu C$}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarData}
-  \caption{$E_{b}\bar{\nu}C$.}
+  \caption{$E_{b}\bar{\nu}C$}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuData}
-  \caption{$E_{b}\nu O$.}
+  \caption{$E_{b}\nu O$}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarData}
-  \caption{$E_{b}\bar{\nu}O$.}
+  \caption{$E_{b}\bar{\nu}O$}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from a data fit.}
 \label{fig:Ebdata}
@@ -895,22 +895,22 @@ To show this is what causes the discontinuities, a fluctuated version of the nom
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuFluc}
-  \caption{$E_{b}\nu C$.}
+  \caption{$E_{b}\nu C$}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarFluc}
-  \caption{$E_{b}\bar{\nu}C$.}
+  \caption{$E_{b}\bar{\nu}C$}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuFluc}
-  \caption{$E_{b}\nu O$.}
+  \caption{$E_{b}\nu O$}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarFluc}
-  \caption{$E_{b}\bar{\nu}O$.}
+  \caption{$E_{b}\bar{\nu}O$}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from fit to fluctuated Asimov data.}
 \label{fig:Ebdata}
@@ -1182,98 +1182,98 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_0}
-  \caption{ND FHC $\nu_{\mu}$.}
+  \caption{ND FHC $\nu_{\mu}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_1}
-  \caption{ND FHC $\nu_e$.}
+  \caption{ND FHC $\nu_e$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_2}
-  \caption{ND FHC $\bar{\nu_{\mu}}$.}
+  \caption{ND FHC $\bar{\nu_{\mu}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_3}
-  \caption{ND FHC $\bar{\nu_{e}}$.}
+  \caption{ND FHC $\bar{\nu_{e}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_4}
-  \caption{ND RHC $\bar{\nu_{\mu}}$.}
+  \caption{ND RHC $\bar{\nu_{\mu}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_5}
-  \caption{ND RHC $\bar{\nu_{e}}$.}
+  \caption{ND RHC $\bar{\nu_{e}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_6}
-  \caption{ND RHC $\nu_{\mu}$.}
+  \caption{ND RHC $\nu_{\mu}$}
   \label{fig:}
 \end{subfigure}
 \vspace{15mm}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_7}
-  \caption{ND RHC $\nu_e$.}
+  \caption{ND RHC $\nu_e$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_8}
-  \caption{SK FHC $\nu_{\mu}$.}
+  \caption{SK FHC $\nu_{\mu}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_9}
-  \caption{SK FHC $\nu_e$.}
+  \caption{SK FHC $\nu_e$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_10}
-  \caption{SK FHC $\bar{\nu_{\mu}}$.}
+  \caption{SK FHC $\bar{\nu_{\mu}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_11}
-  \caption{SK FHC $\bar{\nu_{e}}$.}
+  \caption{SK FHC $\bar{\nu_{e}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_12}
-  \caption{SK RHC $\bar{\nu_{\mu}}$.}
+  \caption{SK RHC $\bar{\nu_{\mu}}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_13}
-  \caption{SK RHC $\bar{\nu_e}$.}
+  \caption{SK RHC $\bar{\nu_e}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_14}
-  \caption{SK RHC $\nu_{\mu}$.}
+  \caption{SK RHC $\nu_{\mu}$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_15}
-  \caption{SK RHC $\nu_e$.}
+  \caption{SK RHC $\nu_e$}
   \label{fig:}
 \end{subfigure}
 \caption{Flux parameters for fake data fits using different detector binnings.}
@@ -1291,7 +1291,7 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
 \begin{subfigure}{0.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinxsec_1}
-  \caption{CC0$\pi$.}
+  \caption{CC0$\pi$}
   \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
@@ -1309,7 +1309,7 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
 \begin{subfigure}{0.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinxsec_4}
-  \caption{$\pi$ FSI and EB.}
+  \caption{$\pi$ FSI and $E_b$}
   \label{fig:}
 \end{subfigure}
 \caption{Interaction parameters for fake data fits using different detector binnings.}
@@ -1424,7 +1424,6 @@ A number of corrections and reweightings are applied to the MC prediction to acc
 \begin{center}
 \begin{table}
 \center
-\large
 \begin{tabular}{ c||c|c}
 \hline
 \hline
@@ -1443,7 +1442,7 @@ A number of corrections and reweightings are applied to the MC prediction to acc
 
 \end{itemize}
 
-All of these one-time corrections (apart from the Coulomb shifts and $E_{b}$ parameters), along with the systematics that vary in the fit, are applied as multiplicative weights on an event-by-event basis.
+All of these one-time corrections (apart from the Coulomb shifts and $E_{b}$ parameters), along with the systematics that vary in the fit, are applied to the raw MC as multiplicative weights on an event-by-event basis. This produces the nominal MC prediction which is ultimately fitted to the data.
 
 \section{Data}\label{sec:data}
 
@@ -1452,6 +1451,7 @@ T2K has been taking data in distinct run periods since 2010, in both FHC and RHC
 MC is produced for each run period individually, so that run-by-run effects such as the beam and detector configurations, and tunings to in-situ beam measurements, can be accounted for.
 
 Table \ref{tab:pot} shows the amount of MC POT produced in each run, along with the amount of data taken with good data quality flag (defined as POT collected with all sub-detectors of ND280, and the data acquisition system online). Over runs 2-9, the overall efficiency of good data taking was $\sim69\%$.
+
 \begin{center}
 \begin{table}
 \center
@@ -1477,11 +1477,16 @@ Table \ref{tab:pot} shows the amount of MC POT produced in each run, along with 
 7 & RHC & 24.3782 & 332.995 \\
 \hline
 8a & FHC & 41.5013 & 361.098 \\
-8w & RHC & 15.8053 & 254.225 \\
+8w & FHC & 15.8053 & 254.225 \\
 \hline
 9 & RHC & 20.5391 & 245.61 \\
+\hline \hline
+Total & FHC  & 115.3131 & 1933.894 \\ 
+& RHC & 83.3569 & 1146.694 \\
+& FHC+RHC  & 198.6700  & 3080.588 \\
 \hline
 \hline
+
 \end{tabular}
 \caption{Collected and generated POT for the run periods used in this analysis.}
 \label{tab:pot}

@@ -9,7 +9,7 @@ The data, unweighted MC, and nominal MC event rates for each sample are shown in
 \begin{center}
 \begin{table}[h]
 \center
-\begin{tabular}{c||c|c|c|c}
+\begin{tabular}{l||c|c|c|c}
 \hline \hline
 \textbf{Sample} & \textbf{Raw MC} & \textbf{Nominal MC} & \textbf{Data} & \textbf{Data/MC} \\
 \hline
@@ -76,7 +76,7 @@ The 2D nominal MC distributions are shown in Figure \ref{fig:2dnom}. The uniform
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/NomMC_MC_FGD2_numuCC_other}
-  \caption{FGD2 $\nu_{\mu}$ Other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
   \label{fig:2d_FGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -207,7 +207,7 @@ The FHC $\nu$ and RHC $\bar{\nu}$ CC 0$\pi$ samples are dominated by the target 
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/FGD2_numuCC_other_p}
-  \caption{FGD2 $\nu_{\mu}$ Other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
   \label{fig:pstack_FGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -336,7 +336,7 @@ The CC 0$\pi$ and CC Other samples again show oscillatory behaviour in the ratio
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/FGD2_numuCC_other_t}
-  \caption{FGD2 $\nu_{\mu}$ Other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
   \label{fig:tstack_FGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -549,7 +549,7 @@ One varied interaction parameter for each sample is shown in Figure \ref{fig:sig
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.85\linewidth]{figs/sig/FGD2_numuCC_other_CC_DIS_MultPi_Norm_Nu_+1sig.pdf}
-  \caption{FGD2 $\nu_{\mu}$ Other: DIS/mult $\pi$ Norm. $\nu$ += $1\sigma$}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other: DIS/mult $\pi$ Norm. $\nu$ += $1\sigma$}
   \label{fig:sigvar_FGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -851,7 +851,7 @@ The ratio of the prior predictive $p_{\mu}$-cos$\theta_{\mu}$ distributions to d
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_numuCC_other.pdf}
-  \caption{FGD2 $\nu_{\mu}$ Other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
   \label{fig:priorpred_FGD2_numuCC_other}
 \end{subfigure}
 \centering
@@ -1127,245 +1127,399 @@ The $Q^2$ normalisations, DIS and mult-$\pi$, and $\pi$ FSI parameters all have 
 
 \section{Posterior Predictions}\label{sec:respostpred}
 
-Posterior predictions are produced using the method described in Section \ref{sec:postpred}. The ratios to data for each sample are shown in Figure \ref{fig:postpreds}. There is clearly improvement compared to prior predictions in Figure \ref{fig:priorpreds}, with the ratio being much closer to 1.0 consistently for all samples. This is confirmed by the reduction in -2LLH for the posterior prediction compared to for the prior prediction, shown in Table \ref{}. The uncertainties on the event rate for all samples is also reduced significantly. The fractional errors in Table \ref{} show the overall ND280 event rate uncertainty has been reduced from X$\%$ to Y$\%$ by the fit.
+Posterior predictions are produced using the method described in Section \ref{sec:postpred}. The ratios to data for each sample are shown in Figure \ref{fig:postpreds}. The postfit model does not perfectly describe the data, with all samples showing substantial discrepancies. However, there is significant improvement compared to prior predictions in Figure \ref{fig:priorpreds}. Particularly in areas of high $Q^2$, at low $p_{\mu}$ and high cos$\theta_{\mu}$, the prediction is closer to data. This is confirmed by the reduction in -2LLH for the posterior prediction compared to for the prior prediction, shown in Table \ref{tab:predrates}. The uncertainties on the event rate for all samples is also reduced significantly. The fractional errors in Table \ref{tab:prederr} show the overall ND280 event rate uncertainty has been reduced from X$\%$ to Y$\%$ by the fit.
 
-\red{update these plots}
 \begin{figure}
 \centering
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_numuCC_0pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_numuCC_0pi.pdf}
   \caption{FGD1 FHC $\nu_{\mu}$ 0$\pi$}
-  \label{fig:priorpred_FGD1_numuCC_0pi}
+  \label{fig:postpred_FGD1_numuCC_0pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_numuCC_1pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_numuCC_1pi.pdf}
   \caption{FGD1 FHC $\nu_{\mu}$ 1$\pi$}
-  \label{fig:priorpred_FGD1_numuCC_1pi}
+  \label{fig:postpred_FGD1_numuCC_1pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_numuCC_other.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_numuCC_other.pdf}
   \caption{FGD1 FHC $\nu_{\mu}$ Other}
-  \label{fig:priorpred_FGD1_numuCC_other}
+  \label{fig:postpred_FGD1_numuCC_other}
 \end{subfigure}
 \centering
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_numuCC_0pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_numuCC_0pi.pdf}
   \caption{FGD2 FHC $\nu_{\mu}$ 0$\pi$}
-  \label{fig:priorpred_FGD2_numuCC_0pi}
+  \label{fig:postpred_FGD2_numuCC_0pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_numuCC_1pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_numuCC_1pi.pdf}
   \caption{FGD2 FHC $\nu_{\mu}$ 1$\pi$}
-  \label{fig:priorpred_FGD2_numuCC_1pi}
+  \label{fig:postpred_FGD2_numuCC_1pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_numuCC_other.pdf}
-  \caption{FGD2 $\nu_{\mu}$ Other}
-  \label{fig:priorpred_FGD2_numuCC_other}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_numuCC_other.pdf}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
+  \label{fig:postpred_FGD2_numuCC_other}
 \end{subfigure}
 \centering
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_anti-numuCC_0pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_anti-numuCC_0pi.pdf}
   \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
-  \label{fig:priorpred_FGD1_anti-numuCC_0pi}
+  \label{fig:postpred_FGD1_anti-numuCC_0pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_anti-numuCC_1pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_anti-numuCC_1pi.pdf}
   \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
-  \label{fig:priorpred_FGD1_anti-numuCC_1pi}
+  \label{fig:postpred_FGD1_anti-numuCC_1pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_anti-numuCC_other.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_anti-numuCC_other.pdf}
   \caption{FGD1 RHC $\bar{\nu_{\mu}}$ Other}
-  \label{fig:priorpred_FGD1_anti-numuCC_other}
+  \label{fig:postpred_FGD1_anti-numuCC_other}
 \end{subfigure}
 \centering
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_anti-numuCC_0pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_anti-numuCC_0pi.pdf}
   \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
-  \label{fig:priorpred_FGD2_anti-numuCC_0pi}
+  \label{fig:postpred_FGD2_anti-numuCC_0pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_anti-numuCC_1pi.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_anti-numuCC_1pi.pdf}
   \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
-  \label{fig:priorpred_FGD2_anti-numuCC_1pi}
+  \label{fig:postpred_FGD2_anti-numuCC_1pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_anti-numuCC_other.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_anti-numuCC_other.pdf}
   \caption{FGD2 RHC $\bar{\nu_{\mu}}$ Other}
-  \label{fig:priorpred_FGD2_anti-numuCC_other}
+  \label{fig:postpred_FGD2_anti-numuCC_other}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode.pdf}
   \caption{FGD1 RHC $\nu_{\mu}$ 0$\pi$}
-  \label{fig:priorpred_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
+  \label{fig:postpred_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode.pdf}
   \caption{FGD1 RHC $\nu_{\mu}$ 1$\pi$}
-  \label{fig:priorpred_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
+  \label{fig:postpred_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode.pdf}
   \caption{FGD1 RHC $\nu_{\mu}$ Other}
-  \label{fig:priorpred_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
+  \label{fig:postpred_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode.pdf}
   \caption{FGD2 RHC $\nu_{\mu}$ 0$\pi$}
-  \label{fig:priorpred_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
+  \label{fig:postpred_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode.pdf}
   \caption{FGD2 RHC $\nu_{\mu}$ 1$\pi$}
-  \label{fig:priorpred_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
+  \label{fig:postpred_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
   \centering
-  \includegraphics[width=0.85\linewidth]{figs/priorpred_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode.pdf}
+  \includegraphics[width=0.85\linewidth]{figs/postpred_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode.pdf}
   \caption{FGD2 RHC $\nu_{\mu}$ Other}
-  \label{fig:priorpred_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
+  \label{fig:postpred_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
 \end{subfigure}
-\caption{}
+\caption{Ratio to data of the posterior predictive distributions for each sample, from the fit to data.}
 \label{fig:postpreds}
 \end{figure}
 
-%update 2d ratios to data better than prior predictions
-%data, prior pred mc, post pred mc rates with errors and LLH
 \begin{center}
 \begin{table}[h]
 \center
-\begin{tabular}{c||c c|c c}
+\begin{tabular}{S||
+                r
+                c
+                r
+                r
+                c
+                r
+                |r
+                r}
 \hline \hline
-\textbf{Sample} & \multicolumn{2}{c|}{\textbf{Event Rates}} & \multicolumn{2}{c}{\textbf{-2LLH}}\\
-& \multicolumn{1}{c}{\textbf{Posterior}} & \multicolumn{1}{c|}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}} & \multicolumn{1}{c}{\textbf{Prior}}\\
+\multicolumn{1}{c||}{\textbf{Sample}} & \multicolumn{6}{c|}{\textbf{Event Rates}} & \multicolumn{2}{c}{\textbf{-2LLH}}\\
+& \multicolumn{3}{c}{\textbf{Prior}} & \multicolumn{3}{c|}{\textbf{Posterior}} & \multicolumn{1}{c}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}}\\
 \hline
 \hline
-\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 & 33443 & 1.20 \\ 
-\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 & 7713 & 0.92 \\ 
-\textbf{FGD1 FHC $\nu$ CC Other} & 99730 & 7031.47 & 8026 & 1.14 \\ \hline
-\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 & 33156 & 1.20 \\
-\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 & 6281 & 0.93\\
-\textbf{FGD2 FHC $\nu$ CC Other} & 94164 & 6454.68 & 7700 & 1.19 \\ \hline
-\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 6980.48 & 8388 & 1.20\\
-\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 & 698 & 1.04\\
-\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 & 1472 & 1.20\\ \hline
-\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 112390 & 6771.47 & 8334 & 1.23\\
-\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 8533 & 603.301 & 650 & 1.08\\
-\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 15616 & 1135.13 & 1335 & 1.18\\ \hline
-\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 41789 & 2916.3 & 3594 & 1.23\\
-\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 14304 & 1115.99 & 1111 & 1.00\\
-\textbf{FGD1 RHC $\nu$ CC Other} & 12733 & 1031.87 & 1344 & 1.30\\ \hline
-\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 41554 & 2901.65 & 3433 & 1.18\\
-\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 11472 & 898.111 & 926 & 1.03\\ 
-\textbf{FGD2 RHC $\nu$ CC Other} & 11954 & 962.735 & 1245 & 1.29\\ \hline
-\textbf{Total} & 1882090 & 111293 & 128849 & 1.16\\ \hline\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 29961.0 & $\pm$ & 2059.8 & 33386.1 & $\pm$ & 165.2 & 1703.82 & 877.54\\ 
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 7676.9 & $\pm$ & 308.9 & 7958.4& $\pm$ &65.6 & 418.60 & 293.27\\
+\textbf{FGD1 FHC $\nu$ CC Other} & 7121.5& $\pm$ &701.0 & 7297.8& $\pm$ &72.2 & 540.27 & 430.66\\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 29730.7& $\pm$ &1936.3 & 33151.2& $\pm$ &163.3 & 1802.69 & 868.27\\
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 6258.1& $\pm$ &229.0 & 6435.6& $\pm$ &57.1 & 398.48 & 316.08\\
+\textbf{FGD2 FHC $\nu$ CC Other} & 6695.8& $\pm$ &668.0 & 7285.4& $\pm$ &65.8 & 568.22 & 404.33\\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 7789.5& $\pm$ &457.3 & 8411.9& $\pm$ &67.9 & 560.14 & 380.80\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 657.9& $\pm$ &45.5 & 679.0& $\pm$ &12.8 & 58.39 & 58.83\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 1291.2& $\pm$ &123.6 & 1464.1& $\pm$ &23.4 & 129.85 & 93.71\\ \hline
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 7606.2& $\pm$ &452.6 & 8173.3& $\pm$ &66.5 & 584.64 & 380.86\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 606.9& $\pm$ &43.5 & 635.4& $\pm$ &10.9 & 51.55 & 55.22\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 1209.5& $\pm$ &96.1 & 1375.5& $\pm$ &19.5 & 128.81 & 120.57\\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 3152.4& $\pm$ &223.9 & 3564.9& $\pm$ &38.2 & 231.94 & 137.31\\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 1079.7& $\pm$ &55.8 & 1154.9& $\pm$ &14.3 & 58.87 & 61.03\\
+\textbf{FGD1 RHC $\nu$ CC Other} & 1091.9& $\pm$ &128.1 & 1281.0& $\pm$ &28.0 & 114.21 & 61.67\\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 3157.4& $\pm$ &184.1 & 3525.0& $\pm$ &36.9 & 173.25 & 136.68\\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 903.2& $\pm$ &40.8 & 921.8& $\pm$ &11.0 & 54.03 & 56.06\\
+\textbf{FGD2 RHC $\nu$ CC Other} &   1031.5& $\pm$ &109.8 & 1188.2& $\pm$ &15.7 & 93.41 & 54.26\\ \hline
+\textbf{Total} & 109664.1& $\pm$ &1243.2 & 128517.5& $\pm$ &377.1 & 7671.17 & 4787.17 \\ \hline\hline
 \end{tabular}
 \caption{Prior and posterior predictive event rates and log-likelihood to data.}
-\label{tab:prederror}
-\end{table}
-\end{center}
-%frac error table
-
-\begin{center}
-\begin{table}[h]
-\center
-\begin{tabular}{c||c c}
-\hline \hline
-\textbf{Sample} & \multicolumn{2}{c}{$\delta N/N$}\\
-& \multicolumn{1}{c}{\textbf{Posterior}} & \multicolumn{1}{c}{\textbf{Prior}} \\
-\hline\hline
-\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 \\ 
-\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 \\ 
-\textbf{FGD1 FHC $\nu$ CC Other} & 99730 & 7031.47 \\ \hline
-\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 \\
-\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 \\
-\textbf{FGD2 FHC $\nu$ CC Other} & 94164 & 6454.68 \\ \hline
-\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 6980.48 \\
-\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 \\
-\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 \\ \hline
-\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 112390 & 6771.47 \\
-\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 8533 & 603.301 \\
-\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 15616 & 1135.13 \\ \hline
-\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 41789 & 2916.3 \\
-\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 14304 & 1115.99 \\
-\textbf{FGD1 RHC $\nu$ CC Other} & 12733 & 1031.87 \\ \hline
-\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 41554 & 2901.65 \\
-\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 11472 & 898.111\\ 
-\textbf{FGD2 RHC $\nu$ CC Other} & 11954 & 962.735 \\ \hline
-\textbf{Total} & 1882090 & 111293 \\ \hline\hline
-\end{tabular}
-\caption{Fractional uncertainties on the prior and posterior predictive event rates.}
 \label{tab:predrates}
 \end{table}
 \end{center}
 
-Posterior predictive p-values were calculated using the methods described in Section \ref{sec:pval}. Discouragingly, the total p-value is 0.00 for both methods, as shown in Figure \ref{}. The individual p-values for each sample are $<5\%$ for the majority of samples, as shown in Table \ref{}.. All but one CC 0$\pi$ samples have a p-value $<5\%$, and for RHC $\bar{\nu}$ the p-values$=0.0\%$. The FGD2 RHC $\nu$ is the only CC 0$\pi$ with a `good' p-value. The CC $1\pi$ samples are generally higher, but are $<5\%$ for FGD2 FHC $\nu$, and both RHC $\nu$ samples. For CC Other, only the FGD1 RHC $\bar{\nu}$ and RHC $\nu$ samples have p-values $>0.05\%$. The p-values are not consistent across FGD1 and 2, suggesting differences in how well the two modelled.
+\begin{center}
+\begin{table}[h]
+\center
+\begin{tabular}{l||c c}
+\hline \hline
+\textbf{Sample} & \multicolumn{2}{c}{$\delta N/N$}\\
+& \multicolumn{1}{c}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}} \\
+\hline\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 0.069 & 0.005\\
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 0.040 & 0.008\\ 
+\textbf{FGD1 FHC $\nu$ CC Other} & 0.098 & 0.010\\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 0.065 & 0.005\\
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 0.037 & 0.009\\
+\textbf{FGD2 FHC $\nu$ CC Other} & 0.100 & 0.009\\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 0.059 & 0.008\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 0.069 & 0.019\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 0.096 & 0.016\\ \hline
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 0.060 & 0.008\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 0.072 & 0.017\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 0.079 & 0.014\\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 0.071 & 0.010\\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 0.052 & 0.012\\
+\textbf{FGD1 RHC $\nu$ CC Other} & 0.117 & 0.022\\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 0.058 & 0.010\\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 0.045 & 0.012\\ 
+\textbf{FGD2 RHC $\nu$ CC Other} & 0.106 & 0.013\\ \hline
+\textbf{Total} & 0.011 & 0.003\\ \hline\hline
+\end{tabular}
+\caption{Fractional uncertainties on the prior and posterior predictive event rates.}
+\label{tab:prederr}
+\end{table}
+\end{center}
 
-As a low p-value for a single sample can drive the total p-value to be, given the results in Table \ref{} it is not surprising that the overall p-values are low.
-%pvalue fig
+\subsection{Posterior Predictive p-values}
+
+Posterior predictive p-values were calculated using the methods described in Section \ref{sec:pval}. Discouragingly, the total p-value is 0.00 for both methods, as shown in Figure \ref{fig:pval}. The individual p-values for each sample are $<5\%$ for the majority of samples, as shown in Table \ref{tab:pval}. All but one CC 0$\pi$ samples have a p-value $<5\%$, and for RHC $\bar{\nu}$ the p-values$=0.0\%$. The FGD2 RHC $\nu$ is the only CC 0$\pi$ with a `good' p-value. The CC $1\pi$ samples are generally higher, but are $<5\%$ for FGD2 FHC $\nu$, and both RHC $\nu$ samples. For CC Other, only the FGD1 RHC $\bar{\nu}$ and RHC $\nu$ samples have p-values $>0.05\%$. The p-values are not consistent across FGD1 and 2, suggesting differences in how well the two modelled.
+
+The two methods of calculating the p-value are consistent. Although they are not identical for all samples, they follow the same trends and within $3\%$ of each other for every sample. This suggests the 2000 draws are describe the posterior distribution sufficiently.
+
+\begin{figure}
+\centering
+\includegraphics*[width=0.9\textwidth,clip]{figs/pval_}
+\caption{Posterior predictive p-values from the data fit.}\label{fig:pval}
+\end{figure}
+
+As the total p-values are constructed from the sum of all the sample likelihoods, a high likelihood for one sample can dominate the overall p-value. A low p-value for a single sample can therefore drive the total p-value to be 0.0$\%$. The total p-value should therefore not be interpreted as an average across all samples, and so the final value of 0.0$\%$ does not mean that the model is entirely unsuitable to fit to all the data, just that there is at least one region of kinematic phase space which is not well described by the posterior.
 
 \begin{center}
 \begin{table}[h]
 \center
-\begin{tabular}{c||c c}
+\begin{tabular}{l||c c}
 \hline \hline
 \textbf{Sample} & \multicolumn{2}{c}{\textbf{p-value}} \\
-& \multicolumn{1}{c}{\textbf{FGD1}} & \multicolumn{1}{c}{\textbf{FGD2}} \\
+& \multicolumn{1}{c}{\textbf{Fluctuation}} & \multicolumn{1}{c}{\textbf{Fluctuation}} \\
+& \multicolumn{1}{c}{\textbf{of Draw}} & \multicolumn{1}{c}{\textbf{of Prediction}} \\
 \hline\hline
-\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 \\ 
-\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 \\ 
-\textbf{FGD1 FHC $\nu$ CC Other} & 99730 & 7031.47 \\ \hline
-\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 \\ 
-\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 127176 & 8358.97 \\ 
-\textbf{FGD2 FHC $\nu$ CC Other} & 99730 & 7031.47 \\ \hline
-\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 \\
-\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 \\
-\textbf{FGD1 RHC $\nu$ CC Other} & 94164 & 6454.68 \\ \hline
-\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 521757 & 27556.2 \\
-\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 103305 & 6723.98 \\
-\textbf{FGD2 RHC $\nu$ CC Other} & 94164 & 6454.68 \\ \hline
-\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 115456\\
-\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 \\
-\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 \\
-\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 115456 & 115456\\
-\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 9272 & 668.897 \\
-\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 16790 & 1230.34 \\ \hline
-\textbf{Total} & & \\ \hline\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 0.020 & 0.029\\ 
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 0.117 & 0.110\\
+\textbf{FGD1 FHC $\nu$ CC Other} & 0.000 & 0.000\\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 0.038 & 0.037\\ 
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 0.036 & 0.036\\ 
+\textbf{FGD2 FHC $\nu$ CC Other} & 0.002 & 0.001\\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 0.001 & 0.000\\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 0.074 & 0.059\\
+\textbf{FGD1 RHC $\nu$ CC Other} & 0.088 & 0.074\\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 0.000 & 0.001\\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 0.152 & 0.109\\
+\textbf{FGD2 RHC $\nu$ CC Other} & 0.001 & 0.001\\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 0.051 & 0.036\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 0.008 & 0.006\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 0.130 & 0.137\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 0.064 & 0.051\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 0.031 & 0.009\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 0.349 & 0.308\\ \hline
+\textbf{Total} & 0.000 & 0.000 \\ \hline\hline
 \end{tabular}
 \caption{Posterior predictive p-values for each sample.}
-\label{tab:prederror}
+\label{tab:pval}
 \end{table}
 \end{center}
 
-To investigate the cause of thelow p-values, the LLH contribution from each bin is shown in Figure \ref{}, for each sample. As would be expected there are more regions with higher contribution in the samples with low p-values. For example there are X regions in sample Y, which are not present in sample Z. 
-%try say cause
+To investigate the cause of the low p-values, the LLH contribution from each bin were inspected for each sample, as shown in Figure \ref{fig:llhconts}. As would be expected there are more regions with higher contribution in the samples with low p-values. For example, comparing the FGD1 and FGD2 RHC $\bar{\nu}$ samples, there are clearly larger contributions from several bins in FGD2, which has a significantly lower p-value, which don't appear for FGD1. However, it is difficult to identify any definitive trends which could explain all the low goodness-of-fits. Comparing the CC 0$\pi$ samples, the low p-value FHC $\nu$ and RHC $\bar{\nu}$ all have sporadic high contributing bins, but these aren't dissimilar from what is seen for FGD1 RHC $\nu$ which has a larger p-value. The FGD2 RHC $\nu$ sample does have a much smaller and more uniform distribution of log-likelihood contribution though, in line with it's higher p-value. For CC $1\pi$, the distributions for the low p-value RHC $\nu$ samples both have large contributions from individual bins, but in different regions of $p_{\mu}$-cos$\theta_{\mu}$ space. The FHC $\nu$ and RHC $\bar{\nu}$ are more uniform, but there is a large contribution from one bin in the peak for FGD1 FHC $\nu$ despite the high p-value.
 
-%LLH dists
+Overall the high log-likelihoods aren't coming from a consistent region in $p_{\mu}$-cos$\theta_{\mu}$, so the low p-values are not just being driven by a single set of kinematics being badly modelled or reconstructed. 
 
-As discussed in Section \ref{sec:postpred}, there is no definitive gauge for what does or does not constitute an acceptable value for the goodness of fit. As the frequentist p-value calculated in the BANFF framework was significantly higher, indicating good compatibility of the model to fit the data, the overall goodness-of-fit was deemed acceptable for this analysis.
+\begin{figure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_numuCC_0pi.pdf}
+  \caption{FGD1 FHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:llhcont_FGD1_numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_numuCC_1pi.pdf}
+  \caption{FGD1 FHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:llhcont_FGD1_numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_numuCC_other.pdf}
+  \caption{FGD1 FHC $\nu_{\mu}$ Other}
+  \label{fig:llhcont_FGD1_numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_numuCC_0pi.pdf}
+  \caption{FGD2 FHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:llhcont_FGD2_numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_numuCC_1pi.pdf}
+  \caption{FGD2 FHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:llhcont_FGD2_numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_numuCC_other.pdf}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
+  \label{fig:llhcont_FGD2_numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_anti-numuCC_0pi.pdf}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
+  \label{fig:llhcont_FGD1_anti-numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_anti-numuCC_1pi.pdf}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
+  \label{fig:llhcont_FGD1_anti-numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_anti-numuCC_other.pdf}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ Other}
+  \label{fig:llhcont_FGD1_anti-numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_anti-numuCC_0pi.pdf}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
+  \label{fig:llhcont_FGD2_anti-numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_anti-numuCC_1pi.pdf}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
+  \label{fig:llhcont_FGD2_anti-numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_anti-numuCC_other.pdf}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ Other}
+  \label{fig:llhcont_FGD2_anti-numuCC_other}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode.pdf}
+  \caption{FGD1 RHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:llhcont_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode.pdf}
+  \caption{FGD1 RHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:llhcont_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode.pdf}
+  \caption{FGD1 RHC $\nu_{\mu}$ Other}
+  \label{fig:llhcont_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode.pdf}
+  \caption{FGD2 RHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:llhcont_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode.pdf}
+  \caption{FGD2 RHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:llhcont_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.85\linewidth]{figs/llhcont_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode.pdf}
+  \caption{FGD2 RHC $\nu_{\mu}$ Other}
+  \label{fig:llhcont_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
+\end{subfigure}
+\caption{Contributions to the sample log-likelihood from each fit bin.}
+\label{fig:llhconts}
+\end{figure}
 
-%SK PP need files and script,
-% say what are
-%osc params
+As discussed in Section \ref{sec:postpred}, there is no definitive gauge for what does or does not constitute an acceptable value for the goodness of fit. As the frequentist p-value calculated in the BANFF framework was significantly higher\cite{}, indicating good compatibility of the model to fit the data, the overall goodness-of-fit was deemed acceptable for this analysis.
+
+\subsection{Propagating to SK}
+
+To see the effect of the near detector fit on the full oscillation analysis, posterior predictive event rates at SK were produced. The same process is used as for the near detector posterior distributions, using 2000 draws from the near detector Markov Chain, but reweighting the nominal MC for SK rather than ND280. Only the 50 SK flux parameters, and interaction parameters which apply to SK events (not parameters for $^{12}C$ or ND280 only) are propagated. Nominal values for the SK detector uncertainties, described in \cite{}, and the oscillation parameters in Table \ref{tab:oscpar}, are used to produce these predictions.
+
+\begin{center}
+\begin{table}[h]
+\center
+\begin{tabular}{c||c}
+\hline \hline
+\textbf{Parameter} & \textbf{Value} \\
+\hline\hline
+sin$^2 \theta_{12}$ & 0.307 \\ 
+sin$^2 \theta_{23}$ & 0.528 \\
+sin$^2 \theta_{13}$ & 0.0218 \\
+$\Delta m^2_{12}$ & 7.53x$10^{-5}$ eV$^2$\\ 
+$\Delta m^2_{23}$ & 2.509x$10^{-5}$ eV$^2$ \\ 
+$\delta_{CP}$ & -1.601 \\ 
+\hline \hline
+\end{tabular}
+\caption{Oscillation parameter values used to produce the SK posterior predictions.}
+\label{tab:oscpar}
+\end{table}
+\end{center}
+
+The SK MC used corresponds to the same run periods as for ND280, but for a higher POT as the detector was on line for larger proportion of these runs. The total data POT is 1.966x$10^{21}$ for FHC and 1.635x$10^{21}$ for RHC.
+
 %table of event rates and errors
+%plots
 
 \section{Finer Fit and Detector Binning}\label{sec:newbin}
 %New fit binning distributions
