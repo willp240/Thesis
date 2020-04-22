@@ -40,7 +40,7 @@ void th2ds(std::string file0) {
     hist->GetXaxis()->SetRangeUser(0,5000);
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
-    hist->GetXaxis()->SetTitle("P_{#mu}, MeV");
+    hist->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     hist->Draw("colz");
     c->Print((std::string("th2ds/TH2D_")+name+std::string(".pdf")).c_str());
     std::cout << "got " << name << std::endl;

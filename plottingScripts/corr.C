@@ -20,30 +20,32 @@ void corr(std::string file0) {
   TFile *file_ = TFile::Open(file0.c_str());
  
   c->SetTopMargin(0.07);
-  c->SetBottomMargin(0.11);
+  c->SetBottomMargin(0.13);
   c->SetLeftMargin(0.11);
   c->SetRightMargin(0.14);
   
   TTree *pos = (TTree*)file_->Get("posteriors");
   file_->cd();
 
-  /*  pos->Draw("b_0:b_1>>h0(200,1.05,1.3,200,1.05,1.35)","step>200000");
+  pos->Draw("b_0:b_1>>h0(200,1.05,1.3,200,1.05,1.35)","step>200000");
   TH1D *h0 = (TH1D*)gDirectory->Get("h0");
   h0->Draw("colz");
   h0->GetYaxis()->SetTitle("Beam Pararmeter 1");
-  h0->GetYaxis()->SetTitleOffset(1.0);
+  h0->GetYaxis()->SetTitleOffset(1.05);
   h0->GetXaxis()->SetTitle("Beam Parameter 0");
+  h0->GetXaxis()->SetTitleOffset(1.15);
   h0->GetZaxis()->SetRangeUser(-1,h0->GetMaximum());
   h0->SetTitle("");
   h0->GetXaxis()->SetNoExponent(1);
-  c->Print("corr1.png");*/
+  c->Print("corr1.png");
 
   pos->Draw("xsec_0:xsec_20>>h1(200,0.75,1.05,200,0.94,1.1)","step>200000");
   TH1D *h1 = (TH1D*)gDirectory->Get("h1");
   h1->Draw("colz");
   h1->GetYaxis()->SetTitle("#it{M_{A}^{QE}}");
-  h1->GetYaxis()->SetTitleOffset(1.0);
+  h1->GetYaxis()->SetTitleOffset(1.05);
   h1->GetXaxis()->SetTitle("#it{M_{A}^{RES}}");
+  h1->GetXaxis()->SetTitleOffset(1.15);
   h1->GetZaxis()->SetRangeUser(-1,h1->GetMaximum());
   h1->SetTitle("");
   h1->GetXaxis()->SetNoExponent(1);

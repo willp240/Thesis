@@ -35,7 +35,7 @@ void momres(std::string file0) {
   c1->SetRightMargin(0.18);
   c1->SetLeftMargin(0.16);
   c1->SetBottomMargin(0.15);
-  h2->GetXaxis()->SetTitle("Reconstructed P_{#mu}, MeV");
+  h2->GetXaxis()->SetTitle("Reconstructed p_{#mu} (MeV)");
   h2->GetXaxis()->SetTitleSize(0.04);
   h2->GetYaxis()->SetTitleSize(0.04);
   h2->GetZaxis()->SetTitleSize(0.04);
@@ -46,7 +46,7 @@ void momres(std::string file0) {
   h2->GetYaxis()->SetLabelSize(0.03);
   h2->GetZaxis()->SetTitle("Events");
   h2->SetTitle("");
-  h2->GetYaxis()->SetTitle("True P_{#mu}, MeV");
+  h2->GetYaxis()->SetTitle("True p_{#mu}, (MeV)");
   palette = (TPaletteAxis*) h2->GetListOfFunctions()->FindObject("palette");
   palette->SetX1NDC(0.83);
   palette->SetX2NDC(0.88);
@@ -75,7 +75,7 @@ void momres(std::string file0) {
   c1->SetLeftMargin(0.14);
   c1->SetRightMargin(0.1);
   hmean->GetXaxis()->SetRangeUser(200,1000);
-  hmean->GetXaxis()->SetTitle("True P_{#mu}, MeV");
+  hmean->GetXaxis()->SetTitle("True p_{#mu} (MeV)");
   hmean->GetYaxis()->SetRangeUser(0,160);
   hmean->GetYaxis()->SetTitleOffset(1.1);
   hmean->GetXaxis()->SetTitleOffset(1.2);
