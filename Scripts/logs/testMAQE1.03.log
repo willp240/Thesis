@@ -1,0 +1,2831 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+
+Reading configuration from configs/psychev3.cfg
+- no POT specified, setting to 3.01E20
+- no nubar POT specified, setting to 3.01E20
+- no livetime specified, setting to 1417.4 days (only matters for Super-K atmospheric analyses)
+- found fluxCovMatrix = inputs/flux_covariance_run1-9_v2_banff.root
+- didn't find fluxCovMatrix! Setting default = total_flux_cov
+- found xsecCovMatrix = inputs/xsec_covariance_2019a_2p2h_Q2_OLDMAQE.root
+- didn't find xsecCovMatrix! Setting default = xsec_cov
+- found NDdetCovMatrix = inputs/ND280_RHCMultiPi_DetectorCovariance_MorrisonBinning_28March2019_convertedToMaCh3.root
+- didn't find ndDetCovMatrix! Setting default = nddet_cov
+- didn't find SKdetCovMatrix! Setting default = utils/skdet_total_error_matrix_2015/SKJointErrorMatrix2015_Total_v7_13thMarch2016.root
+- didn't find skDetCovMatrix! Setting default = SKJointError_Erec_Total
+- didn't find oscCovMatrix! Setting default = inputs/oscillation_covariance_6par_nondouble.root
+- didn't find oscCovMatrix! Setting default = osc_cov
+- didn't find STATONLY, setting default 0
+- found DOOSC, setting 0
+- didn't find USESKSYST, setting default 1
+- didn't find CUSTOM_REWEIGHT, setting to false
+---------------------------------
+General settings      
+    Output file:      test.root
+    Seed:             0
+    Debug:            1
+    GPU fit:          0
+    CPU MP fit:       1
+       N cores:       1
+    PlotByMode:       1
+---------------------------------
+MCMC settings         
+    N steps:          0
+    Flux step scale:  0.05
+    Xsec step scale:  0.02
+    ND det step scale:0.04
+    SK det stet scale:1
+    Osc step scale:   0.1
+    Anneal. temp:     -1
+    Random start:     0
+    Process MCMC:     0
+    Posterior start:  0
+    Posterior chain:  EMPTY
+---------------------------------
+T2K run settings      
+    ND runs:          P6_S17 4a
+    SK nu POT:        3.01e+20
+    SK antinu POT:    3.01e+20
+    Livetime:         1417.4
+    Save nominal:     1
+---------------------------------
+Samples settings      
+    ND280:            1
+    FHC nu_mu CC0pi:  1
+    FHC nu_e CC0pi:   1
+    FHC nu_e CC1pi:   1
+    RHC nu_mu CC0pi:  1
+    RHC nu_e CC0pi:   1
+    SK SF->RFG tuning:1
+    SK RPA tuning:    1
+    SK CCCoh tuning:  1
+---------------------------------
+Samples at ND280
+  FGD1 nu CC0pi
+  FGD1 nu CC1pi
+  FGD1 nu CCOth
+  FGD1 anu CC0pi
+  FGD1 anu CC1pi
+  FGD1 anu CCOth
+  FGD1 anu nu CC0pi
+  FGD1 anu nu CC1pi
+  FGD1 anu nu CCOth
+  FGD2 nu CC0pi
+  FGD2 nu CC1pi
+  FGD2 nu CCOth
+  FGD2 anu CC0pi
+  FGD2 anu CC1pi
+  FGD2 anu CCOth
+  FGD2 anu nu CC0pi
+  FGD2 anu nu CC1pi
+  FGD2 anu nu CCOth
+Samples binning ND280
+    Bin anu mom qe:      
+    Bin anu th qe:       
+    Bin anu mom nqe:     
+    Bin anu th nqe:      
+    Bin anu numu p qe:   
+    Bin anu numu th qe:  
+    Bin anu numu p nqe:  
+    Bin anu numu th nqe: 
+Samples binning SK
+    Numu bins Erec:      0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1 1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 1.65 1.7 1.75 1.8 1.85 1.9 1.95 2 2.05 2.1 2.15 2.2 2.25 2.3 2.35 2.4 2.45 2.5 2.55 2.6 2.65 2.7 2.75 2.8 2.85 2.9 2.95 3 3.25 3.5 3.75 4 4.5 5 5.5 6 7 8 9 10 30 
+    Nue binning option:  0
+    Nue bins Erec:       0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1 1.05 1.1 1.15 1.2 1.25 
+---------------------------------
+Input settings    
+    Data file:   
+---------------------------------
+Real data settings    
+    RealDataFitFlag:  0
+---------------------------------
+Fake data settings    
+    FakeDataFitFlag:  1
+    FakeDataFile:     
+---------------------------------
+Asimov settings       
+    AsimovFitFlag:    0
+    NDAsimovFitFlag:  0
+    MakeAsimovOnly:   0
+---------------------------------
+Toy fit settings      
+    Post. pred. file: EMPTY
+    ToyFitFlag:       0
+    Toy file:         
+    N toys:           100
+    Full LLH:         1
+---------------------------------
+Systematics settings  
+    Flux syst:        1
+    Flux flat:        
+    Flux fixed:       
+    X-sec syst:       1
+    X-sec flat:       1 2 
+    X-sec fixed:      6 7 8 9 33 34 
+    ND280 detector syst:    1
+    ND280 detector flat:    
+    ND280 detector fixed:   
+    Sk detector syst:    1
+    Sk detector flat:    
+    Sk detector fixed:   
+    Oscill. flat:     
+    Oscill. fixed:   
+    Oscill. flat antinu:
+    Oscill. fixed antinu:   
+    Reactor const.:   0
+    Stat only?:       0
+    Do oscillation?:       0
+    Use SK syst?:       1
+    Use BANFF tuning?:0
+    Use MaCh3 ND best fit tuning? (nb currently requires use BANFF tuning to be on):0
+---------------------------------
+Covariance matrices   
+    Flux file:         inputs/flux_covariance_run1-9_v2_banff.root
+      flux matrix:     total_flux_cov
+    Xsec file:         inputs/xsec_covariance_2019a_2p2h_Q2_OLDMAQE.root
+      xsec matrix:     xsec_cov
+    BANFF file:        
+      BANFF matrix:    
+      BANFF vector:    
+    ND280 file:        inputs/ND280_RHCMultiPi_DetectorCovariance_MorrisonBinning_28March2019_convertedToMaCh3.root
+      ND280 matrix:    nddet_cov
+    SK file:           utils/skdet_total_error_matrix_2015/SKJointErrorMatrix2015_Total_v7_13thMarch2016.root
+      SK matrix:       SKJointError_Erec_Total
+    Osc file:          inputs/oscillation_covariance_6par_nondouble.root
+      osc matrix:      osc_cov
+    Osc file antinu:   osc_cov
+      osc matrix:      
+    Use BANFF covariance instead of ND data (and flux/xsec cov): 0
+---------------------------------
+Oscillation parameters
+    Double angle :              0
+    Binned oscillation :        0
+    Oscillation binning:           
+    Starting parameters:           
+    Starting parameters RHC:       
+    Input parameters (if different from starting parameters):           
+    Flat likelihood parameters: 
+---------------------------------
+Beta options: 
+    Use Beta :              0
+    Flip Beta :             0
+    Apply Beta to Nue :     0
+    Apply Diagnal Beta :    0
+Succesfully read config configs/psychev3.cfg, now proceeding
+Trying to load parameters file for parameter: psycheSteering.POT.Production
+WARNING: production has been overwritten by parameter psycheSteering.POT.Production == 6
+WARNING: production has been overwritten by parameter psycheSteering.Bunching.Production == 6
+WARNING: production has been overwritten by parameter psycheSteering.Corrections.Production == 6
+WARNING: production has been overwritten by parameter psycheSteering.Systematics.Production == 6
+AnalysisManager WARNING: The selection do not have to be exclusive to run.
+AnalysisManager WARNING: This is fine but you should be careful because the order in which you sel().AddSelection() now matters!!
+Trying to load parameters file for parameter: psycheSelections.Systematics.ApplyFineTuning
+SelectionBase::Validate(). Validating selection 'kTrackerNumuCC' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection 'kTrackerNumuCCMultiPi' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNumuCC' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 2 branches to branch 'trunk' after step 'fill summary antinu_CCMultiTrack'
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNumuCCMultiTrack' of type 29antiNumuCCMultiTrackSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNumuCCMultiPi' of type 26antiNumuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerNumuInAntiNuModeCC' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 2 branches to branch 'trunk' after step 'fill summary numuBkg_CCMultiTrack'
+SelectionBase::Validate(). Validating selection 'kTrackerNumuInAntiNuModeCCMultiTrack' of type 40numuBkgInAntiNuModeCCMultiTrackSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection 'kTrackerNumuInAntiNuModeCCMultiPi' of type 37numuBkgInAntiNuModeCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerNumuCCFGD2' of type 19numuCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19numuCCFGD2Selection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection 'kTrackerNumuCCMultiPiFGD2' of type 26numuCCMultiPiFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNumuCCFGD2' of type 23antiNumuCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 23antiNumuCCFGD2Selection ..... OK 
+SelectionBase::AddSplit(). Add split with 2 branches to branch 'trunk' after step 'fill summary antinu_CCMultiTrack'
+SelectionBase::Validate(). Validating selection '' of type 29antiNumuCCMultiTrackSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 2 branches to branch 'trunk' after step 'fill summary AntiNuMuCCMultiTrackFGD2'
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNumuCCMultiTrackFGD2' of type 33antiNumuCCMultiTrackFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19antiNumuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 23antiNumuCCFGD2Selection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 26antiNumuCCMultiPiSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNumuCCMultiPiFGD2' of type 30antiNumuCCMultiPiFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19numuCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerNumuInAntiNuModeCCFGD2' of type 34numuBkgInAntiNuModeCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19numuCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 34numuBkgInAntiNuModeCCFGD2Selection ..... OK 
+SelectionBase::AddSplit(). Add split with 2 branches to branch 'trunk' after step 'fill summary numuBkg_CCMultiTrack'
+SelectionBase::Validate(). Validating selection '' of type 40numuBkgInAntiNuModeCCMultiTrackSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 2 branches to branch 'trunk' after step 'fill_summary numuBkgMultiTrackFGD2'
+SelectionBase::Validate(). Validating selection 'kTrackerNumuInAntiNuModeCCMultiTrackFGD2' of type 44numuBkgInAntiNuModeCCMultiTrackFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19numuCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 15numuCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 22numuCCMultiPiSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 19numuCCFGD2Selection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 26numuCCMultiPiFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 34numuBkgInAntiNuModeCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 30numuBkgInAntiNuModeCCSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection '' of type 37numuBkgInAntiNuModeCCMultiPiSelection ..... OK 
+SelectionBase::AddSplit(). Add split with 3 branches to branch 'trunk' after step 'find_pions'
+SelectionBase::Validate(). Validating selection 'kTrackerNumuInAntiNuModeCCMultiPiFGD2' of type 41numuBkgInAntiNuModeCCMultiPiFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerNuECC' of type 14nueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 14nueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNuECC' of type 18antiNueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 14nueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerGamma' of type 14gammaSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 14nueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerNuECCFGD2' of type 18nueCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 14nueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 18nueCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerAntiNuECCFGD2' of type 22antiNueCCFGD2Selection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 14nueCCSelection ..... OK 
+SelectionBase::Validate(). Validating selection '' of type 14gammaSelection ..... OK 
+SelectionBase::Validate(). Validating selection 'kTrackerGammaFGD2' of type 18gammaFGD2Selection ..... OK 
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4pi' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4piMultiPi' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4piFGD2' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4piMultiPiFGD2' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4pi' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4piMultiPi' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4piFGD2' does not exist !!!!
+SelectionManager::GetSelection(). Selection 'kTrackerNumuCC4piMultiPiFGD2' does not exist !!!!
+Trying to load parameters file for parameter: psycheSystematics.Tracker.UseP0DFV
+Trying to load parameters file for parameter: psycheND280Utils.ToF.FGD1FGD2
+ constructing things! 
+nVarSys = 1
+ Total parameters: 8
+filling links
+Trying to load parameters file for parameter: psycheSystematics.gdPid.CovFile
+Creating ND280 2019 instance
+   Using TSpline3
+0x13b2830
+================
+-------------------------
+Sample group run4a
+Data:
+/vols/t2k/users/wparker2/2p2hSplines/P6Data/data_Run4a_1452_Splines.root POT:
+Initial POT (per File).. 0
+Initial POT............. 1.24057e+18 Spills 10361
+|-- Bad Beam............ 0 Spills 0
+|-- Bad ND280........... 0 Spills 0
+|-- Bad ND280 Time...... 0 Spills 0
+|-- Total Good POT...... 1.24057e+18 Spills 10361
+|-- Total Good POT Time. 0 Spills 0
+  |-- @  0KA............ 0
+  |-- @  200KA.......... 0
+  |-- @  250KA.......... 0
+  |-- @ -250KA.......... 0
+  |-- @  Other power.... 0
+MC:
+magnet from /vols/t2k/users/wparker2/2p2hSplines/P6MC//MCsmall.root POT:
+Initial POT (per File).. 5e+18
+Initial POT............. 5.00246e+18 Spills 52866
+|-- Bad Beam............ 0 Spills 0
+|-- Bad ND280........... 0 Spills 0
+|-- Bad ND280 Time...... 0 Spills 0
+|-- Total Good POT...... 5.00246e+18 Spills 52866
+|-- Total Good POT Time. 0 Spills 0
+  |-- @  0KA............ 0
+  |-- @  200KA.......... 0
+  |-- @  250KA.......... 0
+  |-- @ -250KA.......... 0
+  |-- @  Other power.... 0
+sand from /vols/t2k/users/wparker2/2p2hSplines/P6MC//SANDsmall.root POT:
+Initial POT (per File).. 2.5e+18
+Initial POT............. 2.35316e+18 Spills 24867
+|-- Bad Beam............ 0 Spills 0
+|-- Bad ND280........... 0 Spills 0
+|-- Bad ND280 Time...... 0 Spills 0
+|-- Total Good POT...... 2.35316e+18 Spills 24867
+|-- Total Good POT Time. 0 Spills 0
+  |-- @  0KA............ 0
+  |-- @  200KA.......... 0
+  |-- @  250KA.......... 0
+  |-- @ -250KA.......... 0
+  |-- @  Other power.... 0
+Total POT Data: 0
+Total POT MC  : 0
+Total POT Sand: 0
+================
+------------------------------
+Adding selections at ND280
+  Adding selection: FGD1 numuCC 0pi
+  Adding selection: FGD1 numuCC 1pi
+  Adding selection: FGD1 numuCC other
+  Adding selection: FGD1 anti-numuCC 0pi
+  Adding selection: FGD1 anti-numuCC 1pi
+  Adding selection: FGD1 anti-numuCC other
+  Adding selection: FGD1 NuMuBkg CC0pi in AntiNu Mode
+  Adding selection: FGD1 NuMuBkg CC1pi in AntiNu Mode
+  Adding selection: FGD1 NuMuBkg CCother in AntiNu Mode
+  Adding selection: FGD2 numuCC 0pi
+  Adding selection: FGD2 numuCC 1pi
+  Adding selection: FGD2 numuCC other
+  Adding selection: FGD2 anti-numuCC 0pi
+  Adding selection: FGD2 anti-numuCC 1pi
+  Adding selection: FGD2 anti-numuCC other
+  Adding selection: FGD2 NuMuBkg CC0pi in AntiNu Mode
+  Adding selection: FGD2 NuMuBkg CC1pi in AntiNu Mode
+  Adding selection: FGD2 NuMuBkg CCother in AntiNu Mode
+------------------------------
+Created covariance matrix named: xsec_cov
+from file: inputs/xsec_covariance_2019a_2p2h_Q2_OLDMAQE.root
+Scanned cross-section matrix, found xsecmodel = NIWG_undefined_DEFAULT
+#################################################
+Printing covarianceXsec2015:
+NIWG model: NIWG_undefined_DEFAULT
+Number of parameters: 35
+
+Global parameter map:
+#    | Name                     | Nom.      | Prior     | Error          | Lower     | Upper     
+0    | MAQE                     | 1         | 0.858     | +/- 0.05       | 0         | 1e+04     
+1    | 2p2h_norm_nu             | 1         | 1         | +/- 1          | 0         | 1e+04     
+2    | 2p2h_norm_nubar          | 1         | 1         | +/- 1          | 0         | 1e+04     
+3    | 2p2h_normCtoO            | 1         | 1         | +/- 0.2        | 0         | 1e+04     
+4    | 2p2h_shape_C             | 0         | 0         | +/- 3          | -1        | 1         
+5    | 2p2h_shape_O             | 0         | 0         | +/- 3          | -1        | 1         
+6    | MEC_lowENu               | 0         | 0         | +/- 1          | -1        | 0.5       
+7    | MEC_highENu              | 0         | 0         | +/- 1          | -1        | 0.5       
+8    | MEC_lowENubar            | 0         | 0         | +/- 1          | -1        | 0.5       
+9    | MEC_highENubar           | 0         | 0         | +/- 1          | -1        | 0.5       
+10   | Q2_norm_0                | 1         | 1         | +/- 1          | -999      | 999       
+11   | Q2_norm_1                | 1         | 1         | +/- 1          | -999      | 999       
+12   | Q2_norm_2                | 1         | 1         | +/- 1          | -999      | 999       
+13   | Q2_norm_3                | 1         | 1         | +/- 1          | -999      | 999       
+14   | CA5                      | 1         | 0.95      | +/- 0.149      | 0         | 1e+04     
+15   | MARES                    | 1         | 1.13      | +/- 0.158      | 0         | 1e+04     
+16   | ISO_BKG                  | 1         | 0.738     | +/- 0.308      | 0         | 1e+04     
+17   | CC_norm_nu               | 1         | 1         | +/- 0.02       | 0         | 1e+04     
+18   | CC_norm_nubar            | 1         | 1         | +/- 0.01       | 0         | 1e+04     
+19   | nue_numu                 | 1         | 1         | +/- 0.0283     | 0         | 1e+04     
+20   | nuebar_numubar           | 1         | 1         | +/- 0.0283     | 0         | 1e+04     
+21   | CC_DIS                   | 0         | 0         | +/- 0.4        | -1e+04    | 1e+04     
+22   | CC_Coh_C                 | 1         | 1         | +/- 0.3        | 0         | 1e+04     
+23   | CC_Coh_O                 | 1         | 1         | +/- 0.3        | 0         | 1e+04     
+24   | NC_Coh                   | 1         | 1         | +/- 0.3        | 0         | 1e+04     
+25   | NC_1gamma                | 1         | 1         | +/- 1          | 0         | 1e+04     
+26   | NC_other_near            | 1         | 1         | +/- 0.3        | 0         | 1e+04     
+27   | NC_other_far             | 1         | 1         | +/- 0.3        | 0         | 1e+04     
+28   | FEFQE                    | 1         | 1.07      | +/- 0.313      | -1e+04    | 1e+04     
+29   | FEFQEH                   | 1         | 1.01      | +/- 0.477      | -1e+04    | 1e+04     
+30   | FEFINEL                  | 1         | 1         | +/- 1.1        | -1e+04    | 1e+04     
+31   | FEFABS                   | 1         | 1.28      | +/- 0.393      | -1e+04    | 1e+04     
+32   | FEFCX                    | 1         | 0.697     | +/- 0.305      | -1e+04    | 1e+04     
+33   | EB_dial_C                | 25        | 25        | +/- 9          | 16        | 43        
+34   | EB_dial_O                | 27        | 27        | +/- 9          | 18        | 45        
+
+Normalisation parameters:12
+#   | Global #  | Name                | Int. mode | Target    | Type      
+0   | 1         | 2p2h_norm_nu        | 9         |  12 16 |  12 14 
+1   | 2         | 2p2h_norm_nubar     | 9         |  12 16 |  -12 -14 
+2   | 3         | 2p2h_normCtoO       | 9         |  16 |  12 14 -12 -14 
+3   | 17        | CC_norm_nu          | -3        |  12 16 |  12 14 
+4   | 18        | CC_norm_nubar       | -3        |  12 16 |  -12 -14 
+5   | 19        | nue_numu            | -1        |  12 16 |  12 
+6   | 20        | nuebar_numubar      | -1        |  12 16 |  -12 
+7   | 22        | CC_Coh_C            | 2         |  12 |  12 14 -12 -14 
+8   | 23        | CC_Coh_O            | 2         |  16 |  12 14 -12 -14 
+9   | 24        | NC_Coh              | 7         |  |  12 14 -12 -14 
+10  | 25        | NC_1gamma           | 10        |  12 16 |  12 14 -12 -14 
+11  | 26        | NC_other_near       | 8         |  |  12 14 -12 -14 
+
+
+SK spline parameters: 15
+#   | Global #  | Name                
+0   | 0         | MAQE                
+1   | 5         | 2p2h_shape_O        
+2   | 6         | MEC_lowENu          
+3   | 7         | MEC_highENu         
+4   | 8         | MEC_lowENubar       
+5   | 9         | MEC_highENubar      
+6   | 14        | CA5                 
+7   | 15        | MARES               
+8   | 16        | ISO_BKG             
+9   | 21        | CC_DIS              
+10  | 28        | FEFQE               
+11  | 29        | FEFQEH              
+12  | 30        | FEFINEL             
+13  | 31        | FEFABS              
+14  | 32        | FEFCX               
+
+SK functional parameters: 5
+#   | Global #  | Name                
+0   | 10        | Q2_norm_0           
+1   | 11        | Q2_norm_1           
+2   | 12        | Q2_norm_2           
+3   | 13        | Q2_norm_3           
+4   | 34        | EB_dial_O           
+
+SK normalisation parameters: 11
+#   | Global #  | Name                | Int. mode | Target    | Type      
+0   | 1         | 2p2h_norm_nu        | 9         |  12 16 |  12 14 
+1   | 2         | 2p2h_norm_nubar     | 9         |  12 16 |  -12 -14 
+2   | 3         | 2p2h_normCtoO       | 9         |  16 |  12 14 -12 -14 
+3   | 17        | CC_norm_nu          | -3        |  12 16 |  12 14 
+4   | 18        | CC_norm_nubar       | -3        |  12 16 |  -12 -14 
+5   | 19        | nue_numu            | -1        |  12 16 |  12 
+6   | 20        | nuebar_numubar      | -1        |  12 16 |  -12 
+7   | 23        | CC_Coh_O            | 2         |  16 |  12 14 -12 -14 
+8   | 24        | NC_Coh              | 7         |  |  12 14 -12 -14 
+9   | 25        | NC_1gamma           | 10        |  12 16 |  12 14 -12 -14 
+10  | 27        | NC_other_far        | 8         |  16 |  12 14 -12 -14 
+
+ND280 Affecting Spline parameters: 16
+#   | Global #  | Name                
+0   | 0         | MAQE                
+1   | 4         | 2p2h_shape_C        
+2   | 5         | 2p2h_shape_O        
+3   | 6         | MEC_lowENu          
+4   | 7         | MEC_highENu         
+5   | 8         | MEC_lowENubar       
+6   | 9         | MEC_highENubar      
+7   | 14        | CA5                 
+8   | 15        | MARES               
+9   | 16        | ISO_BKG             
+10  | 21        | CC_DIS              
+11  | 28        | FEFQE               
+12  | 29        | FEFQEH              
+13  | 30        | FEFINEL             
+14  | 31        | FEFABS              
+15  | 32        | FEFCX               
+
+Unique spline parameters: 16
+#   | Global #  | Name                
+0   | 0         | MAQE                
+1   | 4         | 2p2h_shape_C        
+2   | 5         | 2p2h_shape_O        
+3   | 6         | MEC_lowENu          
+4   | 7         | MEC_highENu         
+5   | 8         | MEC_lowENubar       
+6   | 9         | MEC_highENubar      
+7   | 14        | CA5                 
+8   | 15        | MARES               
+9   | 16        | ISO_BKG             
+10  | 21        | CC_DIS              
+11  | 28        | FEFQE               
+12  | 29        | FEFQEH              
+13  | 30        | FEFINEL             
+14  | 31        | FEFABS              
+15  | 32        | FEFCX               
+
+What spline parameter uses what spline?
+Spline #  Uses unique #  | Param Name          Uses Name           
+0         0              | MAQE                MAQE                
+1         1              | 2p2h_shape_C        2p2h_shape_C        
+2         2              | 2p2h_shape_O        2p2h_shape_O        
+3         3              | MEC_lowENu          MEC_lowENu          
+4         4              | MEC_highENu         MEC_highENu         
+5         5              | MEC_lowENubar       MEC_lowENubar       
+6         6              | MEC_highENubar      MEC_highENubar      
+7         7              | CA5                 CA5                 
+8         8              | MARES               MARES               
+9         9              | ISO_BKG             ISO_BKG             
+10        10             | CC_DIS              CC_DIS              
+11        11             | FEFQE               FEFQE               
+12        12             | FEFQEH              FEFQEH              
+13        13             | FEFINEL             FEFINEL             
+14        14             | FEFABS              FEFABS              
+15        15             | FEFCX               FEFCX               
+
+ND280 affecting Functional parameters: 6
+#   | Global #  | Name                
+0   | 10        | Q2_norm_0           
+1   | 11        | Q2_norm_1           
+2   | 12        | Q2_norm_2           
+3   | 13        | Q2_norm_3           
+4   | 33        | EB_dial_C           
+5   | 34        | EB_dial_O           
+
+Done printing covarianceXsec2015
+#################################################
+------------------------------
+Created covariance matrix named: total_flux_cov
+from file: inputs/flux_covariance_run1-9_v2_banff.root
+Flux covariance:
+   Near detector size: 8
+    ND280_FHC_numu
+    0 - 0.4 - 0.5 - 0.6 - 0.7 - 1 - 1.5 - 2.5 - 3.5 - 5 - 7 - 30
+    ND280_FHC_numubar
+    0 - 0.7 - 1 - 1.5 - 2.5 - 30
+    ND280_FHC_nue
+    0 - 0.5 - 0.7 - 0.8 - 1.5 - 2.5 - 4 - 30
+    ND280_FHC_nuebar
+    0 - 2.5 - 30
+    ND280_RHC_numu
+    0 - 0.7 - 1 - 1.5 - 2.5 - 30
+    ND280_RHC_numubar
+    0 - 0.4 - 0.5 - 0.6 - 0.7 - 1 - 1.5 - 2.5 - 3.5 - 5 - 7 - 30
+    ND280_RHC_nue
+    0 - 2.5 - 30
+    ND280_RHC_nuebar
+    0 - 0.5 - 0.7 - 0.8 - 1.5 - 2.5 - 4 - 30
+   Far detector size:  8
+    SK_FHC_numu
+    0 - 0.4 - 0.5 - 0.6 - 0.7 - 1 - 1.5 - 2.5 - 3.5 - 5 - 7 - 30
+    SK_FHC_numubar
+    0 - 0.7 - 1 - 1.5 - 2.5 - 30
+    SK_FHC_nue
+    0 - 0.5 - 0.7 - 0.8 - 1.5 - 2.5 - 4 - 30
+    SK_FHC_nuebar
+    0 - 2.5 - 30
+    SK_RHC_numu
+    0 - 0.7 - 1 - 1.5 - 2.5 - 30
+    SK_RHC_numubar
+    0 - 0.4 - 0.5 - 0.6 - 0.7 - 1 - 1.5 - 2.5 - 3.5 - 5 - 7 - 30
+    SK_RHC_nue
+    0 - 2.5 - 30
+    SK_RHC_nuebar
+    0 - 0.5 - 0.7 - 0.8 - 1.5 - 2.5 - 4 - 30
+------------------------------
+Created covariance matrix named: nddet_cov
+from file: inputs/ND280_RHCMultiPi_DetectorCovariance_MorrisonBinning_28March2019_convertedToMaCh3.root
+NDDET SIMPLE: 690
+------------------------------
+------------------------------
+------------------------------
+Setting 2p2h_norm_nu (parameter 1) to flat prior
+Setting 2p2h_norm_nubar (parameter 2) to flat prior
+Setting MEC_lowENu (parameter 6) to fixed at 0
+Setting MEC_highENu (parameter 7) to fixed at 0
+Setting MEC_lowENubar (parameter 8) to fixed at 0
+Setting MEC_highENubar (parameter 9) to fixed at 0
+Setting EB_dial_C (parameter 33) to fixed at 25
+Setting EB_dial_O (parameter 34) to fixed at 27
+------------------------------
+Normalisation parameters: 
+0    |1    |2p2h_norm_nu                  |9    
+1    |2    |2p2h_norm_nubar               |9    
+2    |3    |2p2h_normCtoO                 |9    
+3    |17   |CC_norm_nu                    |-3   
+4    |18   |CC_norm_nubar                 |-3   
+5    |19   |nue_numu                      |-1   
+6    |20   |nuebar_numubar                |-1   
+7    |22   |CC_Coh_C                      |2    
+8    |23   |CC_Coh_O                      |2    
+9    |24   |NC_Coh                        |7    
+10   |25   |NC_1gamma                     |10   
+11   |26   |NC_other_near                 |8    
+Total spline parameters: 
+0    |0    |MAQE                          
+1    |4    |2p2h_shape_C                  
+2    |5    |2p2h_shape_O                  
+3    |6    |MEC_lowENu                    
+4    |7    |MEC_highENu                   
+5    |8    |MEC_lowENubar                 
+6    |9    |MEC_highENubar                
+7    |14   |CA5                           
+8    |15   |MARES                         
+9    |16   |ISO_BKG                       
+10   |21   |CC_DIS                        
+11   |28   |FEFQE                         
+12   |29   |FEFQEH                        
+13   |30   |FEFINEL                       
+14   |31   |FEFABS                        
+15   |32   |FEFCX                         
+Unique spline parameters: 
+0    |0    |MAQE                          
+1    |4    |2p2h_shape_C                  
+2    |5    |2p2h_shape_O                  
+3    |6    |MEC_lowENu                    
+4    |7    |MEC_highENu                   
+5    |8    |MEC_lowENubar                 
+6    |9    |MEC_highENubar                
+7    |14   |CA5                           
+8    |15   |MARES                         
+9    |16   |ISO_BKG                       
+10   |21   |CC_DIS                        
+11   |28   |FEFQE                         
+12   |29   |FEFQEH                        
+13   |30   |FEFINEL                       
+14   |31   |FEFABS                        
+15   |32   |FEFCX                         
+Shared spline parameters: 
+Finished setXsecCov in samplePDFND2019, xsecmodel = NIWG_undefined_DEFAULT
+------------------------------
+xsec_cov setStepScale() = 0.02
+total_flux_cov setStepScale() = 0.05
+nddet_cov setStepScale() = 0.04
+------------------------------
+Number of systematics in psyche = 1
+Making toy variation for systematic FgdPid which has 8 params
+InputManager::IsROOTFile(). If this is not a ROOT file an error will appear in the next two lines. Ignore it !!!! 
+InputManager::IsROOTFile(). This is a ROOT file. 
+InputManager::Initialize(). Input type (oaAnalysisTree, FlatTree, ...) not specified. Find it automatically...
+  - Converter 'kHighlandTree' looking for tree 'flattree' --> Yes
+InputManager::Initialize(). Input type is: kHighlandTree
+RedoTreeConverter::AddFileToTChain(). Adding file: /vols/t2k/users/wparker2/2p2hSplines/P6Data/data_Run4a_1452_Splines.root
+InputManager::input tree has 114 entries
+AnalysisManager::InitialiseDataTChain(). TChain has all data files added.
+ Running on file : /vols/t2k/users/wparker2/2p2hSplines/P6Data/data_Run4a_1452_Splines.root
+114 data events passed selection in psyche
+0 data events didn't pass sample enabled test
+Looped 114 events and 114 in tree
+Sample                             Binned    Unbinned  
+FGD1 numuCC 0pi                    38        39        
+FGD1 numuCC 1pi                    7         7         
+FGD1 numuCC other                  11        11        
+FGD2 numuCC 0pi                    44        44        
+FGD2 numuCC 1pi                    4         4         
+FGD2 numuCC other                  9         9         
+FGD1 anti-numuCC 0pi               0         0         
+FGD1 anti-numuCC 1pi               0         0         
+FGD1 anti-numuCC other             0         0         
+FGD2 anti-numuCC 0pi               0         0         
+FGD2 anti-numuCC 1pi               0         0         
+FGD2 anti-numuCC other             0         0         
+FGD1 NuMuBkg CC0pi in AntiNu Mode  0         0         
+FGD1 NuMuBkg CC1pi in AntiNu Mode  0         0         
+FGD1 NuMuBkg CCother in AntiNu Mode0         0         
+FGD2 NuMuBkg CC0pi in AntiNu Mode  0         0         
+FGD2 NuMuBkg CC1pi in AntiNu Mode  0         0         
+FGD2 NuMuBkg CCother in AntiNu Mode0         0         
+Total:                             113       114       
+Data fill took 0.0639331s
+------------------------------
+[NIWGFSLepEbMomentumVariation_continuous]: Reading inputs from: "/vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root".
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_C12_numu
+	Read input kEbTwkDial_Vary_C12_numu_Value_10 for value: 10
+	Read input kEbTwkDial_Vary_C12_numu_Value_13 for value: 13
+	Read input kEbTwkDial_Vary_C12_numu_Value_16 for value: 16
+	Read input kEbTwkDial_Vary_C12_numu_Value_19 for value: 19
+	Read input kEbTwkDial_Vary_C12_numu_Value_22 for value: 22
+	Read input kEbTwkDial_Vary_C12_numu_Value_25 for value: 25
+	Read input kEbTwkDial_Vary_C12_numu_Value_28 for value: 28
+	Read input kEbTwkDial_Vary_C12_numu_Value_31 for value: 31
+	Read input kEbTwkDial_Vary_C12_numu_Value_34 for value: 34
+	Read input kEbTwkDial_Vary_C12_numu_Value_37 for value: 37
+	Read input kEbTwkDial_Vary_C12_numu_Value_40 for value: 40
+	Read input kEbTwkDial_Vary_C12_numu_Value_43 for value: 43
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_C12_numu in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_C12_numu nominal value input (25).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_C12_numub
+	Read input kEbTwkDial_Vary_C12_numub_Value_10 for value: 10
+	Read input kEbTwkDial_Vary_C12_numub_Value_13 for value: 13
+	Read input kEbTwkDial_Vary_C12_numub_Value_16 for value: 16
+	Read input kEbTwkDial_Vary_C12_numub_Value_19 for value: 19
+	Read input kEbTwkDial_Vary_C12_numub_Value_22 for value: 22
+	Read input kEbTwkDial_Vary_C12_numub_Value_25 for value: 25
+	Read input kEbTwkDial_Vary_C12_numub_Value_28 for value: 28
+	Read input kEbTwkDial_Vary_C12_numub_Value_31 for value: 31
+	Read input kEbTwkDial_Vary_C12_numub_Value_34 for value: 34
+	Read input kEbTwkDial_Vary_C12_numub_Value_37 for value: 37
+	Read input kEbTwkDial_Vary_C12_numub_Value_40 for value: 40
+	Read input kEbTwkDial_Vary_C12_numub_Value_43 for value: 43
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_C12_numub in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_C12_numub nominal value input (25).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_C12_nue
+	Read input kEbTwkDial_Vary_C12_nue_Value_10 for value: 10
+	Read input kEbTwkDial_Vary_C12_nue_Value_13 for value: 13
+	Read input kEbTwkDial_Vary_C12_nue_Value_16 for value: 16
+	Read input kEbTwkDial_Vary_C12_nue_Value_19 for value: 19
+	Read input kEbTwkDial_Vary_C12_nue_Value_22 for value: 22
+	Read input kEbTwkDial_Vary_C12_nue_Value_25 for value: 25
+	Read input kEbTwkDial_Vary_C12_nue_Value_28 for value: 28
+	Read input kEbTwkDial_Vary_C12_nue_Value_31 for value: 31
+	Read input kEbTwkDial_Vary_C12_nue_Value_34 for value: 34
+	Read input kEbTwkDial_Vary_C12_nue_Value_37 for value: 37
+	Read input kEbTwkDial_Vary_C12_nue_Value_40 for value: 40
+	Read input kEbTwkDial_Vary_C12_nue_Value_43 for value: 43
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_C12_nue in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_C12_nue nominal value input (25).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_C12_nueb
+	Read input kEbTwkDial_Vary_C12_nueb_Value_10 for value: 10
+	Read input kEbTwkDial_Vary_C12_nueb_Value_13 for value: 13
+	Read input kEbTwkDial_Vary_C12_nueb_Value_16 for value: 16
+	Read input kEbTwkDial_Vary_C12_nueb_Value_19 for value: 19
+	Read input kEbTwkDial_Vary_C12_nueb_Value_22 for value: 22
+	Read input kEbTwkDial_Vary_C12_nueb_Value_25 for value: 25
+	Read input kEbTwkDial_Vary_C12_nueb_Value_28 for value: 28
+	Read input kEbTwkDial_Vary_C12_nueb_Value_31 for value: 31
+	Read input kEbTwkDial_Vary_C12_nueb_Value_34 for value: 34
+	Read input kEbTwkDial_Vary_C12_nueb_Value_37 for value: 37
+	Read input kEbTwkDial_Vary_C12_nueb_Value_40 for value: 40
+	Read input kEbTwkDial_Vary_C12_nueb_Value_43 for value: 43
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_C12_nueb in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_C12_nueb nominal value input (25).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_O16_numu
+	Read input kEbTwkDial_Vary_O16_numu_Value_12 for value: 12
+	Read input kEbTwkDial_Vary_O16_numu_Value_15 for value: 15
+	Read input kEbTwkDial_Vary_O16_numu_Value_18 for value: 18
+	Read input kEbTwkDial_Vary_O16_numu_Value_21 for value: 21
+	Read input kEbTwkDial_Vary_O16_numu_Value_24 for value: 24
+	Read input kEbTwkDial_Vary_O16_numu_Value_27 for value: 27
+	Read input kEbTwkDial_Vary_O16_numu_Value_30 for value: 30
+	Read input kEbTwkDial_Vary_O16_numu_Value_33 for value: 33
+	Read input kEbTwkDial_Vary_O16_numu_Value_36 for value: 36
+	Read input kEbTwkDial_Vary_O16_numu_Value_39 for value: 39
+	Read input kEbTwkDial_Vary_O16_numu_Value_42 for value: 42
+	Read input kEbTwkDial_Vary_O16_numu_Value_45 for value: 45
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_O16_numu in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_O16_numu nominal value input (27).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_O16_numub
+	Read input kEbTwkDial_Vary_O16_numub_Value_12 for value: 12
+	Read input kEbTwkDial_Vary_O16_numub_Value_15 for value: 15
+	Read input kEbTwkDial_Vary_O16_numub_Value_18 for value: 18
+	Read input kEbTwkDial_Vary_O16_numub_Value_21 for value: 21
+	Read input kEbTwkDial_Vary_O16_numub_Value_24 for value: 24
+	Read input kEbTwkDial_Vary_O16_numub_Value_27 for value: 27
+	Read input kEbTwkDial_Vary_O16_numub_Value_30 for value: 30
+	Read input kEbTwkDial_Vary_O16_numub_Value_33 for value: 33
+	Read input kEbTwkDial_Vary_O16_numub_Value_36 for value: 36
+	Read input kEbTwkDial_Vary_O16_numub_Value_39 for value: 39
+	Read input kEbTwkDial_Vary_O16_numub_Value_42 for value: 42
+	Read input kEbTwkDial_Vary_O16_numub_Value_45 for value: 45
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_O16_numub in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_O16_numub nominal value input (27).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_O16_nue
+	Read input kEbTwkDial_Vary_O16_nue_Value_12 for value: 12
+	Read input kEbTwkDial_Vary_O16_nue_Value_15 for value: 15
+	Read input kEbTwkDial_Vary_O16_nue_Value_18 for value: 18
+	Read input kEbTwkDial_Vary_O16_nue_Value_21 for value: 21
+	Read input kEbTwkDial_Vary_O16_nue_Value_24 for value: 24
+	Read input kEbTwkDial_Vary_O16_nue_Value_27 for value: 27
+	Read input kEbTwkDial_Vary_O16_nue_Value_30 for value: 30
+	Read input kEbTwkDial_Vary_O16_nue_Value_33 for value: 33
+	Read input kEbTwkDial_Vary_O16_nue_Value_36 for value: 36
+	Read input kEbTwkDial_Vary_O16_nue_Value_39 for value: 39
+	Read input kEbTwkDial_Vary_O16_nue_Value_42 for value: 42
+	Read input kEbTwkDial_Vary_O16_nue_Value_45 for value: 45
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_O16_nue in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_O16_nue nominal value input (27).
+[INFO]: Looking for input for dial: kEbTwkDial_Vary_O16_nueb
+	Read input kEbTwkDial_Vary_O16_nueb_Value_12 for value: 12
+	Read input kEbTwkDial_Vary_O16_nueb_Value_15 for value: 15
+	Read input kEbTwkDial_Vary_O16_nueb_Value_18 for value: 18
+	Read input kEbTwkDial_Vary_O16_nueb_Value_21 for value: 21
+	Read input kEbTwkDial_Vary_O16_nueb_Value_24 for value: 24
+	Read input kEbTwkDial_Vary_O16_nueb_Value_27 for value: 27
+	Read input kEbTwkDial_Vary_O16_nueb_Value_30 for value: 30
+	Read input kEbTwkDial_Vary_O16_nueb_Value_33 for value: 33
+	Read input kEbTwkDial_Vary_O16_nueb_Value_36 for value: 36
+	Read input kEbTwkDial_Vary_O16_nueb_Value_39 for value: 39
+	Read input kEbTwkDial_Vary_O16_nueb_Value_42 for value: 42
+	Read input kEbTwkDial_Vary_O16_nueb_Value_45 for value: 45
+[INFO]: Found 12 input values for dial: kEbTwkDial_Vary_O16_nueb in input file: /vols/build/t2k/wparker2/MaCh3/MaCh3/NIWGReWeight/inputs/eb_variations_20191013.root
+[INFO]: Found Dial kEbTwkDial_Vary_O16_nueb nominal value input (27).
+[NIWGFSLepEbMomentumVariation_continuous]: Adding known variations: 
+Input[0] Value: 10 is not nominal for dial kEbTwkDial_Vary_C12_numu
+Input[1] Value: 13 is not nominal for dial kEbTwkDial_Vary_C12_numu
+Input[2] Value: 16 is not nominal for dial kEbTwkDial_Vary_C12_numu
+Input[3] Value: 19 is not nominal for dial kEbTwkDial_Vary_C12_numu
+Input[4] Value: 22 is not nominal for dial kEbTwkDial_Vary_C12_numu
+Input[5] Value: 25 is nominal for dial kEbTwkDial_Vary_C12_numu
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 10 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 13 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 16 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 19 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 22 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 28 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 31 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 34 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 37 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 40 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numu, From: 25, To: 43 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_numub
+Input[12] Value: 10 is not nominal for dial kEbTwkDial_Vary_C12_numub
+Input[13] Value: 13 is not nominal for dial kEbTwkDial_Vary_C12_numub
+Input[14] Value: 16 is not nominal for dial kEbTwkDial_Vary_C12_numub
+Input[15] Value: 19 is not nominal for dial kEbTwkDial_Vary_C12_numub
+Input[16] Value: 22 is not nominal for dial kEbTwkDial_Vary_C12_numub
+Input[17] Value: 25 is nominal for dial kEbTwkDial_Vary_C12_numub
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 10 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 13 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 16 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 19 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 22 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 28 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 31 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 34 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 37 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 40 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_numub, From: 25, To: 43 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nue
+Input[12].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[13].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[14].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[15].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[16].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[17].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[18].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[19].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[20].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[21].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[22].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[23].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nue
+Input[24] Value: 10 is not nominal for dial kEbTwkDial_Vary_C12_nue
+Input[25] Value: 13 is not nominal for dial kEbTwkDial_Vary_C12_nue
+Input[26] Value: 16 is not nominal for dial kEbTwkDial_Vary_C12_nue
+Input[27] Value: 19 is not nominal for dial kEbTwkDial_Vary_C12_nue
+Input[28] Value: 22 is not nominal for dial kEbTwkDial_Vary_C12_nue
+Input[29] Value: 25 is nominal for dial kEbTwkDial_Vary_C12_nue
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 10 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 13 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 16 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 19 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 22 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 28 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 31 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 34 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 37 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 40 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nue, From: 25, To: 43 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_C12_nueb
+Input[12].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[13].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[14].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[15].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[16].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[17].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[18].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[19].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[20].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[21].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[22].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[23].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_C12_nueb
+Input[24].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[25].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[26].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[27].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[28].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[29].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[30].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[31].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[32].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[33].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[34].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[35].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_C12_nueb
+Input[36] Value: 10 is not nominal for dial kEbTwkDial_Vary_C12_nueb
+Input[37] Value: 13 is not nominal for dial kEbTwkDial_Vary_C12_nueb
+Input[38] Value: 16 is not nominal for dial kEbTwkDial_Vary_C12_nueb
+Input[39] Value: 19 is not nominal for dial kEbTwkDial_Vary_C12_nueb
+Input[40] Value: 22 is not nominal for dial kEbTwkDial_Vary_C12_nueb
+Input[41] Value: 25 is nominal for dial kEbTwkDial_Vary_C12_nueb
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 10 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 13 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 16 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 19 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 22 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 28 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 31 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 34 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 37 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 40 }.
+	Added variation: { Dial: kEbTwkDial_Vary_C12_nueb, From: 25, To: 43 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numu
+Input[12].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[13].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[14].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[15].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[16].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[17].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[18].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[19].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[20].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[21].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[22].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[23].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numu
+Input[24].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[25].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[26].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[27].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[28].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[29].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[30].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[31].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[32].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[33].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[34].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[35].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numu
+Input[36].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[37].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[38].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[39].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[40].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[41].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[42].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[43].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[44].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[45].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[46].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[47].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numu
+Input[48] Value: 12 is not nominal for dial kEbTwkDial_Vary_O16_numu
+Input[49] Value: 15 is not nominal for dial kEbTwkDial_Vary_O16_numu
+Input[50] Value: 18 is not nominal for dial kEbTwkDial_Vary_O16_numu
+Input[51] Value: 21 is not nominal for dial kEbTwkDial_Vary_O16_numu
+Input[52] Value: 24 is not nominal for dial kEbTwkDial_Vary_O16_numu
+Input[53] Value: 27 is nominal for dial kEbTwkDial_Vary_O16_numu
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 12 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 15 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 18 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 21 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 24 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 30 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 33 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 36 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 39 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 42 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numu, From: 27, To: 45 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_numub
+Input[12].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[13].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[14].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[15].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[16].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[17].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[18].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[19].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[20].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[21].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[22].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[23].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_numub
+Input[24].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[25].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[26].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[27].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[28].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[29].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[30].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[31].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[32].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[33].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[34].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[35].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_numub
+Input[36].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[37].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[38].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[39].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[40].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[41].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[42].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[43].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[44].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[45].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[46].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[47].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_numub
+Input[48].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[49].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[50].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[51].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[52].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[53].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[54].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[55].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[56].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[57].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[58].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[59].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_numub
+Input[60] Value: 12 is not nominal for dial kEbTwkDial_Vary_O16_numub
+Input[61] Value: 15 is not nominal for dial kEbTwkDial_Vary_O16_numub
+Input[62] Value: 18 is not nominal for dial kEbTwkDial_Vary_O16_numub
+Input[63] Value: 21 is not nominal for dial kEbTwkDial_Vary_O16_numub
+Input[64] Value: 24 is not nominal for dial kEbTwkDial_Vary_O16_numub
+Input[65] Value: 27 is nominal for dial kEbTwkDial_Vary_O16_numub
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 12 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 15 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 18 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 21 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 24 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 30 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 33 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 36 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 39 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 42 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_numub, From: 27, To: 45 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nue
+Input[12].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[13].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[14].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[15].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[16].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[17].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[18].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[19].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[20].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[21].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[22].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[23].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nue
+Input[24].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[25].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[26].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[27].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[28].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[29].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[30].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[31].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[32].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[33].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[34].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[35].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nue
+Input[36].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[37].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[38].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[39].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[40].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[41].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[42].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[43].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[44].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[45].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[46].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[47].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nue
+Input[48].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[49].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[50].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[51].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[52].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[53].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[54].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[55].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[56].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[57].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[58].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[59].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nue
+Input[60].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[61].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[62].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[63].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[64].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[65].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[66].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[67].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[68].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[69].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[70].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[71].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nue
+Input[72] Value: 12 is not nominal for dial kEbTwkDial_Vary_O16_nue
+Input[73] Value: 15 is not nominal for dial kEbTwkDial_Vary_O16_nue
+Input[74] Value: 18 is not nominal for dial kEbTwkDial_Vary_O16_nue
+Input[75] Value: 21 is not nominal for dial kEbTwkDial_Vary_O16_nue
+Input[76] Value: 24 is not nominal for dial kEbTwkDial_Vary_O16_nue
+Input[77] Value: 27 is nominal for dial kEbTwkDial_Vary_O16_nue
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 12 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 15 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 18 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 21 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 24 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 30 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 33 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 36 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 39 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 42 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nue, From: 27, To: 45 }.
+Input[0].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[1].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[2].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[3].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[4].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[5].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[6].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[7].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[8].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[9].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[10].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[11].dial = kEbTwkDial_Vary_C12_numu != kEbTwkDial_Vary_O16_nueb
+Input[12].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[13].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[14].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[15].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[16].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[17].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[18].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[19].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[20].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[21].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[22].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[23].dial = kEbTwkDial_Vary_C12_numub != kEbTwkDial_Vary_O16_nueb
+Input[24].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[25].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[26].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[27].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[28].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[29].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[30].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[31].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[32].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[33].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[34].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[35].dial = kEbTwkDial_Vary_C12_nue != kEbTwkDial_Vary_O16_nueb
+Input[36].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[37].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[38].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[39].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[40].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[41].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[42].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[43].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[44].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[45].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[46].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[47].dial = kEbTwkDial_Vary_C12_nueb != kEbTwkDial_Vary_O16_nueb
+Input[48].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[49].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[50].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[51].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[52].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[53].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[54].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[55].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[56].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[57].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[58].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[59].dial = kEbTwkDial_Vary_O16_numu != kEbTwkDial_Vary_O16_nueb
+Input[60].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[61].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[62].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[63].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[64].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[65].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[66].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[67].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[68].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[69].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[70].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[71].dial = kEbTwkDial_Vary_O16_numub != kEbTwkDial_Vary_O16_nueb
+Input[72].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[73].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[74].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[75].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[76].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[77].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[78].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[79].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[80].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[81].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[82].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[83].dial = kEbTwkDial_Vary_O16_nue != kEbTwkDial_Vary_O16_nueb
+Input[84] Value: 12 is not nominal for dial kEbTwkDial_Vary_O16_nueb
+Input[85] Value: 15 is not nominal for dial kEbTwkDial_Vary_O16_nueb
+Input[86] Value: 18 is not nominal for dial kEbTwkDial_Vary_O16_nueb
+Input[87] Value: 21 is not nominal for dial kEbTwkDial_Vary_O16_nueb
+Input[88] Value: 24 is not nominal for dial kEbTwkDial_Vary_O16_nueb
+Input[89] Value: 27 is nominal for dial kEbTwkDial_Vary_O16_nueb
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 12 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 15 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 18 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 21 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 24 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 30 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 33 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 36 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 39 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 42 }.
+	Added variation: { Dial: kEbTwkDial_Vary_O16_nueb, From: 27, To: 45 }.
+[NIWGFSLepEbMomentumVariation_continuous]: Added 88 known variations.
+InputManager::IsROOTFile(). If this is not a ROOT file an error will appear in the next two lines. Ignore it !!!! 
+InputManager::IsROOTFile(). This is a ROOT file. 
+InputManager::Initialize(). Input type (oaAnalysisTree, FlatTree, ...) not specified. Find it automatically...
+  - Converter 'kHighlandTree' looking for tree 'flattree' --> Yes
+InputManager::Initialize(). Input type is: kHighlandTree
+RedoTreeConverter::AddFileToTChain(). Adding file: /vols/t2k/users/wparker2/2p2hSplines/P6MC//MCsmall.root
+InputManager::input tree has 448 entries
+InputManager::IsROOTFile(). If this is not a ROOT file an error will appear in the next two lines. Ignore it !!!! 
+InputManager::IsROOTFile(). This is a ROOT file. 
+InputManager::Initialize(). Input type (oaAnalysisTree, FlatTree, ...) not specified. Find it automatically...
+  - Converter 'kHighlandTree' looking for tree 'flattree' --> Yes
+InputManager::Initialize(). Input type is: kHighlandTree
+RedoTreeConverter::AddFileToTChain(). Adding file: /vols/t2k/users/wparker2/2p2hSplines/P6MC//SANDsmall.root
+InputManager::input tree has 450 entries
+AnalysisManager::InitialiseMCTChain(). TChain has all MC files added.
+Making TChain from: /vols/t2k/users/wparker2/2p2hSplines/P6MC//MCsmall.root
+Making TChain from: /vols/t2k/users/wparker2/2p2hSplines/P6MC//SANDsmall.root
+Total entries in TChain: 450
+*********************************************
+Found all the normalisation parameters in samplePDFND2019 as: 
+2p2h norm C and O neutrino         1
+2p2h norm C and O anti-neutrino    2
+2p2h norm CtoO neutrino            3
+CC Coherent on C                   22
+CC Coherent on O                   23
+nue_numu norm                      19
+nuebar_numubar norm                20
+Q2 norm 0                          10
+Q2 norm 1                          11
+Q2 norm 2                          12
+Q2 norm 3                          13
+Eb C                               33
+Eb O                               34
+CC nu                              17
+CC nubar                           18
+*********************************************
+Size of mode (int) in xsec2018: 4
+Size of Q2 (float) in xsec2018: 8
+Looping over MC events...
+   Event 0/450 (0%)
+ Running on file : /vols/t2k/users/wparker2/2p2hSplines/P6MC//MCsmall.root
+   Event 46/450 (10%)
+   Event 92/450 (20%)
+   Event 138/450 (30%)
+   Event 184/450 (40%)
+   Event 230/450 (51%)
+   Event 276/450 (61%)
+   Event 322/450 (71%)
+   Event 368/450 (81%)
+   Event 414/450 (92%)
+ Running on file : /vols/t2k/users/wparker2/2p2hSplines/P6MC//SANDsmall.root
+------------------------------------------------------
+Finished looping psyche events (took 3.02615s)
+There are 425 which passed cuts
+Allocated 0.017 MB to the detector structs
+          0.017 MB to the xsec structs (excluding new TSpline3 or TF1)
+  Found 0 events with NEGATIVE detector weight from psyche!
+  Found 0 events with >10 detector weight from psyche!
+Finished cross-section loading: 0.017 MB + splines allocated
+Cross-section loading took 3.02615s
+Events by parameter: 
+Events by mode: 
+   CCQE                178
+   CC1pi               100
+   CCcoh               12
+   CCMpi               43
+   CCDIS               39
+   NC1pi0              0
+   NC1pipm             4
+   NCcoh               0
+   NCoth               16
+   2p2h                31
+   NC1gam              0
+MC fill took 3.02676s
+------------------------------
+------------------------------
+Setup complete! 
+Finding spline segment for xsec parameter MAQE at -0.141667
+Finding spline segment for xsec parameter 2p2h_shape_C at 0
+Finding spline segment for xsec parameter 2p2h_shape_O at 0
+Finding spline segment for xsec parameter MEC_lowENu at 0
+Finding spline segment for xsec parameter MEC_highENu at 0
+Finding spline segment for xsec parameter CA5 at -0.049505
+Finding spline segment for xsec parameter MARES at 0.126316
+Finding spline segment for xsec parameter ISO_BKG at -0.261538
+Finding spline segment for xsec parameter CC_DIS at 0
+Finding spline segment for xsec parameter FEFQE at 0.069
+Finding spline segment for xsec parameter FEFQEH at 0.0133333
+Finding spline segment for xsec parameter FEFINEL at 0.002
+Finding spline segment for xsec parameter FEFABS at 0.276364
+Finding spline segment for xsec parameter FEFCX at -0.303
+Event 0 xsecw: 0.840818 mode: 0 target: 12
+Event 1 xsecw: 0.893562 mode: 0 target: 12
+Event 2 xsecw: 0.95763 mode: 0 target: 12
+Event 3 xsecw: 1 mode: 4 target: 12
+Event 4 xsecw: 1 mode: 1 target: 12
+Event 5 xsecw: 1 mode: 4 target: 1
+Event 6 xsecw: 1 mode: 3 target: 207
+Event 7 xsecw: 1 mode: 1 target: 16
+Event 8 xsecw: 1 mode: 4 target: 12
+Event 9 xsecw: 1 mode: 2 target: 16
+Event 10 xsecw: 1 mode: 9 target: 12
+Event 11 xsecw: 1 mode: 9 target: 12
+Event 12 xsecw: 1 mode: 4 target: 16
+Event 13 xsecw: 0.889585 mode: 0 target: 12
+Event 14 xsecw: 1 mode: 1 target: 16
+Event 15 xsecw: 1 mode: 1 target: 13
+Event 16 xsecw: 1 mode: 3 target: 12
+Event 17 xsecw: 0.754823 mode: 0 target: 12
+Event 18 xsecw: 1 mode: 4 target: 12
+Event 19 xsecw: 0.858026 mode: 0 target: 12
+Event 20 xsecw: 1 mode: 1 target: 27
+Event 21 xsecw: 1 mode: 1 target: 12
+Event 22 xsecw: 0.812572 mode: 0 target: 12
+Event 23 xsecw: 1 mode: 1 target: 16
+Event 24 xsecw: 0.922824 mode: 0 target: 12
+Event 25 xsecw: 1 mode: 2 target: 12
+Event 26 xsecw: 1 mode: 1 target: 12
+Event 27 xsecw: 1 mode: 9 target: 12
+Event 28 xsecw: 1 mode: 3 target: 12
+Event 29 xsecw: 1 mode: 3 target: 16
+Event 30 xsecw: 1 mode: 1 target: 13
+Event 31 xsecw: 1 mode: 4 target: 12
+Event 32 xsecw: 1 mode: 9 target: 12
+Event 33 xsecw: 1 mode: 4 target: 27
+Event 34 xsecw: 1 mode: 3 target: 12
+Event 35 xsecw: 1 mode: 1 target: 16
+Event 36 xsecw: 0.99518 mode: 0 target: 12
+Event 37 xsecw: 0.966486 mode: 0 target: 16
+Event 38 xsecw: 1 mode: 9 target: 12
+Event 39 xsecw: 0.841727 mode: 0 target: 16
+Event 40 xsecw: 1 mode: 1 target: 12
+Event 41 xsecw: 1 mode: 1 target: 12
+Event 42 xsecw: 0.801519 mode: 0 target: 12
+Event 43 xsecw: 0.921718 mode: 0 target: 12
+Event 44 xsecw: 1 mode: 2 target: 12
+Event 45 xsecw: 1 mode: 3 target: 1
+Event 46 xsecw: 1 mode: 4 target: 207
+Event 47 xsecw: 0.855764 mode: 0 target: 12
+Event 48 xsecw: 1 mode: 2 target: 12
+Event 49 xsecw: 1 mode: 8 target: 16
+Event 50 xsecw: 0.827856 mode: 0 target: 16
+Event 51 xsecw: 1 mode: 4 target: 16
+Event 52 xsecw: 1 mode: 6 target: 12
+Event 53 xsecw: 0.868058 mode: 0 target: 12
+Event 54 xsecw: 1 mode: 8 target: 12
+Event 55 xsecw: 0.991866 mode: 0 target: 12
+Event 56 xsecw: 1 mode: 1 target: 12
+Event 57 xsecw: 0.925359 mode: 0 target: 16
+Event 58 xsecw: 1 mode: 3 target: 16
+Event 59 xsecw: 1 mode: 8 target: 12
+Event 60 xsecw: 0.961765 mode: 0 target: 12
+Event 61 xsecw: 1 mode: 9 target: 12
+Event 62 xsecw: 1 mode: 1 target: 12
+Event 63 xsecw: 0.97496 mode: 0 target: 12
+Event 64 xsecw: 1 mode: 3 target: 12
+Event 65 xsecw: 1 mode: 8 target: 207
+Event 66 xsecw: 0.79839 mode: 0 target: 12
+Event 67 xsecw: 0.901993 mode: 0 target: 16
+Event 68 xsecw: 0.909759 mode: 0 target: 12
+Event 69 xsecw: 1 mode: 1 target: 16
+Event 70 xsecw: 0.803312 mode: 0 target: 12
+Event 71 xsecw: 0.941063 mode: 0 target: 16
+Event 72 xsecw: 0.815782 mode: 0 target: 12
+Event 73 xsecw: 0.894653 mode: 0 target: 12
+Event 74 xsecw: 1 mode: 1 target: 12
+Event 75 xsecw: 1 mode: 2 target: 12
+Event 76 xsecw: 1 mode: 4 target: 16
+Event 77 xsecw: 1 mode: 8 target: 16
+Event 78 xsecw: 0.931405 mode: 0 target: 12
+Event 79 xsecw: 0.928337 mode: 0 target: 12
+Event 80 xsecw: 1 mode: 9 target: 16
+Event 81 xsecw: 0.867444 mode: 0 target: 12
+Event 82 xsecw: 1 mode: 1 target: 16
+Event 83 xsecw: 0.931228 mode: 0 target: 12
+Event 84 xsecw: 1 mode: 1 target: 16
+Event 85 xsecw: 0.90267 mode: 0 target: 12
+Event 86 xsecw: 1 mode: 3 target: 16
+Event 87 xsecw: 0.875949 mode: 0 target: 12
+Event 88 xsecw: 0.923874 mode: 0 target: 12
+Event 89 xsecw: 1 mode: 3 target: 16
+Event 90 xsecw: 1 mode: 1 target: 16
+Event 91 xsecw: 1 mode: 1 target: 12
+Event 92 xsecw: 0.843979 mode: 0 target: 12
+Event 93 xsecw: 1 mode: 1 target: 1
+Event 94 xsecw: 1 mode: 1 target: 12
+Event 95 xsecw: 0.841648 mode: 0 target: 16
+Event 96 xsecw: 0.847289 mode: 0 target: 16
+Event 97 xsecw: 1 mode: 4 target: 12
+Event 98 xsecw: 1 mode: 2 target: 16
+Event 99 xsecw: 1 mode: 3 target: 12
+Event 100 xsecw: 1 mode: 8 target: 16
+Event 101 xsecw: 0.87788 mode: 0 target: 16
+Event 102 xsecw: 0.909688 mode: 0 target: 12
+Event 103 xsecw: 1 mode: 1 target: 16
+Event 104 xsecw: 0.86807 mode: 0 target: 47
+Event 105 xsecw: 1 mode: 1 target: 1
+Event 106 xsecw: 0.917667 mode: 0 target: 12
+Event 107 xsecw: 1 mode: 1 target: 16
+Event 108 xsecw: 1 mode: 3 target: 28
+Event 109 xsecw: 1 mode: 9 target: 12
+Event 110 xsecw: 1 mode: 1 target: 12
+Event 111 xsecw: 1 mode: 4 target: 16
+Event 112 xsecw: 1 mode: 4 target: 12
+Event 113 xsecw: 1 mode: 3 target: 12
+Event 114 xsecw: 1 mode: 8 target: 207
+Event 115 xsecw: 0.890256 mode: 0 target: 12
+Event 116 xsecw: 0.934837 mode: 0 target: 12
+Event 117 xsecw: 1 mode: 4 target: 16
+Event 118 xsecw: 0.895395 mode: 0 target: 16
+Event 119 xsecw: 0.900059 mode: 0 target: 12
+Event 120 xsecw: 1 mode: 8 target: 207
+Event 121 xsecw: 1 mode: 1 target: 12
+Event 122 xsecw: 1 mode: 9 target: 12
+Event 123 xsecw: 0.936907 mode: 0 target: 12
+Event 124 xsecw: 0.922919 mode: 0 target: 50
+Event 125 xsecw: 0.876423 mode: 0 target: 12
+Event 126 xsecw: 1 mode: 4 target: 12
+Event 127 xsecw: 1 mode: 6 target: 12
+Event 128 xsecw: 1 mode: 8 target: 12
+Event 129 xsecw: 1 mode: 4 target: 12
+Event 130 xsecw: 1 mode: 1 target: 16
+Event 131 xsecw: 1 mode: 1 target: 12
+Event 132 xsecw: 0.857163 mode: 0 target: 12
+Event 133 xsecw: 0.758454 mode: 0 target: 12
+Event 134 xsecw: 0.817723 mode: 0 target: 12
+Event 135 xsecw: 1 mode: 4 target: 207
+Event 136 xsecw: 1 mode: 4 target: 16
+Event 137 xsecw: 0.914693 mode: 0 target: 16
+Event 138 xsecw: 0.973602 mode: 0 target: 12
+Event 139 xsecw: 0.933745 mode: 0 target: 16
+Event 140 xsecw: 0.940479 mode: 0 target: 16
+Event 141 xsecw: 0.954885 mode: 0 target: 12
+Event 142 xsecw: 0.807317 mode: 0 target: 12
+Event 143 xsecw: 1 mode: 3 target: 12
+Event 144 xsecw: 1 mode: 3 target: 12
+Event 145 xsecw: 0.81276 mode: 0 target: 16
+Event 146 xsecw: 1 mode: 2 target: 12
+Event 147 xsecw: 1 mode: 8 target: 1
+Event 148 xsecw: 1 mode: 3 target: 12
+Event 149 xsecw: 0.89675 mode: 0 target: 16
+Event 150 xsecw: 0.908016 mode: 0 target: 12
+Event 151 xsecw: 1 mode: 1 target: 12
+Event 152 xsecw: 1 mode: 1 target: 12
+Event 153 xsecw: 0.775035 mode: 0 target: 12
+Event 154 xsecw: 1 mode: 1 target: 12
+Event 155 xsecw: 0.843414 mode: 0 target: 12
+Event 156 xsecw: 1 mode: 9 target: 12
+Event 157 xsecw: 1 mode: 1 target: 12
+Event 158 xsecw: 0.926215 mode: 0 target: 16
+Event 159 xsecw: 1 mode: 9 target: 12
+Event 160 xsecw: 0.929448 mode: 0 target: 12
+Event 161 xsecw: 1 mode: 9 target: 12
+Event 162 xsecw: 0.873817 mode: 0 target: 12
+Event 163 xsecw: 0.890983 mode: 0 target: 12
+Event 164 xsecw: 1 mode: 4 target: 207
+Event 165 xsecw: 0.947357 mode: 0 target: 12
+Event 166 xsecw: 1 mode: 1 target: 12
+Event 167 xsecw: 1 mode: 3 target: 12
+Event 168 xsecw: 0.761515 mode: 0 target: 16
+Event 169 xsecw: 0.871734 mode: 0 target: 16
+Event 170 xsecw: 1 mode: 1 target: 12
+Event 171 xsecw: 1 mode: 3 target: 12
+Event 172 xsecw: 1 mode: 3 target: 1
+Event 173 xsecw: 0.788875 mode: 0 target: 12
+Event 174 xsecw: 0.911285 mode: 0 target: 16
+Event 175 xsecw: 1 mode: 1 target: 1
+Event 176 xsecw: 0.785936 mode: 0 target: 12
+Event 177 xsecw: 1 mode: 1 target: 12
+Event 178 xsecw: 0.824232 mode: 0 target: 12
+Event 179 xsecw: 1 mode: 1 target: 1
+Event 180 xsecw: 0.984753 mode: 0 target: 12
+Event 181 xsecw: 0.962207 mode: 0 target: 12
+Event 182 xsecw: 1 mode: 1 target: 12
+Event 183 xsecw: 0.96494 mode: 0 target: 28
+Event 184 xsecw: 1 mode: 9 target: 16
+Event 185 xsecw: 1 mode: 1 target: 12
+Event 186 xsecw: 1 mode: 4 target: 12
+Event 187 xsecw: 1 mode: 2 target: 12
+Event 188 xsecw: 1 mode: 1 target: 16
+Event 189 xsecw: 0.742552 mode: 0 target: 12
+Event 190 xsecw: 0.85588 mode: 0 target: 12
+Event 191 xsecw: 0.927411 mode: 0 target: 12
+Event 192 xsecw: 0.928617 mode: 0 target: 16
+Event 193 xsecw: 1 mode: 1 target: 12
+Event 194 xsecw: 0.953447 mode: 0 target: 12
+Event 195 xsecw: 1 mode: 1 target: 12
+Event 196 xsecw: 0.874181 mode: 0 target: 12
+Event 197 xsecw: 1 mode: 9 target: 12
+Event 198 xsecw: 0.79143 mode: 0 target: 12
+Event 199 xsecw: 0.820548 mode: 0 target: 12
+Event 200 xsecw: 1 mode: 4 target: 12
+Event 201 xsecw: 0.838316 mode: 0 target: 12
+Event 202 xsecw: 1 mode: 9 target: 12
+Event 203 xsecw: 1 mode: 2 target: 12
+Event 204 xsecw: 0.955113 mode: 0 target: 12
+Event 205 xsecw: 0.794704 mode: 0 target: 12
+Event 206 xsecw: 1 mode: 1 target: 12
+Event 207 xsecw: 0.962806 mode: 0 target: 12
+Event 208 xsecw: 1 mode: 3 target: 12
+Event 209 xsecw: 1 mode: 1 target: 1
+Event 210 xsecw: 1 mode: 1 target: 12
+Event 211 xsecw: 1 mode: 1 target: 12
+Event 212 xsecw: 0.75539 mode: 0 target: 12
+Event 213 xsecw: 0.89146 mode: 0 target: 12
+Event 214 xsecw: 1 mode: 8 target: 12
+Event 215 xsecw: 1 mode: 3 target: 12
+Event 216 xsecw: 1 mode: 3 target: 12
+Event 217 xsecw: 1 mode: 4 target: 12
+Event 218 xsecw: 1 mode: 1 target: 12
+Event 219 xsecw: 1 mode: 1 target: 16
+Event 220 xsecw: 1 mode: 3 target: 16
+Event 221 xsecw: 0.815218 mode: 0 target: 28
+Event 222 xsecw: 1 mode: 3 target: 56
+Event 223 xsecw: 0.97006 mode: 0 target: 12
+Event 224 xsecw: 1 mode: 3 target: 12
+Event 225 xsecw: 0.955751 mode: 0 target: 16
+Event 226 xsecw: 1 mode: 1 target: 12
+Event 227 xsecw: 1 mode: 4 target: 16
+Event 228 xsecw: 0.86762 mode: 0 target: 12
+Event 229 xsecw: 0.975196 mode: 0 target: 12
+Event 230 xsecw: 1 mode: 1 target: 12
+Event 231 xsecw: 0.870165 mode: 0 target: 12
+Event 232 xsecw: 1 mode: 1 target: 11
+Event 233 xsecw: 1 mode: 3 target: 16
+Event 234 xsecw: 1 mode: 4 target: 16
+Event 235 xsecw: 0.845893 mode: 0 target: 12
+Event 236 xsecw: 1 mode: 9 target: 12
+Event 237 xsecw: 0.919155 mode: 0 target: 12
+Event 238 xsecw: 0.970773 mode: 0 target: 12
+Event 239 xsecw: 0.894858 mode: 0 target: 12
+Event 240 xsecw: 1 mode: 9 target: 12
+Event 241 xsecw: 1 mode: 9 target: 12
+Event 242 xsecw: 0.862018 mode: 0 target: 48
+Event 243 xsecw: 1 mode: 9 target: 12
+Event 244 xsecw: 1 mode: 3 target: 1
+Event 245 xsecw: 1 mode: 1 target: 12
+Event 246 xsecw: 0.815689 mode: 0 target: 12
+Event 247 xsecw: 1 mode: 9 target: 12
+Event 248 xsecw: 1 mode: 9 target: 12
+Event 249 xsecw: 1 mode: 9 target: 12
+Event 250 xsecw: 0.910833 mode: 0 target: 12
+Event 251 xsecw: 1 mode: 4 target: 12
+Event 252 xsecw: 0.911967 mode: 0 target: 12
+Event 253 xsecw: 0.951868 mode: 0 target: 12
+Event 254 xsecw: 1 mode: 2 target: 12
+Event 255 xsecw: 0.912246 mode: 0 target: 16
+Event 256 xsecw: 0.892456 mode: 0 target: 12
+Event 257 xsecw: 1 mode: 1 target: 12
+Event 258 xsecw: 0.86699 mode: 0 target: 12
+Event 259 xsecw: 1 mode: 1 target: 1
+Event 260 xsecw: 1 mode: 1 target: 12
+Event 261 xsecw: 1 mode: 8 target: 12
+Event 262 xsecw: 0.975016 mode: 0 target: 16
+Event 263 xsecw: 0.881143 mode: 0 target: 12
+Event 264 xsecw: 1 mode: 1 target: 12
+Event 265 xsecw: 1 mode: 3 target: 12
+Event 266 xsecw: 1 mode: 1 target: 1
+Event 267 xsecw: 0.780332 mode: 0 target: 12
+Event 268 xsecw: 1 mode: 9 target: 12
+Event 269 xsecw: 0.912062 mode: 0 target: 16
+Event 270 xsecw: 1 mode: 1 target: 16
+Event 271 xsecw: 1 mode: 4 target: 12
+Event 272 xsecw: 1 mode: 4 target: 12
+Event 273 xsecw: 0.839528 mode: 0 target: 12
+Event 274 xsecw: 1 mode: 1 target: 12
+Event 275 xsecw: 0.825013 mode: 0 target: 12
+Event 276 xsecw: 0.857087 mode: 0 target: 12
+Event 277 xsecw: 1 mode: 2 target: 12
+Event 278 xsecw: 0.901546 mode: 0 target: 12
+Event 279 xsecw: 0.920419 mode: 0 target: 12
+Event 280 xsecw: 0.745619 mode: 0 target: 12
+Event 281 xsecw: 1 mode: 8 target: 27
+Event 282 xsecw: 1 mode: 9 target: 12
+Event 283 xsecw: 1 mode: 1 target: 16
+Event 284 xsecw: 1 mode: 3 target: 12
+Event 285 xsecw: 0.847718 mode: 0 target: 12
+Event 286 xsecw: 0.921119 mode: 0 target: 16
+Event 287 xsecw: 1 mode: 1 target: 12
+Event 288 xsecw: 1 mode: 1 target: 12
+Event 289 xsecw: 1 mode: 6 target: 1
+Event 290 xsecw: 1 mode: 1 target: 12
+Event 291 xsecw: 0.966439 mode: 0 target: 12
+Event 292 xsecw: 0.979042 mode: 0 target: 12
+Event 293 xsecw: 0.958787 mode: 0 target: 12
+Event 294 xsecw: 1 mode: 4 target: 12
+Event 295 xsecw: 1 mode: 9 target: 16
+Event 296 xsecw: 1 mode: 4 target: 207
+Event 297 xsecw: 0.85864 mode: 0 target: 12
+Event 298 xsecw: 1 mode: 1 target: 12
+Event 299 xsecw: 0.929405 mode: 0 target: 16
+Event 300 xsecw: 0.919601 mode: 0 target: 12
+Event 301 xsecw: 1 mode: 1 target: 12
+Event 302 xsecw: 1 mode: 1 target: 16
+Event 303 xsecw: 0.952074 mode: 0 target: 12
+Event 304 xsecw: 1 mode: 3 target: 12
+Event 305 xsecw: 1 mode: 4 target: 12
+Event 306 xsecw: 0.883711 mode: 0 target: 16
+Event 307 xsecw: 0.967321 mode: 0 target: 12
+Event 308 xsecw: 0.861089 mode: 0 target: 12
+Event 309 xsecw: 0.968302 mode: 0 target: 12
+Event 310 xsecw: 1 mode: 3 target: 12
+Event 311 xsecw: 0.784456 mode: 0 target: 12
+Event 312 xsecw: 1 mode: 1 target: 1
+Event 313 xsecw: 1 mode: 1 target: 48
+Event 314 xsecw: 0.953787 mode: 0 target: 16
+Event 315 xsecw: 0.907389 mode: 0 target: 16
+Event 316 xsecw: 1 mode: 1 target: 16
+Event 317 xsecw: 1 mode: 1 target: 16
+Event 318 xsecw: 0.849976 mode: 0 target: 12
+Event 319 xsecw: 0.963946 mode: 0 target: 12
+Event 320 xsecw: 0.95836 mode: 0 target: 16
+Event 321 xsecw: 1 mode: 4 target: 16
+Event 322 xsecw: 0.964019 mode: 0 target: 16
+Event 323 xsecw: 1 mode: 4 target: 12
+Event 324 xsecw: 1 mode: 1 target: 16
+Event 325 xsecw: 1 mode: 1 target: 207
+Event 326 xsecw: 1 mode: 1 target: 16
+Event 327 xsecw: 1 mode: 3 target: 207
+Event 328 xsecw: 1 mode: 8 target: 12
+Event 329 xsecw: 0.859821 mode: 0 target: 16
+Event 330 xsecw: 1 mode: 4 target: 12
+Event 331 xsecw: 1 mode: 9 target: 12
+Event 332 xsecw: 1 mode: 3 target: 16
+Event 333 xsecw: 0.857576 mode: 0 target: 16
+Event 334 xsecw: 1 mode: 4 target: 12
+Event 335 xsecw: 0.877503 mode: 0 target: 12
+Event 336 xsecw: 1 mode: 4 target: 16
+Event 337 xsecw: 0.763068 mode: 0 target: 48
+Event 338 xsecw: 0.89115 mode: 0 target: 12
+Event 339 xsecw: 0.950802 mode: 0 target: 12
+Event 340 xsecw: 1 mode: 1 target: 12
+Event 341 xsecw: 1 mode: 1 target: 1
+Event 342 xsecw: 1 mode: 9 target: 12
+Event 343 xsecw: 0.967292 mode: 0 target: 16
+Event 344 xsecw: 0.836508 mode: 0 target: 16
+Event 345 xsecw: 1 mode: 1 target: 16
+Event 346 xsecw: 1 mode: 4 target: 12
+Event 347 xsecw: 1 mode: 1 target: 12
+Event 348 xsecw: 0.962725 mode: 0 target: 16
+Event 349 xsecw: 0.900506 mode: 0 target: 12
+Event 350 xsecw: 1 mode: 3 target: 12
+Event 351 xsecw: 0.876977 mode: 0 target: 16
+Event 352 xsecw: 0.870101 mode: 0 target: 12
+Event 353 xsecw: 1 mode: 1 target: 16
+Event 354 xsecw: 1 mode: 3 target: 12
+Event 355 xsecw: 1 mode: 1 target: 12
+Event 356 xsecw: 1 mode: 6 target: 12
+Event 357 xsecw: 0.925376 mode: 0 target: 12
+Event 358 xsecw: 1 mode: 4 target: 12
+Event 359 xsecw: 0.773813 mode: 0 target: 16
+Event 360 xsecw: 1 mode: 1 target: 12
+Event 361 xsecw: 1 mode: 1 target: 16
+Event 362 xsecw: 1 mode: 2 target: 12
+Event 363 xsecw: 0.905473 mode: 0 target: 16
+Event 364 xsecw: 1 mode: 3 target: 12
+Event 365 xsecw: 1 mode: 1 target: 1
+Event 366 xsecw: 0.951698 mode: 0 target: 12
+Event 367 xsecw: 0.907794 mode: 0 target: 12
+Event 368 xsecw: 1 mode: 3 target: 12
+Event 369 xsecw: 0.957183 mode: 0 target: 28
+Event 370 xsecw: 0.766998 mode: 0 target: 12
+Event 371 xsecw: 1 mode: 3 target: 12
+Event 372 xsecw: 0.709614 mode: 0 target: 207
+Event 373 xsecw: 0.883449 mode: 0 target: 12
+Event 374 xsecw: 1 mode: 1 target: 12
+Event 375 xsecw: 1 mode: 3 target: 16
+Event 376 xsecw: 0.970243 mode: 0 target: 12
+Event 377 xsecw: 1 mode: 1 target: 16
+Event 378 xsecw: 1 mode: 9 target: 12
+Event 379 xsecw: 1 mode: 3 target: 12
+Event 380 xsecw: 0.95314 mode: 0 target: 12
+Event 381 xsecw: 1 mode: 8 target: 12
+Event 382 xsecw: 0.893399 mode: 0 target: 12
+Event 383 xsecw: 0.910627 mode: 0 target: 16
+Event 384 xsecw: 1 mode: 3 target: 12
+Event 385 xsecw: 0.84699 mode: 0 target: 12
+Event 386 xsecw: 1 mode: 1 target: 12
+Event 387 xsecw: 1 mode: 1 target: 12
+Event 388 xsecw: 1 mode: 9 target: 16
+Event 389 xsecw: 1 mode: 3 target: 12
+Event 390 xsecw: 0.812766 mode: 0 target: 12
+Event 391 xsecw: 0.840427 mode: 0 target: 16
+Event 392 xsecw: 1 mode: 1 target: 16
+Event 393 xsecw: 1 mode: 1 target: 12
+Event 394 xsecw: 0.943888 mode: 0 target: 12
+Event 395 xsecw: 1 mode: 4 target: 16
+Event 396 xsecw: 0.954349 mode: 0 target: 12
+Event 397 xsecw: 0.946414 mode: 0 target: 12
+Event 398 xsecw: 1 mode: 4 target: 12
+Event 399 xsecw: 1 mode: 1 target: 16
+Event 400 xsecw: 0.944364 mode: 0 target: 16
+Event 401 xsecw: 1 mode: 1 target: 1
+Event 402 xsecw: 1 mode: 1 target: 12
+Event 403 xsecw: 0.953386 mode: 0 target: 12
+Event 404 xsecw: 0.901894 mode: 0 target: 12
+Event 405 xsecw: 1 mode: 1 target: 1
+Event 406 xsecw: 0.942096 mode: 0 target: 12
+Event 407 xsecw: 1 mode: 1 target: 1
+Event 408 xsecw: 0.929168 mode: 0 target: 16
+Event 409 xsecw: 1 mode: 8 target: 12
+Event 410 xsecw: 1 mode: 9 target: 12
+Event 411 xsecw: 1 mode: 3 target: 12
+Event 412 xsecw: 1 mode: 1 target: 12
+Event 413 xsecw: 0.801253 mode: 0 target: 12
+Event 414 xsecw: 1 mode: 1 target: 12
+Event 415 xsecw: 1 mode: 1 target: 16
+Event 416 xsecw: 1 mode: 1 target: 27
+Event 417 xsecw: 1 mode: 1 target: 12
+Event 418 xsecw: 1 mode: 9 target: 16
+Event 419 xsecw: 0.974473 mode: 0 target: 12
+Event 420 xsecw: 0.957286 mode: 0 target: 12
+Event 421 xsecw: 0.819462 mode: 0 target: 12
+Event 422 xsecw: 1 mode: 1 target: 12
+Event 423 xsecw: 1 mode: 11 target: -999
+Event 424 xsecw: 1 mode: 11 target: -999
+**************PRINTING DETAILED SAMPLE INFORMATION AFTER LOOP************
+FGD1 numuCC 0pi:
+  MC only:             151
+  MC only nobin:       151
+  POT only:            37.7261
+  POT only nobin:      37.7261
+  Flux only:           38.4335
+  Flux only nobin:     38.4335
+  Xsec only:           35.5477
+  Xsec only nobin:     35.5477
+  Det only:            37.2266
+  Det only nobin:      37.2266
+  ND Cov only:         37.7512
+  ND Cov nobin:        37.7512
+  Beam Cov only:       37.7261
+  Beam Cov nobin:      37.7261
+  All comb:            35.7858
+  All comb nobin:      35.7858
+FGD1 numuCC 1pi:
+  MC only:             45
+  MC only nobin:       45
+  POT only:            11.4389
+  POT only nobin:      11.4389
+  Flux only:           12.4053
+  Flux only nobin:     12.4053
+  Xsec only:           11.3081
+  Xsec only nobin:     11.3081
+  Det only:            11.3744
+  Det only nobin:      11.3744
+  ND Cov only:         11.3178
+  ND Cov nobin:        11.3178
+  Beam Cov only:       11.4389
+  Beam Cov nobin:      11.4389
+  All comb:            12.0546
+  All comb nobin:      12.0546
+FGD1 numuCC other:
+  MC only:             30
+  MC only nobin:       32
+  POT only:            7.43979
+  POT only nobin:      7.93577
+  Flux only:           8.30858
+  Flux only nobin:     8.92702
+  Xsec only:           7.35195
+  Xsec only nobin:     7.84794
+  Det only:            7.35071
+  Det only nobin:      7.84559
+  ND Cov only:         7.30599
+  ND Cov nobin:        7.78
+  Beam Cov only:       7.43979
+  Beam Cov nobin:      7.93577
+  All comb:            7.97155
+  All comb nobin:      8.56178
+FGD2 numuCC 0pi:
+  MC only:             142
+  MC only nobin:       142
+  POT only:            35.215
+  POT only nobin:      35.215
+  Flux only:           35.4076
+  Flux only nobin:     35.4076
+  Xsec only:           32.9099
+  Xsec only nobin:     32.9099
+  Det only:            34.6278
+  Det only nobin:      34.6278
+  ND Cov only:         35.2645
+  ND Cov nobin:        35.2645
+  Beam Cov only:       35.215
+  Beam Cov nobin:      35.215
+  All comb:            32.6185
+  All comb nobin:      32.6185
+FGD2 numuCC 1pi:
+  MC only:             29
+  MC only nobin:       30
+  POT only:            7.1918
+  POT only nobin:      7.43979
+  Flux only:           7.66033
+  Flux only nobin:     7.97626
+  Xsec only:           7.11257
+  Xsec only nobin:     7.36056
+  Det only:            7.04879
+  Det only nobin:      7.28091
+  ND Cov only:         7.1002
+  ND Cov nobin:        7.33859
+  Beam Cov only:       7.1918
+  Beam Cov nobin:      7.43979
+  All comb:            7.33489
+  All comb nobin:      7.61915
+FGD2 numuCC other:
+  MC only:             25
+  MC only nobin:       25
+  POT only:            6.19982
+  POT only nobin:      6.19982
+  Flux only:           7.28566
+  Flux only nobin:     7.28566
+  Xsec only:           6.11879
+  Xsec only nobin:     6.11879
+  Det only:            6.1519
+  Det only nobin:      6.1519
+  ND Cov only:         6.14416
+  ND Cov nobin:        6.14416
+  Beam Cov only:       6.19982
+  Beam Cov nobin:      6.19982
+  All comb:            7.0722
+  All comb nobin:      7.0722
+Totals: 
+  MCOnly bin:      422
+  MCOnly un:       425
+  POTOnly bin:     105.211
+  POTOnly un:      105.955
+  FluxOnly bin:    109.501
+  FluxOnly un:     110.435
+  XsecOnly bin:    100.349
+  XsecOnly un:     101.093
+  DetOnly bin:     103.78
+  DetOnly un:      104.507
+  NDCovOnly bin:   104.884
+  NDCovOnly un:    105.596
+  BeamCovOnly bin: 105.211
+  BeamCovOnly un:  105.955
+  AllOnly bin:     102.838
+  AllOnly un:      103.712
+Printing parameters for xsec_cov
+Name           Nominal        Init           Current        Proposed       
+MAQE           0.858333       0.858333       0.858333       0.858333       
+2p2h_norm_nu   1              1              1              1              
+2p2h_norm_nubar1              1              1              1              
+2p2h_normCtoO  1              1              1              1              
+2p2h_shape_C   0              0              0              0              
+2p2h_shape_O   0              0              0              0              
+MEC_lowENu     0              0              0              0              
+MEC_highENu    0              0              0              0              
+MEC_lowENubar  0              0              0              0              
+MEC_highENubar 0              0              0              0              
+Q2_norm_0      1              1              1              1              
+Q2_norm_1      1              1              1              1              
+Q2_norm_2      1              1              1              1              
+Q2_norm_3      1              1              1              1              
+CA5            0.950495       0.950495       0.950495       0.950495       
+MARES          1.12632        1.12632        1.12632        1.12632        
+ISO_BKG        0.738462       0.738462       0.738462       0.738462       
+CC_norm_nu     1              1              1              1              
+CC_norm_nubar  1              1              1              1              
+nue_numu       1              1              1              1              
+nuebar_numubar 1              1              1              1              
+CC_DIS         0              0              0              0              
+CC_Coh_C       1              1              1              1              
+CC_Coh_O       1              1              1              1              
+NC_Coh         1              1              1              1              
+NC_1gamma      1              1              1              1              
+NC_other_near  1              1              1              1              
+NC_other_far   1              1              1              1              
+FEFQE          1.069          1.069          1.069          1.069          
+FEFQEH         1.01333        1.01333        1.01333        1.01333        
+FEFINEL        1.002          1.002          1.002          1.002          
+FEFABS         1.27636        1.27636        1.27636        1.27636        
+FEFCX          0.697          0.697          0.697          0.697          
+EB_dial_C      25             25             25             25             
+EB_dial_O      27             27             27             27             
+Sample                             Data      MC        -LLH      |         
+FGD1 numuCC 0pi                    38        35.7858   35.8401   |         
+FGD1 numuCC 1pi                    7         12.0546   12.5695   |         
+FGD1 numuCC other                  11        7.97155   9.73752   |         
+FGD2 numuCC 0pi                    44        32.6185   35.4672   |         
+FGD2 numuCC 1pi                    4         7.33489   7.33489   |         
+FGD2 numuCC other                  9         7.0722    7.0722    |         
+FGD1 anti-numuCC 0pi               0         0         0         |         
+FGD1 anti-numuCC 1pi               0         0         0         |         
+FGD1 anti-numuCC other             0         0         0         |         
+FGD2 anti-numuCC 0pi               0         0         0         |         
+FGD2 anti-numuCC 1pi               0         0         0         |         
+FGD2 anti-numuCC other             0         0         0         |         
+FGD1 NuMuBkg CC0pi in AntiNu Mode  0         0         0         |         
+FGD1 NuMuBkg CC1pi in AntiNu Mode  0         0         0         |         
+FGD1 NuMuBkg CCother in AntiNu Mode0         0         0         |         
+FGD2 NuMuBkg CC0pi in AntiNu Mode  0         0         0         |         
+FGD2 NuMuBkg CC1pi in AntiNu Mode  0         0         0         |         
+FGD2 NuMuBkg CCother in AntiNu Mode0         0         0         |         
+Total                              113       102.838   108.021   |         
+Single reweight of MC took 0.428844s to complete
+------------------------------------------
+Have set Asimov fake-data to reweighted MC
+With cross-section settings: 
+Printing parameters for xsec_cov
+Name           Nominal        Init           Current        Proposed       
+MAQE           0.858333       0.858333       0.858333       0.858333       
+2p2h_norm_nu   1              1              1              1              
+2p2h_norm_nubar1              1              1              1              
+2p2h_normCtoO  1              1              1              1              
+2p2h_shape_C   0              0              0              0              
+2p2h_shape_O   0              0              0              0              
+MEC_lowENu     0              0              0              0              
+MEC_highENu    0              0              0              0              
+MEC_lowENubar  0              0              0              0              
+MEC_highENubar 0              0              0              0              
+Q2_norm_0      1              1              1              1              
+Q2_norm_1      1              1              1              1              
+Q2_norm_2      1              1              1              1              
+Q2_norm_3      1              1              1              1              
+CA5            0.950495       0.950495       0.950495       0.950495       
+MARES          1.12632        1.12632        1.12632        1.12632        
+ISO_BKG        0.738462       0.738462       0.738462       0.738462       
+CC_norm_nu     1              1              1              1              
+CC_norm_nubar  1              1              1              1              
+nue_numu       1              1              1              1              
+nuebar_numubar 1              1              1              1              
+CC_DIS         0              0              0              0              
+CC_Coh_C       1              1              1              1              
+CC_Coh_O       1              1              1              1              
+NC_Coh         1              1              1              1              
+NC_1gamma      1              1              1              1              
+NC_other_near  1              1              1              1              
+NC_other_far   1              1              1              1              
+FEFQE          1.069          1.069          1.069          1.069          
+FEFQEH         1.01333        1.01333        1.01333        1.01333        
+FEFINEL        1.002          1.002          1.002          1.002          
+FEFABS         1.27636        1.27636        1.27636        1.27636        
+FEFCX          0.697          0.697          0.697          0.697          
+EB_dial_C      25             25             25             25             
+EB_dial_O      27             27             27             27             
+------------------------------------------
+Sample                             Data      MC        -LLH      |         
+FGD1 numuCC 0pi                    35.7858   35.7858   0         |         
+FGD1 numuCC 1pi                    12.0546   12.0546   0         |         
+FGD1 numuCC other                  7.97155   7.97155   0         |         
+FGD2 numuCC 0pi                    32.6185   32.6185   0         |         
+FGD2 numuCC 1pi                    7.33489   7.33489   0         |         
+FGD2 numuCC other                  7.0722    7.0722    0         |         
+FGD1 anti-numuCC 0pi               0         0         0         |         
+FGD1 anti-numuCC 1pi               0         0         0         |         
+FGD1 anti-numuCC other             0         0         0         |         
+FGD2 anti-numuCC 0pi               0         0         0         |         
+FGD2 anti-numuCC 1pi               0         0         0         |         
+FGD2 anti-numuCC other             0         0         0         |         
+FGD1 NuMuBkg CC0pi in AntiNu Mode  0         0         0         |         
+FGD1 NuMuBkg CC1pi in AntiNu Mode  0         0         0         |         
+FGD1 NuMuBkg CCother in AntiNu Mode0         0         0         |         
+FGD2 NuMuBkg CC0pi in AntiNu Mode  0         0         0         |         
+FGD2 NuMuBkg CC1pi in AntiNu Mode  0         0         0         |         
+FGD2 NuMuBkg CCother in AntiNu Mode0         0         0         |         
+Total                              102.838   102.838   0         |         
+Saving data and MC distributions in test_ND280_nom.root
+------------------------------
+Adding samplePDF object 
+Adding systematic object total_flux_cov
+Adding systematic object xsec_cov
+Adding systematic object nddet_cov
+------------------------------
+---------------------------------
+General settings      
+    Output file:      test.root
+    Seed:             0
+    Debug:            1
+    GPU fit:          0
+    CPU MP fit:       1
+       N cores:       1
+    PlotByMode:       1
+---------------------------------
+MCMC settings         
+    N steps:          0
+    Flux step scale:  0.05
+    Xsec step scale:  0.02
+    ND det step scale:0.04
+    SK det stet scale:1
+    Osc step scale:   0.1
+    Anneal. temp:     -1
+    Random start:     0
+    Process MCMC:     0
+    Posterior start:  0
+    Posterior chain:  EMPTY
+---------------------------------
+T2K run settings      
+    ND runs:          P6_S17 4a
+    SK nu POT:        3.01e+20
+    SK antinu POT:    3.01e+20
+    Livetime:         1417.4
+    Save nominal:     1
+---------------------------------
+Samples settings      
+    ND280:            1
+    FHC nu_mu CC0pi:  1
+    FHC nu_e CC0pi:   1
+    FHC nu_e CC1pi:   1
+    RHC nu_mu CC0pi:  1
+    RHC nu_e CC0pi:   1
+    SK SF->RFG tuning:1
+    SK RPA tuning:    1
+    SK CCCoh tuning:  1
+---------------------------------
+Samples at ND280
+  FGD1 nu CC0pi
+  FGD1 nu CC1pi
+  FGD1 nu CCOth
+  FGD1 anu CC0pi
+  FGD1 anu CC1pi
+  FGD1 anu CCOth
+  FGD1 anu nu CC0pi
+  FGD1 anu nu CC1pi
+  FGD1 anu nu CCOth
+  FGD2 nu CC0pi
+  FGD2 nu CC1pi
+  FGD2 nu CCOth
+  FGD2 anu CC0pi
+  FGD2 anu CC1pi
+  FGD2 anu CCOth
+  FGD2 anu nu CC0pi
+  FGD2 anu nu CC1pi
+  FGD2 anu nu CCOth
+Samples binning ND280
+    Bin anu mom qe:      
+    Bin anu th qe:       
+    Bin anu mom nqe:     
+    Bin anu th nqe:      
+    Bin anu numu p qe:   
+    Bin anu numu th qe:  
+    Bin anu numu p nqe:  
+    Bin anu numu th nqe: 
+Samples binning SK
+    Numu bins Erec:      0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1 1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6 1.65 1.7 1.75 1.8 1.85 1.9 1.95 2 2.05 2.1 2.15 2.2 2.25 2.3 2.35 2.4 2.45 2.5 2.55 2.6 2.65 2.7 2.75 2.8 2.85 2.9 2.95 3 3.25 3.5 3.75 4 4.5 5 5.5 6 7 8 9 10 30 
+    Nue binning option:  0
+    Nue bins Erec:       0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1 1.05 1.1 1.15 1.2 1.25 
+---------------------------------
+Input settings    
+    Data file:   
+---------------------------------
+Real data settings    
+    RealDataFitFlag:  0
+---------------------------------
+Fake data settings    
+    FakeDataFitFlag:  1
+    FakeDataFile:     
+---------------------------------
+Asimov settings       
+    AsimovFitFlag:    0
+    NDAsimovFitFlag:  0
+    MakeAsimovOnly:   0
+---------------------------------
+Toy fit settings      
+    Post. pred. file: EMPTY
+    ToyFitFlag:       0
+    Toy file:         
+    N toys:           100
+    Full LLH:         1
+---------------------------------
+Systematics settings  
+    Flux syst:        1
+    Flux flat:        
+    Flux fixed:       
+    X-sec syst:       1
+    X-sec flat:       1 2 
+    X-sec fixed:      6 7 8 9 33 34 
+    ND280 detector syst:    1
+    ND280 detector flat:    
+    ND280 detector fixed:   
+    Sk detector syst:    1
+    Sk detector flat:    
+    Sk detector fixed:   
+    Oscill. flat:     
+    Oscill. fixed:   
+    Oscill. flat antinu:
+    Oscill. fixed antinu:   
+    Reactor const.:   0
+    Stat only?:       0
+    Do oscillation?:       0
+    Use SK syst?:       1
+    Use BANFF tuning?:0
+    Use MaCh3 ND best fit tuning? (nb currently requires use BANFF tuning to be on):0
+---------------------------------
+Covariance matrices   
+    Flux file:         inputs/flux_covariance_run1-9_v2_banff.root
+      flux matrix:     total_flux_cov
+    Xsec file:         inputs/xsec_covariance_2019a_2p2h_Q2_OLDMAQE.root
+      xsec matrix:     xsec_cov
+    BANFF file:        
+      BANFF matrix:    
+      BANFF vector:    
+    ND280 file:        inputs/ND280_RHCMultiPi_DetectorCovariance_MorrisonBinning_28March2019_convertedToMaCh3.root
+      ND280 matrix:    nddet_cov
+    SK file:           utils/skdet_total_error_matrix_2015/SKJointErrorMatrix2015_Total_v7_13thMarch2016.root
+      SK matrix:       SKJointError_Erec_Total
+    Osc file:          inputs/oscillation_covariance_6par_nondouble.root
+      osc matrix:      osc_cov
+    Osc file antinu:   osc_cov
+      osc matrix:      
+    Use BANFF covariance instead of ND data (and flux/xsec cov): 0
+---------------------------------
+Oscillation parameters
+    Double angle :              0
+    Binned oscillation :        0
+    Oscillation binning:           
+    Starting parameters:           
+    Starting parameters RHC:       
+    Input parameters (if different from starting parameters):           
+    Flat likelihood parameters: 
+---------------------------------
+Beta options: 
+    Use Beta :              0
+    Flip Beta :             0
+    Apply Beta to Nue :     0
+    Apply Diagnal Beta :    0
+
+-------------------- Starting MCMC --------------------
+Finding spline segment for xsec parameter MAQE at -0.129065
+Finding spline segment for xsec parameter 2p2h_shape_C at 0.0683435
+Finding spline segment for xsec parameter 2p2h_shape_O at -0.479145
+Finding spline segment for xsec parameter MEC_lowENu at 0
+Finding spline segment for xsec parameter MEC_highENu at 0
+Finding spline segment for xsec parameter CA5 at -0.0481936
+Finding spline segment for xsec parameter MARES at 0.125135
+Finding spline segment for xsec parameter ISO_BKG at -0.256165
+Finding spline segment for xsec parameter CC_DIS at 0.0111483
+Finding spline segment for xsec parameter FEFQE at 0.0764362
+Finding spline segment for xsec parameter FEFQEH at -0.00641593
+Finding spline segment for xsec parameter FEFINEL at 0.0275131
+Finding spline segment for xsec parameter FEFABS at 0.265899
+Finding spline segment for xsec parameter FEFCX at -0.302496
+Event 0 xsecw: 0.855623 mode: 0 target: 12
+Event 1 xsecw: 0.904105 mode: 0 target: 12
+Event 2 xsecw: 0.966469 mode: 0 target: 12
+Event 3 xsecw: 1 mode: 4 target: 12
+Event 4 xsecw: 1 mode: 1 target: 12
+Event 5 xsecw: 1 mode: 4 target: 1
+Event 6 xsecw: 1 mode: 3 target: 207
+Event 7 xsecw: 1 mode: 1 target: 16
+Event 8 xsecw: 1 mode: 4 target: 12
+Event 9 xsecw: 1.02127 mode: 2 target: 16
+Event 10 xsecw: 0.587155 mode: 9 target: 12
+Event 11 xsecw: 0.587155 mode: 9 target: 12
+Event 12 xsecw: 1 mode: 4 target: 16
+Event 13 xsecw: 0.900451 mode: 0 target: 12
+Event 14 xsecw: 1 mode: 1 target: 16
+Event 15 xsecw: 1 mode: 1 target: 13
+Event 16 xsecw: 1 mode: 3 target: 12
+Event 17 xsecw: 0.774805 mode: 0 target: 12
+Event 18 xsecw: 1 mode: 4 target: 12
+Event 19 xsecw: 0.871444 mode: 0 target: 12
+Event 20 xsecw: 1 mode: 1 target: 27
+Event 21 xsecw: 1 mode: 1 target: 12
+Event 22 xsecw: 0.829543 mode: 0 target: 12
+Event 23 xsecw: 1 mode: 1 target: 16
+Event 24 xsecw: 0.924897 mode: 0 target: 12
+Event 25 xsecw: 1.02141 mode: 2 target: 12
+Event 26 xsecw: 1 mode: 1 target: 12
+Event 27 xsecw: 0.587155 mode: 9 target: 12
+Event 28 xsecw: 1 mode: 3 target: 12
+Event 29 xsecw: 1 mode: 3 target: 16
+Event 30 xsecw: 1 mode: 1 target: 13
+Event 31 xsecw: 1 mode: 4 target: 12
+Event 32 xsecw: 0.587155 mode: 9 target: 12
+Event 33 xsecw: 1 mode: 4 target: 27
+Event 34 xsecw: 1 mode: 3 target: 12
+Event 35 xsecw: 1 mode: 1 target: 16
+Event 36 xsecw: 1.20083 mode: 0 target: 12
+Event 37 xsecw: 0.974435 mode: 0 target: 16
+Event 38 xsecw: 0.587155 mode: 9 target: 12
+Event 39 xsecw: 0.855257 mode: 0 target: 16
+Event 40 xsecw: 1 mode: 1 target: 12
+Event 41 xsecw: 1 mode: 1 target: 12
+Event 42 xsecw: 0.819044 mode: 0 target: 12
+Event 43 xsecw: 0.922529 mode: 0 target: 12
+Event 44 xsecw: 1.02141 mode: 2 target: 12
+Event 45 xsecw: 1 mode: 3 target: 1
+Event 46 xsecw: 1 mode: 4 target: 207
+Event 47 xsecw: 0.869303 mode: 0 target: 12
+Event 48 xsecw: 1.01985 mode: 2 target: 12
+Event 49 xsecw: 1.00588 mode: 8 target: 16
+Event 50 xsecw: 0.843655 mode: 0 target: 16
+Event 51 xsecw: 1 mode: 4 target: 16
+Event 52 xsecw: 1 mode: 6 target: 12
+Event 53 xsecw: 0.880686 mode: 0 target: 12
+Event 54 xsecw: 1.00588 mode: 8 target: 12
+Event 55 xsecw: 1.19725 mode: 0 target: 12
+Event 56 xsecw: 1 mode: 1 target: 12
+Event 57 xsecw: 0.933264 mode: 0 target: 16
+Event 58 xsecw: 1 mode: 3 target: 16
+Event 59 xsecw: 1.00588 mode: 8 target: 12
+Event 60 xsecw: 0.970194 mode: 0 target: 12
+Event 61 xsecw: 0.587155 mode: 9 target: 12
+Event 62 xsecw: 1 mode: 1 target: 12
+Event 63 xsecw: 1.17908 mode: 0 target: 12
+Event 64 xsecw: 1 mode: 3 target: 12
+Event 65 xsecw: 1.00588 mode: 8 target: 207
+Event 66 xsecw: 0.816223 mode: 0 target: 12
+Event 67 xsecw: 0.911702 mode: 0 target: 16
+Event 68 xsecw: 0.9131 mode: 0 target: 12
+Event 69 xsecw: 1 mode: 1 target: 16
+Event 70 xsecw: 0.820353 mode: 0 target: 12
+Event 71 xsecw: 0.946028 mode: 0 target: 16
+Event 72 xsecw: 0.832431 mode: 0 target: 12
+Event 73 xsecw: 0.905069 mode: 0 target: 12
+Event 74 xsecw: 1 mode: 1 target: 12
+Event 75 xsecw: 1.02141 mode: 2 target: 12
+Event 76 xsecw: 1 mode: 4 target: 16
+Event 77 xsecw: 1.00588 mode: 8 target: 16
+Event 78 xsecw: 0.938746 mode: 0 target: 12
+Event 79 xsecw: 0.935964 mode: 0 target: 12
+Event 80 xsecw: 0.589693 mode: 9 target: 16
+Event 81 xsecw: 0.880126 mode: 0 target: 12
+Event 82 xsecw: 1 mode: 1 target: 16
+Event 83 xsecw: 0.937167 mode: 0 target: 12
+Event 84 xsecw: 1 mode: 1 target: 16
+Event 85 xsecw: 0.912283 mode: 0 target: 12
+Event 86 xsecw: 1 mode: 3 target: 16
+Event 87 xsecw: 0.887937 mode: 0 target: 12
+Event 88 xsecw: 0.931924 mode: 0 target: 12
+Event 89 xsecw: 1 mode: 3 target: 16
+Event 90 xsecw: 1 mode: 1 target: 16
+Event 91 xsecw: 1 mode: 1 target: 12
+Event 92 xsecw: 0.858499 mode: 0 target: 12
+Event 93 xsecw: 1 mode: 1 target: 1
+Event 94 xsecw: 1 mode: 1 target: 12
+Event 95 xsecw: 0.856013 mode: 0 target: 16
+Event 96 xsecw: 0.861587 mode: 0 target: 16
+Event 97 xsecw: 1 mode: 4 target: 12
+Event 98 xsecw: 1.02127 mode: 2 target: 16
+Event 99 xsecw: 1 mode: 3 target: 12
+Event 100 xsecw: 1.00588 mode: 8 target: 16
+Event 101 xsecw: 0.889606 mode: 0 target: 16
+Event 102 xsecw: 0.918749 mode: 0 target: 12
+Event 103 xsecw: 1 mode: 1 target: 16
+Event 104 xsecw: 0.880763 mode: 0 target: 47
+Event 105 xsecw: 1 mode: 1 target: 1
+Event 106 xsecw: 0.918887 mode: 0 target: 12
+Event 107 xsecw: 1 mode: 1 target: 16
+Event 108 xsecw: 1 mode: 3 target: 28
+Event 109 xsecw: 0.587155 mode: 9 target: 12
+Event 110 xsecw: 1 mode: 1 target: 12
+Event 111 xsecw: 1 mode: 4 target: 16
+Event 112 xsecw: 1 mode: 4 target: 12
+Event 113 xsecw: 1 mode: 3 target: 12
+Event 114 xsecw: 1.00588 mode: 8 target: 207
+Event 115 xsecw: 0.900993 mode: 0 target: 12
+Event 116 xsecw: 0.941838 mode: 0 target: 12
+Event 117 xsecw: 1 mode: 4 target: 16
+Event 118 xsecw: 0.90563 mode: 0 target: 16
+Event 119 xsecw: 0.910011 mode: 0 target: 12
+Event 120 xsecw: 1.00588 mode: 8 target: 207
+Event 121 xsecw: 1 mode: 1 target: 12
+Event 122 xsecw: 0.587155 mode: 9 target: 12
+Event 123 xsecw: 0.94229 mode: 0 target: 12
+Event 124 xsecw: 0.930828 mode: 0 target: 50
+Event 125 xsecw: 0.888335 mode: 0 target: 12
+Event 126 xsecw: 1 mode: 4 target: 12
+Event 127 xsecw: 1 mode: 6 target: 12
+Event 128 xsecw: 1.00588 mode: 8 target: 12
+Event 129 xsecw: 1 mode: 4 target: 12
+Event 130 xsecw: 1 mode: 1 target: 16
+Event 131 xsecw: 1 mode: 1 target: 12
+Event 132 xsecw: 0.870697 mode: 0 target: 12
+Event 133 xsecw: 0.778662 mode: 0 target: 12
+Event 134 xsecw: 0.834136 mode: 0 target: 12
+Event 135 xsecw: 1 mode: 4 target: 207
+Event 136 xsecw: 1 mode: 4 target: 16
+Event 137 xsecw: 0.916196 mode: 0 target: 16
+Event 138 xsecw: 1.17762 mode: 0 target: 12
+Event 139 xsecw: 0.940859 mode: 0 target: 16
+Event 140 xsecw: 0.945506 mode: 0 target: 16
+Event 141 xsecw: 0.963992 mode: 0 target: 12
+Event 142 xsecw: 0.824609 mode: 0 target: 12
+Event 143 xsecw: 1 mode: 3 target: 12
+Event 144 xsecw: 1 mode: 3 target: 12
+Event 145 xsecw: 0.829534 mode: 0 target: 16
+Event 146 xsecw: 1.02141 mode: 2 target: 12
+Event 147 xsecw: 1.00588 mode: 8 target: 1
+Event 148 xsecw: 1 mode: 3 target: 12
+Event 149 xsecw: 0.907006 mode: 0 target: 16
+Event 150 xsecw: 0.915863 mode: 0 target: 12
+Event 151 xsecw: 1 mode: 1 target: 12
+Event 152 xsecw: 1 mode: 1 target: 12
+Event 153 xsecw: 0.794391 mode: 0 target: 12
+Event 154 xsecw: 1 mode: 1 target: 12
+Event 155 xsecw: 0.858027 mode: 0 target: 12
+Event 156 xsecw: 0.587155 mode: 9 target: 12
+Event 157 xsecw: 1 mode: 1 target: 12
+Event 158 xsecw: 0.926581 mode: 0 target: 16
+Event 159 xsecw: 0.587155 mode: 9 target: 12
+Event 160 xsecw: 0.93696 mode: 0 target: 12
+Event 161 xsecw: 0.587155 mode: 9 target: 12
+Event 162 xsecw: 0.885984 mode: 0 target: 12
+Event 163 xsecw: 0.901744 mode: 0 target: 12
+Event 164 xsecw: 1 mode: 4 target: 207
+Event 165 xsecw: 0.957179 mode: 0 target: 12
+Event 166 xsecw: 1 mode: 1 target: 12
+Event 167 xsecw: 1 mode: 3 target: 12
+Event 168 xsecw: 0.781601 mode: 0 target: 16
+Event 169 xsecw: 0.883906 mode: 0 target: 16
+Event 170 xsecw: 1 mode: 1 target: 12
+Event 171 xsecw: 1 mode: 3 target: 12
+Event 172 xsecw: 1 mode: 3 target: 1
+Event 173 xsecw: 0.806743 mode: 0 target: 12
+Event 174 xsecw: 0.914436 mode: 0 target: 16
+Event 175 xsecw: 1 mode: 1 target: 1
+Event 176 xsecw: 0.804585 mode: 0 target: 12
+Event 177 xsecw: 1 mode: 1 target: 12
+Event 178 xsecw: 0.840057 mode: 0 target: 12
+Event 179 xsecw: 1 mode: 1 target: 1
+Event 180 xsecw: 1.1896 mode: 0 target: 12
+Event 181 xsecw: 0.970593 mode: 0 target: 12
+Event 182 xsecw: 1 mode: 1 target: 12
+Event 183 xsecw: 0.968688 mode: 0 target: 28
+Event 184 xsecw: 0.590597 mode: 9 target: 16
+Event 185 xsecw: 0.998469 mode: 1 target: 12
+Event 186 xsecw: 1 mode: 4 target: 12
+Event 187 xsecw: 1.02141 mode: 2 target: 12
+Event 188 xsecw: 1 mode: 1 target: 16
+Event 189 xsecw: 0.762369 mode: 0 target: 12
+Event 190 xsecw: 0.869478 mode: 0 target: 12
+Event 191 xsecw: 0.929046 mode: 0 target: 12
+Event 192 xsecw: 0.934811 mode: 0 target: 16
+Event 193 xsecw: 1 mode: 1 target: 12
+Event 194 xsecw: 1.15571 mode: 0 target: 12
+Event 195 xsecw: 1 mode: 1 target: 12
+Event 196 xsecw: 0.886302 mode: 0 target: 12
+Event 197 xsecw: 0.587155 mode: 9 target: 12
+Event 198 xsecw: 0.809725 mode: 0 target: 12
+Event 199 xsecw: 0.836703 mode: 0 target: 12
+Event 200 xsecw: 1 mode: 4 target: 12
+Event 201 xsecw: 0.852986 mode: 0 target: 12
+Event 202 xsecw: 0.587155 mode: 9 target: 12
+Event 203 xsecw: 1.02141 mode: 2 target: 12
+Event 204 xsecw: 0.962732 mode: 0 target: 12
+Event 205 xsecw: 0.812893 mode: 0 target: 12
+Event 206 xsecw: 1 mode: 1 target: 12
+Event 207 xsecw: 0.971131 mode: 0 target: 12
+Event 208 xsecw: 1 mode: 3 target: 12
+Event 209 xsecw: 1 mode: 1 target: 1
+Event 210 xsecw: 1 mode: 1 target: 12
+Event 211 xsecw: 1 mode: 1 target: 12
+Event 212 xsecw: 0.775098 mode: 0 target: 12
+Event 213 xsecw: 0.900807 mode: 0 target: 12
+Event 214 xsecw: 1.00588 mode: 8 target: 12
+Event 215 xsecw: 1 mode: 3 target: 12
+Event 216 xsecw: 1 mode: 3 target: 12
+Event 217 xsecw: 1 mode: 4 target: 12
+Event 218 xsecw: 1 mode: 1 target: 12
+Event 219 xsecw: 1 mode: 1 target: 16
+Event 220 xsecw: 1 mode: 3 target: 16
+Event 221 xsecw: 0.831489 mode: 0 target: 28
+Event 222 xsecw: 1 mode: 3 target: 56
+Event 223 xsecw: 1.17201 mode: 0 target: 12
+Event 224 xsecw: 1 mode: 3 target: 12
+Event 225 xsecw: 0.964777 mode: 0 target: 16
+Event 226 xsecw: 1 mode: 1 target: 12
+Event 227 xsecw: 1 mode: 4 target: 16
+Event 228 xsecw: 0.880192 mode: 0 target: 12
+Event 229 xsecw: 1.17933 mode: 0 target: 12
+Event 230 xsecw: 1 mode: 1 target: 12
+Event 231 xsecw: 0.882707 mode: 0 target: 12
+Event 232 xsecw: 1 mode: 1 target: 11
+Event 233 xsecw: 1 mode: 3 target: 16
+Event 234 xsecw: 1 mode: 4 target: 16
+Event 235 xsecw: 0.860352 mode: 0 target: 12
+Event 236 xsecw: 0.587155 mode: 9 target: 12
+Event 237 xsecw: 0.920226 mode: 0 target: 12
+Event 238 xsecw: 0.978285 mode: 0 target: 12
+Event 239 xsecw: 0.90392 mode: 0 target: 12
+Event 240 xsecw: 0.586257 mode: 9 target: 12
+Event 241 xsecw: 0.587155 mode: 9 target: 12
+Event 242 xsecw: 0.874977 mode: 0 target: 48
+Event 243 xsecw: 0.587155 mode: 9 target: 12
+Event 244 xsecw: 1 mode: 3 target: 1
+Event 245 xsecw: 1 mode: 1 target: 12
+Event 246 xsecw: 0.831988 mode: 0 target: 12
+Event 247 xsecw: 0.586257 mode: 9 target: 12
+Event 248 xsecw: 0.587155 mode: 9 target: 12
+Event 249 xsecw: 0.587155 mode: 9 target: 12
+Event 250 xsecw: 0.914109 mode: 0 target: 12
+Event 251 xsecw: 1 mode: 4 target: 12
+Event 252 xsecw: 0.915126 mode: 0 target: 12
+Event 253 xsecw: 0.961269 mode: 0 target: 12
+Event 254 xsecw: 1.02141 mode: 2 target: 12
+Event 255 xsecw: 0.915372 mode: 0 target: 16
+Event 256 xsecw: 0.903036 mode: 0 target: 12
+Event 257 xsecw: 1 mode: 1 target: 12
+Event 258 xsecw: 0.87954 mode: 0 target: 12
+Event 259 xsecw: 1 mode: 1 target: 1
+Event 260 xsecw: 1 mode: 1 target: 12
+Event 261 xsecw: 1.00588 mode: 8 target: 12
+Event 262 xsecw: 1.17914 mode: 0 target: 16
+Event 263 xsecw: 0.892686 mode: 0 target: 12
+Event 264 xsecw: 1 mode: 1 target: 12
+Event 265 xsecw: 1 mode: 3 target: 12
+Event 266 xsecw: 1 mode: 1 target: 1
+Event 267 xsecw: 0.799431 mode: 0 target: 12
+Event 268 xsecw: 0.587155 mode: 9 target: 12
+Event 269 xsecw: 0.913816 mode: 0 target: 16
+Event 270 xsecw: 1 mode: 1 target: 16
+Event 271 xsecw: 1 mode: 4 target: 12
+Event 272 xsecw: 1 mode: 4 target: 12
+Event 273 xsecw: 0.854041 mode: 0 target: 12
+Event 274 xsecw: 1 mode: 1 target: 12
+Event 275 xsecw: 0.840487 mode: 0 target: 12
+Event 276 xsecw: 0.870706 mode: 0 target: 12
+Event 277 xsecw: 1.02141 mode: 2 target: 12
+Event 278 xsecw: 0.910015 mode: 0 target: 12
+Event 279 xsecw: 0.922752 mode: 0 target: 12
+Event 280 xsecw: 0.765923 mode: 0 target: 12
+Event 281 xsecw: 1.00588 mode: 8 target: 27
+Event 282 xsecw: 0.586257 mode: 9 target: 12
+Event 283 xsecw: 1 mode: 1 target: 16
+Event 284 xsecw: 1 mode: 3 target: 12
+Event 285 xsecw: 0.861893 mode: 0 target: 12
+Event 286 xsecw: 0.923371 mode: 0 target: 16
+Event 287 xsecw: 1 mode: 1 target: 12
+Event 288 xsecw: 1 mode: 1 target: 12
+Event 289 xsecw: 1 mode: 6 target: 1
+Event 290 xsecw: 0.998469 mode: 1 target: 12
+Event 291 xsecw: 0.972904 mode: 0 target: 12
+Event 292 xsecw: 1.18347 mode: 0 target: 12
+Event 293 xsecw: 0.967513 mode: 0 target: 12
+Event 294 xsecw: 1 mode: 4 target: 12
+Event 295 xsecw: 0.590597 mode: 9 target: 16
+Event 296 xsecw: 1 mode: 4 target: 207
+Event 297 xsecw: 0.871809 mode: 0 target: 12
+Event 298 xsecw: 1 mode: 1 target: 12
+Event 299 xsecw: 0.936907 mode: 0 target: 16
+Event 300 xsecw: 0.922026 mode: 0 target: 12
+Event 301 xsecw: 1 mode: 1 target: 12
+Event 302 xsecw: 1 mode: 1 target: 16
+Event 303 xsecw: 0.959987 mode: 0 target: 12
+Event 304 xsecw: 1 mode: 3 target: 12
+Event 305 xsecw: 1 mode: 4 target: 12
+Event 306 xsecw: 0.895064 mode: 0 target: 16
+Event 307 xsecw: 0.975188 mode: 0 target: 12
+Event 308 xsecw: 0.87412 mode: 0 target: 12
+Event 309 xsecw: 1.17012 mode: 0 target: 12
+Event 310 xsecw: 1 mode: 3 target: 12
+Event 311 xsecw: 0.80306 mode: 0 target: 12
+Event 312 xsecw: 1 mode: 1 target: 1
+Event 313 xsecw: 1 mode: 1 target: 48
+Event 314 xsecw: 0.963005 mode: 0 target: 16
+Event 315 xsecw: 0.916686 mode: 0 target: 16
+Event 316 xsecw: 1 mode: 1 target: 16
+Event 317 xsecw: 1 mode: 1 target: 16
+Event 318 xsecw: 0.863765 mode: 0 target: 12
+Event 319 xsecw: 0.970667 mode: 0 target: 12
+Event 320 xsecw: 0.967129 mode: 0 target: 16
+Event 321 xsecw: 1 mode: 4 target: 16
+Event 322 xsecw: 0.970733 mode: 0 target: 16
+Event 323 xsecw: 1 mode: 4 target: 12
+Event 324 xsecw: 1 mode: 1 target: 16
+Event 325 xsecw: 1 mode: 1 target: 207
+Event 326 xsecw: 1 mode: 1 target: 16
+Event 327 xsecw: 1 mode: 3 target: 207
+Event 328 xsecw: 1.00588 mode: 8 target: 12
+Event 329 xsecw: 0.873039 mode: 0 target: 16
+Event 330 xsecw: 1 mode: 4 target: 12
+Event 331 xsecw: 0.587155 mode: 9 target: 12
+Event 332 xsecw: 1 mode: 3 target: 16
+Event 333 xsecw: 0.870866 mode: 0 target: 16
+Event 334 xsecw: 1 mode: 4 target: 12
+Event 335 xsecw: 0.889259 mode: 0 target: 12
+Event 336 xsecw: 1 mode: 4 target: 16
+Event 337 xsecw: 0.782561 mode: 0 target: 48
+Event 338 xsecw: 0.901833 mode: 0 target: 12
+Event 339 xsecw: 0.960269 mode: 0 target: 12
+Event 340 xsecw: 1 mode: 1 target: 12
+Event 341 xsecw: 1 mode: 1 target: 1
+Event 342 xsecw: 0.586257 mode: 9 target: 12
+Event 343 xsecw: 0.973669 mode: 0 target: 16
+Event 344 xsecw: 0.850452 mode: 0 target: 16
+Event 345 xsecw: 1 mode: 1 target: 16
+Event 346 xsecw: 1 mode: 4 target: 12
+Event 347 xsecw: 1 mode: 1 target: 12
+Event 348 xsecw: 0.971056 mode: 0 target: 16
+Event 349 xsecw: 0.909037 mode: 0 target: 12
+Event 350 xsecw: 1 mode: 3 target: 12
+Event 351 xsecw: 0.888858 mode: 0 target: 16
+Event 352 xsecw: 0.882633 mode: 0 target: 12
+Event 353 xsecw: 1 mode: 1 target: 16
+Event 354 xsecw: 1.00096 mode: 3 target: 12
+Event 355 xsecw: 1 mode: 1 target: 12
+Event 356 xsecw: 1 mode: 6 target: 12
+Event 357 xsecw: 0.931874 mode: 0 target: 12
+Event 358 xsecw: 1 mode: 4 target: 12
+Event 359 xsecw: 0.793122 mode: 0 target: 16
+Event 360 xsecw: 1 mode: 1 target: 12
+Event 361 xsecw: 1 mode: 1 target: 16
+Event 362 xsecw: 1.02141 mode: 2 target: 12
+Event 363 xsecw: 0.90919 mode: 0 target: 16
+Event 364 xsecw: 1 mode: 3 target: 12
+Event 365 xsecw: 1 mode: 1 target: 1
+Event 366 xsecw: 1.15391 mode: 0 target: 12
+Event 367 xsecw: 0.90997 mode: 0 target: 12
+Event 368 xsecw: 1 mode: 3 target: 12
+Event 369 xsecw: 0.961741 mode: 0 target: 28
+Event 370 xsecw: 0.786176 mode: 0 target: 12
+Event 371 xsecw: 1 mode: 3 target: 12
+Event 372 xsecw: 0.732248 mode: 0 target: 207
+Event 373 xsecw: 0.893536 mode: 0 target: 12
+Event 374 xsecw: 1 mode: 1 target: 12
+Event 375 xsecw: 1 mode: 3 target: 16
+Event 376 xsecw: 0.977808 mode: 0 target: 12
+Event 377 xsecw: 1 mode: 1 target: 16
+Event 378 xsecw: 0.587155 mode: 9 target: 12
+Event 379 xsecw: 1 mode: 3 target: 12
+Event 380 xsecw: 0.962421 mode: 0 target: 12
+Event 381 xsecw: 1.00588 mode: 8 target: 12
+Event 382 xsecw: 0.903877 mode: 0 target: 12
+Event 383 xsecw: 0.912544 mode: 0 target: 16
+Event 384 xsecw: 1 mode: 3 target: 12
+Event 385 xsecw: 0.861328 mode: 0 target: 12
+Event 386 xsecw: 1 mode: 1 target: 12
+Event 387 xsecw: 1 mode: 1 target: 12
+Event 388 xsecw: 0.590597 mode: 9 target: 16
+Event 389 xsecw: 1 mode: 3 target: 12
+Event 390 xsecw: 0.829541 mode: 0 target: 12
+Event 391 xsecw: 0.855129 mode: 0 target: 16
+Event 392 xsecw: 1 mode: 1 target: 16
+Event 393 xsecw: 1 mode: 1 target: 12
+Event 394 xsecw: 0.95003 mode: 0 target: 12
+Event 395 xsecw: 1 mode: 4 target: 16
+Event 396 xsecw: 0.96348 mode: 0 target: 12
+Event 397 xsecw: 0.952304 mode: 0 target: 12
+Event 398 xsecw: 1 mode: 4 target: 12
+Event 399 xsecw: 1 mode: 1 target: 16
+Event 400 xsecw: 0.954461 mode: 0 target: 16
+Event 401 xsecw: 1 mode: 1 target: 1
+Event 402 xsecw: 1 mode: 1 target: 12
+Event 403 xsecw: 0.962632 mode: 0 target: 12
+Event 404 xsecw: 0.911715 mode: 0 target: 12
+Event 405 xsecw: 1 mode: 1 target: 1
+Event 406 xsecw: 0.948391 mode: 0 target: 12
+Event 407 xsecw: 1 mode: 1 target: 1
+Event 408 xsecw: 0.935305 mode: 0 target: 16
+Event 409 xsecw: 1.00588 mode: 8 target: 12
+Event 410 xsecw: 0.587155 mode: 9 target: 12
+Event 411 xsecw: 1 mode: 3 target: 12
+Event 412 xsecw: 1 mode: 1 target: 12
+Event 413 xsecw: 0.818798 mode: 0 target: 12
+Event 414 xsecw: 1 mode: 1 target: 12
+Event 415 xsecw: 1 mode: 1 target: 16
+Event 416 xsecw: 1 mode: 1 target: 27
+Event 417 xsecw: 1 mode: 1 target: 12
+Event 418 xsecw: 0.590597 mode: 9 target: 16
+Event 419 xsecw: 1.17675 mode: 0 target: 12
+Event 420 xsecw: 0.966158 mode: 0 target: 12
+Event 421 xsecw: 0.835852 mode: 0 target: 12
+Event 422 xsecw: 1 mode: 1 target: 12
+Event 423 xsecw: 1 mode: 11 target: -999
+Event 424 xsecw: 1 mode: 11 target: -999
+**************PRINTING DETAILED SAMPLE INFORMATION AFTER LOOP************
+FGD1 numuCC 0pi:
+  MC only:             151
+  MC only nobin:       151
+  POT only:            37.7261
+  POT only nobin:      37.7261
+  Flux only:           38.4335
+  Flux only nobin:     38.4335
+  Xsec only:           34.4811
+  Xsec only nobin:     34.4811
+  Det only:            37.2266
+  Det only nobin:      37.2266
+  ND Cov only:         37.7439
+  ND Cov nobin:        37.7439
+  Beam Cov only:       37.7111
+  Beam Cov nobin:      37.7111
+  All comb:            34.7271
+  All comb nobin:      34.7271
+FGD1 numuCC 1pi:
+  MC only:             45
+  MC only nobin:       45
+  POT only:            11.4389
+  POT only nobin:      11.4389
+  Flux only:           12.4053
+  Flux only nobin:     12.4053
+  Xsec only:           11.3403
+  Xsec only nobin:     11.3403
+  Det only:            11.3744
+  Det only nobin:      11.3744
+  ND Cov only:         11.3119
+  ND Cov nobin:        11.3119
+  Beam Cov only:       11.4518
+  Beam Cov nobin:      11.4518
+  All comb:            12.0987
+  All comb nobin:      12.0987
+FGD1 numuCC other:
+  MC only:             30
+  MC only nobin:       32
+  POT only:            7.43979
+  POT only nobin:      7.93577
+  Flux only:           8.30858
+  Flux only nobin:     8.92702
+  Xsec only:           7.37602
+  Xsec only nobin:     8.36799
+  Det only:            7.35071
+  Det only nobin:      7.84559
+  ND Cov only:         7.31728
+  ND Cov nobin:        8.26368
+  Beam Cov only:       7.45768
+  Beam Cov nobin:      8.45244
+  All comb:            8.02984
+  All comb nobin:      9.21157
+FGD2 numuCC 0pi:
+  MC only:             142
+  MC only nobin:       142
+  POT only:            35.215
+  POT only nobin:      35.215
+  Flux only:           35.4076
+  Flux only nobin:     35.4076
+  Xsec only:           32.0032
+  Xsec only nobin:     32.0032
+  Det only:            34.6278
+  Det only nobin:      34.6278
+  ND Cov only:         35.2217
+  ND Cov nobin:        35.2217
+  Beam Cov only:       35.1907
+  Beam Cov nobin:      35.1907
+  All comb:            31.6277
+  All comb nobin:      31.6277
+FGD2 numuCC 1pi:
+  MC only:             29
+  MC only nobin:       30
+  POT only:            7.1918
+  POT only nobin:      7.43979
+  Flux only:           7.66033
+  Flux only nobin:     7.97626
+  Xsec only:           7.03296
+  Xsec only nobin:     7.52894
+  Det only:            7.04879
+  Det only nobin:      7.28091
+  ND Cov only:         7.09582
+  ND Cov nobin:        7.57154
+  Beam Cov only:       7.19698
+  Beam Cov nobin:      7.69455
+  All comb:            7.26861
+  All comb nobin:      7.83766
+FGD2 numuCC other:
+  MC only:             25
+  MC only nobin:       25
+  POT only:            6.19982
+  POT only nobin:      6.19982
+  Flux only:           7.28566
+  Flux only nobin:     7.28566
+  Xsec only:           6.12931
+  Xsec only nobin:     6.12931
+  Det only:            6.1519
+  Det only nobin:      6.1519
+  ND Cov only:         6.14877
+  ND Cov nobin:        6.14877
+  Beam Cov only:       6.22142
+  Beam Cov nobin:      6.22142
+  All comb:            7.11593
+  All comb nobin:      7.11593
+Totals: 
+  MCOnly bin:      422
+  MCOnly un:       425
+  POTOnly bin:     105.211
+  POTOnly un:      105.955
+  FluxOnly bin:    109.501
+  FluxOnly un:     110.435
+  XsecOnly bin:    98.3628
+  XsecOnly un:     99.8508
+  DetOnly bin:     103.78
+  DetOnly un:      104.507
+  NDCovOnly bin:   104.839
+  NDCovOnly un:    106.261
+  BeamCovOnly bin: 105.23
+  BeamCovOnly un:  106.722
+  AllOnly bin:     100.868
+  AllOnly un:      102.619
+Printing parameters for xsec_cov
+Name           Nominal        Init           Current        Proposed       
+MAQE           0.858333       0.858333       0.858333       0.870935       
+2p2h_norm_nu   1              1              1              0.587155       
+2p2h_norm_nubar1              1              1              1.1649         
+2p2h_normCtoO  1              1              1              1.00586        
+2p2h_shape_C   0              0              0              0.0683435      
+2p2h_shape_O   0              0              0              -0.479145      
+MEC_lowENu     0              0              0              0              
+MEC_highENu    0              0              0              0              
+MEC_lowENubar  0              0              0              0              
+MEC_highENubar 0              0              0              0              
+Q2_norm_0      1              1              1              1.20605        
+Q2_norm_1      1              1              1              1.0045         
+Q2_norm_2      1              1              1              1.00026        
+Q2_norm_3      1              1              1              0.993763       
+CA5            0.950495       0.950495       0.950495       0.951806       
+MARES          1.12632        1.12632        1.12632        1.12514        
+ISO_BKG        0.738462       0.738462       0.738462       0.743835       
+CC_norm_nu     1              1              1              0.998469       
+CC_norm_nubar  1              1              1              1.00077        
+nue_numu       1              1              1              1.00096        
+nuebar_numubar 1              1              1              0.998734       
+CC_DIS         0              0              0              0.0111483      
+CC_Coh_C       1              1              1              1.02141        
+CC_Coh_O       1              1              1              1.02127        
+NC_Coh         1              1              1              1.00118        
+NC_1gamma      1              1              1              0.966166       
+NC_other_near  1              1              1              1.00588        
+NC_other_far   1              1              1              0.996808       
+FEFQE          1.069          1.069          1.069          1.07644        
+FEFQEH         1.01333        1.01333        1.01333        0.993584       
+FEFINEL        1.002          1.002          1.002          1.02751        
+FEFABS         1.27636        1.27636        1.27636        1.2659         
+FEFCX          0.697          0.697          0.697          0.697504       
+EB_dial_C      25             25             25             25             
+EB_dial_O      27             27             27             27             
+
+0 steps took 6.19888e-06 seconds to complete. (infs / step).
+0 steps were accepted.
+------------------------------
+Sample                             Data      MC        -LLH      |         
+FGD1 numuCC 0pi                    35.7858   34.7271   0.368994  |         
+FGD1 numuCC 1pi                    12.0546   12.0987   0.0004303 |         
+FGD1 numuCC other                  7.97155   8.02984   0.000407134|         
+FGD2 numuCC 0pi                    32.6185   31.6277   0.268186  |         
+FGD2 numuCC 1pi                    7.33489   7.26861   0.0266627 |         
+FGD2 numuCC other                  7.0722    7.11593   0.000379101|         
+FGD1 anti-numuCC 0pi               0         0         0         |         
+FGD1 anti-numuCC 1pi               0         0         0         |         
+FGD1 anti-numuCC other             0         0         0         |         
+FGD2 anti-numuCC 0pi               0         0         0         |         
+FGD2 anti-numuCC 1pi               0         0         0         |         
+FGD2 anti-numuCC other             0         0         0         |         
+FGD1 NuMuBkg CC0pi in AntiNu Mode  0         0         0         |         
+FGD1 NuMuBkg CC1pi in AntiNu Mode  0         0         0         |         
+FGD1 NuMuBkg CCother in AntiNu Mode0         0         0         |         
+FGD2 NuMuBkg CC0pi in AntiNu Mode  0         0         0         |         
+FGD2 NuMuBkg CC1pi in AntiNu Mode  0         0         0         |         
+FGD2 NuMuBkg CCother in AntiNu Mode0         0         0         |         
+Total                              102.838   100.868   0.66506   |         
+------------------------------

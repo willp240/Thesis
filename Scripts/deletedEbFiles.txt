@@ -1,0 +1,219 @@
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Asimovs/16JunEbAsimov_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Asimovs/16JunEbAsimov_drawPar.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Asimovs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/4JulM1NoDialFDFit_half.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunM1NoDial_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/4JulM1NoDialFDFit_half_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunP1FakeDataFit_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/16JunEbAsimov_drawCorr.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunM1NoDial_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunP1FakeDataFit_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/18JunEbDataFitFine_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/4JulM1NoDialFDFit_half_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawCorr.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/18JunEbDataFitFine_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawCorr.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/16JunEbAsimov_drawCorr.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/18JunEbDataFit_MCMC_diag.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/20JunM1FDFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunP1FakeDataFit_PostPredStore_FullLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/18JunEbDataFit_PostPredStore_FullLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/20JunM1FDFit_PostPredStore_FullLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore.rootb’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunP1FakeDataFit_PostPredStore_FullLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/P1FakeDataFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/24Jun3bPostFitDists_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/18JunEbDataFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore_FullLLH_procs.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/makePosteriorPredictiveStruct.C’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/20JunM1FDFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/20JunM1FDFit_PostPredStore_SampLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/25JunP1FakeDataFit_PostPredStore_SampLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/18JunEbDataFit_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/25JunP1FakeDataFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/18JunEbDataFit_PostPredStore_SampLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/25JunP1FakeDataFit_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/20JunM1FDFit_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/18JunEbDataFit_PostPredStore.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/24Jun3bLLH_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/24JunAllLLH_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/24Jun3bLLHData_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/3bLLH_ND280logL_scan.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/14JunNoMPAllP1Ratios.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbP1SigmaRatio.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/12Jun0sig_0_ND280_sigmavar.root_EbVar1sig5Gev.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/18JunEbFDsetRatio.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbFDsetRatio.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbFDsetRatio.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunAllRuns0sig_MPGPU_0_ND280_sigmavar.root_EbVar1sig5Gev.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbP1SigmaRatio.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/18JunEbFDsetRatio.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_2018Psychev3Run2to8DATA_25Jan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFit_drawCorr.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFit_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_Mar21_NewFluxNewDet_Data.root.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_2018Psychev3Run2to8DATA_25Jan.root.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_Mar21_NewFluxNewDet_Data.root.pdf’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllLLHsNoDial_0_ND280logL_scan.root_16JunAllLLHs_0_ND280logL_scan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllLLHs_0_ND280logL_scan.root_16JunAllLLHsNoDial_0_ND280logL_scan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllLLHsNoDial_0_ND280logL_scan.root_16JunAllRunsLLH_MPGPU_0_ND280logL_scan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllRunsLLH_MPGPU_0_ND280logL_scan.root.pdf’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/cfg/10AugP1FDdist_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/log/10AugP1FDdist_0_10912455.err’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/log/10AugP1FDdist_0_10912455.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/scripts/10AugP1FDdist_0.sh’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/scripts’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/cfg/18SepEbCOnlyC16_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/log/18SepEbCOnlyC16_0_27606689.err’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/log/18SepEbCOnlyC16_0_27606689.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/scripts/18SepEbCOnlyC16_0.sh’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/scripts’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/18SepEbCOnlyC16_0.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/18SepEbCOnlyC16_0.root.log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/18SepEbCOnlyC16_0_ND280_nom.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/cfg/18SepEbCOnlyC19_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/18SepEbCOnlyC19_0_ND280_nom.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/log/18SepEbCOnlyC19_0_27606696.err’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/log/18SepEbCOnlyC19_0_27606696.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/scripts/18SepEbCOnlyC19_0.sh’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/scripts’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/18SepEbCOnlyC19_0.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/18SepEbCOnlyC19_0.root.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/cfg/18SepEbCOnlyC22_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/log/18SepEbCOnlyC22_0_27606704.log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/log/18SepEbCOnlyC22_0_27606704.err’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/scripts/18SepEbCOnlyC22_0.sh’
+^Cremoved ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Asimovs/16JunEbAsimov_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Asimovs/16JunEbAsimov_drawPar.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Asimovs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/4JulM1NoDialFDFit_half.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunM1NoDial_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/4JulM1NoDialFDFit_half_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunP1FakeDataFit_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/16JunEbAsimov_drawCorr.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunM1NoDial_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/25JunP1FakeDataFit_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/18JunEbDataFitFine_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/4JulM1NoDialFDFit_half_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawCorr.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/18JunEbDataFitFine_drawPar.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/20JunM1FDFit_drawCorr.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/16JunEbAsimov_drawCorr.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits/18JunEbDataFit_MCMC_diag.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PostFits’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/20JunM1FDFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunP1FakeDataFit_PostPredStore_FullLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/18JunEbDataFit_PostPredStore_FullLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/20JunM1FDFit_PostPredStore_FullLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore.rootb’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunP1FakeDataFit_PostPredStore_FullLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/P1FakeDataFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/24Jun3bPostFitDists_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/18JunEbDataFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP/25JunM1NoDial_PostPredStore_FullLLH_procs.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/InitialPP’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/makePosteriorPredictiveStruct.C’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/20JunM1FDFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/20JunM1FDFit_PostPredStore_SampLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/25JunP1FakeDataFit_PostPredStore_SampLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/18JunEbDataFit_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/25JunP1FakeDataFit_PostPredStore.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/18JunEbDataFit_PostPredStore_SampLLH_procs.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/25JunP1FakeDataFit_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/20JunM1FDFit_PostPredStore_SampLLH_procs.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs/18JunEbDataFit_PostPredStore.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/PosteriorOutputs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/24Jun3bLLH_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/24JunAllLLH_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/24Jun3bLLHData_ND280logL_scan.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH/3bLLH_ND280logL_scan.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs/LLH’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/EbOutputs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/14JunNoMPAllP1Ratios.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbP1SigmaRatio.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/12Jun0sig_0_ND280_sigmavar.root_EbVar1sig5Gev.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/18JunEbFDsetRatio.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbFDsetRatio.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbFDsetRatio.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunAllRuns0sig_MPGPU_0_ND280_sigmavar.root_EbVar1sig5Gev.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/16JunEbP1SigmaRatio.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios/18JunEbFDsetRatio.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Ratios’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_2018Psychev3Run2to8DATA_25Jan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFit_drawCorr.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFit_drawPar.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_Mar21_NewFluxNewDet_Data.root.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_2018Psychev3Run2to8DATA_25Jan.root.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data/18JunEbDataFi_Mar21_NewFluxNewDet_Data.root.pdf’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/Data’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllLLHsNoDial_0_ND280logL_scan.root_16JunAllLLHs_0_ND280logL_scan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllLLHs_0_ND280logL_scan.root_16JunAllLLHsNoDial_0_ND280logL_scan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllLLHsNoDial_0_ND280logL_scan.root_16JunAllRunsLLH_MPGPU_0_ND280logL_scan.root.pdf’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH/16JunAllRunsLLH_MPGPU_0_ND280logL_scan.root.pdf’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs/LLH’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/EbOutputs’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/cfg/10AugP1FDdist_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/log/10AugP1FDdist_0_10912455.err’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/log/10AugP1FDdist_0_10912455.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/scripts/10AugP1FDdist_0.sh’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist/scripts’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/10AugP1FDdist’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/cfg/18SepEbCOnlyC16_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/log/18SepEbCOnlyC16_0_27606689.err’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/log/18SepEbCOnlyC16_0_27606689.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/scripts/18SepEbCOnlyC16_0.sh’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/scripts’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/18SepEbCOnlyC16_0.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/18SepEbCOnlyC16_0.root.log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16/18SepEbCOnlyC16_0_ND280_nom.root’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC16’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/cfg/18SepEbCOnlyC19_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/18SepEbCOnlyC19_0_ND280_nom.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/log/18SepEbCOnlyC19_0_27606696.err’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/log/18SepEbCOnlyC19_0_27606696.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/scripts/18SepEbCOnlyC19_0.sh’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/scripts’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/18SepEbCOnlyC19_0.root’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19/18SepEbCOnlyC19_0.root.log’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC19’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/cfg/18SepEbCOnlyC22_0.cfg’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/cfg’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/log/18SepEbCOnlyC22_0_27606704.log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/log/18SepEbCOnlyC22_0_27606704.err’
+removed directory: ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/log’
+removed ‘/vols/t2k/users/wparker2/OA2019/Eb/18SepEbCOnlyC22/scripts/18SepEbCOnlyC22_0.sh’
+^C

@@ -1,0 +1,125 @@
+C========================================================================
+C  Input card for Super-Kamiokande Monte Carlo simulation
+C========================================================================
+C
+C Number of events ; NEBM-NEVNT
+C
+NEBM-NEVNT  10000
+C
+C-------------------------------
+C Flux flavor   ; NEBM-FLX
+C
+NEBM-FLX    14
+C
+C-------------------------------
+C Particle Code ; NEBM-PID
+C
+NEBM-PID    14
+C
+C-------------------------------
+C RADIUS (MAX) in cm ; NEBM-RADMX
+C
+NEBM-RADMX  100000.
+C
+C-------------------------------
+C Detector ID   ; NEBM-DETID
+C
+NEBM-DETID    5
+C
+C--------------------------------
+C ******************************
+C **** NEUTRINO INTERACTION ****
+C ******************************
+C
+C **** TARGET INFORMATION ****
+C
+C NUMBNDN : total number of neutron
+C           (e.g. CH => 6, H2O => 8, Ar => 22, Fe => 30)
+C
+NEUT-NUMBNDN 8
+C
+C NUMBNDP : total number of bound proton
+C           (e.g. CH => 6, H2O => 8, Ar => 18, Fe => 26)
+C
+NEUT-NUMBNDP 8
+C
+C NUMFREP : total number of free proton
+C           (e.g. CH => 1, H2O => 2, Ar => 0, Fe => 0)
+C
+NEUT-NUMFREP 2
+C
+C NUMATOM : atomic number of atom heavier than hydrogen
+C           (e.g. CH => 12, H2O =>16, Ar => 40, Fe => 56)
+C
+NEUT-NUMATOM 16
+C
+C
+C-----------------------------------------------------------------------
+C
+C NEUT-MDLQE
+C
+C   CC Quasi-elastic / NC elastic model selection
+C        ( Not all the combinations are supported )
+C
+C        Simple Fermi-Gas mdels
+C         xxx1 : Smith-Moniz with dipole 
+C         xxx2 : Smith-Moniz with BBBA05
+C         xxx3 : Smith-Moniz with BBBA07
+C
+C         xx0x : NCEL cross-section scaling to CCQE
+C         xx1x : NCEL cross-section scaling to Spectrum func. with Dipole
+C         xx2x : NCEL cross-section scaling to Spectrum func. with BBBA05
+C         xx3x : NCEL cross-section scaling to Spectrum func. with BBBA07
+C
+C        Transverse enhancement ( only for partial ) 
+C         x1xx : CCQE with Transverse enhancement ( Bodek et al. )
+C
+C        Spectral functions ( CC & NC )
+C         x4xx : Spectral function model ( Ankowski et al. )
+C         x6xx : TEM spectral function
+C         x7xx : Effective spectral function
+C
+C        RPA correcton on/off
+C         1xxx : RPA correction ( Nieves et al. )
+C                
+C        Nieves 1p1h model 
+C         2XxX : Nieves 1p1h ( X digits are ignored for now )
+C
+C NEUT-MAQE 
+C   CCQE Axial Mass 
+C      For Smith-Moniz, set 1.01, 1.05, 1.11, 1.21{default}, or 1.31
+C      For Nieves 1p1h, set 1.05 ( suggested value ) or 1.21.
+C      
+C-- Use spectral function
+NEUT-MDLQE 402
+NEUT-MAQE  1.21
+C
+C-----------------------------------------------------------------------
+C NEUT-MDL2P2H
+C
+C    1 : Nieves 2P2H using table
+C    2 : Nieves 2P2H using hadronic tensor
+C
+C Tentatively set 1 to be compatible with ND280 (default is 2)
+C
+NEUT-MDL2P2H 1
+C
+C-----------------------------------------------------------------------
+C
+C NEUT-CRSPATH
+C   Cross-section data file pathname
+
+NEUT-CRSPATH '/usr/local/sklib_gcc4.8.5/neut_5.4.0.1.rev634.t2ksk/src/crsdat'
+C
+C--------------------------------
+C
+C RAND : random seed
+C      0 : Read RANDOM number from FILE
+C      1 : Generating RANDOM SEED from the time
+C
+NEUT-RAND 0
+C
+C RNDM : TAUOLA RANDUM NUMBER SEED
+C        IF IRNDM(1)=0, SEED IS NOT INITIALIZED.(TERMINATED)
+C        
+TAU-RNDM 72342014 34181 0

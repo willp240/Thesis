@@ -1,0 +1,119 @@
+FGD1 numuCC 0pi:
+  MC only:             12202
+  MC only nobin:       12235
+  POT only:            595.726
+  POT only nobin:      597.325
+  Flux only:           602.201
+  Flux only nobin:     604.042
+  Xsec only:           561.967
+  Xsec only nobin:     563.515
+  Det only:            589.505
+  Det only nobin:      591.096
+  ND Cov only:         595.474
+  ND Cov nobin:        597.035
+  Beam Cov only:       595.726
+  Beam Cov nobin:      597.325
+  All comb:            562.759
+  All comb nobin:      564.511
+FGD1 numuCC 1pi:
+  MC only:             3232
+  MC only nobin:       3239
+  POT only:            157.509
+  POT only nobin:      157.848
+  Flux only:           171.519
+  Flux only nobin:     171.901
+  Xsec only:           154.133
+  Xsec only nobin:     154.478
+  Det only:            155.894
+  Det only nobin:      156.226
+  ND Cov only:         155.575
+  ND Cov nobin:        155.901
+  Beam Cov only:       157.509
+  Beam Cov nobin:      157.848
+  All comb:            164.249
+  All comb nobin:      164.616
+FGD1 numuCC other:
+  MC only:             2333
+  MC only nobin:       2354
+  POT only:            113.065
+  POT only nobin:      114.083
+  Flux only:           129.579
+  Flux only nobin:     130.848
+  Xsec only:           110.489
+  Xsec only nobin:     111.538
+  Det only:            112.866
+  Det only nobin:      113.884
+  ND Cov only:         111.628
+  ND Cov nobin:        112.607
+  Beam Cov only:       113.065
+  Beam Cov nobin:      114.083
+  All comb:            124.905
+  All comb nobin:      126.165
+FGD2 numuCC 0pi:
+  MC only:             12655
+  MC only nobin:       12687
+  POT only:            614.18
+  POT only nobin:      615.731
+  Flux only:           620.288
+  Flux only nobin:     622.075
+  Xsec only:           577.456
+  Xsec only nobin:     578.963
+  Det only:            604.909
+  Det only nobin:      606.463
+  ND Cov only:         613.073
+  ND Cov nobin:        614.58
+  Beam Cov only:       614.18
+  Beam Cov nobin:      615.731
+  All comb:            574.167
+  All comb nobin:      575.902
+FGD2 numuCC 1pi:
+  MC only:             2602
+  MC only nobin:       2608
+  POT only:            126.102
+  POT only nobin:      126.393
+  Flux only:           137.733
+  Flux only nobin:     138.094
+  Xsec only:           123.037
+  Xsec only nobin:     123.318
+  Det only:            124.224
+  Det only nobin:      124.512
+  ND Cov only:         124.057
+  ND Cov nobin:        124.338
+  Beam Cov only:       126.102
+  Beam Cov nobin:      126.393
+  All comb:            130.362
+  All comb nobin:      130.698
+FGD2 numuCC other:
+  MC only:             2360
+  MC only nobin:       2378
+  POT only:            114.374
+  POT only nobin:      115.246
+  Flux only:           130.994
+  Flux only nobin:     132.072
+  Xsec only:           111.601
+  Xsec only nobin:     112.497
+  Det only:            112.793
+  Det only nobin:      113.645
+  ND Cov only:         113.038
+  ND Cov nobin:        113.879
+  Beam Cov only:       114.374
+  Beam Cov nobin:      115.246
+  All comb:            124.638
+  All comb nobin:      125.676
+Totals:
+  MCOnly bin:      35384
+  MCOnly un:       35501
+  POTOnly bin:     1720.96
+  POTOnly un:      1726.63
+  FluxOnly bin:    1792.31
+  FluxOnly un:     1799.03
+  XsecOnly bin:    1638.68
+  XsecOnly un:     1644.31
+  DetOnly bin:     1700.19
+  DetOnly un:      1705.83
+  NDCovOnly bin:   1712.85
+  NDCovOnly un:    1718.34
+  BeamCovOnly bin: 1720.96
+  BeamCovOnly un:  1726.63
+  AllOnly bin:     1681.08
+  AllOnly un:      1687.57
