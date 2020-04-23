@@ -4,7 +4,7 @@ void SKSpectra_Divide2(char *file_prior, char *file_post, char *outfile)
 
   TGaxis::SetMaxDigits(3) ;
   TString spec[5] = {"numu", "numubar", "nue", "nuebar", "nue1pi"}; 
-  TString label[2] = {"Pre ND Fit", "Post ND Fit"};
+  TString label[2] = {"Prior Predictive", "Posterior Predictive"};
   TString title[5] = {"1R_{#mu}", "RHC 1R_{#mu}", "1R_{e}", "RHC R_{e}", "1R_{e} 1de"};
   double MAXY[5] = {25,8,12,2,2};
   double MAXX[5] = {2,2,1.3,1.3,1.3};
