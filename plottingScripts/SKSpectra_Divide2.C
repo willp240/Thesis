@@ -116,7 +116,7 @@ void SKSpectra_Divide2(char *file_prior, char *file_post, char *outfile)
     
     // un-divided, not- bin normalised
     upper->cd();
-    h_post->SetTitle(title[s]);
+    //    h_post->SetTitle(title[s]);
     h_post->GetYaxis()->SetTitle("Events/bin");
     h_post->GetYaxis()->SetTitleOffset(0.87);
     h_post->GetYaxis()->SetTitleSize(0.05);
