@@ -11,7 +11,7 @@ The data, unweighted MC, and nominal MC event rates for each sample are shown in
 \center
 \begin{tabular}{l||c|c|c|c}
 \hline \hline
-\textbf{Sample} & \textbf{Raw MC} & \textbf{Nominal MC} & \textbf{Data} & \textbf{Data/MC} \\
+\multicolumn{1}{c}{\textbf{Sample}} & \textbf{Raw MC} & \textbf{Nominal MC} & \textbf{Data} & \textbf{Data/MC} \\
 \hline
 \hline
 \textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 524093 & 27951.1 & 33443 & 1.20 \\ 
@@ -1293,7 +1293,7 @@ Posterior predictions are produced using the method described in Section \ref{se
 \center
 \begin{tabular}{l||c c}
 \hline \hline
-\textbf{Sample} & \multicolumn{2}{c}{$\delta N/N$}\\
+\multicolumn{1}{c}{\textbf{Sample}} & \multicolumn{2}{c}{$\delta N/N$}\\
 & \multicolumn{1}{c}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}} \\
 \hline\hline
 \textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 0.069 & 0.005\\
@@ -1340,7 +1340,7 @@ As the total p-values are constructed from the sum of all the sample likelihoods
 \center
 \begin{tabular}{l||c c}
 \hline \hline
-\textbf{Sample} & \multicolumn{2}{c}{\textbf{p-value}} \\
+\multicolumn{1}{c}{\textbf{Sample}} & \multicolumn{2}{c}{\textbf{p-value}} \\
 & \multicolumn{1}{c}{\textbf{Fluctuation}} & \multicolumn{1}{c}{\textbf{Fluctuation}} \\
 & \multicolumn{1}{c}{\textbf{of Draw}} & \multicolumn{1}{c}{\textbf{of Prediction}} \\
 \hline\hline
@@ -1520,7 +1520,13 @@ $\delta_{CP}$ & -1.601 \\
 
 The SK MC used corresponds to the same run periods as for ND280, but for a higher POT as the detector was on line for larger proportion of these runs. The total data POT is 1.966x$10^{21}$ for FHC and 1.635x$10^{21}$ for RHC.
 
-%table of event rates and errors
+The prior predicted rates were also calculated, using the same method as for ND280, but throwing the SK flux, SK detector, and interaction uncertainties and reweighting the SK MC.
+
+The total prior and posterior event rates for each of the SK samples are shown in Table \ref{}. The total number of events has been reduced/increased in X samples, beyond the prior uncertainties. The uncertainties for all samples have been reduced significantly, as shown in Table \ref{}, and the overall event rate uncertainty has been reduced from X$\%$ to $Y\%$ by the near detector fit. 
+%table rates
+%table errors
+
+The prior and posterior distributions are shown in Figure \ref{}. The error band has been reduced for all samples, particularly in X regions of Y samples. %Impact on osc params
 %plots
 
 \section{Finer Fit and Detector Binning}\label{sec:newbin}
@@ -1536,6 +1542,7 @@ The SK MC used corresponds to the same run periods as for ND280, but for a highe
 %pvalue table of all 4
 %LLH conts (*3, or just polyboth?)
 %SK PP all
+
 \section{Oscillation Parameter Sensitivity}
 
 \newpage
