@@ -16,17 +16,18 @@ void pval2(std::string file0) {
 
   gStyle->SetPalette(51);
 
-  TCanvas *c = new TCanvas("canv", "canv", 1580, 1080);
+  TCanvas *c = new TCanvas("canv", "canv", 1380, 1080);
   TFile *file_ = TFile::Open(file0.c_str());
  
   c->SetTopMargin(0.05);
   c->SetBottomMargin(0.14);
-  c->SetLeftMargin(0.1);
+  c->SetLeftMargin(0.12);
   c->SetRightMargin(0.16);
   
   std::string name = "lnLDrawHist";
   //    name = "FGD1 numuCC 0pi/FGD1_numuCC_0pi_nom_mean_ratio";
   TH2D* hist = (TH2D*)file_->Get(name.c_str())->Clone();
+  TPaveText *value = new TPaveText(0.6,0.75,0.8,0.85,"NDC");
 
   hist->GetXaxis()->SetRangeUser(4200,5400);
 
@@ -46,15 +47,25 @@ void pval2(std::string file0) {
   TempLine->SetLineWidth(2);
 
   hist->SetTitle("");
-  hist->GetYaxis()->SetTitleOffset(1);
+  hist->GetYaxis()->SetTitleOffset(1.1);
   hist->GetXaxis()->SetTitleOffset(1.2);
-  //  hist->GetZaxis()->SetTitleOffset(1.0);
+  //hist->GetZaxis()->SetTitleOffset(1.0);
   hist->GetXaxis()->SetTitleSize(0.05);
   hist->GetYaxis()->SetTitleSize(0.05);
   hist->GetZaxis()->SetTitleSize(0.05);
   hist->GetZaxis()->SetTitle("Steps");
   hist->Draw("colz");
   TempLine->Draw("same");
+
+  //NDC sets coords relative to pad
+  value->SetTextSize(0.04);
+  value->SetFillColor(kWhite);
+  value->SetFillStyle(1001);
+  value->SetLineColor(kRed);
+  value->AddText("p-value = 0.0");
+  value->Draw();
+
+
   c->Print((std::string("pval2_")+std::string(".pdf")).c_str());
 
 }
