@@ -106,7 +106,7 @@ void SKSpectra_Divide2(char *file_prior, char *file_post, char *outfile)
     h_postn->GetXaxis()->SetTitleSize(0.17);
     h_postn->GetXaxis()->SetTitleOffset(1.2);
     h_postn->GetXaxis()->SetLabelSize(0.13);
-    h_postn->SetLineColor(kBlue+2);
+    h_postn->SetLineColor(kBlue);
     h_postn->Draw("L hist");
    
     TLine *line = new TLine(0, 1.0, MAXX[s], 1.0);
@@ -122,15 +122,15 @@ void SKSpectra_Divide2(char *file_prior, char *file_post, char *outfile)
     h_post->GetYaxis()->SetTitleSize(0.05);
     h_post->GetYaxis()->SetLabelSize(0.04);
     h_post->SetFillStyle(3224);
-    h_post->SetFillColor(kBlue+2);
-    h_prior->SetFillColor(kRed+2);
+    h_post->SetFillColor(kBlue);
+    h_prior->SetFillColor(kRed);
     h_prior->SetFillStyle(3003);
     h_prior->SetMarkerStyle(7);
-    h_prior->SetMarkerColor(kRed+2);
-    h_prior->SetLineColor(kRed+2);
+    h_prior->SetMarkerColor(kRed);
+    h_prior->SetLineColor(kRed);
     h_post->SetMarkerStyle(1);
-    h_post->SetMarkerColor(kBlue+2);
-    h_post->SetLineColor(kBlue+2);
+    h_post->SetMarkerColor(kBlue);
+    h_post->SetLineColor(kBlue);
     h_post->Draw("e1");
     h_prior->Draw("p e5 same");
     
