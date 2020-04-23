@@ -12,7 +12,7 @@
 #include <algorithm>
 #include "TH2Poly.h"
 
-void pval(std::string file0) {
+void pval2(std::string file0) {
 
   gStyle->SetPalette(51);
 
@@ -24,7 +24,7 @@ void pval(std::string file0) {
   c->SetLeftMargin(0.1);
   c->SetRightMargin(0.16);
   
-  std::string name = "lnLFlucHist";
+  std::string name = "lnLDrawHist";
   //    name = "FGD1 numuCC 0pi/FGD1_numuCC_0pi_nom_mean_ratio";
   TH2D* hist = (TH2D*)file_->Get(name.c_str())->Clone();
 
@@ -48,13 +48,13 @@ void pval(std::string file0) {
   hist->SetTitle("");
   hist->GetYaxis()->SetTitleOffset(1);
   hist->GetXaxis()->SetTitleOffset(1.2);
-  //hist->GetZaxis()->SetTitleOffset(1.0);
+  //  hist->GetZaxis()->SetTitleOffset(1.0);
   hist->GetXaxis()->SetTitleSize(0.05);
   hist->GetYaxis()->SetTitleSize(0.05);
   hist->GetZaxis()->SetTitleSize(0.05);
   hist->GetZaxis()->SetTitle("Steps");
   hist->Draw("colz");
   TempLine->Draw("same");
-  c->Print((std::string("pval_")+std::string(".pdf")).c_str());
+  c->Print((std::string("pval2_")+std::string(".pdf")).c_str());
 
 }
