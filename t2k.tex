@@ -16,7 +16,7 @@ As well as ND280 and INGRID, there are also detectors at the ND suite that are n
 
 \section{Beamline}\label{sec:beam}
 
-The neutrino beamline at J-PARC \cite{jparc} was newly constructed for the T2K experiment, and is fed by a system of 3 accelerator facilities: a linear accelerator (LINAC), a rapid cycling proton synchrotron (RCS), and the main ring synchrotron (MR). The accelerator complex is shown in Figure \ref{jparc}. $H^{-}$ ions are first accelerated to 400 MeV by the LINAC, before being converted to $H^{+}$ ions by charge stripping foils as they are injected into the RCS. Here, they are further accelerated to 3 GeV in 25 Hz cycles, with 2 bunches per cycle.
+The neutrino beamline at J-PARC \cite{jparc} was newly constructed for the T2K experiment, and is fed by a system of 3 accelerator facilities: a linear accelerator (LINAC), a rapid cycling proton synchrotron (RCS), and the main ring synchrotron (MR). The accelerator complex is shown in Figure \ref{jparc}. H$^{-}$ ions are first accelerated to 400 MeV by the LINAC, before being converted to H$^{+}$ ions by charge stripping foils as they are injected into the RCS. Here, they are further accelerated to 3 GeV in 25 Hz cycles, with 2 bunches per cycle.
 
 \begin{figure}[!htbp]
 \centering
@@ -124,7 +124,7 @@ It's not possible to count the total number of neutrinos produced in the beam, s
 Because neutrinos are produced in a two-body decay, and so some fraction of energy is taken by the second decay product, it is not possible to produce a mono-energetic beam. The oscillation probability depends on the neutrino energy, and so more accurate measurements of oscillation parameters can be made using a neutrino beam with a narrower spread of energies. The neutrino energy is given by\cite{Enuoffaxis}:
 
 \begin{equation}
-E_{\nu} = \frac{m^{2}_{\pi} - m^{2}_{\mu}}{2(E_{\pi} - p_{\pi} cos\theta_{\pi\nu})}.
+E_{\nu} = \frac{m^{2}_{\pi} - m^{2}_{\mu}}{2(E_{\pi} - p_{\pi} \text{cos}\theta_{\pi\nu})}.
 \end{equation}
 
 Figure \ref{offaxisEdep} shows $E_\nu$ as a function of $E_\pi$ for different values of $\theta_{\pi\nu}$. The $E_\nu$ distribution is flatter for larger $\theta_{\pi\nu}$, and so $E_\nu$ has a weaker dependence on $E_\pi$. At higher angles a narrower range of $E_\nu$ can therefore be produced from a wider range of $E_\pi$. This effect is highlighted in Figure \ref{offaxis}, showing the predicted neutrino fluxes on and off-axis. A narrower beam spread is produced at 2.5$^o$, but with a lower overall rate (the y-axis is normalised). The beam energy and off-axis angle are chosen such that the neutrino energy peaks at $\sim$0.6 GeV, to maximise the probability of oscillation at the far detector by aligning the beam peak with the first oscillation dip. Going off-axis also reduces the wrong sign contamination in the beam. 
@@ -159,7 +159,7 @@ The beam is first measured by two near detectors, ND280 and INGRID, 280 m away f
 
 The INGRID detector is located on the beam axis, and is designed to measure the beam profile and direction. From this, the beam angle at ND280 and SK can be determined to within 0.2 mrad, and the beam center to within 5 cm. Neutrino event rates are also measured to within 2$\%$. These measurements are in good agreement with results from MUMON, as shown in Figure \ref{mumoningrid}. A precise determination of the beam direction is necessary as a 1 mrad uncertainty corresponds to a 2-3$\%$ uncertainty on the beam energy.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/mumoningrid}
 \caption{INGRID and MUMON measurements of the beam direction and event rate for runs 1-9.} \label{mumoningrid}
@@ -167,7 +167,7 @@ The INGRID detector is located on the beam axis, and is designed to measure the 
 
 INGRID achieves this precision by using 16 identical modules made of interleaved iron and scintillator. These are arranged in a 10 x 10 m cross shape centered on the primary proton beamline axis, with 2 modules off-axis outside the cross, as shown in Figure \ref{ingridcross}. 
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.6\textwidth,clip]{figs/ingridcross}
 \caption{The horizontal, vertical, and off-axis modules of the INGRID detector.} \label{ingridcross}
@@ -175,7 +175,7 @@ INGRID achieves this precision by using 16 identical modules made of interleaved
 
 Each module consists of nine iron sheets and 11 tracking scintillator planes, as shown in Fiugre \ref{ingridmodule}. Each scintillator plane contains 24 horizontal and 24 vertical bars of plastic scintillator. These bars are threaded with a wavelength shifting (WLS) fibre, which collects photons emitted in the plastic scintillator during energy deposition. The WLS fibres transport photons to multi-pixel photon counters (MPPCs) at the end of each bar, and shift the spectrum of the light to the optimal region for MPPC readout. The MPPCs are avalanche photodiodes with a gain 1 x 10$^6$, which convert photons into an electrical signal. This signal is readout by a set of Trip-T front-end electronics boards\cite{tript}, each of which is connected to 48 MPPCs. The backend electronics are made up of readout merger modules (RMM), which read data from the detector, and clock modules, which send trigger signals and ensure all components of the detector are synchronised.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/ingridmodule}
 \caption{The composition of an INGRID module.} \label{ingridmodule}
@@ -324,7 +324,7 @@ The far detector, Super-Kamiokande, is a water Cherenkov detector located 295 km
 
 Super-Kamiokande has been searching for proton decay and measuring solar and atmospheric neutrino oscillations since 1996, and has been a far detector for a long baseline accelerator neutrino oscillation experiment since 1999, initially for K2K and now for T2K. Although it has undergone several updates during this period, the long running operation mean its behaviour is well understood. The atmospheric and cosmic ray muon data provide calibration samples completely separate from the T2K analysis, for which the simulated MC matches data to the percent level.
 
-The detector is divided into the inner (ID) and outer (OD) detectors by a 55 cm cylindrical stainless steel and tyvek framework. The OD is 40.2 m in height with a radius of 35.8 m. It surrounds the ID with 2 m of water, serving as a shield from interactions in the surrounding rock. 1885 outward-facing 20 cm PMTs provide an active veto for cosmic ray muons with an efficiency of almost 100$\%$, despite the fairly sparse PMT coverage. The beam timing window can be used to identify interactions in the OD from beam neutrinos.
+The detector is divided into the inner (ID) and outer (OD) detectors by a 55 cm cylindrical stainless steel and tyvek framework. The OD is 40.2 m in height with a radius of 35.8 m. It surrounds the ID with 2 m of water, serving as a shield from interactions in the surrounding rock. An active veto for cosmic ray muons is provided by 1885 outward-facing 20 cm PMTs. Despite the fairly sparse PMT coverage, the veto has an efficiency of almost 100$\%$. The beam timing window can be used to identify interactions in the OD from beam neutrinos.
 
 The ID is 36.2 m in height with a radius of 33.8 m. It contains 11,129 inward-facing 50 cm PMTs, each with a combined quantum and collection efficiency of 20$\%$, and a timing resolution of $\sim$2 ns. The PMT coverage of the ID is 40$\%$, which gives enough spatial resolution to sufficiently reconstruct the paths of particles produced in neutrino interactions inside the tank.
 

@@ -71,7 +71,7 @@ for FGD2. $x$ and $y$ cuts also reject events with a vertex within 5 bars of the
 
 \item \textbf{Broken Track:} Events can be misreconstructed such that a single muon candidate track originating in the fiducial volume of one of the FGDs is broken into two components, one track only in the FGD and one that starts in the last layers of the FGD and passes through the TPC. The second track is therefore identified as a muon candidate. To cut these events, events with the muon candidate starting within 425 mm of the upstream edge of the FGD are rejected if there is also at least one FGD only track.
 
-\item \textbf{Muon PID:} Events with the HMNT crossing a TPC, starting inside the fiducial volume of an FGD, and identified as a negative particle, are potential muon candidates. The particle identification (PID) is then determined using the $dE/dx$ measured in the TPCs. The energy deposited in the TPC is compared to the amount that would be expected if the particle were a muon, electron, pion or proton, which are shown for positive particles in Figure \ref{fig:tpcpid}. The likelihood for particle type $i$ is calculated by:
+\item \textbf{Muon PID:} Events with the HMNT crossing a TPC, starting inside the fiducial volume of an FGD, and identified as a negative particle, are potential muon candidates. The particle identification (PID) is then determined using the d$E/$d$x$ measured in the TPCs. The energy deposited in the TPC is compared to the amount that would be expected if the particle were a muon, electron, pion or proton, which are shown for positive particles in Figure \ref{fig:tpcpid}. The likelihood for particle type $i$ is calculated by:
 
 \begin{equation}
 L_{i} = \frac{e^{-Pull_{i}^{2}}}{\sum_{l}e^{Pull_{l}^2}},
@@ -80,7 +80,7 @@ L_{i} = \frac{e^{-Pull_{i}^{2}}}{\sum_{l}e^{Pull_{l}^2}},
 where $l = \mu, \pi, e, p$, and the $Pull$ is given by:
 
 \begin{equation}
-Pull_{i} = \frac{dE/dx_{measured} - dE/dx_{expected,i}}{\sigma(dE/dx_{measured}-dE/dx_{expected,i})}.
+Pull_{i} = \frac{\text{d}E/\text{d}x_{measured} - \text{d}E/\text{d}x_{expected,i}}{\sigma(\text{d}E/\text{d}x_{measured}-\text{d}E/\text{d}x_{expected,i})}.
 \end{equation}
 
 Electrons are rejecting by requiring:
@@ -134,7 +134,7 @@ There are two methods by which information from an FGD can be used to identify i
 \end{itemize}
 \end{itemize}
 
-The number of pions identified by the TPC PID, Michel electron tagging, and FGD PID is then used to split the CC-inclusive selection into CC0$\pi$, CC1$\pi$ and CCOther:
+The number of pions identified by the TPC PID, Michel electron tagging, and FGD PID is then used to split the CC-inclusive selection into CC 0$\pi$, CC 1$\pi$ and CC Other:
 
 \begin{itemize}
 
@@ -170,7 +170,7 @@ L_{\pi} > 0.1.
 
 \end{itemize}
 
-The pion identification is performed in the same way as for FHC $\nu_{\mu}$, and the CC-inclusive sample is again split into CC0$\pi$, CC1$\pi$ and CCOther.
+The pion identification is performed in the same way as for FHC $\nu_{\mu}$, and the CC-inclusive sample is again split into CC 0$\pi$, CC 1$\pi$ and CC Other.
 
 \subsection{RHC $\nu_{\mu}$}
 
@@ -214,39 +214,39 @@ ND280 events are binned in the reconstructed momentum and angle of the outgoing 
 
 \begin{itemize}
 
-\item \textbf{FHC $\nu_{\mu}$ CC0$\pi$:}\\
+\item \textbf{FHC $\nu_{\mu}$ CC 0$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0, 200, 300, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 2000, 2500, 3000, 5000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.5, 0.6, 0.7, 0.76, 0.78, 0.8, 0.83, 0.85, 0.88, 0.89, 0.9, 0.91, 0.92, 0.925, 0.93, 0.935, 0.94, 0.945, 0.95, 0.955, 0.96, 0.965, 0.97, 0.975, 0.98, 0.985, 0.99, 0.995, 1.
 
-\item \textbf{FHC $\nu_{\mu}$ CC1$\pi$:}\\
+\item \textbf{FHC $\nu_{\mu}$ CC 1$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0, 300, 350, 400, 500, 600, 650, 700, 750, 800, 900, 1000, 1100, 1200, 1500, 2000, 3000, 5000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.6, 0.7, 0.8, 0.85, 0.88, 0.9, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 1.
 
-\item \textbf{FHC $\nu_{\mu}$ CCOther:}\\
+\item \textbf{FHC $\nu_{\mu}$ CC Other:}\\
 \textbf{\textit{p} (MeV/c):} 0, 300, 400, 500, 600, 650, 700, 750, 800, 900, 1000, 1100, 1250, 1500, 1750, 2000, 3000, 5000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.6, 0.7, 0.76, 0.8, 0.85, 0.88, 0.89, 0.9, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 1.
 
-\item \textbf{RHC $\bar{\nu_{\mu}}$ CC0$\pi$:}\\
+\item \textbf{RHC $\bar{\nu_{\mu}}$ CC 0$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0, 300, 400, 500, 550, 600, 650, 700, 750, 800, 900, 1000, 1100, 1200, 1500, 2000, 4000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.6, 0.7, 0.8, 0.85, 0.9, 0.92, 0.93, 0.94, 0.95, 0.96, 0.965, 0.97, 0.975, 0.98, 0.985, 0.99, 0.995, 1.
 
-\item \textbf{RHC $\bar{\nu_{\mu}}$ CC1$\pi$:}\\
+\item \textbf{RHC $\bar{\nu_{\mu}}$ CC 1$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0, 500, 700, 900, 1300, 2500, 30000.\\
 \textbf{cos $\theta$:}  -1, 0.7, 0.8, 0.9, 0.94, 0.96, 0.98, 0.99, 1.
 
-\item \textbf{RHC $\bar{\nu_{\mu}}$ CCOther:}
+\item \textbf{RHC $\bar{\nu_{\mu}}$ CC Other:}
 \textbf{\textit{p} (MeV/c):} 0, 600, 800, 1000, 1250, 1500, 2000, 4000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.7, 0.8, 0.85, 0.9, 0.93, 0.95, 0.97, 0.98, 0.99, 1.
 
-\item \textbf{RHC $\nu_{\mu}$ CC0$\pi$:}\\
+\item \textbf{RHC $\nu_{\mu}$ CC 0$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0, 300, 500, 700, 800, 900, 1250, 1500, 2000, 4000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.7, 0.8, 0.85, 0.88, 0.9, 0.92, 0.94, 0.96, 0.97, 0.98, 0.99, 1.
 
-\item \textbf{RHC $\nu_{\mu}$ CC1$\pi$:}\\
+\item \textbf{RHC $\nu_{\mu}$ CC 1$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0, 600, 800, 1500, 30000.\\
 \textbf{cos $\theta$:} -1, 0.7, 0.8, 0.86, 0.9, 0.94, 0.96, 0.97, 0.98, 0.99, 1.
 
-\item \textbf{RHC $\nu_{\mu}$ CCOther:}\\
+\item \textbf{RHC $\nu_{\mu}$ CC Other:}\\
 \textbf{\textit{p} (MeV/c):} 0, 600, 1000, 1250, 2000, 4000, 30000.\\
 \textbf{cos $\theta$:} -1, 0.7, 0.8, 0.86, 0.9, 0.93, 0.95, 0.97, 0.99, 1.
 
@@ -369,7 +369,7 @@ ND280 events are binned in the reconstructed momentum and angle of the outgoing 
 \label{fig:th2dbin}
 \end{figure}
 
-For example, in the FGD1 CC0$\pi$ sample, the bins at low angle, ($<0.6$), and low momentum, ($\sim500$ MeV), the bins span a large angle range (-1.0 - 0.6). Having such large bins causes them to contain a large amount of events. However, if they were divided to only span a smaller range of angles, the bins at the same angle but higher momentum would also be divided. As these regions are much more sparsely populated, splitting them further would result in there being insufficient number of events in those bins. The same is true for the high angle bins at higher momentum. These bins cover a large momentum range and are well populated; there are a relatively large amount of events with high momentum forward-going muons. Splitting these bins though would mean the backward-going bins at the same high momentum would not be large enough and so would be too sparsely populated. This effect becomes more significant with the addition of more data.
+For example, in the FGD1 CC 0$\pi$ sample, the bins at low angle, ($<0.6$), and low momentum, ($\sim500$ MeV), the bins span a large angle range (-1.0 - 0.6). Having such large bins causes them to contain a large amount of events. However, if they were divided to only span a smaller range of angles, the bins at the same angle but higher momentum would also be divided. As these regions are much more sparsely populated, splitting them further would result in there being insufficient number of events in those bins. The same is true for the high angle bins at higher momentum. These bins cover a large momentum range and are well populated; there are a relatively large amount of events with high momentum forward-going muons. Splitting these bins though would mean the backward-going bins at the same high momentum would not be large enough and so would be too sparsely populated. This effect becomes more significant with the addition of more data.
 
 \subsection{Non-Uniform Rectangular Binning Studies}\label{sec:nonrecbinning}
 \enlargethispage{\baselineskip}
@@ -379,9 +379,9 @@ The following algorithm was used to define a non-uniform but still rectangular b
 
 \begin{itemize}
 
-\item The bin edges on the cos $\theta$ axis are hard coded and constant, guided by the previous binning. This keeps the bins rectangular.
+\item The bin edges on the cos$\theta$ axis are hard coded and constant, guided by the previous binning. This keeps the bins rectangular.
 
-\item For each cos $\theta$ row, scroll across from 30 GeV down 0 GeV in 100 MeV steps.
+\item For each cos$\theta$ row, scroll across from 30 GeV down 0 GeV in 100 MeV steps.
 
 \item Once 50 unscaled MC events are reached, start a new bin
 
@@ -389,9 +389,9 @@ The following algorithm was used to define a non-uniform but still rectangular b
 
 \end{itemize}
 
-The aim of this process was to produce as uniform a distribution of events in each bin as possible. This was not always possible, as regions of high density would require bins so small that they go below the resolution of the detector. The hard coded $\theta$ bin edges and momentum step sizes of 100 MeV were driven by this minimum bin size limit. The resolutions are calculated by plotting the reconstructed vs true kinematic variables, as shown in Figure \ref{fig:res2d}, and taking the RMS at different slices of the 2D Gaussian. These RMSs, shown in Figures\ref{fig:res1d}, give a gauge of the detector resolution, and so the minimum bin width for each variable in different regions.
+The aim of this process was to produce as uniform a distribution of events in each bin as possible. This was not always possible, as regions of high density would require bins so small that they go below the resolution of the detector. The hard coded cos$\theta$ bin edges and momentum step sizes of 100 MeV were driven by this minimum bin size limit. The resolutions are calculated by plotting the reconstructed vs true kinematic variables, as shown in Figure \ref{fig:res2d}, and taking the RMS at different slices of the 2D Gaussian. These RMSs, shown in Figures \ref{fig:res1d}, give a gauge of the detector resolution, and so the minimum bin width for each variable in different regions.
 
-For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $> 1000$ MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos $\theta$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos $\theta$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. 
+For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $> 1000$ MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos$\theta$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. 
 
 \begin{figure}[t]
 \centering
@@ -552,7 +552,7 @@ Using non-uniform binning significantly improves the sensitivity of the fit to c
 
 The narrower likelihood distributions show that by using the non-uniform binning, moving a parameter further away from the nominal value will be less favoured than by using uniform binning. The ratio panel shows that the improvement is fairly constant across the range of the scan.
 
-Further studies could be undergone to develop a non-rectangular fit binning. For instance, given the underlying distribution of events, using bins of constant $Q^2$ in the $p-\theta$ space may allow a better representation of events. However, given that the bin sizes are already close to the resolution of the detector, and that several iterations of non-uniform rectangular binning showed diminishing returns on improvements in sensitivity, this was not investigated for this analysis.
+Further studies could be undergone to develop a non-rectangular fit binning. For instance, given the underlying distribution of events, using bins of constant $Q^2$ in the $p_{\mu}-$cos$\theta_{\mu}$ space may allow a better representation of events. However, given that the bin sizes are already close to the resolution of the detector, and that several iterations of non-uniform rectangular binning showed diminishing returns on improvements in sensitivity, this was not investigated for this analysis.
 
 \begin{figure}[h]
 \centering
@@ -616,21 +616,21 @@ The parametrisation for each interaction mode proceeds using the following model
 \item \textbf{CC Quasi-Elastic:}\\
 The nominal MC is generated using a Spectral Function (SF) nuclear model from \cite{benhar}. There is one splined parameter, $M^{QE}_{A}$, for the axial mass in the dipole form factor. It's prior is informed by bubble chamber data\cite{tn344}. 8 normalisation parameters are applied, for different bins in $Q^2$. The lowest 5 have width $0.05$ GeV$^2$, from $0.00$ GeV$^2$ up to $0.25$ GeV$^2$. The highest 3 span the ranges from $0.25$ GeV$^2$ to $0.50$ GeV$^2$, $0.50$ GeV$^2$ to $1.00$ GeV$^2$, and $>1.00$ GeV$^2$. Their prior central values and uncertainties are tuned by MINER$\nu$A data. 
 
-The neutrino energy of CCQE events is calculated using Equation \ref{eqn:erec}, which is highly dependent on having an accurate value of the binding energy of the target nuclei. 4 parameters are used to fit the binding energies (for target $^{12}C/^{16}O$ and $\nu/\bar{\nu}$). These are neither shape nor normalisation parameters, and are described in more detail in Section \ref{sec:eb}.
+The neutrino energy of CCQE events is calculated using Equation \ref{eqn:erec}, which is highly dependent on having an accurate value of the binding energy of the target nuclei. 4 parameters are used to fit the binding energies (for target $^{12}$C/$^{16}$O and $\nu/\bar{\nu}$). These are neither shape nor normalisation parameters, and are described in more detail in Section \ref{sec:eb}.
 
 \item \textbf{2-particle-2-hole:}\\
-2p2h interactions are generated in NEUT using the Nieves model \cite{Nieves}. Two shape parameters apply to 2p2h interactions, one for events on $^{12}C$ and one for events on $^{16}O$.  At one extreme it is entirely non-pionless-$\Delta$-decay-like in accordance with the Nieves model, and at the other extreme the shape is entirely pionless-$\Delta$-decay-like, in accordance with the Martini model\cite{Martini}. These two shape parameters have a 30$\%$ correlation.
+2p2h interactions are generated in NEUT using the Nieves model \cite{Nieves}. Two shape parameters apply to 2p2h interactions, one for events on $^{12}$C and one for events on $^{16}$O.  At one extreme it is entirely non-pionless-$\Delta$-decay-like in accordance with the Nieves model, and at the other extreme the shape is entirely pionless-$\Delta$-decay-like, in accordance with the Martini model\cite{Martini}. These two shape parameters have a 30$\%$ correlation.
 
 There are additional shape parameters, to account for differences in the energy dependence of 2p2h interactions. At one extreme the shape is entirely consistent with the Nieves model, and at the other it is consistent with the Martini model. There are 4 of these parameters in total: $\nu/\bar{\nu}$ and high/low $E_{\nu}$. However, studies showed these could not be constrained using near detector data alone, so are fixed in near detector only fits. For the joint near and far detector fits in the oscillation analysis, the parameters are free in the fit. 
 
-Three normalisations are also applied, one for $\nu$ events, one for $\bar{\nu}$, and one for $^{12}C \rightarrow ^{16}O$ scaling. The latter is applied to events on $^{16}O$ multiplicatively with the other normalisations.
+Three normalisations are also applied, one for $\nu$ events, one for $\bar{\nu}$, and one for $^{12}$C $\rightarrow ^{16}$O scaling. The latter is applied to events on $^{16}$O multiplicatively with the other normalisations.
 
 \item \textbf{CC Resonance:}\\
 The Rein-Sehgal model\cite{reinessehgal} is used to describe resonant $\pi$ production in NEUT. Splines are used to parametrise the resonance axial mass, $M^{Res}_{A}$, the normalisation of the axial form factor, $C^{A}_{5}$, and the size of the $I=1/2$ non-resonant background to $I=3/2$ resonant $\pi$ production. The prior central values and uncertainties are tuned using bubble chamber data \cite{bubblechamber}. There is a prior anti-correlation of 83$\%$ between $M^{Res}_{A}$ and $C^{A}_{5}$, 1$\%$ between $M^{Res}_{A}$ and $I=1/2$, and 31$\%$ between $C^{A}_{5}$ and $I=1/2$. In the joint near and far detector fits, the $I=1/2$ parameter is split into two, one for anti-neutrino events with $p_{\pi} < 200$ MeV, and one for all other $I=1/2$ non-resonant background events. In the near detector only fit, the low $p_{\pi}$parameter is not fit, and the other $I=1/2$ parameter applies to all $I=1/2$ non-resonant background events.
 
 \item \textbf{CC Coherent Scattering:}\\
 The Rein-Seghal model \cite{reincoh} is used to describe the coherent scattering events.
-However, measurements at MINER$\nu$A show a $30\%$ difference in cross-section from this model. Two normalisation parameters are fit, one for CC events on $^{12}C$ and one for CC events on $^{16}O$ each with a $30\%$ prior uncertainty to account for this discrepancy. These are $100\%$ correlated.
+However, measurements at MINER$\nu$A show a $30\%$ difference in cross-section from this model. Two normalisation parameters are fit, one for CC events on $^{12}$C and one for CC events on $^{16}$O each with a $30\%$ prior uncertainty to account for this discrepancy. These are $100\%$ correlated.
 
 \item \textbf{CC Deep Inelastic Scattering and Multi-$\pi$:}\\
 The CC DIS and multi-$\pi$ cross-section is calculated from `Parton Distribution Functions' (PDFs). In NEUT these are constructed using the GRV98\cite{grv98} model with corrections from Bodek and Yang\cite{by}. Two shape parameters are applied, one for DIS and one for multi-$\pi$ events, to account for uncertainty in the reliability of these corrections. One extreme corresponds to fully applying the corrections, and the other corresponds to not applying them at all.
@@ -643,7 +643,7 @@ Two normalisation parameters are applied to CC DIS and multi-$\pi$ events, one f
 A normalisation parameter with 100$\%$ uncertainty is applied to CC 1$K$, $1\eta$, and $1\gamma$ events.
 
 \item \textbf{CC Inclusive:}\\
-Two normalisations are applied to CC interactions with $0.4 < E_{\nu} < 0.6$GeV, one for $\nu$ and one for $\bar{\nu}$ events. This is to account for the fact the relative effect of the Coulomb corrections, described in Section \ref{sec:corr}, is smaller at higher momentum. The uncertainties on these systematics are $2\%$ and $1\%$ for $\nu$ and $\bar{\nu}$ respectively, and they are $100\%$ correlated.
+Two normalisations are applied to CC interactions with $0.4 < E_{\nu} < 0.6$ GeV, one for $\nu$ and one for $\bar{\nu}$ events. This is to account for the fact the relative effect of the Coulomb corrections, described in Section \ref{sec:corr}, is smaller at higher momentum. The uncertainties on these systematics are $2\%$ and $1\%$ for $\nu$ and $\bar{\nu}$ respectively, and they are $100\%$ correlated.
 
 \item \textbf{Neutral Current:}\\
 Like for CC Coherent scattering, NC scattering events receive a normalisation with $30\%$ uncertainty. NC $1\gamma$ interactions are modelled with the Rein-Sehgal CC Res model. The cross-section is half the value calculated with more recent models\cite{NCxsec}, and so the prior weight applied is 2.0. As there is no external data to constrain the cross-section, the prior uncertainty is $100\%$.
@@ -681,11 +681,11 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \hline
 \textbf{2p2h Norm $\bar{\nu}$} & 2p2h, $\bar{\nu}$ & 1.0 & 1.0 & Flat & Norm.\\
 \hline
-\textbf{2p2h Norm $^{12}C$ to $^{16}O$} & 2p2h on $^{16}O$ & 1.0 & 0.2 & Gaus & Norm.\\
+\textbf{2p2h Norm $^{12}$C to $^{16}$O} & 2p2h on $^{16}$O & 1.0 & 0.2 & Gaus & Norm.\\
 \hline
-\textbf{2p2h Shape $^{12}C$} & 2p2h on $^{12}C$ & 1.0 & 3.0 & Gaus & Shape\\
+\textbf{2p2h Shape $^{12}$C} & 2p2h on $^{12}$C & 1.0 & 3.0 & Gaus & Shape\\
 \hline
-\textbf{2p2h Shape $^{16}O$} & 2p2h on$^{16}O$ & 1.0 & 3.0 & Gaus & Shape\\
+\textbf{2p2h Shape $^{16}$O} & 2p2h on$^{16}$O & 1.0 & 3.0 & Gaus & Shape\\
 \hline
 \textbf{2p2h E dep low E $\nu$} & - & - & - & - & -\\
 \hline
@@ -711,13 +711,13 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \hline
 \textbf{$Q^2$ 7} & CCQE; $Q^{2}<1.0$ GeV$^{2}$ & 1.0 & 0.40 & Gaus & Norm.\\
 \hline
-\textbf{$E_{b} \nu C$} & CCQE on $^{12}C$; $E_{\nu} < 4$ GeV; $\nu$ & 27 (25) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \nu$ C} & CCQE on $^{12}$C; $E_{\nu} < 4$ GeV; $\nu$ & 27 (25) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
-\textbf{$E_{b} \bar{\nu} C$} & CCQE on $^{12}C$; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 25 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \bar{\nu}$ C} & CCQE on $^{12}$C; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 25 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
-\textbf{$E_{b} \nu O$} & CCQE on $^{16}O$; $E_{\nu} < 4$ GeV; $\nu$ & 31 (27) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \nu$ O} & CCQE on $^{16}$O; $E_{\nu} < 4$ GeV; $\nu$ & 31 (27) MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
-\textbf{$E_{b} \bar{\nu} O$} & CCQE on $^{16}O$; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 27 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
+\textbf{$E_{b} \bar{\nu}$ O} & CCQE on $^{16}$O; $E_{\nu} < 4$ GeV; $\bar{\nu}$ & 27 MeV & 6 MeV & Gaus & $p_{\mu}$ Shift\\
 \hline
 \textbf{$M^{RES}_{A}$} & CC Res, NC $\pi^{0}$, NC $\pi^{\pm}$ & 1.07 (0.95) GeV & 0.15 GeV & Gaus & Shape\\
 \hline
@@ -747,9 +747,9 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \hline
 \textbf{CC DIS, multi-$\pi$ norm $\bar{\nu}$} & CC DIS, CC multi-$\pi$, $\bar{\nu}$ & 1.0 & 0.065 & Gaus & Norm.\\
 \hline
-\textbf{CC coh$^{12}C$} & CC Coherent on $^{12}C$ & 1.0 & 0.3 & Gaus & Norm.\\
+\textbf{CC coh$^{12}$C} & CC Coherent on $^{12}$C & 1.0 & 0.3 & Gaus & Norm.\\
 \hline
-\textbf{CC coh $^{16}O$} & CC Coherent on $^{16}O$& 1.0 & 0.3 &  Gaus & Norm.\\
+\textbf{CC coh $^{16}$O} & CC Coherent on $^{16}$O & 1.0 & 0.3 &  Gaus & Norm.\\
 \hline
 \textbf{NC coh} & NC Coherent & 1.0 & 0.3 & Gaus & Norm.\\
 \hline
@@ -794,27 +794,27 @@ In the SF nuclear model, there isn't a single nuclear binding energy systematic 
 
 Ideally, there would be systematic parameters for the height, width, and position of each of the peaks for each target nucleus. However, this was infeasible to implement on the time scale of this analysis. Instead, a global uncertainty of 6 MeV is applied to the removal energy in the SF nuclear model.
 
-These binding energy systematics are implemented as neither shape nor normalisation parameters in the T2K oscillation analysis. Instead, the offset to the removal energy is propagated to a change in the $P_{\mu}-\theta_{\mu}$ distributions by directly shifting $P_{\mu}$. It has been shown that changes in the removal energy do not cause significant changes in the distribution of $\theta_{\mu}$.
+These binding energy systematics are implemented as neither shape nor normalisation parameters in the T2K oscillation analysis. Instead, the offset to the removal energy is propagated to a change in the $P_{\mu}-$cos$\theta_{\mu}$ distributions by directly shifting $P_{\mu}$. It has been shown that changes in the removal energy do not cause significant changes in the distribution of $\theta_{\mu}$.
 
 The SF model used was constrained using data from $e\rightarrow e'p$ experiments, which only applies to initial state protons, and therefore anti-neutrino CCQE interactions. The spectral function of initial state neutrons in neutrino CCQE interactions can not be constrained in the same way. The offset between the SF and Relativistic Mean-Field model predictions \cite{RMFPred} for neutrons is $\sim$4 MeV for oxygen and $\sim$2 MeV for carbon. 
 
-There are therefore 4 binding energy parameters applied to CCQE events: for $^{12}C$/$^{16}O$ and $\nu$/$\bar{\nu}$. The $\bar{\nu}$ parameters have a prior central value of 25 MeV for $^{12}C$, and 27 MeV for $^{16}O$. The central value of the $\nu$ parameters are offset from their $\bar{\nu}$ counterparts by 2 and 4 MeV for $^{12}C$ and $^{16}O$ respectively. The parameters are correlated with each other as follows:
+There are therefore 4 binding energy parameters applied to CCQE events: for $^{12}$C/$^{16}$O and $\nu$/$\bar{\nu}$. The $\bar{\nu}$ parameters have a prior central value of 25 MeV for $^{12}$C, and 27 MeV for $^{16}$O. The central value of the $\nu$ parameters are offset from their $\bar{\nu}$ counterparts by 2 and 4 MeV for $^{12}$C and $^{16}$O respectively. The parameters are correlated with each other as follows:
 
 \begin{itemize}
 
-\item \textbf{$E_{b}\nu O:$} 70$\%$ with $E_{b}\bar{\nu}O$, 77.77$\%$ with $E_{b}\nu C$, 65.27$\%$ with $E_{b}\bar{\nu}C$
+\item \textbf{$E_{b}\nu$ O:} 70$\%$ with $E_{b}\bar{\nu}$ O, 77.77$\%$ with $E_{b}\nu$ C, 65.27$\%$ with $E_{b}\bar{\nu}$ C
 
-\item \textbf{$E_{b}\bar{\nu}O:$} 70$\%$ with $E_{b}\nu O$, 65.27$\%$ with $E_{b}\nu C$, 77.77$\%$ with $E_{b}\bar{\nu}C$
+\item \textbf{$E_{b}\bar{\nu}$ O:} 70$\%$ with $E_{b}\nu$ O, 65.27$\%$ with $E_{b}\nu$ C, 77.77$\%$ with $E_{b}\bar{\nu}$ C
 
-\item \textbf{$E_{b}\nu C:$} 77.77$\%$ with $E_{b}\nu O$, 65.27$\%$ with $E_{b}\bar{\nu}O$, 70$\%$ with $E_{b}\bar{\nu}C$
+\item \textbf{$E_{b}\nu$ C:} 77.77$\%$ with $E_{b}\nu$ O, 65.27$\%$ with $E_{b}\bar{\nu}$ O, 70$\%$ with $E_{b}\bar{\nu}$ C
 
-\item \textbf{$E_{b}\bar{\nu}C:$} 65.27$\%$ with $E_{b}\nu O$, 77.77$\%$ with $E_{b}\bar{\nu}O$, 70$\%$ with $E_{b}\nu C$
+\item \textbf{$E_{b}\bar{\nu}$ O:} 65.27$\%$ with $E_{b}\nu$ C, 77.77$\%$ with $E_{b}\bar{\nu}$ O, 70$\%$ with $E_{b}\nu$ C
 
 \end{itemize}
 
 These values are derived in \cite{tn344}.
 
-The effect of the $E_b \nu C$ parameter on the FGD1 FHC CC0$\pi$ sample is shown in Figure \ref{fig:Ebratios}. Here, the parameter is set to $\pm1\sigma$ while all other parameters are kept at nominal, and the ratio to the nominal MC is taken. As the binding energy parameter is increased, the final state lepton momentum is decreased. This is seen in the increase in number of events at lower momentum in Figure \ref{fig:EbratiosP1}. The opposite effect is seen for decreasing the binding energy parameter in Figure \ref{fig:EbratiosM1}.
+The effect of the $E_b \nu$ C parameter on the FGD1 FHC CC0$\pi$ sample is shown in Figure \ref{fig:Ebratios}. Here, the parameter is set to $\pm1\sigma$ while all other parameters are kept at nominal, and the ratio to the nominal MC is taken. As the binding energy parameter is increased, the final state lepton momentum is decreased. This is seen in the increase in number of events at lower momentum in Figure \ref{fig:EbratiosP1}. The opposite effect is seen for decreasing the binding energy parameter in Figure \ref{fig:EbratiosM1}.
 
 \begin{figure}[t]
 \centering
@@ -828,7 +828,7 @@ The effect of the $E_b \nu C$ parameter on the FGD1 FHC CC0$\pi$ sample is shown
   \includegraphics[width=0.95\linewidth]{figs/EbNuCM1Ratio}
   \caption{$-1\sigma$}\label{fig:EbratiosM1}
 \end{subfigure}
-\caption{Ratio of the FGD1 FHC CC0$\pi$ sample with $E_{b}\nu C$ parameter set to $\pm 1\sigma$ to the nominal MC.}
+\caption{Ratio of the FGD1 FHC CC0$\pi$ sample with $E_{b}\nu$ C parameter set to $\pm 1\sigma$ to the nominal MC.}
 \label{fig:Ebratios}
 \end{figure}
 
@@ -839,22 +839,22 @@ To validate the implementation of this new type of parameter, Asimov fits (where
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuAsmv}
-  \caption{$E_{b}\nu C$}
+  \caption{$E_{b}\nu$ C}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarAsmv}
-  \caption{$E_{b}\bar{\nu}C$}
+  \caption{$E_{b}\bar{\nu}$ C}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuAsmv}
-  \caption{$E_{b}\nu O$}
+  \caption{$E_{b}\nu$ O}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarAsmv}
-  \caption{$E_{b}\bar{\nu}O$}
+  \caption{$E_{b}\bar{\nu}$ O}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from an Asimov fit.}
 \label{fig:Ebasimov}
@@ -867,22 +867,22 @@ However, for fits to data the posteriors contain many discontinuities as shown i
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuData}
-  \caption{$E_{b}\nu C$}
+  \caption{$E_{b}\nu$ C}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarData}
-  \caption{$E_{b}\bar{\nu}C$}
+  \caption{$E_{b}\bar{\nu}$ C}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuData}
-  \caption{$E_{b}\nu O$}
+  \caption{$E_{b}\nu$ O}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarData}
-  \caption{$E_{b}\bar{\nu}O$}
+  \caption{$E_{b}\bar{\nu}$ O}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from a data fit.}
 \label{fig:Ebdata}
@@ -895,28 +895,28 @@ To show this is what causes the discontinuities, a fluctuated version of the nom
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuFluc}
-  \caption{$E_{b}\nu C$}
+  \caption{$E_{b}\nu$ C}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarFluc}
-  \caption{$E_{b}\bar{\nu}C$}
+  \caption{$E_{b}\bar{\nu}$ C}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuFluc}
-  \caption{$E_{b}\nu O$}
+  \caption{$E_{b}\nu$ O}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarFluc}
-  \caption{$E_{b}\bar{\nu}O$}
+  \caption{$E_{b}\bar{\nu}$ O}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from fit to fluctuated Asimov data.}
 \label{fig:Ebdata}
 \end{figure}
 
-In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $P_{\mu}-\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{}.\red{assuming i have something in the results section that shows this}
+In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $P_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{}.\red{assuming i have something in the results section that shows this}
 
 \subsection{Flux}\label{sec:beam}
 
@@ -940,7 +940,7 @@ There are six sources of flux uncertainty:
 
 \end{itemize}
 
-The fractional sizes of the different sources of ND280 flux systematic are shown in Figure \ref{fig:fluxsourceND}, for different neutrino signs. The hadron production contribution dominates, and the total uncertainty is $\sim10\%$ around the beam peak energy at 600 MeV. The proton beam alignment becomes more significant around 1 GeV. The black dotted line shows the total flux uncertainty using the previous version of the model. This also used the full replica target tuning; the improvement comes from using the latest FLUKA\cite{fluka} release. Similar results are seen for the SK flux uncertainties, shown in Figure\ref{fig:fluxsourceSK}.\red{Get better quality Plots}
+The fractional sizes of the different sources of ND280 flux systematic are shown in Figure \ref{fig:fluxsourceND}, for different neutrino signs. The hadron production contribution dominates, and the total uncertainty is $\sim10\%$ around the beam peak energy at 600 MeV. The proton beam alignment becomes more significant around 1 GeV. The black dotted line shows the total flux uncertainty using the previous version of the model. This also used the full replica target tuning; the improvement comes from using the latest FLUKA\cite{fluka} release. Similar results are seen for the SK flux uncertainties, shown in Figure \ref{fig:fluxsourceSK}.\red{Get better quality Plots}
 
 \begin{center}
 \begin{figure}[!htbp]
@@ -1079,7 +1079,7 @@ The type of each of the 17 systematics is shown in Table \ref{tab:detsyst}, alon
 \end{table}
 \end{center}
 
-In theory, these systematics could be applied on an event by event basis and fitted individually. However, this is not computationally feasible on the timescales required for the oscillation analysis. Instead, each systematic is varied 2000 times and the MC reweighted. This gives a distribution of 2000 number of events for each $p_{\mu}-cos\theta_{\mu}$ bin. The mean and width of a Gaussian fitted to each of these distributions becomes the prior central value and uncertainty for a normalisation parameter applying to that bin. However, the number of fit bins is large, and so to reduce the number of fit parameters, adjacent bins with similar responses to the systematic variations are merged, so the detector binning is coarser than the fit binning. Studies of different detector binnings are presented in Section \ref{sec:detbin}.
+In theory, these systematics could be applied on an event by event basis and fitted individually. However, this is not computationally feasible on the timescales required for the oscillation analysis. Instead, each systematic is varied 2000 times and the MC reweighted. This gives a distribution of 2000 number of events for each $p_{\mu}-$cos$\theta_{\mu}$ bin. The mean and width of a Gaussian fitted to each of these distributions becomes the prior central value and uncertainty for a normalisation parameter applying to that bin. However, the number of fit bins is large, and so to reduce the number of fit parameters, adjacent bins with similar responses to the systematic variations are merged, so the detector binning is coarser than the fit binning. Studies of different detector binnings are presented in Section \ref{sec:detbin}.
 
 This process assumes the shape of the underlying systematics is Gaussian. This is the case for the majority of bins, four of which are shown in Figure \ref{fig:detgaussbins}. In previous analyses, the MC stats uncertainty was included in the ND280 detector covariance instead of as an extra term in the log-likelihood calculation, and so a Gaussian fitted to the distribution of number of events in each bin with and without the MC stats uncertainty are shown. However, several bins exhibit non-Gaussian behaviour, as shown in Figure \ref{fig:detnongaussbins}.
 
@@ -1176,8 +1176,6 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
 \begin{subfigure}{0.95\textwidth}
   \centering
   \includegraphics[width=0.24\linewidth]{figs/detcovbin_leg}
-  \caption{}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
@@ -1285,8 +1283,6 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
 \begin{subfigure}{0.95\textwidth}
   \centering
   \includegraphics[width=0.25\linewidth]{figs/detcovbin_leg}
-  \caption{}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \centering
@@ -1323,27 +1319,27 @@ Furthermore, when the postfit chains are used to produce posterior predictive di
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detbin_numu}
-  \caption{FHC $\nu_{\mu}$}
+  \caption{1R$_{\mu}$}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detbin_numubar}
-  \caption{RHC $\bar{\nu_{\mu}}$}
+  \caption{RHC 1R$_{\mu}$}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detbin_nue}
-  \caption{FHC $\nu_{e}$}
+  \caption{1R$_{e}$}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detbin_nuebar}
-  \caption{RHC $\bar{\nu_{e}}$}
+  \caption{RHC 1R$_{e}$}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detbin_nue1pi}
-  \caption{FHC $\nu_{e} 1\pi$}
+  \caption{1R$_{e}$ 1d.e.}
 \end{subfigure}
 \caption{SK posterior predictive distributions from near detector fits using different binnings for the detector covariance.}
 \label{fig:detbinSK}
@@ -1355,39 +1351,39 @@ As the far detector prediction was robust to the different detector bin mergings
 \setlength\itemsep{1mm}
 \item \textbf{FHC $\nu_{\mu}$ CC0$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0., 300., 1000., 1250., 1500., 2000., 3000., 5000., 30000.\\
-\textbf{cos $\theta$:} -1.0, 0.6, 0.8, 0.85, 0.9, 0.92, 0.98, 0.99, 1.0
+\textbf{cos$\theta$:} -1.0, 0.6, 0.8, 0.85, 0.9, 0.92, 0.98, 0.99, 1.0
 
 \item \textbf{FHC $\nu_{\mu}$ CC1$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0., 300., 400., 700., 800., 1000., 1500., 2000., 5000., 30000.\\
-\textbf{cos $\theta$:} -1.0, 0.6, 0.8, 0.9, 0.92, 0.94, 0.96, 0.98, 0.99, 1.0
+\textbf{cos$\theta$:} -1.0, 0.6, 0.8, 0.9, 0.92, 0.94, 0.96, 0.98, 0.99, 1.0
 
 \item \textbf{FHC $\nu_{\mu}$ CCOther:} \\
 \textbf{\textit{p} (MeV/c):} 0., 300., 400., 700., 800., 900., 1250., 2000., 3000., 5000., 30000.\\
-\textbf{cos $\theta$:} -1.0, 0.6, 0.8, 0.85, 0.9, 0.92, 0.96, 0.98, 0.99, 1.0
+\textbf{cos$\theta$:} -1.0, 0.6, 0.8, 0.85, 0.9, 0.92, 0.96, 0.98, 0.99, 1.0
 
 \item \textbf{RHC $\bar{\nu_{\mu}}$ CC0$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0., 300., 2000., 4000., 30000.\\
-\textbf{cos $\theta$:} -1., 0.6, 0.8, 0.9, 0.96, 1.
+\textbf{cos$\theta$:} -1., 0.6, 0.8, 0.9, 0.96, 1.
 
 \item \textbf{RHC $\bar{\nu_{\mu}}$ CC1$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0., 500., 30000.\\
-\textbf{cos $\theta$:} -1, 0.7, 1.
+\textbf{cos$\theta$:} -1, 0.7, 1.
 
 \item \textbf{RHC $\bar{\nu_{\mu}}$ CCOther:}\\
 \textbf{\textit{p} (MeV/c):} 0., 600., 800., 30000.\\
-\textbf{cos $\theta$:} -1., 0.7, 0.95, 0.97, 1.
+\textbf{cos$\theta$:} -1., 0.7, 0.95, 0.97, 1.
 
 \item \textbf{RHC $\nu_{\mu}$ CC0$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0., 300., 1500., 30000.\\
-\textbf{cos $\theta$:} -1., 0.7, 1.
+\textbf{cos$\theta$:} -1., 0.7, 1.
 
 \item \textbf{RHC $\nu_{\mu}$ CC1$\pi$:}\\
 \textbf{\textit{p} (MeV/c):} 0., 600., 800., 30000.\\
-\textbf{cos $\theta$:} -1, 0.7, 1.
+\textbf{cos$\theta$:} -1, 0.7, 1.
 
 \item \textbf{RHC $\nu_{\mu}$ CCOther:}\\
 \textbf{\textit{p} (MeV/c):} 0., 600., 30000.\\
-\textbf{cos $\theta$:} -1., 0.7, 1.
+\textbf{cos$\theta$:} -1., 0.7, 1.
 
 \end{itemize}
 
@@ -1415,7 +1411,7 @@ A number of corrections and reweightings are applied to the MC prediction to acc
 
 \item \textbf{Pile Up: } The detector efficiency in data is lower than in MC because of the coincidence between neutrino events and interactions involving sand muons. This needs to be applied as MC neutrino interactions within the magnet are simulated separately from sand muons. The correction applied depends on the run, and which FGD the event occurred in.
 
-\item \textbf{Detector: } Precise control studies are used to inform corrections due to well known hardware and reconstruction deficiencies in the TPC $dE/dx$ and PID. These are applied on an event by event basis, and are discussed in more detail in \cite{tn212}.
+\item \textbf{Detector: } Precise control studies are used to inform corrections due to well known hardware and reconstruction deficiencies in the TPC d$E/$d$x$ and PID. These are applied on an event by event basis, and are discussed in more detail in \cite{tn212}.
 
 \item \textbf{Flux: } A correction is made to the nominal neutrino flux for tunings to updated replica target data. The value of the weight applied depends on the run and neutrino energy.
 

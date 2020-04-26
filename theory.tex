@@ -1,12 +1,12 @@
 \chapter{Neutrino Physics}\label{sec:NeutrinoPhysics}
 
-Neutrinos are spin ½ fermions with extremely small mass and zero electric charge. They only interact via the weak and gravitational forces, allowing them to travel great distances through matter without ever being affected by it, and so making them very difficult to detect. This has made neutrinos one of the most elusive particles, despite being one of the most abundant in the Universe. 
+Neutrinos are spin-1/2 fermions with extremely small mass and zero electric charge. They only interact via the weak and gravitational forces, allowing them to travel great distances through matter without ever being affected by it, and so making them very difficult to detect. This has made neutrinos one of the most elusive particles, despite being one of the most abundant in the Universe. 
 
 This chapter gives an overview of the history of neutrino physics, from Wolfgang Pauli's ``desperate remedy" of an undetectable particle, to the 2015 Nobel prize winning results of SK \cite{FUKUDA2002179} and SNO \cite{Ahmad_2001}, as well as the relevant theory involved. Section \ref{sec:discovery} describes the initial evidence of the existence of neutrinos, and the discovery of the different flavours. The evidence of neutrino oscillations is presented in Section \ref{sec:neutrinooscillationevidence}, separated by neutrino source. The theory behind the oscillation mechanism is introduced in Section \ref{sec:oscillationtheory}, along with a discussion on the different interaction types relevant for long baseline neutrino oscillation experiments. Finally, Section \ref{sec:status} gives an overview of the current experimental status of neutrino oscillations, and the questions yet to be answered.
 
 \section{Neutrino Discovery}\label{sec:discovery}
 
-To comply with the conservation of energy, momentum, and spin, the electron produced from $\beta$ decay should always have the same energy, as is the case for the resulting particle in both $\alpha$ and $\gamma$ decays. This is because, assuming a 2-body process, the emitted particle is carrying away the energy difference between the initial and final nuclear states. However, using a magnetic spectrometer and a Geiger counter, James Chadwick measured a continuous energy spectrum from this process \cite{chadwick}. The vast majority of the emitted $\beta$ particles had energies much lower than the expected value, but none had energies higher.
+In 1933, using a magnetic spectrometer and a Geiger counter, Chadwick \cite{chadwick} measured a continuous energy spectrum of $e^-$ from $\beta$ decay. This appeared to violate the conservation laws for energy, momentum, and spin. This is because, assuming a 2-body process, the emitted particle is carrying away the energy difference between the initial and final nuclear states, which should be constant, as is the case for $\alpha$ and $\gamma$ decays. However, the vast majority of the emitted $\beta$ particles measured had energies much lower than the expected value, but none had energies higher.
 
 Neils Bohr initially proposed a statistical formulation of the conservation laws, suggesting individual decays could violate them as long as the overall average resulted in no net change. However, the upper limit on the measured $\beta$ energies, which was confirmed by Ellis and Mott \cite{bethe1934neutrino}, contradicted this theory. If the conservation laws were invalid, any amount of energy would be available in at least a small fraction of decays.
 
@@ -29,12 +29,12 @@ Two tanks of water sandwiched between 3 tanks of liquid scintillator containing 
 \bar{\nu} + p \rightarrow n + e^+.
 \end{equation}
 
-The tanks of water provided a large amount of target protons for the anti-neutrinos to interact with, producing neutrons and positrons. Positron annihilation would then produce 2 $\gamma$ rays, causing a flash in the scintillator liquid which could be detected by the PMTs.
+The tanks of water provided a large amount of target protons for the anti-neutrinos to interact with, producing neutrons and positrons. Positron annihilation would then produce 2 $\gamma$-rays, causing a flash in the scintillator liquid which could be detected by the PMTs.
 
 The water was doped with 40kg of CdCl$_{2}$, so that the free neutron could be detected via neutron capture:
 
 \begin{equation}
-n + ^{108}\negmedspace Cd \rightarrow ^{109}\negmedspace Cd^{*} \rightarrow ^{109}\negmedspace Cd + \gamma.
+n + ^{108}\negmedspace \text{Cd} \rightarrow ^{109}\negmedspace \text{Cd}^{*} \rightarrow ^{109}\negmedspace \text{Cd} + \gamma.
 \end{equation}
 
 The coincidence of a neutron capture 5 $\mu$s after a positron annihilation provided an unambiguous signature of an anti-neutrino reaction. This was the first experimental evidence of the existence of neutrinos.
@@ -42,23 +42,30 @@ The coincidence of a neutron capture 5 $\mu$s after a positron annihilation prov
 A similar experiment by Ray Davis \cite{davis} in 1962 used a tank of chlorine doped water placed near the Brookhaven nuclear reactor, to search for the interaction:
 
 \begin{equation}
-\bar{\nu} + ^{37}\negmedspace Cl \rightarrow e^- + ^{37}\negmedspace \negmedspace Ar.
+\bar{\nu} + ^{37}\negmedspace \text{Cl} \rightarrow e^- + ^{37}\negmedspace \negmedspace \text{Ar}.
 \label{eqn:argonreact}
 \end{equation}
 
-However, no excess of Argon was detected. This along with the Reines and Cowan result lead to the theory of lepton number conservation. This meant that anti-neutrinos could not be produced from interactions involving leptons, and neutrinos could not be produced from interactions involving anti-leptons.
+However, no excess of argon was detected. This along with the Reines and Cowan result lead to the theory of lepton number conservation. This meant that anti-neutrinos could not be produced from interactions involving leptons, and neutrinos could not be produced from interactions involving anti-leptons.
 
-In 1962, Ledermen, Schwartz, and Steinberger \cite{lederman} explored the possibility of the existence of two separate neutrino flavours. Protons were initially accelerated to 15 GeV, before being impinged on a Beryllium target. This produced many pions, which decayed into muons and neutrinos:
+In 1962, Ledermen, Schwartz, and Steinberger \cite{lederman} explored the possibility of the existence of two separate neutrino flavours. Protons were initially accelerated to 15 GeV, before being impinged on a beryllium target. This produced many pions, which decayed into muons and neutrinos:
 
 \begin{equation}
 \pi \rightarrow \mu + \nu_{\mu}.
 \end{equation}
 
-A 13m steel shield then stopped the muons and any surviving pions, leaving a beam of neutrinos. A spark chamber was used to detect when these neutrinos interacted with target Aluminium sheets. An excess of muons compared to electrons was observed, showing that neutrinos produced with a muon, produce another muon when they interact. This proved that muon neutrinos were distinct from electron neutrinos. Measurements at CERN confirmed this result in 1963 \cite{cernnuflavs}.
+A 13m steel shield then stopped the muons and any surviving pions, leaving a beam of neutrinos. A spark chamber was used to detect when these neutrinos interacted with target aluminium sheets. An excess of muons compared to electrons was observed, showing that neutrinos produced with a muon, produce another muon when they interact. This proved that muon neutrinos were distinct from electron neutrinos. Measurements at CERN confirmed this result in 1963 \cite{cernnuflavs}.
 
-When the tau lepton was discovered in 1975, it was expected that there would be a corresponding neutrino. The first direct detection of the tau neutrino was at the DONUT experiment \cite{taudiscovery} in 2000. Protons were accelerated to 800 GeV and impinged on 36 m of Tungsten. This produced D$_{s}$ mesons, which quickly decayed to tau anti-neutrinos and tau leptons, which would then decay to produce a tau neutrino. A kink in the tau lepton's path detected using nuclear emulsion was used to identify the tau decay, and prove the existence of the tau neutrino.
+When the tau lepton was discovered in 1975, it was expected that there would be a corresponding neutrino. However, as tau leptons have a half-life of only 300fs, it is difficult to use them to detect tau neutrinos. This, coupled with the fact that tau neutrinos are extremely rare, meant that the first direct detection was not until 2000, at the DONUT experiment \cite{taudiscovery}. Protons were accelerated to 800 GeV and impinged on 36 m of Tungsten. This produced D$_{s}$ mesons, which quickly decayed to tau anti-neutrinos and tau leptons, which would then decay to produce a tau neutrino. A kink in the tau lepton's path detected using nuclear emulsion was used to identify the tau decay, and prove the existence of the tau neutrino.
 
-The possibility of further neutrino flavours has been ruled out by measurements of Z decays at the Large Electron Positron (LEP) and the Stanford Linear Accelerator (SLAC) \cite{lepslac}. The width of the Z mass peak is the sum of the visible partial width (from decays to leptons and hadrons), and the invisible partial width (assumed to be from decays to N$_{\nu}$ light neutrino species). Assuming each flavour contributes equally, N$_{\nu}$ was measured to equal 2.9840 $\pm$ 0.0082. This result has been confirmed by measurements of the expansion rate of the early Universe, which is consistent with N$_{\nu}$=3.04 $\pm$ 0.18 \cite{universalN}.
+The possibility of further active neutrino flavours has been ruled out by measurements of Z decays at the Large Electron Photon (LEP) collider and the Stanford Linear Accelerator Center (SLAC) \cite{lepslac}. The width of the Z mass peak is the sum of the visible partial width (from decays to leptons and hadrons), and the invisible partial width (assumed to be from decays to N$_{\nu}$ light neutrino species). Assuming each flavour contributes equally, N$_{\nu}$ was measured to equal 2.9840 $\pm$ 0.0082. The results are shown in Figure \ref{fig:zdecay}, clearly most consistent with the 3 active neutrino case. This has been supported by measurements of the expansion rate of the early Universe, which is consistent with N$_{\nu}$=3.04 $\pm$ 0.18 \cite{universalN}.
+
+\begin{figure}
+\centering
+\includegraphics*[width=0.6\textwidth,clip]{figs/zdecay}
+\caption{The cross-section for Z production as a function of energy. The red and green lines show the prediction in the case of 2, 3, and 4 active neutrino flavours. The data points are from a combination of the ALEPH, DELPHI, L3, and OPAL experiments at LEP. Figure from \cite{aleph}.} \label{zdecay}
+\end{figure}
+
 
 However, this does not mean there cannot be further types of neutrino which do not interact via the weak force and are therefore unable to couple to the Z boson, known as sterile neutrinos. There are many experiments currently searching for sterile neutrinos, though no firm evidence has yet been detected. Furthermore, there could be more heavy neutrino flavours, which are just too massive to be produced in Z decays.
 
@@ -66,13 +73,12 @@ However, this does not mean there cannot be further types of neutrino which do n
 
 Neutrino oscillations are now well established, with many experiments measuring various aspects of the phenomena in different regimes. This was not always the case, however. In this section, the early evidence for oscillations of all flavours, and potential steriles, is discussed.
 
-
 \subsection{Solar Neutrinos}\label{sec:solarneutrinos}
 
 Electron neutrinos are produced in the Sun by a number of different mechanisms. The largest flux comes from the nuclear fusion of 4 Hydrogen atoms into a Helium (the \textit{pp} chain):
 
 \begin{equation}
-4 p \rightarrow \medspace ^{4}He + 2e^{+} + 2\nu_e.
+4 p \rightarrow \medspace ^{4}\text{He} + 2e^{+} + 2\nu_e.
 \end{equation}
 
 \begin{figure}[!htbp]
@@ -81,19 +87,19 @@ Electron neutrinos are produced in the Sun by a number of different mechanisms. 
 \caption{Flux of solar neutrinos at Earth as a function of energy for different production mechanisms, according to Bahcall's solar model. Figure from \cite{behcallflux}.} \label{solarflux}
 \end{figure}
 
-However, the energy of the resulting neutrinos is below detection threshold. Other mechanisms produce higher energy neutrinos but with a lower flux, as shown in Figure \ref{solarflux}. Most solar neutrino experiments therefore measure the flux produced through Boron decay:
+However, the energy of the resulting neutrinos is below detection threshold. Other mechanisms produce higher energy neutrinos but with a lower flux, as shown in Figure \ref{solarflux}. Most solar neutrino experiments therefore measure the flux produced through boron decay:
 
 \begin{equation}
-^{8}_{5}B \rightarrow  \medspace ^{8}_{4} Be + e^{+} + \nu_e.
+^{8}_{5}\text{B} \rightarrow  \medspace ^{8}_{4} \text{Be} + e^{+} + \nu_e.
 \end{equation}
 
-Ray Davies and John Bahcall devised an experiment to measure the flux of neutrinos produced via this mechanism in 1968 \cite{davis2}. The design was similar to Davies' previous experiment, measuring the Argon produced in the reaction in Equation \eqref{eqn:argonreact} using a $380$ m$^3$ underground tank of chlorine-based cleaning fluid ($C_{2}Cl_{4}$) in the Homestake Mine.
+Ray Davies and John Bahcall devised an experiment to measure the flux of neutrinos produced via this mechanism in 1968 \cite{davis2}. The design was similar to Davies' previous experiment, measuring the argon produced in the reaction in Equation \eqref{eqn:argonreact} using a $380$ m$^3$ underground tank of chlorine-based cleaning fluid (C$_{2}$Cl$_{4}$) in the Homestake Mine.
 
-Bahcall calculated the predicted number of neutrinos from the Sun from the B decay chain using the Standard Solar Model, as well as the number of Argon nuclei they would produce in the tank. However, consistently, only a third of the amount of neutrinos were detected than had been expected. The discrepancy between the predicted and measured number of neutrinos became known as The Solar Neutrino Problem.
+Bahcall calculated the predicted number of neutrinos from the Sun from the B decay chain using the Standard Solar Model, as well as the number of argon nuclei they would produce in the tank. However, consistently, only a third of the amount of neutrinos were detected than had been expected. The discrepancy between the predicted and measured number of neutrinos became known as The Solar Neutrino Problem.
 
-Bruno Pontecorvo proposed a solution in 1968 \cite{pontecorvo}, which involved neutrinos changing flavour as they propagated through space. This phenomenon, known as neutrino oscillation, was similar to the CKM \cite{CKM} \cite{CKM2} formalism of quark mixing. Some of the electron neutrinos produced in the Sun would therefore change flavour before reaching the Earth, causing the flux deficits measured. However, this required a significant modification to the Standard Model of particle physics, that neutrinos have mass. The success of the massless theory of the neutrino meant that this explanation initially did not gain much support.
+Bruno Pontecorvo proposed a solution in 1968 \cite{pontecorvo}, which involved neutrinos changing flavour as they propagated through space. This phenomenon, known as neutrino oscillation, was similar to the CKM \cite{CKM} \cite{CKM2} formalism of quark mixing. Some of the electron neutrinos produced in the Sun would therefore change flavour before reaching the Earth, causing the flux deficits measured. However, this required neutrinos to have mass, which would be significant modification to the Standard Model of particle physics. The success of the massless theory of the neutrino meant that this explanation initially did not gain much support.
 
-Instead, initial efforts focused on modifying the solar model so that the prediction fit the data. The model depended on accurate knowledge of the pressure and temperature inside the Sun's core, and so it was thought that if the temperature was lower than had been assumed in the prediction, then less neutrinos would be expected to be produced. However, advances in helioseismology allowed improved measurements of the core temperature which were consistent with the original value.
+Instead, initial efforts focused on modifying the solar model so that the prediction fit the data. The model depended on accurate knowledge of the pressure and temperature inside the Sun's core, and so it was thought that if the temperature was lower than had been assumed in the prediction, then fewer neutrinos would be expected to be produced. However, advances in helioseismology allowed improved measurements of the core temperature which were consistent with the original value.
 
 No modification to the solar model itself could accommodate the measured fluxes either. The overall reduced flux required a lower core temperature, whereas the measured shape of the energy distribution of the neutrinos required a higher temperature. This is because the different nuclear processes producing different neutrino energies have different temperature dependencies. Modifying the solar model in any way would always result in at least one of these discrepancies increasing.
 
@@ -104,28 +110,38 @@ In 1989, the Kamiokande experiment \cite{kamiokande} measured the solar neutrino
 The GALLEX \cite{gallex} and SAGE \cite{sage} experiments in the early 1990s also used radiochemical detection, but with Gallium to measure:
 
 \begin{equation}
-\nu_e + ^{71}\negmedspace Ga \rightarrow e^- + ^{71}\negmedspace Ge.
+\nu_e + ^{71}\negmedspace \text{Ga} \rightarrow e^- + ^{71}\negmedspace \text{Ge}.
 \end{equation}
 
 This interaction had a lower energy threshold, allowing measurement of the flux from the $pp$ chain. Both experiments confirmed the discrepancy between prediction and measurement.
 
-Despite the $pp$ chain being better understood than $B$ decay, the results of these experiments all relied upon the solar model and so were still not fully accepted.
+Despite the $pp$ chain being better understood than B-8 decay, the results of these experiments all relied upon the solar model and so were still not fully accepted.
 
-The first model independent measurement of the solar neutrino flux came from the SNO experiment in 2002 \cite{snoresult}. SNO detected both the $\nu_e$ flux via charged-current interactions:
+The first solar-model independent measurement of the solar neutrino flux came from the SNO experiment in 2002 \cite{snoresult}. SNO detected both the $\nu_e$ flux via charged-current interactions:
 
 \begin{equation}
 \nu_e + d  \rightarrow p + p + e^-,
 \end{equation}
+
 and the total $\nu$ flux via neutral-current interactions:
+
 \begin{equation}
 \nu_{\alpha} + d  \rightarrow p + n + \nu_{\alpha},
 \end{equation}
+
 and:
+
 \begin{equation}
 \nu_{\alpha} + e^-  \rightarrow \nu_{\alpha} + e^-.
 \end{equation}
 
-The electron neutrino flux measured was consistent with the previous results, but the total flavour independent flux was consistent with the predicted values. This was strong evidence that electron neutrinos were changing flavour into muon and tau neutrinos before they got to the Earth.
+The electron neutrino flux measured was consistent with the previous results, but the total flavour independent flux was consistent with the predicted values, as shown in Figure \ref{fig:snores}. This was strong evidence that electron neutrinos were changing flavour into muon and tau neutrinos before they got to the Earth.
+
+\begin{figure}
+\centering
+\includegraphics*[width=0.7\textwidth,clip]{figs/snoresult}
+\caption{The flux of $\mu+\tau$ vs $e$ $^8$B solar neutrinos measured at SNO. The dashed lines show the total flux predicted by the BP2000 solar model \cite{solmod}. The blue, red, and green bands show the flux measured through NC, CC, and elastic scattering reactions respectively. The intersect of the bands is at the bestfit values for $\phi_e$ and $\phi_{\mu\tau}$, showing that the combined fluxes are consistent with the prediction. Figure from \cite{snoresult}.} \label{fig:snores}
+\end{figure}
 
 \subsection{Atmospheric Neutrinos}\label{sec:atmosphericneutrinos}
 
@@ -314,13 +330,13 @@ This form of the unitary matrix is often used as it makes it easier to interpret
 
 The first matrix contains terms only in $\theta_{23}$, the mixing angle involved in most atmospheric neutrino oscillations. If $\nu_e$ are neglected, and atmospheric oscillations are considered as a two flavour process $\nu_\mu \rightarrow \nu_\tau$, then $\theta_{atm} \approx \theta_{23}$.
 
-The second matrix contains terms only in $\theta_{13}$, the mixing angle involved in most reactor neutrino oscillations, and the $CP$-violating phase, $\delta_{CP}$. If $\delta_{CP} \neq 0$, neutrinos oscillate differently to anti-neutrinos: $\nu_{\alpha} \rightarrow \nu_{\beta} \neq \bar{\nu}_{\alpha} \rightarrow \bar{\nu}_{\beta}$. However, when multiplied out $\delta_{CP}$ only appears in terms with other angles, and so can only be measured if these are all non-zero. This parametrisation of $U$ emphasises the dependence on $\theta_{13}$, as it is the smallest angle and was the last to be measured.
+The second matrix contains terms only in $\theta_{13}$, the mixing angle involved in most reactor neutrino oscillations, and the CP-violating phase, $\delta_{CP}$. If $\delta_{CP} \neq 0$, neutrinos oscillate differently to anti-neutrinos: $\nu_{\alpha} \rightarrow \nu_{\beta} \neq \bar{\nu}_{\alpha} \rightarrow \bar{\nu}_{\beta}$. However, when multiplied out $\delta_{CP}$ only appears in terms with other angles, and so can only be measured if these are all non-zero. This parametrisation of $U$ emphasises the dependence on $\theta_{13}$, as it is the smallest angle and was the last to be measured.
 
 The third matrix contains terms only in $\theta_{12}$, the mixing angle involved in most solar neutrino oscillations. If $\nu_\tau$ are neglected, and solar oscillations are considered as a two flavour process $\nu_{e} \rightarrow \nu_{\mu}$, then $\theta_{sol} \approx \theta_{12}$.
 
 This has all assumed the neutrinos have been propagating through a vacuum. In most circumstances, the neutrinos actually travel through matter, and so interactions with the medium must be accounted for. In the Earth, there are two types of interactions which can occur. These are charged current scattering of $\nu_{e}$ off an electron, and neutral current scattering of any flavour of neutrino off an electron, neutron, or proton. The neutral current scattering is flavour independent and so does not affect oscillation probabilities. The charged couple scattering however, only occurs for $\nu_{e}$, and so needs to be considered in oscillation calculations. The effect increases with distance through matter travelled, and the electron density of the medium. The full treatment of how this process affects oscillations is known as the MSW effect \cite{msw}, but is beyond the scope of this thesis.
 
-As the Earth is made predominantly of matter rather than anti-matter, the MSW effect has a different impact for neutrinos than it does for anti-neutrinos. This produces an effect that mimics $CP$ violation, causing $\nu_{\alpha} \rightarrow \nu_{\beta} \neq \bar{\nu}_{\alpha} \rightarrow \bar{\nu}_{\beta}$, and so careful treatment is required for measurements of $\delta_{CP}$. At T2K, the average matter density between the near and far detectors of 2.6 g/cm$^3$ \cite{massdensity} has very little effect on the oscillation probabilities, but the matter effects are fully taken into account nonetheless.
+As the Earth is made predominantly of matter rather than anti-matter, the MSW effect has a different impact for neutrinos than it does for anti-neutrinos. This produces an effect that mimics CP violation, causing $\nu_{\alpha} \rightarrow \nu_{\beta} \neq \bar{\nu}_{\alpha} \rightarrow \bar{\nu}_{\beta}$, and so careful treatment is required for measurements of $\delta_{CP}$. At T2K, the average matter density between the near and far detectors of 2.6 g/cm$^3$ \cite{massdensity} has very little effect on the oscillation probabilities, but the matter effects are fully taken into account nonetheless.
 
 Putting all this together, Equation \eqref{eqn:oscprob} can therefore be written for the T2K detection channels, $\nu_\mu$ ($\bar{\nu}_{\mu}$) disappearance and $\nu_e$ ($\bar{\nu}_e$) appearance, as:
 
@@ -406,7 +422,7 @@ E_{rec} = \frac{m_p^2 - (m_n - E_b)^2 + m_\mu^2 + 2(m_n - E_b)E_\mu}{2(m_n - E_b
 \label{eqn:erec}
 \end{equation}
 
-where $m_p$ is the mass of the proton, $m_n$ is the mass of the neutron, $E_b$ is the binding energy of the neutron, and $m_\mu$, $E_\mu$, $p_\mu$ and cos $\theta_\mu$ are the mass, energy, momentum, and angle of the final state lepton.
+where $m_p$ is the mass of the proton, $m_n$ is the mass of the neutron, $E_b$ is the binding energy of the neutron, and $m_\mu$, $E_\mu$, $p_\mu$ and cos$\theta_\mu$ are the mass, energy, momentum, and angle of the final state lepton.
 
 Equation \ref{eqn:erec} shows that accurate neutrino energy reconstruction depends on having an accurate value of the binding energy. The binding energy itself is the energy required for the incoming neutrino to release a nucleon from the target nucleus. This manifests itself as missing energy in the interaction. If an incorrect value for $E_b$ is used in the reconstruction, an incorrect value of $E_{rec}$ will be obtained, biasing the measurement of oscillation parameters. As the average binding energy per nucleon is not well constrained by external data, this is one of the dominant systematic uncertainties in previous T2K oscillation analyses.
 
