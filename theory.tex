@@ -173,9 +173,9 @@ The dependence of the number of $\nu_{\mu}$ observed on the distance travelled c
 
 Reactor neutrinos have a similar energy flux to the solar neutrinos, peaking between 1-10 MeV. Like atmospheric neutrinos, experiments for detecting reactor neutrinos can measure oscillations across different baselines.
 
-The KamLAND experiment \cite{kamland} measured the $\bar{\nu_{\mu}}$ flux from 55 nuclear power reactors across Japan, with a flux-weighted average baseline of 180 km. The number of $\bar{\nu_{\mu}}$ detected was smaller than would be expected if neutrinos could not change flavour, and the measured probability of oscillation as a function of energy and distance was in agreement with Pontercorvo's theory of neutrino flavour mixing. This provided further evidence that neutrinos oscillate while propagating through space.
+The KamLAND experiment \cite{kamland} measured the $\bar{\nu_{\mu}}$ flux from 55 nuclear power reactors across Japan, with a flux-weighted average baseline of 180 km. This gave sensitivity to $\Delta m_{21}^{2}$. The number of $\bar{\nu_{\mu}}$ detected was smaller than would be expected if neutrinos could not change flavour, and the measured probability of oscillation as a function of energy and distance was in agreement with Pontercorvo's theory of neutrino flavour mixing. This provided further evidence that neutrinos oscillate while propagating through space.
 
-Several reactor experiments, RENO \cite{reno}, Double Chooz \cite{doublechooz}, Daya Bay \cite{dayabay}, all with a baseline of $\sim$1 km, have measured an excess of neutrinos at E$_\nu \sim$5 MeV compared to prediction. This could either be due to poor flux modelling, or the existence of sterile neutrinos.
+There are several reactor experiments, RENO \cite{reno}, Double Chooz \cite{doublechooz}, Daya Bay \cite{dayabay}, with a shorter baseline of $\sim$1 km, sensitive to $\theta_{13}$. These have all measured an excess of neutrinos at $E_\nu \sim$5 MeV compared to prediction, which could be due to poor flux modelling, or the existence of sterile neutrinos.
 
 \subsection{Accelerator Neutrinos}\label{sec:acceleratorneutrinos}
 
@@ -375,11 +375,32 @@ meaning with a $295$ km baseline and $0.6$ GeV beam, T2K is sensitive to $\Delta
 
 This has all assumed that there are only 3 flavours of neutrino, in line with the measured values of the Z$^0$ decay width \cite{lepslac,universalN}. However, there could exist sterile neutrinos, briefly discussed at the end of Section \ref{sec:discovery}. In this case, the mixing matrix would need to be modified to accommodate oscillations involving these new neutrinos, and further mass states may be required. 
 
+\subsection{CP Violation}
+\label{cpv}
+
+In 1967, Sakharov proposed three conditions that would be required for an interaction to produce different amounts of matter and anti-matter\cite{sakharov}. These were:
+
+\begin{itemize} 
+
+\item \textbf{Baryon Number Violation:} For a process to produce an unequal number of baryons and anti-baryons, there must be a net non-zero baryon number.
+
+\item \textbf{C and CP Violation:} Process producing a net amount of baryons must not be balanced by processes producing a net amount of anti-baryons.
+
+\item \textbf{Departure from Thermal Equilibrium:} In thermal equilibrium, CPT symmetry would cause the time reversal of baryon producing interactions to balance the net amount.
+
+\end{itemize}
+
+The abundance of matter over anti-matter observed in the Universe therefore suggests that CP violating interactions must have occurred. These have been observed in the quark sector \cite{quarkcpv}, but not by a sufficient amount to alone explain the asymmetry. 
+
+Equation \ref{eqn:appprob} shows that neutrino oscillations could violate CP symmetry, if $\delta_{CP}$ is non-zero. Theories of leptogenesis propose that an abundance of leptons over anti-leptons in the Universe can be converted to a net number of baryons through sphaleron processes \cite{sphaleron}. 
+
+Leptogenesis models \cite{lepto1}\cite{lepto2} suggest that CP violation in the neutrino sector could be sufficient to explain the baryon asymmetry in the Universe.
+
 \subsection{Neutrino Interactions in Long Baseline Oscillation Experiments}\label{sec:interactions}
 
 To detect neutrino oscillations, it is inherently vital that the flavour composition of a flux of neutrinos is carefully analysed. As the the number of neutrinos measured is a convolution of the flux, cross-section, detector efficiency, and oscillation probability, it is important each of these components is well understood to make an accurate measurement. Due to their low interaction rate and subsequent lack of data, neutrino cross-sections contribute significantly to the total uncertainty, and this is only going to become more pronounced with increased statistics for oscillation experiments. It is therefore essential to study neutrino interactions for precision measurements of oscillations to be made.
 
-Equation \eqref{eqn:appprob} tells us that the probability of oscillation is dependent on the mixing angles, mass splittings, distance travelled, and energy of the neutrino. The oscillation parameters are fundamental properties of the Universe which cannot be changed. The probability of oscillation is what can be measured. This is essentially the number neutrinos of a given flavour after oscillation, divided by the number before\footnote{This would be the probability for the disappearance channel. The probability for appearance would be the number of neutrinos of the appearing flavour after oscillation, divided by the number of the initial flavour before.}. The length is a fixed, known quantity for accelerator based neutrino experiments. However, it is infeasible to produce a mono-energetic source of neutrinos. The oscillation parameters are therefore determined by the energy spectrum and number of each flavour neutrino.
+Equation \eqref{eqn:appprob} tells us that the probability of oscillation is dependent on the mixing angles, mass splittings, distance travelled, and energy of the neutrino. The baseline length and energy are experimental variables which can be chosen. The length is a fixed, known quantity for accelerator based neutrino experiments, but it is infeasible to produce a mono-energetic source of neutrinos, and so the energy spectrum for each flavour is used. The probability of oscillation is measured from the number of neutrinos of each flavour before and after oscillation. The oscillation parameters can then be calculated from the measured ($P(\nu_{\alpha}\rightarrow \nu_{\beta})$) and experimental ($L$ and $E$) variables.
 
 As neutrinos cannot be detected directly, the number of neutrinos is inferred from the secondary particles produced when they interact. Inferring the number of incoming neutrinos of each flavour from the particles produced in the events requires a thorough understanding of all the interactions that could take place. If the cross-section for a flavour is not known accurately, the number of neutrinos of that flavour, and hence the oscillation probability, will be determined incorrectly.
 
@@ -398,7 +419,7 @@ The Feynman diagram for CC elastic scattering is shown on the right hand side of
 \caption{Feynman diagrams for NC electron elastic scattering (left) and CC elastic scattering (right). The NC interaction can occur for any neutrino flavour $\alpha = e, \mu, \tau$, whereas the CC interaction can only occur for an incoming $\nu_{e}$.} \label{Scattdiagram}
 \end{figure}
 
-At T2K energies, there are 3 main types of interaction, but with a range of complex nuclear effects involved. At low energies, $<$1 GeV, quasi-elastic (QE) scattering dominates, but nucleon-nucleon correlations and the distribution of nucleons within a nucleus need to be accounted for. QE events are called as such as the kinematics are similar to electron scattering, as the transfer of energy, $Q^2$, is small. At intermediate energies, around 1 GeV, resonance production (RES) become important, where the nucleon is excited into a baryonic resonance, before decaying. At higher energies, deep inelastic scattering (DIS) dominates, with parton distribution functions becoming important. Feynman diagrams for these three processes are shown in Figure \ref{feynmandiagrams}. The cross-section of these interactions for neutrinos (rather than anti-neutrinos) as a function of energy is shown in Figure \ref{xsecpot}. Although the individual interactions are understood fairly well, the transitions between these energy regimes are currently poorly modelled \cite{models}.
+At T2K energies, there are three main types of interaction, but with a range of complex nuclear effects involved. At low energies, $<$1 GeV, quasi-elastic (QE) -like scattering dominates, but nucleon-nucleon correlations and the distribution of nucleons within a nucleus need to be accounted for. QE events are called as such as the kinematics are similar to electron scattering, as the transfer of energy, $Q^2$, is small. At intermediate energies, around 1 GeV, resonance production (RES) become important, where the nucleon is excited into a baryonic resonance, before decaying. At higher energies, deep inelastic scattering (DIS) dominates, with parton distribution functions becoming important. Feynman diagrams for these three processes are shown in Figure \ref{feynmandiagrams}, and their cross-sections for neutrinos (rather than anti-neutrinos) as a function of energy are shown in Figure \ref{xsecpot}. The transitions between these energy regimes are currently poorly modelled \cite{models}.
 
 \begin{figure}[!htbp]
 \vspace{20pt}
@@ -428,7 +449,7 @@ Equation \ref{eqn:erec} shows that accurate neutrino energy reconstruction depen
 
 The assumption that the initial state nucleon is at rest, is also not strictly true, particularly for low $Q^2$ events. Nucleons are constantly moving around, and the initial momentum distribution within a nucleus is not well modelled. This causes an uncertainty in the reconstruction of the neutrino energy.
 
-As described in Section \ref{sec:sel}, T2K samples data by event topology as seen by the detector, whereby CCQE events are selected as CC 0$\pi$. A large background in this sample comes from events where a neutrino interacts with a correlated pair of nucleons, known as 2p2h (two-particle-two-hole). An example 2p2h Feynman diagram is shown in Figure \ref{2p2hdiagram}. Like CCQE events, this leaves a 0$\pi$ final state, meaning it is vitally important these interactions are well modelled. If 2p2h events are mistaken for CCQE, the neutrino energy will be incorrectly reconstructed, biasing the oscillation results.
+As described in Section \ref{sec:sel}, T2K samples data by event topology as seen by the detector, whereby CCQE events are selected as CC 0$\pi$. There is a large background of CCQE-like events, which are also selected as CC 0$\pi$. These can be events with a pion(s) in the final state which is not detected, misreconstructed, or is absorbed before detection. Another contribution to this background comes from events where a neutrino interacts with a correlated pair of nucleons, known as 2p2h (two-particle-two-hole). An example 2p2h Feynman diagram is shown in Figure \ref{2p2hdiagram}. This also leaves a 0$\pi$ final state, meaning it is vitally important these interactions are well modelled. Equation \ref{eqn:erec} only applies for true CCQE events, so if 2p2h events are mistaken for CCQE, the neutrino energy will be incorrectly reconstructed, biasing the oscillation results.
 
 \begin{figure}[!htbp]
 \vspace{20pt}
@@ -460,21 +481,49 @@ Although FSI doesn't generally affect the final state lepton, it can still have 
 
 The current generation long baseline accelerator experiments, T2K and NOvA, are measuring the accelerator oscillation parameters to greater precision, as well as trying to determine $\delta_{CP}$ and the mass hierarchy. The short baseline neutrino oscillation experiments, such as MicroBooNE \cite{microboone} and ICARUS, are searching for sterile neutrinos, and trying to resolve tensions with the LSND result. These form the Short Baseline Neutrino (SBN) program at Fermilab \cite{sbn}, along with the SBN near and far detectors, due to come online in 2020. The main aim of the SBN program is to unambiguously confirm or disprove previously anomalous measurements, as well as performing detailed studies of neutrino-nucleus interactions at the GeV energy scale.
 
-The solar oscillation parameters are well constrained, but Borexino \cite{borexino}, is measuring neutrinos produced via the $^8$B, $^7$Be, $pep$, $pp$ and CNO processes. SNO+ \cite{snoplus} will aim to confirm these results as well as performing detailed studies of the MSW effect.
+The solar oscillation parameters are well constrained, but Borexino \cite{borexino}, is measuring neutrinos produced via the $^8$B, $^7$Be, $pep$, and $pp$ processes. SNO+ \cite{snoplus} will aim to confirm these results as well as performing detailed studies of the MSW effect.
 
 The current atmospheric neutrino oscillation experiments, such as IceCube \cite{icecube}, ANTARES \cite{antares}, and SK, are measuring the atmospheric parameters to increased precision, as well as studying specific zenith angles, and therefore baselines, to investigate the MSW effect.
 
-sin $\theta_{13}$ is being measured with increasing precision by the current reactor neutrino experiments, such as RENO, Double Chooz, Daya Bay, and KamLAND. They are also searching for steriles and trying to resolve tensions between the measured and predicted flux at E$_\nu\sim$5 MeV. DANSS \cite{danss}, NEOS \cite{neos}, PROSPECT \cite{prospect}, STEREO \cite{stereo} and SoLi$\delta$ \cite{solid} are all very short baseline reactor experiments (L $\sim$10 m), and have each confirmed the 5 MeV. However, currently none have found significant evidence of a sterile neutrino.
+The current reactor neutrino experiments, such as RENO, Double Chooz, Daya Bay, and KamLAND, are measuring sin$\theta_{13}$ with increasing precision. They are also searching for steriles and trying to resolve tensions between the measured and predicted flux at E$_\nu\sim$5 MeV. DANSS \cite{danss}, NEOS \cite{neos}, PROSPECT \cite{prospect}, STEREO \cite{stereo} and SoLi$\delta$ \cite{solid} are all very short baseline reactor experiments (L $\sim$10 m), and have each confirmed the 5 MeV. However, currently none have found significant evidence of a sterile neutrino.
 
-Many solar, atmospheric, reactor, and accelerator neutrino experiments have been performed over many years, with the aim of measuring the key oscillation parameters to an increasing level of accuracy and precision. The Particle Data Group determine the current world-leading measurements of each of the parameters \cite{pdg}.
+Many solar, atmospheric, reactor, and accelerator neutrino experiments have been performed over many years, with the aim of measuring the key oscillation parameters to an increasing level of accuracy and precision. The Particle Data Group determine the current world-leading measurements of each of the parameters \cite{pdg}. These are shown in Table \ref{tab:pdg}.
 
-The best measurement of the solar parameters are from a global fit of solar and KamLAND data, using a constraint on $\theta_{13}$ from reactor and accelerator experiments for $\Delta m_{21}^2$. This gives $\Delta m_{21}^2 = (7.53\pm 0.18) \times 10^{−5}$ eV$^2$, and sin$^2\theta_{12} = 0.3076^{+0.013}_{−0.012}$.  
+The best measurement of the solar parameters are from a global fit of solar and KamLAND data, using a constraint on $\theta_{13}$ from reactor and accelerator experiments for $\Delta m_{21}^2$. 
 
-The atmospheric parameters are best measured using a fit of T2K, SK, NOvA, MINOS, and IceCube data. These depend on the mass hierarchy, and the $\theta_{23}$ octant. For the normal hierarchy, this gives $\Delta m_{32}^2 = (2.444\pm 0.034) \times 10^{−3}$ eV$^2$, sin$^2 \theta_{23} = 0.512^{+0.019}_{−0.022}$ (upper octant: sin$^2 \theta_{23} > 0.5$), and sin$^2 \theta_{23} = 0.542^{+0.019}_{−0.022}$ (lower octant: sin$^2 \theta_{23} < 0.5$). For the inverted hierarchy, this gives $\Delta m_{32}^2 = (-2.55\pm±0.04) \times 10^{−3}$ eV$^2$, and sin$^2 \theta_{23} = 0.536^{+0.023}_{−0.028}$.
+The atmospheric parameters are best measured using a fit of T2K, SK, NOvA, MINOS, and IceCube data. These depend on the mass hierarchy, and the $\theta_{23}$ octant.
 
-A fit of data by reactor experiments Daya Bay, RENO, and Double Chooz is the most precise measurement of $\theta_{13}$. This gives sin$^2 \theta_{13} = (2.18\pm0.07) \times 10^{-2}$.
+A fit of data by reactor experiments Daya Bay, RENO, and Double Chooz is the most precise measurement of $\theta_{13}$. The best measurement of the $CP$ violating phase comes from a fit of T2K, SK, and NOvA data. The T2K and SK results assume the normal hierarchy, and use a constraint on $\theta_{13}$ from reactor experiments. The NOvA result assumes the normal hierarchy and the upper $\theta_{23}$ octant (sin$^2 \theta_{23} > 0.5$).
 
-The best measurement of the $CP$ violating phase comes from a fit of T2K, SK, and NOvA data. The T2K and SK results assume the normal hierarchy, and use a constraint on $\theta_{13}$ from reactor experiments. The NOvA result assumes the normal hierarchy and the upper $\theta_{23}$ octant (sin$^2 \theta_{23} > 0.5$). This gives $\delta_{CP} = 1.37^{+0.18}_{−0.16}$.
+\begin{center}
+\begin{table}
+\large
+\center
+\begin{tabular}{ c|c c|| c } 
+\hline
+\hline
+\textbf{Parameter} & \textbf{Mass} & \textbf{sin$\theta_{23}$} & \textbf{Value} \\
+ & \textbf{Hierarchy} & \textbf{Octant} & \\
+\hline
+\hline
+\textbf{$\Delta m_{21}^2$} & - & - & (7.5 $\pm$ 0.18) x 10$^{-5}$ eV$^2$\\
+\textbf{sin$^{2}\theta_{12}$} & - & - & 0.307$^{+0.013}_{-0.012}$ \\
+\hline
+\textbf{$\Delta m_{32}^2$} & NH & - & $(2.444 \pm 0.034$) x 10$^{-3}$ eV$^2$ \\
+ & IH & - & ($-2.55 \pm 0.04)$ x 10$^{-3}$ eV$^2$\\
+\textbf{sin$^{2}\theta_{23}$} & NH & Lower & 0.542$^{+0.019}_{-0.022}$\\
+ & & Upper & 0.512$^{+0.019}_{-0.022}$ \\
+ & IH & - & 0.536$^{+0.023}_{-0028}$\\
+\hline
+\textbf{sin$^{2}\theta_{13}$} & - & - & $2.18 \pm 0.07$ x $10^{-2}$\\
+\textbf{$\delta_{CP}$} & NH & Upper & 1.37$^{+0.18}_{-0.17}$ rad\\
+\hline 
+\hline
+\end{tabular}
+\caption{Current best measurements of oscillation parameters. Values from \cite{pdg}.}
+\label{tab:pdg}
+\end{table}
+\end{center}
 
 \subsection{Open Questions}
 

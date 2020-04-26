@@ -38,7 +38,7 @@ The neutrino beamline consists of two sections, the primary and secondary beamli
 
 The secondary beamline contains the proton target station, decay volume, and beam dump and muon monitor. This is shown in Figure \ref{secondarybeamline}. The proton target station, contains the graphite target, an optical transition radiation monitor (OTR), and the magnetic focussing horns. The protons are impinged on the target, producing secondary muons, pions, and kaons. The target is a 91.4 cm long graphite rod with a diameter of 2.6 cm. Helium gas is used to cool the target, to offset the heating effect of the beam. It is surrounded by a 2 mm thick graphite sleeve and a 0.3 mm titanium casing. 
 
-The target station sits within the first of the focusing horns. This collects the secondary mesons, and they are then focused by the second and third horns. In each horn, a toroidal magnetic field is produced by coaxial conductors. The strength of the field reduces with 1/$r$ where $r$ is the distance from the beam axis. The horns are designed to operate at 320 kA (1.7 T), which increases the neutrino flux at SK by a factor of 16 compared to 0 kA. 
+The target station sits within the first of the focusing horns. This collects the secondary mesons, and they are then focused by the second and third horns. In each horn, a toroidal magnetic field is produced by coaxial conductors. The strength of the field reduces with 1/$r$ where $r$ is the distance from the beam axis. The horns operate at 250 kA (1.7 T), which increases the neutrino flux at SK by a factor of 16 compared to 0 kA. 
 
 \begin{figure}[!htbp]
 \centering
@@ -111,12 +111,12 @@ In each mode, there is some contamination of the wrong sign neutrino due to impe
 
 After the decay channel, there is a beam dump made up of 3.17 m of graphite and 2.4 m of iron. This stops all surviving mesons, and all muons below 5 GeV. Neutrinos and higher momentum muons reach the muon monitor (MUMON) beyond the beam dump. The MUMON consists of two independent detectors: Si PIN photodiodes, and ion chambers. These measure the muon profile on a bunch by bunch basis, which is a reliable measure of the beam direction and intensity as the majority of neutrinos in the beam are produced with a muon in a two-body decay. The MUMON measures the beam direction to an accuracy of 0.25 mrad, and the beam intensity to a precision of 3$\%$\cite{mumon}.
 
-It's not possible to count the total number of neutrinos produced in the beam, so the number of protons impinged on the target (POT) is used as a metric for the data collected by T2K. The total accumulated POT and beam power have been increasing since data taking began in 2010, as shown in Figure \ref{fig:pot}. Data from runs 2-9 are used in this analysis.
+It's not possible to count the total number of neutrinos produced in the beam, so the number of protons impinged on the target (POT) is used as a metric for the data collected by T2K. The total accumulated POT and beam power have been increasing since data taking began in 2010, as shown in Figure \ref{fig:pot}. Near detector data from runs 2-9 is used in this analysis.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
-\includegraphics*[width=0.8\textwidth,clip]{figs/pot}
-\caption{The total accumulated POT and beam power at T2K for runs 2-9.} \label{fig:pot}
+\includegraphics*[width=0.8\textwidth,clip]{figs/pow_t2k_all_toRun84}
+\caption{The total accumulated POT and beam power at T2K for runs 2-10.} \label{fig:pot}
 \end{figure}
 
 \subsection{Off Axis Technique}
@@ -149,10 +149,10 @@ A data-driven Monte-Carlo (MC) is produced to model the neutrino flux. The FLUKA
 
 The beam is first measured by two near detectors, ND280 and INGRID, 280 m away from the source. At this short distance, the probability of oscillation is negligible and so the unoscillated beam can be measured. The locations of the two detectors within the near detector suite are shown in Figure \ref{ndpit}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
-\includegraphics*[width=0.6\textwidth,clip]{figs/ndpit}
-\caption{The T2K near detector suite, 280 m from the beam soure. } \label{ndpit}
+\includegraphics*[width=0.6\textwidth,trim={0 10cm 0 10cm},clip]{figs/ndpitcenter}
+\caption{The T2K near detector suite, 280 m from the beam soure.} \label{ndpit}
 \end{figure}
 
 \subsection{INGRID}\label{sec:ingrid}
@@ -169,7 +169,7 @@ INGRID achieves this precision by using 16 identical modules made of interleaved
 
 \begin{figure}
 \centering
-\includegraphics*[width=0.6\textwidth,clip]{figs/ingridcross}
+\includegraphics*[width=0.8\textwidth,clip]{figs/ingridcross}
 \caption{The horizontal, vertical, and off-axis modules of the INGRID detector.} \label{ingridcross}
 \end{figure}
 
@@ -185,7 +185,7 @@ The layered structure of each module is surrounded by scintillator planes to vet
 
 There is another 17th module, with a slightly different composition to the others. This module, known as the proton module, consists of only scintillator planes, but in smaller bars to give a finer granularity. It is designed to detect muons and protons from CCQE interactions on carbon in the plastic, to improve the MC simulation of the beamline and neutrino interactions. The proton module is located at the center of the cross, and like the other modules, is surrounded by veto planes. Figure \ref{protonmodule} shows its composition.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.6\textwidth,clip]{figs/protonmodule}
 \caption{The composition of the proton module in the INGRID detector.} \label{protonmodule}
@@ -197,7 +197,7 @@ The off-axis near detector, ND280, is designed to detect particles produced in n
 
 As shown in Figure \ref{nd280basket}, ND280 consists of several sub-detectors. The tracker region contains two time projection chambers (TPCs) between three fine grained detectors (FGDs). The FGDs provide a target for neutrinos, and track particles close to the interaction vertex. The TPCs identify and measure the momentum of particles, particularly muons, which are produced in the event and leave the FGD the interaction vertex is in. The FGDs and TPCs are described in more detail in Sections \ref{sec:fgd} and \ref{sec:tpc}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.6\textwidth,clip]{figs/nd280basket}
 \caption{Exploded view of ND280, showing it's sub-detectors.} \label{nd280basket}
@@ -223,14 +223,15 @@ The resolution and track length in the FGDs is too low to use d$E$/d$x$ to ident
 
 \begin{figure}
 \centering
-\begin{subfigure}{.5\textwidth}
-  \centering
+\hspace{0.7cm}
+\begin{subfigure}{.7\textwidth}
+\centering
   \includegraphics[width=0.95\linewidth]{figs/FGD1beam}
   \caption{Neutrino beam data.}
   \label{fig:fgd1beam}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
+\end{subfigure}
+\newline
+\begin{subfigure}{.7\textwidth}
   \includegraphics[width=0.95\linewidth]{figs/FGD1cosmic}
   \caption{Cosmic trigger data.}
   \label{fig:FGD1cosmic}
@@ -259,7 +260,7 @@ Particle identification is performed in the TPCs using, like in the FGDs, d$E$/d
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics*[width=0.6\textwidth,clip]{figs/tpcpid}
+\includegraphics*[width=0.7\textwidth,clip]{figs/tpcpid}
 \caption{Energy loss as a function of momentum for particles in one TPC. The scatter plot shows data while the curves show the MC predictions for protons, electrons, muons, and pions.} \label{fig:tpcpid}
 \end{figure}
 

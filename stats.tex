@@ -20,24 +20,24 @@ P(\bar{\theta}|D) = \frac{P(D|\bar{\theta}) P(\bar{\theta})}{\int P(D|\bar{\thet
 $P(D|\bar{\theta})$ is the probability of measuring the data $D$ given the set of model parameter values $\bar{\theta}$. This is calculated by comparing the number of data events in each bin to the number of events in the Monte Carlo prediction using the given set of model parameters. The Poisson likelihood for a single bin is given by:
 
 \begin{equation}
-\mathcal{L}_{Bin} = \frac{\lambda(\bar{\theta}) ^n e^{-\lambda}}{n!},
+\mathcal{L}_{Bin} = \frac{\lambda(\bar{\theta}) ^n e^{-\lambda}}{n!} / \frac{n(\bar{\theta}) ^n e^{-n}}{n!}
 \end{equation}
 
 where $n$ is the number of observed data events in the bin, and $\lambda(\bar{\theta})$ is the number of predicted MC events for model $\bar{\theta}$ in the bin. The total sample contribution to the log-likelihood is therefore given by:
 
 \begin{equation}
--log\mathcal{L}_{Sample} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n log \frac{n}{\lambda(\bar{\theta})}].
+-\log\mathcal{L}_{Sample} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}].
 \label{eqn:llhsample}
 \end{equation}
 
 This is then modified to include the MC statistical uncertainty, which accounts for the fact that there was not an infinite amount of MC generated. An additional penalty is added to the original sample likelihood, and a scaling factor, $\beta$, is applied to $\lambda(\bar{\theta})$:
 
 \begin{equation}
--log\mathcal{L}_{Sample} = \sum_{Bins}[\beta\lambda(\bar{\theta}) - n + n log \frac{n}{\beta\lambda(\bar{\theta})} + \frac{(\beta -1)^2}{2\sigma^{2}_\beta}].
+-\log\mathcal{L}_{Sample} = \sum_{Bins}[\beta\lambda(\bar{\theta}) - n + n \log \frac{n}{\beta\lambda(\bar{\theta})} + \frac{(\beta -1)^2}{2\sigma^{2}_\beta}].
 \label{eqn:llhbb}
 \end{equation}
 
-Fitting a new parameter, $\beta$, for each bin would introduce $\sim$3000 new fit parameters, bringing the total number of parameters to an infeasibly high amount. Instead, it is assumed $\beta$ follows a Gaussian distribution for each. By minimising $-log\mathcal{L}$ with respect to $\beta$, $\beta$ can be calculated analytically for each bin by solving:
+Fitting a new parameter, $\beta$, for each bin would introduce $\sim$3000 new fit parameters, bringing the total number of parameters to an infeasibly high amount. Instead, it is assumed $\beta$ follows a Gaussian distribution for each. By minimising $-\log\mathcal{L}$ with respect to $\beta$, $\beta$ can be calculated analytically for each bin by solving:
 
 \begin{equation}
 \beta^2 + (\lambda \sigma^{2}_{\beta} - 1)\beta - n \sigma^{2}_{\beta} = 0,
@@ -49,7 +49,7 @@ where $\sigma_{\beta}$ is the fractional uncertainty on the MC in a given bin. E
 $P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is driven by previous and external measurements. This is calculated as either a Gaussian or Flat uncertainty for each parameter, along with inter-parameter correlations:
 
 \begin{equation}
--log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)],
+-\log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)],
 \end{equation}\label{eqn:systllh}
 
 where $X_i$ is the value of parameter $i$ with central value $\mu_i$, and $\textbf{V}$ is the covariance matrix describing the relation between parameters $i$ and $j$ with $\textbf{V}_{ij}$. In this analysis, the systematics are grouped by 3 covariance matrices from the beam flux, cross-section, and ND280 detector models.
@@ -63,7 +63,7 @@ P(D|\bar{\theta}) P(\bar{\theta}) = \prod \mathcal{L}_{total} = \prod (\mathcal{
  and so:
 
 \begin{equation}
--log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n log \frac{n}{\lambda(\bar{\theta})}] + \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)].
+-\log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}] + \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)].
 \end{equation}
 
 The integral in Equation \ref{eqn:bayes} is often not analytically solvable in practice, and so Monte-Carlo methods are required to sample from the posterior to produce a distribution proportional to the posterior probability distribution up to a normalisation constant. 
@@ -106,7 +106,7 @@ The Metropolis Hastings algorithm was first developed by N. Metropolis for symme
 \item \textbf{Proposal:} A new value is proposed for every parameter, according to the proposal function described in Section \ref{sec:stepprop}. \\
 \item \textbf{Acceptance:} The MC is reweighted to the new set of parameters and the test statistic calculated. The acceptance probability, $\alpha$, is given for the $(n+1)^{th}$ step by:
 \begin{equation}
-\alpha = min[1, log \mathcal{L}_{n+1} - log \mathcal{L}_{n}].
+\alpha = min[1, \log\mathcal{L}_{n+1} - \log \mathcal{L}_{n}].
 \end{equation}
  A random number is thrown from a uniform distribution in the range [0,1]. If this is $\geq \alpha$ the step is accepted. Otherwise the step is rejected, and the parameters are set back to the previous values.  \\
 \item \textbf{Repeat:} Steps 2 to 3 are repeated N times. \\

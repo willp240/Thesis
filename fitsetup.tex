@@ -9,7 +9,7 @@ When the number of neutrinos are measured at the far detector, it is a convoluti
 N^{\nu_{\beta}}_{SK} = \phi^{\nu_\alpha}_{SK} \cdot \sigma^{\nu_{\beta}} \cdot \epsilon^{\nu_{\beta}}_{SK} \cdot P_{PMNS}(\nu_{\alpha}\rightarrow\nu_{\beta}),
 \end{equation}
 
-where $N^{\nu_\beta}_{SK}$ is the number of neutrinos of flavour $\beta$, $\phi^{\nu_\alpha}_{SK}$ is the flux of neutrinos of flavour $\alpha$ at SK, $\sigma^{\nu_{\beta}}$ is the interaction cross-section for neutrinos of flavour $\beta$ at SK, $\epsilon^{\nu_\beta}_{SK} $ is the detector efficiency of SK for neutrinos of flavour $\beta$, and $P_{PMNS}(\nu_{\alpha}\rightarrow\nu_{\beta})$ is the probability that a neutrino produced as flavour $\alpha$ oscillates to flavour $\beta$ before reaching SK.
+where $N^{\nu_\beta}_{SK}$ is the number of neutrinos of flavour $\beta$, $\phi^{\nu_\alpha}_{SK}$ is the flux of neutrinos of flavour $\alpha$ at SK without oscillation, $\sigma^{\nu_{\beta}}$ is the interaction cross-section for neutrinos of flavour $\beta$ at SK, $\epsilon^{\nu_\beta}_{SK} $ is the detector efficiency of SK for neutrinos of flavour $\beta$, and $P_{PMNS}(\nu_{\alpha}\rightarrow\nu_{\beta})$ is the probability that a neutrino produced as flavour $\alpha$ oscillates to flavour $\beta$ before reaching SK.
 
 There are degeneracies between the flux, cross-section, and detector efficiency models, and the PMNS parameters. A change in one of the nuisance parameters mimics the effect of a change in one of the parameters of interest. Therefore it is crucial to constrain the model parameters as much as possible. This is done using near detector data, where the number of neutrinos is measured before oscillation and so the  nuisance parameters can be disentangled from the oscillation parameters. The near detector samples also have higher statistics than the SK statistics, and using them to constrain nuisance parameters decreases the uncertainty on the predicted event rate at SK from \red{$X\%$ to $Y\%$}. The constraint on systematic uncertainties at T2K comes almost entirely from the use of near detector data, as shown in Figure \ref{fig:ndskconstraint} by the postfit uncertainties of cross-section parameters from a near detector only fit, and joint near and far detector fit from the 2018 Oscillation Analysis. Figure \ref{fig:ndconstraint}, also from the 2018 Oscillation Analysis, shows the SK prediction with and without the near detector constraint. The uncertainty bands are much narrower when using near detector data in the prediction, further showing the significance of the near detector on the full fit. Without the near detector constraint, T2K would not be able to make the world leading oscillation measurements it does.
 
@@ -39,7 +39,7 @@ Events occurring inside FGD1 and FGD2 are separated as they will undergo a diffe
 
 Events are separated by whether the beam was in FHC or RHC mode as neutrino and anti-neutrino events will be affected by different systematics. For RHC, there are separate selections for wrong sign neutrino events. This is not the case for FHC, as the anti-neutrino cross-section on matter is so much smaller than for neutrinos. As the far detector is not magnetised, it is important to constrain systematics affecting neutrino and anti-neutrino interactions differently at the near detector, and so the separation of these selections is required. 
 
-The separation of events by topology allows more accurate identification of the interaction mode. In this analysis, events are divided into three topological groups: CC 0$\pi$, CC 1$\pi$, and CC Other. In total there are therefore 18 near detector samples: 2 FGDs x 3 neutrino signs x 3 $\pi$ multiplicities. These samples are binned in the momentum and angle of the final state lepton, as these kinematic variables can be measured with good resolution in ND280. The sample and bin are all the information for a single data event that is used to compare to the MC. 
+The separation of events by topology allows more accurate identification of the interaction mode. In this analysis, events are divided into three topological groups: CC 0$\pi$, CC 1$\pi$, and CC Other. For each FGD there are nine samples, three topologies for each of the three neutrino signs, and so there eighteen near detector samples in total. These samples are binned in the momentum and angle of the final state lepton, as these kinematic variables can be measured with good resolution in ND280. The sample and bin are all the information for a single data event that is used to compare to the MC. 
 
 The initial reconstruction of events is performed using an algorithm that fits clusters of hits in each TPC, and then adds hits in the upstream FGD to form a TPC-FGD track. The algorithm is described in more detail in \cite{tn212}. The specific criteria used to define each selection are detailed in the following section. 
 
@@ -51,9 +51,9 @@ The FHC $\nu_{\mu}$ selections are designed to initially produce a sample of CC-
 
 \item \textbf{Data Quality:} The event must occur within bunch time windows of the neutrino beam, and belong to a spill which is entirely flagged as having good global ND280 data quality. Two events occurring within the same spill but different bunches are treated as independent events to avoid pile-up.
 
-\item \textbf{Total Multiplicity:} There must be at least one reconstructed track crossing the TPC in the event.
+\item \textbf{Total Multiplicity:} There must be at least one reconstructed track crossing the TPC in the event, otherwise there is not enough information to classify the event.
 
-\item \textbf{Quality and Fiducial Volume:} There must be at least one track reconstructed inside the FGD1 or FGD2 fiducial volume, and there must be at least one track with segments within at least one FGD and at least one TPC. The fiducial volume of the FGDs are defined as:
+\item \textbf{Quality and Fiducial Volume:} There must be at least one track reconstructed inside the FGD1 or FGD2 fiducial volume, as this is where the most accurate reconstruction occurs. There must also be at least one track with segments within at least one FGD and at least one TPC. The fiducial volume of the FGDs are defined as:
 
 \begin{equation}
 |x| < 874.51 \textrm{ mm}; |y| < 929.51 \textrm{ mm}; 136.875 < z < 446.955 \textrm{ mm},
@@ -95,19 +95,47 @@ L_{\mu} > 0.05.
 \end{equation}
 \end{itemize}
 
+The efficiency of the FGD1 and FGD2 FHC $\nu_{\mu}$ CC-inclusive samples are shown in Figure \ref{fig:numueff}. This is defined as the number of selected CC interactions divided by the total number of simulated interactions in the FGD fiducial volume. The efficiencies are higher at larger $p_{\mu}$ and cos$\theta_{\mu}$. There is also a small peak at lower cos$\theta_{\mu}$ for FGD2.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effmomfgd1numu}
+  \caption{FGD1 $p_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effcosfgd1numu}
+  \caption{FGD1 cos$\theta_{\mu}$}
+\end{subfigure} \\
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effmomfgd2numu}
+  \caption{FGD2 $p_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effcosfgd2numu}
+  \caption{FGD2 cos$\theta_{\mu}$}
+\end{subfigure}
+\caption{Efficiency of the FGD1 and FGD2 FHC $\nu_{\mu}$ CC inclusive samples, as a function of $p_{\mu}$ and cos$\theta_{\mu}$.}
+\label{fig:numueff}
+\end{figure}
+
 This CC-inclusive selection is then divided by $\pi$ multiplicity, which depends on the identification of pions. This is done in the TPCs and FGDs:
 
 \begin{itemize}
 
-\item \textbf{Secondary Track:} A secondary track separate from the muon candidate must be present in the event.
+\item \textbf{Secondary Track:} A secondary track separate from the muon candidate must be present in the event. Events with no other track can't have a reconstructed pion, so cannot be treated as CC 1$\pi$ or Other.
 
-\item \textbf{Bunch Matching:} The secondary track must be in the same time bunch as the muon candidate track.
+\item \textbf{Bunch Matching:} The secondary track must be in the same time bunch as the muon candidate track. This cut rejects secondary tracks which are likely not from the same event.
 
-\item \textbf{Track Start Matching:} The secondary track must originate from the fiducial volume of the same FGD as the muon candidate track.
+\item \textbf{Track Start Matching:} The secondary track must originate from the fiducial volume of the same FGD as the muon candidate track. Secondary tracks starting in a different detector are likely not from the same interaction so are rejected.
 
-\item \textbf{TPC Matching:} If the secondary and muon candidate tracks start in FGD1, the secondary track must also enter TPC 2. If the secondary and muon candidate tracks start in FGD2, the secondary track must also enter TPC 3. 
+\item \textbf{TPC Matching:} If the secondary and muon candidate tracks start in FGD1, the secondary track must also enter TPC 2. If the secondary and muon candidate tracks start in FGD2, the secondary track must also enter TPC 3. This cut ensures the secondary track is forward-going and long enough to be reconstructed.
 
-\item \textbf{TPC Quality:} There must be at least 18 clusters in the TPC. 
+\item \textbf{TPC Quality:} There must be at least 18 clusters in the TPC. This cut ensures the track large enough to be accurately reconstructed.
 
 \item \textbf{Pion PID:} The number of charged pions is determined by the number of secondary tracks with PID determined in the TPC corresponding to a pion. For positive tracks, the pion, positron and proton hypotheses are tested. For negative tracks, only the pion and electron hypotheses are tested. The pulls for each hypothesis are calculated and protons are rejected by requiring:
 
@@ -127,7 +155,7 @@ There are two methods by which information from an FGD can be used to identify i
 
 \begin{itemize}
 
-\item \textbf{FGD Reconstruction:} Secondary tracks in the FGD that don't start in the fiducial volume of the same FGD as the HMNT or that aren't fully contained within the FGD are rejected. Tracks that pass this cut and are in the same time bunch as the muon candidate are considered as pion candidates. The deposited energy in the FGD is then used to discriminate charged pions from protons.
+\item \textbf{FGD Reconstruction:} Secondary tracks in the FGD that don't start in the fiducial volume of the same FGD as the HMNT, or that aren't fully contained within the FGD, are rejected. Tracks that pass this cut and are in the same time bunch as the muon candidate are considered as pion candidates. The deposited energy in the FGD is then used to discriminate charged pions from protons.
 
 \item \textbf{Michel Electron:} Lower momentum pions which don't produce a track in an FGD can be identified from the Michel electron produced from the muon produced in the pion decay. To be identified as the delayed signal from a Michel electron, the hit cluster must have at least 7 hits in FGD1 or 6 hits in FGD2, and be outside the beam bunch window\footnote{The muon has a 2.19 $\mu$s decay time, causing the delay in the Michel electron signal}.
 
@@ -170,6 +198,34 @@ L_{\pi} > 0.1.
 
 \end{itemize}
 
+The efficiency of the FGD1 and FGD2 RHC $\bar{\nu_{\mu}}$ CC-inclusive samples are shown in Figure \ref{fig:numueff}.  The efficiencies are higher at larger $p_{\mu}$ and cos$\theta_{\mu}$. 
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effmomfgd1numubar}
+  \caption{FGD1 $p_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effcosfgd1numubar}
+  \caption{FGD1 cos$\theta_{\mu}$}
+\end{subfigure} \\
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effmomfgd2numubar}
+  \caption{FGD2 $p_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effcosfgd2numubar}
+  \caption{FGD2 cos$\theta_{\mu}$}
+\end{subfigure}
+\caption{Efficiency of the FGD1 and FGD2 RHC $\bar{\nu_{\mu}}$ CC inclusive samples, as a function of $p_{\mu}$ and cos$\theta_{\mu}$.}
+\label{fig:numueff}
+\end{figure}
+
 The pion identification is performed in the same way as for FHC $\nu_{\mu}$, and the CC-inclusive sample is again split into CC 0$\pi$, CC 1$\pi$ and CC Other.
 
 \subsection{RHC $\nu_{\mu}$}
@@ -195,6 +251,34 @@ L_{\pi} > 0.1.
 \end{equation}
 
 \end{itemize}
+
+The efficiency of the FGD1 and FGD2 RHC $\nu_{\mu}$ CC-inclusive samples are shown in Figure \ref{fig:nuinnubareff}. The efficiencies are higher at larger $p_{\mu}$ and cos$\theta_{\mu}$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effmomfgd1nuinnubar}
+  \caption{FGD1 $p_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effcosfgd1nuinnubar}
+  \caption{FGD1 cos$\theta_{\mu}$}
+\end{subfigure} \\
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effmomfgd2nuinnubar}
+  \caption{FGD2 $p_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/effcosfgd2nuinnubar}
+  \caption{FGD2 cos$\theta_{\mu}$}
+\end{subfigure}
+\caption{Efficiency of the FGD1 and FGD2 RHC $\nu_{\mu}$ CC inclusive samples, as a function of $p_{\mu}$ and cos$\theta_{\mu}$.}
+\label{fig:nuinnubareff}
+\end{figure}
 
 \subsection{Updating to RHC Multi $\pi$ Samples}
 
@@ -607,16 +691,18 @@ The models of these three groups of systematics are parametrised, and each enter
 
 The MC prediction is produced using the NEUT 5.4.0 generator\cite{neut}, as discussed in Section \ref{sec:ndsim}. The model for each interaction mode is therefore based on the models implemented in NEUT, with several modifications to tune to external data and additional theoretical calculations.
 
-The uncertainties of these models are parametrised as shape or normalisation uncertainties, and applied to the interaction modes they correspond to on an event by event basis. For normalisation parameters, the weight applied to the event is just the value of the parameter. However, for shape parameters, the weight applied at different values of the parameter depends on kinematic variables of the event. Splined response functions are produced by evaluating the change in weight for an event at evenly spaced values of the parameter, and interpolating between them. The number of points varies by parameter but is always $\leq 10$. The spline is then evaluated at the parameter value at a given step in the fit, and the resulting weight applied to the event.
+The uncertainties of these models are applied to the interaction modes they correspond to on an event by event basis. They are each parametrised as either shape or normalisation uncertainties. For normalisation parameters, the weight applied to the event is just the value of the parameter. However, for shape parameters, the weight applied at different values of the parameter depends on the kinematic variables of the event. Splines are used to translate from a change in parameter to a change in weight. These are produced by evaluating the change in weight for an event at evenly spaced values of the parameter, and interpolating between them. 
 
 The parametrisation for each interaction mode proceeds using the following models:
 
 \begin{itemize}
 
 \item \textbf{CC Quasi-Elastic:}\\
-The nominal MC is generated using a Spectral Function (SF) nuclear model from \cite{benhar}. There is one splined parameter, $M^{QE}_{A}$, for the axial mass in the dipole form factor. It's prior is informed by bubble chamber data\cite{tn344}. 8 normalisation parameters are applied, for different bins in $Q^2$. The lowest 5 have width $0.05$ GeV$^2$, from $0.00$ GeV$^2$ up to $0.25$ GeV$^2$. The highest 3 span the ranges from $0.25$ GeV$^2$ to $0.50$ GeV$^2$, $0.50$ GeV$^2$ to $1.00$ GeV$^2$, and $>1.00$ GeV$^2$. Their prior central values and uncertainties are tuned by MINER$\nu$A data. 
+The nominal MC is generated using a Spectral Function (SF) nuclear model from \cite{benhar}. There is one splined parameter, $M^{QE}_{A}$, for the axial mass in the dipole form factor. It's prior is informed by bubble chamber data\cite{tn344}. 
 
-The neutrino energy of CCQE events is calculated using Equation \ref{eqn:erec}, which is highly dependent on having an accurate value of the binding energy of the target nuclei. 4 parameters are used to fit the binding energies (for target $^{12}$C/$^{16}$O and $\nu/\bar{\nu}$). These are neither shape nor normalisation parameters, and are described in more detail in Section \ref{sec:eb}.
+There are also eight normalisation parameters applied, for different bins in $Q^2$. The lowest five have width $0.05$ GeV$^2$, from $0.00$ GeV$^2$ up to $0.25$ GeV$^2$. The highest three span the ranges from $0.25$ GeV$^2$ to $0.50$ GeV$^2$, $0.50$ GeV$^2$ to $1.00$ GeV$^2$, and $>1.00$ GeV$^2$. Their prior central values and uncertainties are tuned by MINER$\nu$A data. 
+
+The neutrino energy of CCQE events is calculated using Equation \ref{eqn:erec}, which is highly dependent on having an accurate value of the binding energy of the target nuclei. Four parameters are used to fit the binding energies (for target $^{12}$C/$^{16}$O and $\nu/\bar{\nu}$). These are neither shape nor normalisation parameters, and are described in more detail in Section \ref{sec:eb}.
 
 \item \textbf{2-particle-2-hole:}\\
 2p2h interactions are generated in NEUT using the Nieves model \cite{Nieves}. Two shape parameters apply to 2p2h interactions, one for events on $^{12}$C and one for events on $^{16}$O.  At one extreme it is entirely non-pionless-$\Delta$-decay-like in accordance with the Nieves model, and at the other extreme the shape is entirely pionless-$\Delta$-decay-like, in accordance with the Martini model\cite{Martini}. These two shape parameters have a 30$\%$ correlation.
@@ -784,6 +870,8 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 
 \subsubsection{Binding Energy}\label{sec:eb}
 
+The uncertainty on the binding energy was the largest individual systematic in the previous oscillation analysis\cite{}. To reduce its impact, a new treatment of the uncertainty was implemented for this analysis.
+
 In the SF nuclear model, there isn't a single nuclear binding energy systematic uncertainty. Instead, external data is used to inform removal energy distributions which contain peaks corresponding to the nuclear shell structure. The peaks are shown for different initial nucleon momentum for the ground state in Figure \ref{fig:sfshells}.
 
 \begin{figure}[!htbp]
@@ -798,7 +886,7 @@ These binding energy systematics are implemented as neither shape nor normalisat
 
 The SF model used was constrained using data from $e\rightarrow e'p$ experiments, which only applies to initial state protons, and therefore anti-neutrino CCQE interactions. The spectral function of initial state neutrons in neutrino CCQE interactions can not be constrained in the same way. The offset between the SF and Relativistic Mean-Field model predictions \cite{RMFPred} for neutrons is $\sim$4 MeV for oxygen and $\sim$2 MeV for carbon. 
 
-There are therefore 4 binding energy parameters applied to CCQE events: for $^{12}$C/$^{16}$O and $\nu$/$\bar{\nu}$. The $\bar{\nu}$ parameters have a prior central value of 25 MeV for $^{12}$C, and 27 MeV for $^{16}$O. The central value of the $\nu$ parameters are offset from their $\bar{\nu}$ counterparts by 2 and 4 MeV for $^{12}$C and $^{16}$O respectively. The parameters are correlated with each other as follows:
+There are therefore four binding energy parameters applied to CCQE events: for $^{12}$C/$^{16}$O and $\nu$/$\bar{\nu}$. The $\bar{\nu}$ parameters have a prior central value of 25 MeV for $^{12}$C, and 27 MeV for $^{16}$O. The central value of the $\nu$ parameters are offset from their $\bar{\nu}$ counterparts by 2 and 4 MeV for $^{12}$C and $^{16}$O respectively. The parameters are correlated with each other as follows:
 
 \begin{itemize}
 
@@ -816,7 +904,7 @@ These values are derived in \cite{tn344}.
 
 The effect of the $E_b \nu$ C parameter on the FGD1 FHC CC0$\pi$ sample is shown in Figure \ref{fig:Ebratios}. Here, the parameter is set to $\pm1\sigma$ while all other parameters are kept at nominal, and the ratio to the nominal MC is taken. As the binding energy parameter is increased, the final state lepton momentum is decreased. This is seen in the increase in number of events at lower momentum in Figure \ref{fig:EbratiosP1}. The opposite effect is seen for decreasing the binding energy parameter in Figure \ref{fig:EbratiosM1}.
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -834,7 +922,7 @@ The effect of the $E_b \nu$ C parameter on the FGD1 FHC CC0$\pi$ sample is shown
 
 To validate the implementation of this new type of parameter, Asimov fits (where the nominal MC is fitted to itself) with binding energy included were run. The Asimov fitting process is described in more detail in Section \ref{sec:asimov}. The 1D posterior distributions for each of the 4 parameters are shown in Figure \ref{fig:Ebasimov}, with a fitted Gaussian distribution. As expected, the postfit values are close to the nominal values, and the distributions are approximately Gaussian. 
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.48\textwidth}
   \centering
@@ -1407,7 +1495,7 @@ A number of corrections and reweightings are applied to the MC prediction to acc
 
 \begin{itemize}
 
-\item \textbf{POT: } A scaling is applied to every MC event to account for the fact that a vast amount more MC POT is produced for each run than data POT. The weight applied to each event depends on the run, and is the ratio of the total data POT with good data quality flag to MC POT in the run.
+\item \textbf{POT: } A scaling is applied to every MC event to account for the fact that more MC POT is produced for each run than data POT. The weight applied to each event depends on the run, and is the ratio of the total data POT with good data quality flag to MC POT in the run.
 
 \item \textbf{Pile Up: } The detector efficiency in data is lower than in MC because of the coincidence between neutrino events and interactions involving sand muons. This needs to be applied as MC neutrino interactions within the magnet are simulated separately from sand muons. The correction applied depends on the run, and which FGD the event occurred in.
 
@@ -1489,7 +1577,7 @@ Table \ref{tab:pot} shows the amount of MC POT produced in each run, along with 
 \end{table}
 \end{center}
 
-Vastly more MC is produced than data, with the weights and corrections described in the previous sections bringing the MC prediction comparable to data. 
+Significantly more MC is produced than data, with the weights and corrections described in the previous sections bringing the MC prediction comparable to data. 
 
 Runs with an `a' or `w' suffix refer to whether the P0D was filled with water (w) or air (a) during the run. These are separated, despite being part of the same global run, as the MC production requires different geometries to be used for these two different configurations. Runs without a suffix had a consistent P0D filling for the entire run. This was water for runs 5, 7, and 9, and air for runs 3 and 6.
 
