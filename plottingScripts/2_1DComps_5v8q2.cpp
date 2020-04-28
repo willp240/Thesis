@@ -351,8 +351,9 @@ void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2
     hpost2->SetLineColor(kBlack);
     hpost2->SetLineWidth(2);
 
+    double max1 = std::max(hpost->GetMaximum(), hpost2->GetMaximum());
     // Now make the TLine for the asimov
-    TLine *asimov = new TLine(asimovLine, hpost->GetMinimum(), asimovLine, 1.5*hpost->GetMaximum());
+    TLine *asimov = new TLine(asimovLine, hpost->GetMinimum(), asimovLine, 1.5*max1);
     asimov->SetLineColor(kRed);
     asimov->SetLineWidth(2);
     asimov->SetLineStyle(kDashed);

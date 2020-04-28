@@ -68,11 +68,11 @@ int main(int argc, char *argv[]) {
 
     std::cout << "Producing single fit output" << std::endl;
     std::string filename = argv[1];
-    //bool drawCorr = false;
+    bool drawCorr = false;
     if (argc == 3) {
-      //drawCorr = true;
+      drawCorr = true;
     }
-    //    DrawComp(filename, drawCorr);
+    DrawComp(filename, drawCorr);
 
     // If we want to compare two fits (e.g. binning changes or introducing new params/priors)
   } else if (argc == 3+2*1) {
@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
     std::string title2    = argv[4];
     std::string filename3 = argv[5];
     std::string title3    = argv[6];
-    DrawComp(filename, title1, filename2, title2, filename3, title3);
+    //    DrawComp(filename, title1, filename2, title2, filename3, title3);
 
   }
 
@@ -102,45 +102,28 @@ int main(int argc, char *argv[]) {
 }
 
 
-void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2, std::string title2, std::string inputFile3, std::string title3) {
 
-  std::cout << "File for study:       " << inputFile1 << std::endl;
-  std::cout << "File for study2:      " << inputFile2 << std::endl;
-  std::cout << "File for study3:      " << inputFile3 << std::endl;
 
-  // Open the chain for file 1
+// All right, let's re-write this in a faster more efficient way!
+void DrawComp(std::string inputFile, bool drawCorr) {
+
+  // drawCorr decideds if we want to draw correlations or not
+  std::cout << "File for study:       " << inputFile << std::endl;
+  std::cout << "Draw correlations?    " << drawCorr << std::endl;
+
+  // Open the chain
   TChain* chain = new TChain("posteriors","");
-  chain->Add(inputFile1.c_str());
-  // Open the chain for file 2
-  TChain* chain2 = new TChain("posteriors","");
-  chain2->Add(inputFile2.c_str());
-  // Open the chain for file 3
-  TChain* chain3 = new TChain("posteriors","");
-  chain3->Add(inputFile3.c_str());
-
-  //  int nEntries = chain->GetEntries();
-  //int nEntries2 = chain2->GetEntries();
-  ///int nEntries3 = chain3->GetEntries();
-
-  // Use first 1/4 as burn-in
-  int cut = 50000;
-  int cut2 = 50000;
-  int cut3 = 50000;
+  chain->Add(inputFile.c_str());
+  //int nEntries = chain->GetEntries();
+  // Use first 1/5 as burn-in
+  int cut = 200000;// nEntries/4;
   std::stringstream ss;
   ss << "step > " << cut;
-  std::stringstream ss2;
-  ss2 << "step > " << cut2;
-  std::stringstream ss3;
-  ss3 << "step > " << cut3;
 
   // What entries are we interested in?
   // Here specifically 20k steps in, and events that have a logL < 5000
   std::string stepcut = ss.str();
-  std::string stepcut2 = ss2.str();
-  std::string stepcut3 = ss3.str();
 
-  // Loop over interesting params; only need to do this for one of the files granted we have same params
-  //
   // Get the list of branches
   TObjArray* brlis = (TObjArray*)chain->GetListOfBranches();
   // Get the number of branches
@@ -157,20 +140,15 @@ void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2
   int nflux = 0;
   int nxsec = 0;
 
-
   // Have bool to remember what parameters we're plotting
+  // Probably take these as user input instead!
   bool plotFlux = false;
-  //  bool plotXsec = false;
 
   // Loop over the number of branches
   // Find the name and how many of each systematic we have
   chain->SetBranchStatus("*", false);
   chain->SetBranchStatus("step", true);
-  chain2->SetBranchStatus("*", false);
-  chain2->SetBranchStatus("step", true);
-  chain3->SetBranchStatus("*", false);
-  chain3->SetBranchStatus("step", true);
-  for(int i=0; i < nbr; i++) {
+  for (int i = 0; i < nbr; i++) {
 
     // Get the TBranch and its name
     TBranch* br = (TBranch*)brlis->At(i);
@@ -181,35 +159,25 @@ void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2
 
     // If we're on beam systematics
     if(bname.BeginsWith("b_")) {
-
       plotFlux = true;
       chain->SetBranchStatus(bname, true);
       chain->SetBranchAddress(bname, &(nom[i]));
-      chain2->SetBranchStatus(bname, true);
-      chain2->SetBranchAddress(bname, &(nom[i]));
-      chain3->SetBranchStatus(bname, true);
-      chain3->SetBranchAddress(bname, &(nom[i]));
       bnames[ndraw]=bname;
-      nflux++;
       ndraw++;
-
+      nflux++;
     } else if(bname.BeginsWith("xsec_")) {
-
-      //      plotXsec = true;
       chain->SetBranchStatus(bname, true);
       chain->SetBranchAddress(bname, &(nom[i]));
-      chain2->SetBranchStatus(bname, true);
-      chain2->SetBranchAddress(bname, &(nom[i]));
-      chain3->SetBranchStatus(bname, true);
-      chain3->SetBranchAddress(bname, &(nom[i]));
       bnames[ndraw]=bname;
       ndraw++;
       nxsec++;
-
     }
   }
-  TFile *TempFile = new TFile(inputFile1.c_str(), "open");
+
+  TFile *TempFile = new TFile(inputFile.c_str(), "open");
+  TempFile->ls();
   TTree* Settings = (TTree*)(TempFile->Get("Settings"));
+  Settings->ls();
   // Get the xsec covariance matrix
   std::string *XsecInput = 0;
   Settings->SetBranchAddress("XsecCov", &XsecInput);
@@ -223,328 +191,206 @@ void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2
 
   XsecCov = "../"+*XsecInput;
   FluxCov = "../"+*FluxInput;
+
+  // Get first entry in chain
   chain->GetEntry(0);
   nom.resize(nbr);
 
   std::cout << "# useful entries (flux, xsec, fsi): " << ndraw << std::endl;
   std::cout << "************************************************" << std::endl;
 
-  gStyle->SetOptFit(0);
-  gStyle->SetOptStat(0);
+  gStyle->SetOptFit(111);
 
   // Open a TCanvas to write the posterior onto
   TCanvas* c0 = new TCanvas("c0", "c0", 0, 0, 1024, 1024);
   c0->SetGrid();
   gStyle->SetOptStat(0);
   gStyle->SetOptTitle(0);
+  c0->SetTickx();
+  c0->SetTicky();
   c0->SetBottomMargin(0.1);
-  c0->SetTopMargin(0.02);
+  c0->SetTopMargin(0.04);
   c0->SetRightMargin(0.03);
-  c0->SetLeftMargin(0.12);
+  c0->SetLeftMargin(0.15);
 
+  // Make sure we can read files located anywhere and strip the .root ending
+  inputFile = inputFile.substr(0, inputFile.find(".root"));
 
-  // Write to a PDF file
-  // Strip out the initial ../ if can find
-  // Then strip out any additional /
-  // Strip out the last .root
-  inputFile1 = inputFile1.substr(0, inputFile1.find(".root"));
-  std::cout << inputFile1 << std::endl;
-  while (inputFile2.find("/") != std::string::npos) {
-    inputFile2 = inputFile2.substr(inputFile2.find("/")+1, inputFile2.find(".root")-1);
+  TString canvasname = inputFile;
+  // Append if we're drawing correlations
+  // Open bracket means we want to make a pdf file
+  if (drawCorr) {
+    canvasname += "_drawCorr.pdf[";
+  } else {
+    canvasname += "_drawPar.pdf[";
   }
-  std::cout << inputFile2 << std::endl;
-  while (inputFile3.find("/") != std::string::npos) {
-    inputFile3 = inputFile3.substr(inputFile3.find("/")+1, inputFile3.find(".root")-1);
-  }
-  std::cout << inputFile3 << std::endl;
-  TString canvasname = inputFile1+"_"+inputFile2+"_"+inputFile3+".pdf[";
-  // c0->Print(canvasname);
+
   // Once the pdf file is open no longer need to bracket
   canvasname.ReplaceAll("[","");
 
-  // We fit with this gaussian
-  TF1 *gauss = new TF1("gauss","[0]/sqrt(2.0*3.14159)/[2]*TMath::Exp(-0.5*pow(x-[1],2)/[2]/[2])",   -5, 5);
-  TF1 *gauss2 = new TF1("gauss2","[0]/sqrt(2.0*3.14159)/[2]*TMath::Exp(-0.5*pow(x-[1],2)/[2]/[2])", -5, 5);
-  TF1 *gauss3 = new TF1("gauss3","[0]/sqrt(2.0*3.14159)/[2]*TMath::Exp(-0.5*pow(x-[1],2)/[2]/[2])", -5, 5);
+  // We fit with this Gaussian
+  TF1 *gauss    = new TF1("gauss","[0]/sqrt(2.0*3.14159)/[2]*TMath::Exp(-0.5*pow(x-[1],2)/[2]/[2])",-5,5);
+  gauss->SetLineWidth(2);
+  gauss->SetLineColor(kOrange-5);
 
-  TVectorD* mean_vec = new TVectorD(ndraw);
-  TVectorD* err_vec = new TVectorD(ndraw); 
+  // Some TVectors with the means, errors and Gaussian parameters of the PDFs
+  TVectorD* mean_vec  = new TVectorD(ndraw);
+  TVectorD* err_vec   = new TVectorD(ndraw); 
   TVectorD* gaus_mean_vec = new TVectorD(ndraw);
-  TVectorD* gaus_err_vec = new TVectorD(ndraw); 
-
-  TVectorD* mean_vec2 = new TVectorD(ndraw);
-  TVectorD* err_vec2 = new TVectorD(ndraw); 
-  TVectorD* gaus_mean_vec2 = new TVectorD(ndraw);
-  TVectorD* gaus_err_vec2 = new TVectorD(ndraw); 
-
-  TVectorD* mean_vec3 = new TVectorD(ndraw);
-  TVectorD* err_vec3 = new TVectorD(ndraw); 
-  TVectorD* gaus_mean_vec3 = new TVectorD(ndraw);
-  TVectorD* gaus_err_vec3 = new TVectorD(ndraw); 
+  TVectorD* gaus_err_vec  = new TVectorD(ndraw); 
+  TVectorD* HPD_mean_vec  = new TVectorD(ndraw);
+  TVectorD* HPD_err_p_vec   = new TVectorD(ndraw); 
+  TVectorD* HPD_err_vec   = new TVectorD(ndraw); 
+  TVectorD* HPD_err_m_vec   = new TVectorD(ndraw); 
 
   TVectorD* xsec_nom  = new TVectorD(nxsec);
 
-  // Output file to write to
-  TString rootfilename = inputFile1+"_"+inputFile2+"_"+inputFile3+".root";
-  // TFile* file = new TFile(rootfilename, "RECREATE");
-  //file->cd();
-  //TDirectory *params = file->mkdir("hpost");
+  // Only want to draw covariance of xsec parameters!
+  TMatrixT<double>* covariance = new TMatrixT<double>(ndraw,ndraw);
+  TMatrixT<double>* correlation = new TMatrixT<double>(ndraw,ndraw);
+  for (int i = 0; i < ndraw; ++i) {
+    for (int j = 0; j < ndraw; ++j) {
+      (*covariance)(i,j) = 0.;
+      (*correlation)(i,j) = 0.;
+    }
+  }
 
-  int nbins = 70;
   bool isXsec = false;
 
+  // Remember which parameters we're varying
+  bool *vary = new bool[ndraw]();
+  for (int i=0; i < ndraw; ++i) {
+    vary[i] = false;
+  }
+
   // ndraw is number of draws we want to do
-  for(int i=118; i<122; ++i) {
+  for(int i = 106; i < 110; ++i) {
+    isXsec = false;
 
-    //    file->cd();
+      int nbins = 70;
 
-    double asimovLine = 0.0;
+      double asimovLine = 1.0;
 
-    std::string tempString;
+      std::string tempString = std::string(bnames[i]);
+      if (bnames[i].BeginsWith("xsec_")) {
+        isXsec = true;
 
-    // Make a line with the asimov on for xsec params
-    if (bnames[i].BeginsWith("xsec_")) {
-      asimovLine = nom.at(i);
-    } else {
-      asimovLine = 1.0;
-    }
+        int paramNo = 0;
+        if (plotFlux && i >= nflux) {
+          paramNo = i - nflux;
+        } 
+        tempString = GetXsecName(paramNo);
 
+        double central, prior, down, up;
+        GetXsecLimits(paramNo, central, prior, down, up);
+        (*xsec_nom)(paramNo) = central;
+        asimovLine = prior;
+      }
 
-    // Set up slightly different binning
-    // If beam systematic
-    if (bnames[i].BeginsWith("b_")) {
-      tempString = bnames[i];
-      // Also if we find xsec systematic make a string WITH THE ACTUAL PARAMETER NAME FOR 2016a WOOP
-    } else if (bnames[i].BeginsWith("xsec_")) {
-      isXsec = true;
+      double maxi = chain->GetMaximum(bnames[i]);
+      double mini = chain->GetMinimum(bnames[i]);
+      // This holds the posterior density
+      TH1D *hpost = new TH1D(bnames[i], bnames[i], nbins, mini, maxi);
+      hpost->SetMinimum(0);
+      hpost->GetYaxis()->SetTitle("Steps");
+      hpost->GetYaxis()->SetTitleOffset(2.3);
+      hpost->GetYaxis()->SetNoExponent(true);
 
-      int paramNo = 0;
-      if (plotFlux) {
-        paramNo = i - nflux;
-      } 
-      tempString = GetXsecName(paramNo);
+      // Project bnames[i] onto hpost, applying stepcut
+      chain->Project(bnames[i], bnames[i], stepcut.c_str());
 
-      double central;
-      double prior;
-      double down;
-      double up;
-      GetXsecLimits(paramNo, central, prior, down, up);
-      (*xsec_nom)(paramNo) = central;
-    }
-    //file->cd();
-    std::cout << bnames[i] << std::endl;
+      hpost->Smooth();
 
-    double maxi = chain->GetMaximum(bnames[i]);
-    double mini = chain->GetMinimum(bnames[i]);
-    double maxi2 = chain2->GetMaximum(bnames[i]);
-    double mini2 = chain2->GetMinimum(bnames[i]);
-    double maxi3 = chain3->GetMaximum(bnames[i]);
-    double mini3 = chain3->GetMinimum(bnames[i]);
+      // Get the characteristics of the hpost
+      double mean, rms;
+      GetArithmetic(hpost, mean, rms);
+      double peakval, sigma_p, sigma_m, sigma_hpd;
+      GetHPD(hpost, peakval, sigma_hpd, sigma_p, sigma_m);
+      double gauss_mean, gauss_rms;
+      GetGaussian(hpost, gauss, gauss_mean, gauss_rms);
+      
+      std::cout << mean << " +/- " << rms << " (" << peakval << "+/-" << sigma_hpd << " + " << sigma_p << " - " << sigma_m << ")" << " (" << gauss_mean << "+/-" << gauss_rms << ")" << std::endl;
 
-    // This holds the posterior density
-    TH1D *hpost = new TH1D(bnames[i], bnames[i], nbins, mini, maxi);
-    hpost->SetMinimum(0);
-    hpost->GetYaxis()->SetTitle("Steps (area norm.)");
-    hpost->GetYaxis()->SetTitleOffset(1.2);
-    hpost->GetYaxis()->SetNoExponent(false);
-    TH1D *hpost2 = new TH1D(bnames[i]+"_2", bnames[i]+"_2", nbins, mini2, maxi2);
-    hpost2->SetMinimum(0);
-    TH1D *hpost3 = new TH1D(bnames[i]+"_3", bnames[i]+"_3", nbins, mini3, maxi3);
-    hpost3->SetMinimum(0);
+      TLine *hpd = new TLine(peakval, hpost->GetMinimum(), peakval, hpost->GetMaximum());
+      hpd->SetLineColor(kBlack);
+      hpd->SetLineWidth(2);
+      hpd->SetLineStyle(kSolid);
 
-    hpost->SetTitle(bnames[i]);
-    hpost2->SetTitle(bnames[i]+"_2");
-    hpost3->SetTitle(bnames[i]+"_3");
+      TLegend *leg = new TLegend(0.16, 0.6, 0.5, 0.95);
+      leg->SetTextSize(0.04);
+      leg->AddEntry(hpost, Form("#splitline{PDF}{#mu = %.2f, #sigma = %.2f}", hpost->GetMean(), hpost->GetRMS()), "l");
+      leg->AddEntry(gauss, Form("#splitline{Gauss}{#mu = %.2f, #sigma = %.2f}", gauss->GetParameter(1), gauss->GetParameter(2)), "l");
+      leg->AddEntry(hpd, Form("#splitline{HPD}{#mu = %.2f, #sigma = %.2f (+%.2f-%.2f)}", peakval, sigma_hpd,sigma_p, sigma_m), "l");
 
-    // Project bnames[i] onto hpost, applying stepcut
-    chain->Project(bnames[i], bnames[i], stepcut.c_str());
-    chain2->Project(bnames[i]+"_2", bnames[i], stepcut2.c_str());
-    chain3->Project(bnames[i]+"_3", bnames[i], stepcut3.c_str());
+      if (isXsec && ((*xsec_nom)(i-nflux)) != 0) {
+        mean = mean / ((*xsec_nom)(i-nflux));
+        rms = rms / ((*xsec_nom)(i-nflux));
+        gauss_mean = gauss_mean / ((*xsec_nom)(i-nflux));
+        gauss_rms = gauss_rms / ((*xsec_nom)(i-nflux));
+        peakval = peakval / ((*xsec_nom)(i-nflux));
+        sigma_hpd = sigma_hpd / ((*xsec_nom)(i-nflux));
+        sigma_p = sigma_p / ((*xsec_nom)(i-nflux));
+        sigma_m = sigma_m / ((*xsec_nom)(i-nflux));
+      } else if (isXsec && ((*xsec_nom)(i-nflux)) == 0) {
+        mean = mean + 1.0;
+        gauss_mean = gauss_mean + 1.0;
+        peakval = peakval + 1.0;
+      }
 
-    // Area normalise the distributions
-    hpost->Scale(1./hpost->Integral(), "width");
-    hpost2->Scale(1./hpost2->Integral(), "width");
-    hpost3->Scale(1./hpost3->Integral(), "width");
+      (*mean_vec)(i)      = mean;
+      (*err_vec)(i)       = rms;
+      (*gaus_mean_vec)(i) = gauss_mean;
+      (*gaus_err_vec)(i)  = gauss_rms;
+      (*HPD_mean_vec)(i) = peakval;
+      (*HPD_err_p_vec)(i)  = sigma_p;
+      (*HPD_err_vec)(i)   = sigma_hpd;
+      (*HPD_err_m_vec)(i)  = sigma_m;
+      (*covariance)(i,i)  = rms*rms;
+      (*correlation)(i,i)  = 1.0;
 
-    hpost->Smooth();
-    hpost2->Smooth();
-    hpost3->Smooth();
+      hpost->SetLineWidth(2);
+      hpost->SetMaximum(hpost->GetMaximum()*1.5);
+      hpost->SetTitle(tempString.c_str());
+      hpost->GetXaxis()->SetTitle((std::string(hpost->GetTitle())+" rel. nom").c_str());
 
-    hpost->SetTitle(tempString.c_str());
-    hpost->GetXaxis()->SetTitle(tempString.c_str());
-    hpost2->SetTitle(tempString.c_str());
-    hpost2->GetXaxis()->SetTitle(tempString.c_str());
-    hpost3->SetTitle(tempString.c_str());
-    hpost3->GetXaxis()->SetTitle(tempString.c_str());
+      // Now make the TLine for the asimov
+      TLine *asimov = new TLine(asimovLine, hpost->GetMinimum(), asimovLine, hpost->GetMaximum());
+      asimov->SetLineColor(kRed-3);
+      asimov->SetLineWidth(2);
+      asimov->SetLineStyle(kDashed);
+      hpost->Draw();
+      hpd->Draw("same");
+      asimov->Draw("same");
 
-    // Get the characteristics of the hpost
-    double mean = hpost->GetMean();
-    double rms = hpost->GetRMS();
-    double peakval = hpost->GetBinCenter(hpost->GetMaximumBin());
-    double gauss_mean = gauss->GetParameter(1);
-    double gauss_rms = gauss->GetParameter(2);
+      // Make the legend
+      leg->AddEntry(asimov, Form("#splitline{Input}{x = %.2f}", asimovLine), "l");
+      leg->SetLineColor(0);
+      leg->SetLineStyle(0);
+      leg->SetFillColor(0);
+      leg->SetFillStyle(0);
+      leg->Draw("same");
 
-    double mean2 = hpost2->GetMean();
-    double rms2 = hpost2->GetRMS();
-    double peakval2 = hpost2->GetBinCenter(hpost2->GetMaximumBin());
-    double gauss_mean2 = gauss2->GetParameter(1);
-    double gauss_rms2 = gauss2->GetParameter(2);
+      if (hpost->GetMaximum() == hpost->Integral()*1.5) {
+        vary[i] = false;
+        delete hpost;
+        delete asimov;
+        delete hpd;
+        delete leg;
+        continue;
+      }
+      vary[i] = true;
 
-    double mean3 = hpost3->GetMean();
-    double rms3 = hpost3->GetRMS();
-    double peakval3 = hpost3->GetBinCenter(hpost3->GetMaximumBin());
-    double gauss_mean3 = gauss3->GetParameter(1);
-    double gauss_rms3 = gauss3->GetParameter(2);
+      // Write to file
+      c0->SetName(hpost->GetName());
+      c0->SetTitle(hpost->GetTitle());
+      c0->Print((tempString+".pdf").c_str());
 
+      delete hpost;
+      delete asimov;
+      delete hpd;
+      delete leg;
 
-    double sigma_p, sigma_m, sigma_hpd;
-    GetHPD(hpost, peakval, sigma_hpd, sigma_p, sigma_m);
-    double sigma_p2, sigma_m2, sigma_hpd2;
-    GetHPD(hpost2, peakval2, sigma_hpd2, sigma_p2, sigma_m2);
-    double sigma_p3, sigma_m3, sigma_hpd3;
-    GetHPD(hpost3, peakval3, sigma_hpd3, sigma_p3, sigma_m3);
-
-    // Set the range for the Gaussian fit
-    gauss->SetRange(mean - 1.5*rms , mean + 1.5*rms);
-    gauss2->SetRange(mean2 - 1.5*rms2 , mean2 + 1.5*rms2);
-    gauss3->SetRange(mean3 - 1.5*rms3 , mean3 + 1.5*rms3);
-
-    // Set the starting parameters close to RMS and peaks of the histograms
-    gauss->SetParameters(hpost->GetMaximum()*rms*sqrt(2*3.14), peakval, rms);
-    gauss2->SetParameters(hpost2->GetMaximum()*rms2*sqrt(2*3.14), peakval2, rms2);
-    gauss3->SetParameters(hpost3->GetMaximum()*rms3*sqrt(2*3.14), peakval3, rms3);
-
-    // Set some nice colours
-    hpost->SetLineColor(kBlue);
-    hpost->SetLineWidth(2);
-    gauss->SetLineColor(kBlue);
-    gauss->SetLineStyle(kDashed);
-
-    hpost2->SetLineColor(kBlack);
-    hpost2->SetLineWidth(2);
-    gauss2->SetLineColor(kBlack);
-    gauss2->SetLineStyle(kDashed);
-
-    hpost3->SetLineColor(kGreen+2);
-    hpost3->SetLineWidth(2);
-    gauss3->SetLineColor(kGreen+2);
-    gauss3->SetLineStyle(kDashed);
-
-    // Perform the fit
-    hpost->Fit("gauss","Rq");
-    hpost2->Fit("gauss2","Rq");
-    hpost3->Fit("gauss3","Rq");
-
-    double max1 = std::max(hpost->GetMaximum(), hpost2->GetMaximum());
-    double max2 = std::max(max1, hpost3->GetMaximum());
-    // Now make the TLine for the asimov
-    TLine *asimov = new TLine(asimovLine, hpost->GetMinimum(), asimovLine, 1.5*max2);
-    asimov->SetLineColor(kRed);
-    asimov->SetLineWidth(2);
-    asimov->SetLineStyle(kDashed);
-
-    // Make a nice little TLegend
-    TLegend *leg = new TLegend(0.13, 0.7, 0.8, 0.97);
-    leg->SetTextSize(0.03);
-    leg->SetFillColor(0);
-    leg->SetFillStyle(0);
-    leg->SetLineColor(0);
-    leg->SetLineStyle(0);
-    TString nombinLeg = Form("#splitline{%s}{HPD = %.2f, #sigma = %.2f}", title1.c_str(), peakval, sigma_hpd);
-    TString rebinLeg = Form("#splitline{%s}{HPD = %.2f, #sigma = %.2f}", title2.c_str(), peakval2, sigma_hpd2);
-    TString rebinLeg2 = Form("#splitline{%s}{HPD = %.2f, #sigma = %.2f}", title3.c_str(), peakval3, sigma_hpd3);
-    TString asimovLeg = Form("Prior, #mu = %.2f", asimovLine);
-    leg->AddEntry(asimov, asimovLeg, "l");
-    leg->AddEntry(hpost, nombinLeg, "l");
-    leg->AddEntry(hpost2, rebinLeg, "l");
-    leg->AddEntry(hpost3, rebinLeg2, "l");
-
-    TLine *hpd = new TLine(peakval, hpost->GetMinimum(), peakval, hpost->GetMaximum());
-    hpd->SetLineColor(hpost->GetLineColor());
-    hpd->SetLineWidth(2);
-    hpd->SetLineStyle(kSolid);
-
-    TLine *hpd2 = new TLine(peakval2, hpost2->GetMinimum(), peakval2, hpost2->GetMaximum());
-    hpd2->SetLineColor(hpost2->GetLineColor());
-    hpd2->SetLineWidth(2);
-    hpd2->SetLineStyle(kSolid);
-
-    TLine *hpd3 = new TLine(peakval3, hpost3->GetMinimum(), peakval3, hpost3->GetMaximum());
-    hpd3->SetLineColor(hpost3->GetLineColor());
-    hpd3->SetLineWidth(2);
-    hpd3->SetLineStyle(kSolid);
-    
-    if (isXsec && ((*xsec_nom)(i-nflux)) != 0) {
-      mean = mean / ((*xsec_nom)(i-nflux));
-      rms = rms / ((*xsec_nom)(i-nflux));
-      gauss_mean = gauss_mean / ((*xsec_nom)(i-nflux));
-      gauss_rms = gauss_rms / ((*xsec_nom)(i-nflux));
-
-      mean2 = mean2 / ((*xsec_nom)(i-nflux));
-      rms2 = rms2 / ((*xsec_nom)(i-nflux));
-      gauss_mean2 = gauss_mean2 / ((*xsec_nom)(i-nflux));
-      gauss_rms2 = gauss_rms2 / ((*xsec_nom)(i-nflux));
-
-      mean3 = mean3 / ((*xsec_nom)(i-nflux));
-      rms3 = rms3 / ((*xsec_nom)(i-nflux));
-      gauss_mean3 = gauss_mean3 / ((*xsec_nom)(i-nflux));
-      gauss_rms3 = gauss_rms3 / ((*xsec_nom)(i-nflux));
-    } else if (isXsec && ((*xsec_nom)(i-nflux)) == 0) {
-      mean = mean + 1.0;
-      gauss_mean = gauss_mean + 1.0;
-      mean2 = mean2 + 1.0;
-      gauss_mean2 = gauss_mean2 + 1.0;
-      mean3 = mean3 + 1.0;
-      gauss_mean3 = gauss_mean3 + 1.0;
-    }
-
-    // Save the mean and RMS for histo and Gaussian fit
-    (*mean_vec)(i)      = mean;
-    (*err_vec)(i)       = rms;
-    (*gaus_mean_vec)(i) = gauss_mean;
-    (*gaus_err_vec)(i)  = gauss_rms;
-
-    (*mean_vec2)(i)     = mean2;
-    (*err_vec2)(i)      = rms2;
-    (*gaus_mean_vec2)(i)= gauss_mean2;
-    (*gaus_err_vec2)(i) = gauss_rms2;
-
-    (*mean_vec3)(i)     = mean3;
-    (*err_vec3)(i)      = rms3;
-    (*gaus_mean_vec3)(i)= gauss_mean3;
-    (*gaus_err_vec3)(i) = gauss_rms3;
-
-
-    // Do the difference between 1 and 2
-    double maximum = 0;
-    maximum = std::max(hpost->GetMaximum(), hpost2->GetMaximum());
-    maximum = std::max(maximum, hpost3->GetMaximum());
-
-    hpost->SetMaximum(1.5*maximum);
-    hpost2->SetMaximum(hpost->GetMaximum());
-    hpost3->SetMaximum(hpost->GetMaximum());
-
-    //    file->cd();
-    //    hpost->GetYaxis()->SetTitle("titleeee");
-    hpost->GetYaxis()->SetTitleOffset(1.5);
-    hpost->Draw();
-    hpost2->Draw("same");
-    hpost3->Draw("same");
-    asimov->Draw("same");
-    hpd->Draw("same");
-    hpd2->Draw("same");
-    hpd3->Draw("same");
-    leg->Draw("same");
-
-    // cd into params directory in root file
-    c0->SetName(hpost->GetName());
-    c0->SetTitle(hpost->GetTitle());
-    c0->Print((tempString+".pdf").c_str());
-
-    delete hpost;
-    delete asimov;
-    delete leg;
-  } // End the for ndraw loop
+  } // End for ndraw
 
 }
 
