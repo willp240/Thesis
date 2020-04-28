@@ -240,7 +240,7 @@ void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2
   c0->SetBottomMargin(0.1);
   c0->SetTopMargin(0.02);
   c0->SetRightMargin(0.03);
-  c0->SetLeftMargin(0.13);
+  c0->SetLeftMargin(0.12);
 
 
   // Write to a PDF file
@@ -442,7 +442,7 @@ void DrawComp(std::string inputFile1, std::string title1, std::string inputFile2
     asimov->SetLineStyle(kDashed);
 
     // Make a nice little TLegend
-    TLegend *leg = new TLegend(0.12, 0.7, 0.8, 0.97);
+    TLegend *leg = new TLegend(0.13, 0.7, 0.8, 0.97);
     leg->SetTextSize(0.03);
     leg->SetFillColor(0);
     leg->SetFillStyle(0);
