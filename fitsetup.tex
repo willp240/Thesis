@@ -22,7 +22,7 @@ There are degeneracies between the flux, cross-section, and detector efficiency 
 \begin{figure}[!htbp]
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/NDConstraint}
-\caption{The predicted event rate at SK, with and without the near detector fit constraint. Using near detector data to reduce systematics narrows the uncertainty on the prediction, allowing more precise oscillation measurements to be made. }\label{fig:ndconstraint}
+\caption{The predicted event rate at SK, with and without the near detector fit constraint. Using near detector data to reduce systematics narrows the uncertainty on the prediction, allowing more precise oscillation measurements to be made.}\label{fig:ndconstraint}
 \end{figure}
 
 The parametrised models of the beam, cross-section, and near detector detector efficiencies used in the near detector fit are produced by different groups within T2K. The beam group uses data from beamline monitors and the on-axis INGRID to provide the beam flux model, the Systematics, Selections, and Validations (SSV) group provide a model of ND280 detector systematics, and the Neutrino Interactions Working Group (NIWG) provide the interaction model. For the full joint near and far detector fits, the T2K-SK group provides the SK detector model and selections. The parameters of these models affect the log-likelihood in the fit through Equation \ref{eqn:systllh}.
@@ -223,7 +223,7 @@ The efficiency of the FGD1 and FGD2 RHC $\bar{\nu_{\mu}}$ CC-inclusive samples a
   \caption{FGD2 cos$\theta_{\mu}$}
 \end{subfigure}
 \caption{Efficiency of the FGD1 and FGD2 RHC $\bar{\nu_{\mu}}$ CC inclusive samples, as a function of $p_{\mu}$ and cos$\theta_{\mu}$.}
-\label{fig:numueff}
+\label{fig:numubareff}
 \end{figure}
 
 The pion identification is performed in the same way as for FHC $\nu_{\mu}$, and the CC-inclusive sample is again split into CC 0$\pi$, CC 1$\pi$ and CC Other.
@@ -882,7 +882,7 @@ In the SF nuclear model, there isn't a single nuclear binding energy systematic 
 
 Ideally, there would be systematic parameters for the height, width, and position of each of the peaks for each target nucleus. However, this was infeasible to implement on the time scale of this analysis. Instead, a global uncertainty of 6 MeV is applied to the removal energy in the SF nuclear model.
 
-These binding energy systematics are implemented as neither shape nor normalisation parameters in the T2K oscillation analysis. Instead, the offset to the removal energy is propagated to a change in the $P_{\mu}-$cos$\theta_{\mu}$ distributions by directly shifting $P_{\mu}$. It has been shown that changes in the removal energy do not cause significant changes in the distribution of $\theta_{\mu}$.
+These binding energy systematics are implemented as neither shape nor normalisation parameters in the T2K oscillation analysis. Instead, the offset to the removal energy is propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by directly shifting $p_{\mu}$. It has been shown that changes in the removal energy do not cause significant changes in the distribution of $\theta_{\mu}$.
 
 The SF model used was constrained using data from $e\rightarrow e'p$ experiments, which only applies to initial state protons, and therefore anti-neutrino CCQE interactions. The spectral function of initial state neutrons in neutrino CCQE interactions can not be constrained in the same way. The offset between the SF and Relativistic Mean-Field model predictions \cite{RMFPred} for neutrons is $\sim$4 MeV for oxygen and $\sim$2 MeV for carbon. 
 
@@ -976,9 +976,9 @@ However, for fits to data the posteriors contain many discontinuities as shown i
 \label{fig:Ebdata}
 \end{figure}
 
-To show this is what causes the discontinuities, a fluctuated version of the nominal MC was produced. This was done by setting the number of events in each bin to be a random number from a Poisson distribution, with a mean equal to the nominal bin content. This ensured the number of events in each bin was an integer. The fluctuated MC was fitted to the nominal MC, and the posterior distributions for the $E_b$ parameters are shown in Figure \ref{fig:Ebdata}. The fact that these are non-Gaussian and discontinuous, despite them being continuous and Gaussian in the regular Asimov fit, shows that the effect is caused by the discrete shifts to integer events.
+To show this is what causes the discontinuities, a fluctuated version of the nominal MC was produced. This was done by setting the number of events in each bin to be a random number from a Poisson distribution, with a mean equal to the nominal bin content. This ensured the number of events in each bin was an integer. The fluctuated MC was fitted to the nominal MC, and the posterior distributions for the $E_b$ parameters are shown in Figure \ref{fig:Ebfluc}. The fact that these are non-Gaussian and discontinuous, despite them being continuous and Gaussian in the regular Asimov fit, shows that the effect is caused by the discrete shifts to integer events.
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.48\textwidth}
   \centering
@@ -1001,12 +1001,12 @@ To show this is what causes the discontinuities, a fluctuated version of the nom
   \caption{$E_{b}\bar{\nu}$ O}
 \end{subfigure}
 \caption{Posterior distributions from the binding energy parameters from fit to fluctuated Asimov data.}
-\label{fig:Ebdata}
+\label{fig:Ebfluc}
 \end{figure}
 
-In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $P_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{}.\red{assuming i have something in the results section that shows this}
+In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{}.\red{assuming i have something in the results section that shows this}
 
-\subsection{Flux}\label{sec:beam}
+\subsection{Flux}\label{sec:flux}
 
 The flux systematics are determined using the simulation described in Section \ref{sec:fluxsim}. New data is used to regularly update and improve the modelling. This comes from external experiments such as NA61/SHINE\cite{na61}, the T2K beam monitors, and the on-axis near detector INGRID. This analysis is the first to use flux systematics developed from simulation using data from a full T2K target replica, and not just a thinner replica version.
 
@@ -1269,98 +1269,82 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_0}
   \caption{ND FHC $\nu_{\mu}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_1}
   \caption{ND FHC $\nu_e$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_2}
   \caption{ND FHC $\bar{\nu_{\mu}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_3}
   \caption{ND FHC $\bar{\nu_{e}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_4}
   \caption{ND RHC $\bar{\nu_{\mu}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_5}
   \caption{ND RHC $\bar{\nu_{e}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_6}
   \caption{ND RHC $\nu_{\mu}$}
-  \label{fig:}
 \end{subfigure}
 \vspace{15mm}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_7}
   \caption{ND RHC $\nu_e$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_8}
   \caption{SK FHC $\nu_{\mu}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_9}
   \caption{SK FHC $\nu_e$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_10}
   \caption{SK FHC $\bar{\nu_{\mu}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_11}
   \caption{SK FHC $\bar{\nu_{e}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_12}
   \caption{SK RHC $\bar{\nu_{\mu}}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_13}
   \caption{SK RHC $\bar{\nu_e}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_14}
   \caption{SK RHC $\nu_{\mu}$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.24\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_15}
   \caption{SK RHC $\nu_e$}
-  \label{fig:}
 \end{subfigure}
 \caption{Flux parameters for fake data fits using different detector binnings.}
 \label{fig:detcovbinfluxSK}
@@ -1376,25 +1360,21 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flu
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinxsec_1}
   \caption{CC0$\pi$}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinxsec_2}
   \caption{CC1$\pi$, $\nu_e$, CC DIS, and CC coh.}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinxsec_3}
   \caption{NC.}
-  \label{fig:}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/detcovbinxsec_4}
   \caption{$\pi$ FSI and $E_b$}
-  \label{fig:}
 \end{subfigure}
 \caption{Interaction parameters for fake data fits using different detector binnings.}
 \label{fig:detcovbinxsec}
