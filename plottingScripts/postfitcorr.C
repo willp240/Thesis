@@ -78,7 +78,7 @@ void postfitcorr(std::string file0) {
   cov2->GetZaxis()->SetTitle("Covariance");
   cov2->GetZaxis()->SetTitleOffset(1.5);
   cov2->Draw("colz");
-  c->Print((std::string("datpostfitcov")+std::string(".pdf")).c_str());  
+  c->Print((std::string("asmvpostfitcov")+std::string(".pdf")).c_str());  
 
 }
 
