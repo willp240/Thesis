@@ -1,10 +1,48 @@
-\chapter{Future Near Detectors for Long Baseline Neutrino Oscillation Experiments}\label{sec:HPTPC}
+\chapter{Future Near Detectors for Long Baseline Neutrino Oscillation Experiments}
+%Link more to rest of thesis maybe. Like instead of just saying FSI is big, say more stuff that;s conssitent with rest of story
+
+For T2K, the statistical error is still the largest uncertainty on oscillation measurements. This will not be the case for the future long baseline neutrino oscillation experiments, HK and DUNE, and so they aim to perform 5$\sigma$ measurements of $\delta_{CP}$. However, as the statistical error becomes less significant, it is ever more important that systematic uncertainties are reduced. To achieve the target sensitivity, systematic errors will need to be reduced to the 1-2$\%$ level.
+
+Cross-section uncertainties are the dominant systematic, and these depend heavily on theoretical nuclear models. This is because the target nucleon resides inside a nucleus, and so nuclear effects and final state interactions (FSI) can alter the measured kinematics of final state particles. As discussed in Section \ref{sec:interactions}, FSI effects cause the neutrino energy to be reconstructed incorrectly, and interactions to be misclassified, contributing a large systematic uncertainty. To reduce these uncertainties, tensions in nuclear models must be resolved, which can only be done with improved measurements of the multiplicity and momentum distributions of final state particles \cite{nustecscat}.
+
+The NEUT, GENIE, and NuWro \cite{nuwro} neutrino event generators use cascade models tuned to hadron-nucleus scattering measurements to simulate final-state particles leaving the target nucleus. However, these measurements are sparse, as shown in Figure \ref{fig:nucxsec}, and so semi-empirical parametrisations are used to extrapolate to the relevant momentum ranges and target nuclei. The parametrisations are different in the two generators, leading to significant differences in the multiplicity of final state protons, as shown in Figure \ref{fig:generators}. Below 100 MeV, the proton momentum distributions diverge significantly, but this is below the detection threshold of current detectors.
+
+\begin{figure}
+\centering
+\includegraphics*[width=0.75\textwidth,clip]{figs/nucxsec}
+\caption{Cross-section measurements of protons on different nuclei. Figure from \cite{hptpcprop}.}\label{fig:nucxsec}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics*[width=0.8\textwidth,clip]{figs/neutgenienuwro}
+\caption{Predicted proton energy distributions at the DUNE far detector using GENIE, NEUT and NuWro. The dotted and solid lines show the expected reconstruction thresholds in liquid and 10 atm gaseous argon detectors respecctively. Figure from \cite{dunehptpc}.}\label{fig:generators}
+\end{figure}
+
+It is therefore crucial that future near detectors are able to accurately measure final state particles, particularly at low momentum, to distinguish between nuclear models and reduce the effects of FSI.
+
 \section{High Pressure Time Projection Chamber}
-%talk about the detector itself
+
+A high pressure time projection chamber (HPTPC) is a proposed near detector for future long baseline neutrino oscillation experiments. It is designed to be able to probe the low momentum region of parameter space to resolve nuclear model tensions and reduce neutrino interaction cross section uncertainties.
+
+Gas TPCs have lower momentum thresholds for detecting secondary particles as low energy hadrons travel further from the interaction point in gas than in denser detectors. The proton detection threshold is $\sim110$ MeV in water Cerenkov detectors, and is $\sim400$ MeV in liquid argon TPCs. These are both too high to resolve model discrepancies. 
+
+The main disadvantage of using gas inside a TPC is the reduction in number of events due to the lower density, but this effect can be reduced by increasing the pressure. This, combined with the Mega-Watt beams future experiments will utilise, mean there can be enough detected events using a gaseous target.
+
+Having the TPC filled with the active target allows 4-$\pi$ angular coverage of final state particles, further adding to the HPTPCs ability to distinguish between interaction models.
+
+An HPTPC is part of the planned near detector complex at DUNE, and T2K is exploring an HPTPC as a possible near detector upgrade. 
+
+\subsection{Single Transverse Variables}
+
+% fsi manifests itself as momentum inbalance in interactions
+%better measurement of p multiplicity and kinematics 
+%allows use STV
+%these show momentum imbalance, therefore can be used to measure impact of FSI and nuclear effects
+
 \section{Sensitivity Studies}
 %implemented with truth smeared MC
 %samples split by proton mult
-%transverse variables
 %nominal distributions?
 %Asimov in Pmu
 %Asimov in STVs
