@@ -38,7 +38,7 @@ void nd280pmu(std::string file0) {
     hist->GetZaxis()->SetTitleOffset(0.9);
     hist->GetXaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetRangeUser(0,5000);
-    hist->GetZaxis()->SetRangeUser(-1,hist->GetMaximum());
+    hist->GetZaxis()->SetRangeUser(-0.1,hist->GetMaximum());
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetTitle("p_{#mu} (MeV)");
