@@ -978,33 +978,33 @@ However, for fits to data the posteriors contain many discontinuities as shown i
 
 To show this is what causes the discontinuities, a fluctuated version of the nominal MC was produced. This was done by setting the number of events in each bin to be a random number from a Poisson distribution, with a mean equal to the nominal bin content. This ensured the number of events in each bin was an integer. The fluctuated MC was fitted to the nominal MC, and the posterior distributions for the $E_b$ parameters are shown in Figure \ref{fig:Ebfluc}. The fact that these are non-Gaussian and discontinuous, despite them being continuous and Gaussian in the regular Asimov fit, shows that the effect is caused by the discrete shifts to integer events.
 
+Furthermore, Figure \ref{fig:Ebfluc} also shows the $E_b$ distributions for a fluctuated Asimov fit using the non-rectangular binning described in Section \ref{sec:nonrecbinning}. The peaks in the distributions, caused by the shifting of discrete events across bin boundaries, move positions between the two fits. This shows the location of the peaks in $E_{b}$ is very dependent on the binning. This is much more of a significant effect for $E_b$, as the parametrisation directly shifts events rather than reweighting them. Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are.
+
 \begin{figure}
 \centering
 \begin{subfigure}{.48\textwidth}
   \centering
-  \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuFluc}
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nuFluc2}
   \caption{$E_{b}\nu$ C}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
-  \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarFluc}
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubarFluc2}
   \caption{$E_{b}\bar{\nu}$ C}
 \end{subfigure} \\
 \begin{subfigure}{.48\textwidth}
   \centering
-  \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuFluc}
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nuFluc2}
   \caption{$E_{b}\nu$ O}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
-  \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarFluc}
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubarFluc2}
   \caption{$E_{b}\bar{\nu}$ O}
 \end{subfigure}
-\caption{Posterior distributions for the binding energy parameters from fit to fluctuated Asimov data.}
+\caption{Posterior distributions for the binding energy parameters from fits to fluctuated Asimov data using uniform and non-uniform rectangular fit binnings.}
 \label{fig:Ebfluc}
 \end{figure}
-
-To investigate this effect, the fluctuated Asimov `data' described in Section \ref{} was fitted using both binnings. The underlying Asimov events were identical for the two fits, they were just binned differently. The 1D distributions for the $E_{b}$ parameters from these fits are shown in Figure \ref{}. The peaks in the distributions, caused by the shifting of discrete events across bin boundaries, move positions between the two fits. This shows the location of the peaks in $E_{b}$ is very dependent on the binning, causing the differences in the data fit distributions in Figure \ref{}. This is much more of a significant effect for $E_b$, as the parametrisation directly shifts events rather than reweighting them. Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are.
 
 In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{}.\red{assuming i have something in the results section that shows this}
 
