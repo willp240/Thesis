@@ -231,7 +231,7 @@ TH1D* MakeRatioPlot(TH1D* OneCopy, TH1D *TwoCopy) {
   return Ratio;
 }
 
-void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, std::string FileName3) {
+void GetAsimovPlots_HPDOnlyPolyFits(std::string FileName1, std::string FileName2, std::string FileName3) {
   
   TFile *File1 = new TFile(FileName1.c_str());
   TFile *File2 = new TFile(FileName2.c_str());
@@ -243,7 +243,7 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
   canv->SetBottomMargin(0.12);
   canv->SetTopMargin(0.08);
   canv->SetRightMargin(0.04);
-  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf[").c_str());
+  //canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf[").c_str());
   TPad *p1 = new TPad("p1", "p1", 0.0, 0.3, 1.0, 1.0);
   TPad *p2 = new TPad("p2", "p2", 0.0, 0.0, 1.0, 0.3);
   p1->SetLeftMargin(canv->GetLeftMargin());
@@ -284,12 +284,12 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
   if (One != NULL) leg->AddEntry(One, "Prior", "lpf");
   if (Two != NULL) leg->AddEntry(Two, "FGD1 + FGD2", "lpf");
   if (Three != NULL) leg->AddEntry(Three, "FGD1", "lpf");
-  if (Four != NULL) leg->AddEntry(Four, "FGD2", "lpf");
+  if (Four != NULL) leg->AddEntry(Four, "FGD2", "lp");
 
   canv->cd();
   canv->Clear();
   leg->Draw();
-  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
+  canv->Print("fgdfits_leg.pdf");
   delete leg;
 
   int nBins = One->GetXaxis()->GetNbins();
@@ -363,7 +363,11 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
     line2->Draw("same");
     line3->Draw("same");
     
-    canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
+    std::stringstream ss;
+    ss << i;
+    std::string fluxnum = ss.str();
+
+    canv->Print(("fgdfitsflux_"+fluxnum+".pdf").c_str());
 
     nFluxParams += OneCopy[i]->GetXaxis()->GetNbins();
 
@@ -540,7 +544,11 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     line2->Draw("same");
     line3->Draw("same");
 
-    canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
+    std::stringstream ss;
+    ss << i;
+    std::string xsecnum = ss.str();
+
+    canv->Print(("fgdfitsxsec_"+xsecnum+".pdf").c_str());
     
     delete axis;
     delete line;
@@ -552,5 +560,5 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     delete RatioThree;
    }
 
-  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf]").c_str());
+  //  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf]").c_str());
 }

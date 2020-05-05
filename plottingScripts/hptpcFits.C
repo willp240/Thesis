@@ -186,6 +186,7 @@ void PrettifyTitles(TH1D *Hist) {
 
     else if (title == "CA5") title = "C_{A}^{5}";
     else if (title == "MANFFRES") title = "M_{A}^{5}";
+    else if (title == "BgRES") title = "Non-res I_{1/2}";
     else if (title == "CCNUE_0") title = "#nu_{e}/#nu_{#mu}";
     else if (title == "CCNUEBAR_0") title = "#bar{#nu}_{e}/#bar{#nu}_{#mu}";
     else if (title == "DISMPISHP") title = "CC DIS";

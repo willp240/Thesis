@@ -12,7 +12,7 @@
 #include <algorithm>
 #include "TH2Poly.h"
 #include <vector>
-#include "samplePDF/Structs.h"
+#include "../samplePDF/Structs.h"
 
 // *******************
 // Template to make vector out of an array of any length
@@ -22,8 +22,8 @@
   //return std::vector<T>(data, data+N);
 //}
 
-TH1D* PolyProjectionX(TObject* poly, std::string TempName, std::vector<double> xbins, bool err);
-TH1D* PolyProjectionY(TObject* poly, std::string TempName, std::vector<double> ybins, bool err);
+TH1D* PolyProjectionX(TObject* poly, std::string TempName, std::vector<double> xbins);
+TH1D* PolyProjectionY(TObject* poly, std::string TempName, std::vector<double> ybins);
 
 void SetBinning(int Selection, std::vector<double> & BinningX,std::vector<double> & BinningY);
 
@@ -67,8 +67,8 @@ int main(int argc, char **argv) {
 	  SetBinning(s, datxbins, datybins);
 	  
 	  TH2Poly *dathist = (TH2Poly*) file_->Get(datname.c_str())->Clone();
-	  TH1D* dataprojX = PolyProjectionX(dathist, datname.c_str(), datxbins, true);
-	  TH1D* dataprojY = PolyProjectionY(dathist, datname.c_str(), datybins, true);
+	  TH1D* dataprojX = PolyProjectionX(dathist, datname.c_str(), datxbins);
+	  TH1D* dataprojY = PolyProjectionY(dathist, datname.c_str(), datybins);
 
 	  dataprojX->Scale(1., "width");
 	  dataprojY->Scale(1., "width");
@@ -79,21 +79,7 @@ int main(int argc, char **argv) {
 	  outfile->cd();
 	  dataprojX->Write();
 	  dataprojY->Write();
-
-	  std::string mcname = "MC_" + samp[s];
-	  TH2Poly *mchist = (TH2Poly*) file_->Get(mcname.c_str())->Clone();
-          TH1D* mcprojX = PolyProjectionX(mchist, mcname.c_str(), datxbins, true);
-          TH1D* mcprojY = PolyProjectionY(mchist, mcname.c_str(), datybins, true);
-
-          mcprojX->Scale(1., "width");
-          mcprojY->Scale(1., "width");
-
-          MomStack->Add(mcprojX);
-          ThStack->Add(mcprojY);
-
-          outfile->cd();
-          mcprojX->Write();
-          mcprojY->Write();
+	  
 	}
 	
 	std::string name = "MC_" + samp[s];
@@ -107,17 +93,8 @@ int main(int argc, char **argv) {
 	SetBinning(s, xbins, ybins);
 	
 	TH2Poly *hist = (TH2Poly*) file_->Get(name.c_str())->Clone();
-
-	bool error;
-	if(m>0){
-	  error = false;
-	}
-	else{
-	  error = true;
-	}
-	
-	TH1D* projX = PolyProjectionX(hist, name.c_str(), xbins, error);
-	TH1D* projY = PolyProjectionY(hist, name.c_str(), ybins, error);
+	TH1D* projX = PolyProjectionX(hist, name.c_str(), xbins);
+	TH1D* projY = PolyProjectionY(hist, name.c_str(), ybins);
 	
 	projX->Scale(1., "width");
 	projY->Scale(1., "width");
@@ -129,11 +106,9 @@ int main(int argc, char **argv) {
 	projX->SetFillStyle(3001);
 	projY->SetFillStyle(3001);
 	
-	if(error == false){
-	  MomStack->Add(projX);
-	  ThStack->Add(projY);
-	}
-	
+	MomStack->Add(projX);
+	ThStack->Add(projY);
+
 	outfile->cd();
 	projX->Write();
 	projY->Write();
@@ -264,7 +239,7 @@ void SetBinning(int Selection, std::vector<double> & BinningX,std::vector<double
 
 // **************************************************
 // Helper function for projecting TH2Poly onto the X axis
-TH1D* PolyProjectionX(TObject* poly, std::string TempName, std::vector<double> xbins, bool err) {
+TH1D* PolyProjectionX(TObject* poly, std::string TempName, std::vector<double> xbins) {
   // **************************************************
 
   TH1D* hProjX = new TH1D((TempName+"_x").c_str(),(TempName+"_x").c_str(),xbins.size()-1,&xbins[0]);
@@ -306,21 +281,20 @@ TH1D* PolyProjectionX(TObject* poly, std::string TempName, std::vector<double> x
               frac=0;
             }
           hProjX->SetBinContent(dx+1,hProjX->GetBinContent(dx+1)+frac*bin->GetContent());
-	  if(err)
-	    hProjX->SetBinError(dx+1,hProjX->GetBinError(dx+1)+(frac*((TH2Poly*)poly)->GetBinError(i+1))*(frac*((TH2Poly*)poly)->GetBinError(i+1)));
+	  hProjX->SetBinError(dx+1,hProjX->GetBinError(dx+1)+(frac*poly->GetBinError(i+1))*(frac*poly->GetBinError(i+1)));
         }
     }
-  if(err){
-    for(int i=1; i<=hProjX->GetXaxis()->GetNbins(); i++){
-      hProjX->SetBinError(i, sqrt(hProjX->GetBinError(i)));
-    }
+  
+  for(int i=1; i<=hProjX->GetXaxis()->GetNbins(); i++){
+    hProjX->SetBinError(i, sqrt(hProjX->GetBinError(i)));
   }
+
   return hProjX;
 } // end project poly X function
 
 // **************************************************
 // Helper function for projecting TH2Poly onto the Y axis
-TH1D* PolyProjectionY(TObject* poly, std::string TempName, std::vector<double> ybins, bool err) {
+TH1D* PolyProjectionY(TObject* poly, std::string TempName, std::vector<double> ybins) {
   // **************************************************
 
   TH1D* hProjY = new TH1D((TempName+"_y").c_str(),(TempName+"_y").c_str(),ybins.size()-1,&ybins[0]);
@@ -362,15 +336,14 @@ TH1D* PolyProjectionY(TObject* poly, std::string TempName, std::vector<double> y
               frac=0;
             }
           hProjY->SetBinContent(dy+1,hProjY->GetBinContent(dy+1)+frac*bin->GetContent());
-	  if(err)
-	    hProjY->SetBinError(dy+1,hProjY->GetBinError(dy+1)+(frac*((TH2Poly*)poly)->GetBinError(i+1))*(frac*((TH2Poly*)poly)->GetBinError(i+1)));
+	  hProjY->SetBinError(dx+1,hProjY->GetBinError(dx+1)+(frac*poly->GetBinError(i+1))*(frac*poly->GetBinError(i+1)))
         }
     }
-  if(err){
-    for(int i=1; i<=hProjY->GetXaxis()->GetNbins(); i++){
-      hProjY->SetBinError(i, sqrt(hProjY->GetBinError(i)));
-    }
+
+  for(int i=1; i<=hProjY->GetXaxis()->GetNbins(); i++){
+    hProjY->SetBinError(i, sqrt(hProjY->GetBinError(i)));
   }
+
   return hProjY;
 } // end project poly Y function
 

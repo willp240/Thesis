@@ -100,7 +100,6 @@ TH1D* PrettifyMe(TH1D *One, int which) {
   OneCopy->SetMarkerStyle(One->GetMarkerStyle());
   OneCopy->SetMarkerSize(One->GetMarkerSize());
   OneCopy->SetMarkerColor(One->GetMarkerColor());
-  OneCopy->SetLineColor(One->GetLineColor());
   OneCopy->GetYaxis()->SetRangeUser(0.7, 1.3);
   //OneCopy->GetXaxis()->SetMoreLogLabels();
 
@@ -231,11 +230,10 @@ TH1D* MakeRatioPlot(TH1D* OneCopy, TH1D *TwoCopy) {
   return Ratio;
 }
 
-void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, std::string FileName3) {
-  
+void GetAsimovPlots_HPDOnly2Fits8Q2(std::string FileName1, std::string FileName2) {
+
   TFile *File1 = new TFile(FileName1.c_str());
   TFile *File2 = new TFile(FileName2.c_str());
-  TFile *File3 = new TFile(FileName3.c_str());
 
   //gStyle->SetPalette(51);
   TCanvas *canv = new TCanvas("canv", "canv", 1024, 1024);
@@ -243,7 +241,7 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
   canv->SetBottomMargin(0.12);
   canv->SetTopMargin(0.08);
   canv->SetRightMargin(0.04);
-  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf[").c_str());
+  canv->Print((FileName1+"_"+FileName2+".pdf[").c_str());
   TPad *p1 = new TPad("p1", "p1", 0.0, 0.3, 1.0, 1.0);
   TPad *p2 = new TPad("p2", "p2", 0.0, 0.0, 1.0, 0.3);
   p1->SetLeftMargin(canv->GetLeftMargin());
@@ -258,38 +256,44 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
 
   TH1D *One = (TH1D*)File1->Get("param_flux_prefit_0");
   TH1D *Two = (TH1D*)File1->Get("param_flux_HPD_0");
-  TH1D *Three = (TH1D*)File2->Get("param_flux_HPD_0");
-  TH1D *Four = (TH1D*)File3->Get("param_flux_HPD_0");
+  TH1D *Four = (TH1D*)File2->Get("param_flux_HPD_0");
+
+  TH1D *Three = new TH1D("test","test",Four->GetXaxis()->GetNbins()+3,0,Four->GetXaxis()->GetNbins()+3);
+  for(int i=1; i<=Four->GetXaxis()->GetNbins(); i++){
+    Three->SetBinContent(i,Four->GetBinContent(i));
+    Three->SetBinError(i,Four->GetBinError(i));
+  }
 
   One->SetFillColor(kRed);
   One->SetFillStyle(3003);
   One->SetMarkerStyle(7);
   One->SetMarkerColor(kRed);
   One->SetLineColor(kRed);
-  Two->SetFillColor(kBlue);
-  Two->SetFillStyle(3003);
-  Two->SetMarkerColor(kBlue);
-  Two->SetMarkerStyle(7);
-  Two->SetLineColor(kBlue);
-  Three->SetMarkerColor(kBlack);
-  Three->SetLineColor(kBlack);
+  Three->SetFillColor(kBlue);
+  Three->SetFillStyle(3003);
+  Three->SetMarkerColor(kBlue);
   Three->SetMarkerStyle(7);
-  Four->SetMarkerColor(kGreen+3);
-  Four->SetLineColor(kGreen+3);
-  Four->SetFillColor(kGreen+3);
-  Four->SetMarkerStyle(7);
+  Three->SetLineColor(kBlue);
+  //Two->ResetAttFill();
+  Two->SetFillStyle(0);
+  Two->SetMarkerColor(kBlack);
+  Two->SetLineColor(kBlack);
+  Two->SetMarkerStyle(7);
+  //Three->SetMarkerColor(kBlack);
+  //Three->SetLineColor(kBlack);
+  //Three->SetMarkerStyle(7);
 
   // Make a Legend page
   TLegend *leg = new TLegend(0.0, 0.0, 1.0, 1.0);
   if (One != NULL) leg->AddEntry(One, "Prior", "lpf");
-  if (Two != NULL) leg->AddEntry(Two, "FGD1 + FGD2", "lpf");
-  if (Three != NULL) leg->AddEntry(Three, "FGD1", "lpf");
-  if (Four != NULL) leg->AddEntry(Four, "FGD2", "lpf");
+  //  if (Two != NULL) leg->AddEntry(Two, "8 Q2 Normalisations", "lpf");
+  if (Three != NULL) leg->AddEntry(Three, "5 Q2 Normalisations", "lpf");
+  if (Two != NULL) leg->AddEntry(Two, "8 Q2 Normalisations", "lpf");
 
   canv->cd();
   canv->Clear();
   leg->Draw();
-  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
+  canv->Print((FileName1+"_"+FileName2+".pdf").c_str());
   delete leg;
 
   int nBins = One->GetXaxis()->GetNbins();
@@ -299,7 +303,6 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
   TH1D* OneCopy[nFluxPlots];
   TH1D* TwoCopy[nFluxPlots];
   TH1D* ThreeCopy[nFluxPlots];
-  TH1D* FourCopy[nFluxPlots];
 
   int nFluxParams = 0;
   for (int i = 0; i < nFluxPlots; ++i) {
@@ -307,16 +310,14 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
     OneCopy[i]  = PrettifyMe(One, i);
     if (Two != NULL) TwoCopy[i]  = PrettifyMe(Two, i);
     if (Three != NULL) ThreeCopy[i]  = PrettifyMe(Three, i);    
-    if (Four != NULL) FourCopy[i] = PrettifyMe(Four, i);
 
     canv->cd();
     p1->Draw();
     p1->cd();
     p1->SetLogx(true);
     OneCopy[i]->Draw("e2");
-    if (Two != NULL) TwoCopy[i]->Draw("e2,same");
-    if (Three != NULL) ThreeCopy[i]->Draw("e1,same");
-    if (Four != NULL) FourCopy[i]->Draw("e1,same");
+    if (Two != NULL) TwoCopy[i]->Draw("e1,same");
+    if (Three != NULL) ThreeCopy[i]->Draw("e2,same");
 
     //OneCopy[i]->GetXaxis()->SetMoreLogLabels();
     OneCopy[i]->GetYaxis()->SetLabelSize(0.);
@@ -341,14 +342,10 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
     TH1D *Ratio2 = MakeRatioPlot(OneCopy[i], ThreeCopy[i]);
     Ratio2->SetMarkerColor(Ratio2->GetLineColor());
     Ratio2->Draw("p same");
-    TH1D *Ratio3 = MakeRatioPlot(OneCopy[i], FourCopy[i]);
-    Ratio3->SetMarkerColor(Ratio3->GetLineColor());
-    Ratio3->Draw("p same");
 
     TLine *line = new TLine(OneCopy[i]->GetXaxis()->GetXmin(), 0.0, OneCopy[i]->GetXaxis()->GetXmax(), 0.0);
     TLine *line2 = new TLine(OneCopy[i]->GetXaxis()->GetXmin(), -1.0, OneCopy[i]->GetXaxis()->GetXmax(), -1.0);
     TLine *line3 = new TLine(OneCopy[i]->GetXaxis()->GetXmin(), 1.0, OneCopy[i]->GetXaxis()->GetXmax(), 1.0);
-
     line->SetLineColor(kRed);
     line->SetLineStyle(kDashed);
     line->SetLineWidth(2);
@@ -362,8 +359,8 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
     line->Draw("same");
     line2->Draw("same");
     line3->Draw("same");
-    
-    canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
+   
+    canv->Print((FileName1+"_"+FileName2+".pdf").c_str());
 
     nFluxParams += OneCopy[i]->GetXaxis()->GetNbins();
 
@@ -373,7 +370,6 @@ void GetAsimovPlots_HPDOnly3Fits(std::string FileName1, std::string FileName2, s
     delete line3;
     delete Ratio1;
     delete Ratio2;
-    delete Ratio3;
   }
 
   canv->cd();
@@ -391,40 +387,41 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
   */
 
   //
-  // C nu
-  One->SetBinContent(nFluxParams+19,1+(One->GetBinContent(nFluxParams+19)-1)/25);
-  One->SetBinError(nFluxParams+19,One->GetBinError(nFluxParams+19)/25);
-  Two->SetBinContent(nFluxParams+19,1+Two->GetBinContent(nFluxParams+19)/25);
-  Two->SetBinError(nFluxParams+19,Two->GetBinError(nFluxParams+19)/25);
-  Three->SetBinContent(nFluxParams+19,1+Three->GetBinContent(nFluxParams+19)/25);
-  Three->SetBinError(nFluxParams+19,Three->GetBinError(nFluxParams+19)/25);
-  Four->SetBinContent(nFluxParams+19,1+Four->GetBinContent(nFluxParams+19)/25);
-  Four->SetBinError(nFluxParams+19,Four->GetBinError(nFluxParams+19)/25);
+  One->SetBinContent(nFluxParams+16+3,1+(One->GetBinContent(nFluxParams+16+3)-1)/25);
+  One->SetBinError(nFluxParams+16+3,One->GetBinError(nFluxParams+16+3)/25);
+  Two->SetBinContent(nFluxParams+16+3,1+Two->GetBinContent(nFluxParams+16+3)/25);
+  Two->SetBinError(nFluxParams+16+3,Two->GetBinError(nFluxParams+16+3)/25);
+  Three->SetBinContent(nFluxParams+16,1+Three->GetBinContent(nFluxParams+16)/25);
+  Three->SetBinError(nFluxParams+16,Three->GetBinError(nFluxParams+16)/25);
   // C nubar
-  One->SetBinError(nFluxParams+20,One->GetBinError(nFluxParams+20)/25);
-  Two->SetBinContent(nFluxParams+20,1+Two->GetBinContent(nFluxParams+20)/25);
-  Two->SetBinError(nFluxParams+20,Two->GetBinError(nFluxParams+20)/25);
-  Three->SetBinContent(nFluxParams+20,1+Three->GetBinContent(nFluxParams+20)/25);
-  Three->SetBinError(nFluxParams+20,Three->GetBinError(nFluxParams+20)/25);
-  Four->SetBinContent(nFluxParams+20,1+Four->GetBinContent(nFluxParams+20)/25);
-  Four->SetBinError(nFluxParams+20,Four->GetBinError(nFluxParams+20)/25);
+  One->SetBinError(nFluxParams+17+3,One->GetBinError(nFluxParams+17+3)/25);
+  Two->SetBinContent(nFluxParams+17+3,1+Two->GetBinContent(nFluxParams+17+3)/25);
+  Two->SetBinError(nFluxParams+17+3,Two->GetBinError(nFluxParams+17+3)/25);
+  Three->SetBinContent(nFluxParams+17,1+Three->GetBinContent(nFluxParams+17)/25);
+  Three->SetBinError(nFluxParams+17,Three->GetBinError(nFluxParams+17)/25);
   // O nu
-  One->SetBinContent(nFluxParams+21,1+(One->GetBinContent(nFluxParams+21)-1)/27);
-  One->SetBinError(nFluxParams+21,One->GetBinError(nFluxParams+21)/27);
-  Two->SetBinContent(nFluxParams+21,1+Two->GetBinContent(nFluxParams+21)/27);
-  Two->SetBinError(nFluxParams+21,Two->GetBinError(nFluxParams+21)/27);
-  Three->SetBinContent(nFluxParams+21,1+Three->GetBinContent(nFluxParams+21)/27);
-  Three->SetBinError(nFluxParams+21,Three->GetBinError(nFluxParams+21)/27);
-  Four->SetBinContent(nFluxParams+21,1+Four->GetBinContent(nFluxParams+21)/27);
-  Four->SetBinError(nFluxParams+21,Four->GetBinError(nFluxParams+21)/27);
+  One->SetBinContent(nFluxParams+18+3,1+(One->GetBinContent(nFluxParams+18+3)-1)/27);
+  One->SetBinError(nFluxParams+18+3,One->GetBinError(nFluxParams+18+3)/27);
+  Two->SetBinContent(nFluxParams+18+3,1+Two->GetBinContent(nFluxParams+18+3)/27);
+  Two->SetBinError(nFluxParams+18+3,Two->GetBinError(nFluxParams+18+3)/27);
+  Three->SetBinContent(nFluxParams+18,1+Three->GetBinContent(nFluxParams+18)/27);
+  Three->SetBinError(nFluxParams+18,Three->GetBinError(nFluxParams+18)/27);
   // O nubar
-  One->SetBinError(nFluxParams+22,One->GetBinError(nFluxParams+22)/27);
-  Two->SetBinContent(nFluxParams+22,1+Two->GetBinContent(nFluxParams+22)/27);
-  Two->SetBinError(nFluxParams+22,Two->GetBinError(nFluxParams+22)/27);
-  Three->SetBinContent(nFluxParams+22,1+Three->GetBinContent(nFluxParams+22)/27);
-  Three->SetBinError(nFluxParams+22,Three->GetBinError(nFluxParams+22)/27);
-  Four->SetBinContent(nFluxParams+22,1+Four->GetBinContent(nFluxParams+22)/27);
-  Four->SetBinError(nFluxParams+22,Four->GetBinError(nFluxParams+22)/27);
+  One->SetBinError(nFluxParams+19+3,One->GetBinError(nFluxParams+19+3)/27);
+  Two->SetBinContent(nFluxParams+19+3,1+Two->GetBinContent(nFluxParams+19+3)/27);
+  Two->SetBinError(nFluxParams+19+3,Two->GetBinError(nFluxParams+19+3)/27);
+  Three->SetBinContent(nFluxParams+19,1+Three->GetBinContent(nFluxParams+19)/27);
+  Three->SetBinError(nFluxParams+19,Three->GetBinError(nFluxParams+19)/27);
+
+  /*  // C nu
+  for(int i=16; i<20; i++) {
+    One->SetBinContent(nFluxParams+i+3,1+(One->GetBinContent(nFluxParams+i+3)-1)/25);
+    One->SetBinError(nFluxParams+3+i,One->GetBinError(nFluxParams+i+3)/25);
+    Two->SetBinContent(nFluxParams+i+3,1+Two->GetBinContent(nFluxParams+i+3)/25);
+    Two->SetBinError(nFluxParams+i+3,Two->GetBinError(nFluxParams+i+3)/25);
+    Three->SetBinContent(nFluxParams+i,1+Three->GetBinContent(nFluxParams+i)/25);
+    Three->SetBinError(nFluxParams+i,Three->GetBinError(nFluxParams+i)/25);
+    }*/
 
   //and hard code fixed 2p2hEdep + I1/2 Low Pi Mom
   
@@ -433,17 +430,28 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     Two->SetBinError(nFluxParams+i,0);
     Three->SetBinContent(nFluxParams+i,-999);
     Three->SetBinError(nFluxParams+i,0);
-    Four->SetBinContent(nFluxParams+i,-999);
-    Four->SetBinError(nFluxParams+i,0);
   }
 
   Two->SetBinContent(nFluxParams+25,-999);
   Two->SetBinError(nFluxParams+25,0);
-  Three->SetBinContent(nFluxParams+25,-999);
-  Three->SetBinError(nFluxParams+25,0);
-  Four->SetBinContent(nFluxParams+25,-999);
-  Four->SetBinError(nFluxParams+25,0);
+  Three->SetBinContent(nFluxParams+22,-999);
+  Three->SetBinError(nFluxParams+22,0);
 
+
+  for(int i=Two->GetNbinsX()+2;i>18;i--){
+    Three->SetBinContent(nFluxParams+i,Three->GetBinContent(nFluxParams+i-3));
+    Three->SetBinError(nFluxParams+i,Three->GetBinError(nFluxParams+i-3));
+  }
+  //and now hard code for plotting 4/7 Q2 Norms
+  for(int i=16;i<19;i++){
+    Three->SetBinContent(nFluxParams+i,-999);
+    Three->SetBinError(nFluxParams+i,0);
+  }
+  //  for(int i=Two->GetNbinsX()+2;i>18;i--){
+  //Three->SetBinContent(nFluxParams+i,Three->GetBinContent(nFluxParams+i-3));
+  // Three->SetBinError(nFluxParams+i,Three->GetBinError(nFluxParams+i-3));
+  // }
+  
   /////////////////////////////////////////////////// Done hard coding
 
   // Do some fancy replacements
@@ -488,15 +496,11 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     One->Draw("e2");
     if (Two != NULL) {
       Two->GetXaxis()->SetRangeUser(XsecOffset[i-1], XsecOffset[i]);
-      Two->Draw("e2,same");
+      Two->Draw("e1,same");
     }
     if (Three != NULL) {
       Three->GetXaxis()->SetRangeUser(XsecOffset[i-1], XsecOffset[i]);
-      Three->Draw("e1,same");
-    }
-    if (Four != NULL) {
-      Four->GetXaxis()->SetRangeUser(XsecOffset[i-1], XsecOffset[i]);
-      Four->Draw("e1,same");
+      Three->Draw("e2,same");
     }
 
     canv->Update();
@@ -513,19 +517,15 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     p4->cd();
     TH1D *RatioOne = MakeRatioPlot(One, Two);
     TH1D *RatioTwo = MakeRatioPlot(One, Three);
-    TH1D *RatioThree = MakeRatioPlot(One, Four);
 
     RatioOne->SetMarkerColor(RatioOne->GetLineColor());
     RatioOne->Draw("p");
     RatioTwo->SetMarkerColor(RatioTwo->GetLineColor());
     RatioTwo->Draw("p same");
-    RatioThree->SetMarkerColor(RatioThree->GetLineColor());
-    RatioThree->Draw("p same");
 
     TLine *line = new TLine(RatioOne->GetXaxis()->GetBinLowEdge(RatioOne->GetXaxis()->GetFirst()), 0.0, RatioOne->GetXaxis()->GetBinLowEdge(RatioOne->GetXaxis()->GetLast()+1), 0.0);
     TLine *line2 = new TLine(RatioOne->GetXaxis()->GetBinLowEdge(RatioOne->GetXaxis()->GetFirst()), 1.0, RatioOne->GetXaxis()->GetBinLowEdge(RatioOne->GetXaxis()->GetLast()+1), 1.0);
     TLine *line3 = new TLine(RatioOne->GetXaxis()->GetBinLowEdge(RatioOne->GetXaxis()->GetFirst()), -1.0, RatioOne->GetXaxis()->GetBinLowEdge(RatioOne->GetXaxis()->GetLast()+1), -1.0);
-
     line->SetLineColor(kRed);
     line->SetLineStyle(kDashed);
     line->SetLineWidth(2);
@@ -535,22 +535,20 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     line3->SetLineColor(kRed);
     line3->SetLineStyle(kDashed);
     line3->SetLineWidth(2);
-
     line->Draw("same");
     line2->Draw("same");
     line3->Draw("same");
 
-    canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
+    canv->Print((FileName1+"_"+FileName2+".pdf").c_str());
     
     delete axis;
     delete line;
     delete line2;
     delete line3;
-   
+
     delete RatioOne;
     delete RatioTwo;
-    delete RatioThree;
    }
 
-  canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf]").c_str());
+  canv->Print((FileName1+"_"+FileName2+".pdf]").c_str());
 }
