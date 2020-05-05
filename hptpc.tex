@@ -24,25 +24,25 @@ It is therefore crucial that future near detectors are able to accurately measur
 
 A high pressure time projection chamber (HPTPC) is a proposed near detector for future long baseline neutrino oscillation experiments. It is designed to be able to probe the low momentum region of parameter space to resolve nuclear model tensions and reduce neutrino interaction cross section uncertainties.
 
-Gas TPCs have lower momentum thresholds for detecting secondary particles as low energy hadrons travel further from the interaction point in gas than in denser detectors. The proton detection threshold is $\sim110$ MeV in water Cerenkov detectors, and is $\sim400$ MeV in liquid argon TPCs. These are both too high to resolve model discrepancies. 
+Gas TPCs have lower momentum thresholds for detecting secondary particles as low energy hadrons travel further from the interaction point in gas than in denser detectors. The proton detection threshold is $\sim$110 MeV in water Cerenkov detectors, and $\sim$400 MeV in liquid argon TPCs. These are both too high to resolve model discrepancies. 
 
-The main disadvantage of using gas inside a TPC is the reduction in number of events due to the lower density, but this effect can be reduced by increasing the pressure. This, combined with the Mega-Watt beams future experiments will utilise, mean there can be enough detected events using a gaseous target.
+The main disadvantage of using gas as an active target is the reduction in number of events due to the lower density, but this effect can be reduced by increasing the pressure. This, combined with the Mega-Watt beams future experiments will utilise, mean there can be enough detected events using a gaseous target.
 
-Having the TPC filled with the active target allows 4-$\pi$ angular coverage of final state particles, further adding to the HPTPCs ability to distinguish between interaction models.
+Having the TPC filled with the active target allows 4-$\pi$ angular coverage of final state particles, further adding to the HPTPC's ability to distinguish between interaction models.
 
 An HPTPC is part of the planned near detector complex at DUNE, and T2K is exploring an HPTPC as a possible near detector upgrade. 
 
 \subsection{Single Transverse Variables}
 
-When the true momentum vector of the final state lepton and hadrons are projected into the plane transverse to the original neutrino’s trajectory, any momentum imbalance is due to final state interactions and nuclear effects. By making accurate measurements of the multiplicity and momentum distributions of secondary particles, an HPTPC can probe the missing momentum, and better characterise events affected by FSI. This can be done using transverse kinematics variables \cite{stv1}:
+When the true momentum vector of the final state lepton and hadrons are projected into the plane transverse to the original neutrino’s trajectory, any momentum imbalance is due to final state interactions and nuclear effects. By making accurate measurements of the multiplicity and momentum distributions of secondary particles, an HPTPC can probe the missing momentum, and better characterise events affected by FSI. This can be done using single transverse kinematics variables (STV) \cite{stv1}:
 
 \begin{itemize}
 
-\item $\delta p_{T}$: this represents the imbalance in the three momentum in the transverse plane. It is zero in the absence of FSI.
+\item $\delta p_{T}$: represents the imbalance in the three momentum in the transverse plane. It is zero in the absence of FSI.
 
-\item $\delta \phi_{T}$: this characterises how `back-to-back' the transverse components in the final states are. It is zero for a completely balanced final state.
+\item $\delta \phi_{T}$: characterises how `back-to-back' the transverse components in the final states are. It is zero for a completely balanced final state.
 
-\item $\delta \alpha_{T}$: this describes how the hadronic system has been `accelerated' or `decelerated' by FSI effects. This is $<\pi$/2 if the proton transverse momentum is larger than expected for the observed lepton transverse momentum, and $>\pi$/2 if the proton transverse momentum is smaller than expected.
+\item $\delta \alpha_{T}$: describes how the hadronic system has been `accelerated' or `decelerated' by FSI effects. This is $<\pi$/2 if the proton transverse momentum is larger than expected for the observed lepton transverse momentum, and $>\pi$/2 if the proton transverse momentum is smaller than expected.
 
 \end{itemize}
 
@@ -111,7 +111,7 @@ The selected events are then divided by pion and proton multiplicity, giving sev
 
 \begin{itemize}
 
-\item \textbf{CC 0$\pi$ 1p:} 1 muon above threshold, 0 charged pions above threshold, 0 protons above threshold.
+\item \textbf{CC 0$\pi$ 0p:} 1 muon above threshold, 0 charged pions above threshold, 0 protons above threshold.
 
 \item \textbf{CC 0$\pi$ 1p:} 1 muon above threshold, 0 charged pions above threshold, 1 proton above threshold.
 
@@ -155,7 +155,7 @@ Total & 10286.30 & 12653.78 \\
 \end{table}
 \end{center}
 
-The CC 0$\pi$ 0p and CC 1$\pi$ 0p samples have more events for ND280, as higher multiplicity events will be misclassified as having 0 protons due to the higher detection thresholds. Overall, there is a greater number of interactions in the HPTPC sample, due to the lower thresholds.
+The CC 0$\pi$ 0p and CC 1$\pi$ 0p samples have more events for ND280, as higher multiplicity events will be misclassified as having zero protons due to the higher detection thresholds. Overall, there is a greater number of interactions in the HPTPC sample, due to the lower thresholds.
 
 The $p_{\mu}$-cos$\theta_{\mu}$ distributions for the two detectors are shown in Figures \ref{fig:nd280PmuTmu} and \ref{fig:hptpcPmuTmu}.
 
@@ -241,13 +241,11 @@ The $p_{\mu}$-cos$\theta_{\mu}$ distributions for the two detectors are shown in
 \label{fig:hptpcPmuTmu}
 \end{figure}
 
-The distributions of CC 0$\pi$ 0p and CC 0$\pi$ 1p samples are similar for the two detectors, but the normalisations are higher for ND280. The 1p and Np samples have significantly more backward going low momentum events in the HPTPC distirbutions than ND280. This is because if a proton is detected in an event with a low momentum lepton, the proton momentum is also likely to be low, and so more will be below the ND280 detection threshold. The shape of the CC Other distributions are similar, but there is a slightly higher normalisation for HPTPC.
+The distributions of CC 0$\pi$ 0p and CC 0$\pi$ 1p samples are similar for the two detectors, but the normalisations are higher for ND280. The 1p and Np samples have significantly more backward going low momentum events in the HPTPC distributions than ND280. This is because if a proton is detected in an event with a low momentum lepton, the proton momentum is also likely to be low, and so more will be below the ND280 detection threshold. The shape of the CC Other distributions are similar, but there is a slightly higher normalisation for HPTPC.
 
 The full potential sensitivity of the HPTPC to resolving nuclear model tensions cannot be achieved with lepton kinematics alone. To investigate the impact of using hadronic information in interactions, $\pm1\sigma$ parameter variations were run on the HPTPC MC in different combinations of single transverse variables, and lepton, proton, and pion momentum and angle. The process was the same as that described in Section \ref{sec:sigvar}, but events were binned in different variables.
 
-The transverse variables are calculated for each event from the smeared true lepton momentum and angle. 
-
-For each sample, the combination of interaction parameter and kinematic variables which caused the largest changed in the total number of events is shown in Table \ref{tab:hptpcsigvar}. 
+The transverse variables are calculated for each event from the smeared true lepton momentum and angle. For each sample, the combination of interaction parameter and kinematic variables which caused the largest changed in the total number of events is shown in Table \ref{tab:hptpcsigvar}. 
 
 \begin{center}
 \begin{table}
@@ -315,16 +313,157 @@ The distributions in these pairs of kinematics for the HPTPC MC samples are show
 \label{fig:hptpcsigvar}
 \end{figure}
 
-The samples binned in $p_{p}$ and $p_{\pi}$ have hard cuts at low momentum, beyond which there are very few events. However, there are significantly below the ND280 detection thresholds. These samples, along with the $\delta p_{T}$ binned CC 1$\pi$ 1p  sample, have much narrower momentum distributions than those binned in $p_{\mu}$. The `gaps' in the distributions at cos$\theta_{\mu}\sim0.8$ are binning effects, whereby bins in the peak regions are finer, so have fewer events. The binnings have not been fully tuned to the new kinematic variables. 
+The samples binned in $p_{p}$ and $p_{\pi}$ have hard cuts at low momentum, beyond which there are very few events. However, these are significantly below the ND280 detection thresholds. These samples, along with the $\delta p_{T}$ binned CC 1$\pi$ 1p  sample, have much narrower momentum distributions than those binned in $p_{\mu}$. The `gaps' in the distributions at cos$\theta_{\mu}\sim0.8$ are binning effects, whereby bins in the peak regions are finer, so have fewer events. The binnings have not been fully tuned to the new kinematic variables. 
 
 \subsubsection{Asimov Fits}
 
-Three Asimov fits were run to compare the sensitivities of the two detectors. The ND280 and HPTPC nominal MC distributions were fit in $p_{\mu}$-cos$\theta_{\mu}$, and the HPTPC MC was also fit mixture of different variables for each sample shown in Figure \ref{fig:hptpcsigvar}.
+Three Asimov fits were ran to compare the sensitivities of the two detectors. The ND280 and HPTPC nominal MC distributions were fit in $p_{\mu}$-cos$\theta_{\mu}$, and the HPTPC MC was also fit in the combination of single transverse variables for each sample shown in Figure \ref{fig:hptpcsigvar}.
 
-The fit results are shown in Figures \ref{} and \ref{}.
+The fit results are shown in Figures \ref{fig:hptpcflux} and \ref{fig:hptpcxsec}.
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}{0.95\textwidth}
+  \centering
+  \includegraphics[width=0.24\linewidth]{figs/hptpcfits_leg}	
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_0}
+  \caption{ND FHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_1}
+  \caption{ND FHC $\nu_e$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_2}
+  \caption{ND FHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_3}
+  \caption{ND FHC $\bar{\nu_{e}}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_4}
+  \caption{ND RHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_5}
+  \caption{ND RHC $\bar{\nu_{e}}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_6}
+  \caption{ND RHC $\nu_{\mu}$}
+\end{subfigure}
+\vspace{15mm}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_7}
+  \caption{ND RHC $\nu_e$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_8}
+  \caption{SK FHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_9}
+  \caption{SK FHC $\nu_e$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_10}
+  \caption{SK FHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_11}
+  \caption{SK FHC $\bar{\nu_e}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_12}
+  \caption{SK RHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_13}
+  \caption{SK RHC $\bar{\nu_e}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_14}
+  \caption{SK RHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.24\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_15}
+  \caption{SK RHC $\nu_e$}
+\end{subfigure}
+\caption{Flux parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
+\label{fig:hptpcflux}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.95\textwidth}
+  \centering
+  \includegraphics[width=0.25\linewidth]{figs/hptpcfits_leg}	
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsxsec_1}
+  \caption{CC0$\pi$}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsxsec_2}
+  \caption{CC1$\pi$, $\nu_e$, CC DIS, CC coh., NC}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsxsec_3}
+  \caption{FSI}
+\end{subfigure}
+\caption{Flux parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
+\label{fig:hptpcxsec}
+\end{figure}
+
+As expected, the postfit values of all parameters are very close to their nominal values. The slight differences are due to marginalisation effects, which are larger than for the full analysis fits due to the lower statistics.
+
+The majority of flux parameters have a smaller postfit uncertainty for the HPTPC than ND280. The increase in number of events from lowering the detection thresholds allows a slight increase in the constraint on these systematics.
+
+There is also a further reduction in the majority of postfit flux uncertainties for fitting in STVs rather than just $p_{\mu}$-cos$\theta_{\mu}$. This is a smaller effect however, and is not consistent across all energies.
+
+Several of the interaction parameters also have a general trend of the HPTPC seeing better constraint than ND280, and the STVs being a slight improvement on just the lepton variables.
+
+The size of the $M_{A}^{QE}$, carbon Fermi momentum, and carbon binding energy uncertainties are very similar in the three fits. The MEC C uncertainty has a stronger constraint for the HPTPC, but only a small improvement from the STVs. The oxygen parameters have very little constraint in any of the fits as only FGD1 MC is used. 
+
+Of the 1 $\pi$ parameters, the $I_{1/2}$ non-resonant background is the only uncertainty to reduce for the HPTPC compared to ND280. The STVs do not improve the constraint any further. The CC DIS and CC coh. C parameters have small improvements in constraint for HPTPC, but this is not reduced any further by the STVs. The CC coh. O has a similar postfit uncertainty for all three fits, as the constraint comes entirely from the prior. The NC parameters have similar postfit uncertainties for all three fits.
+
+The FSI parameters all have similar constraints for the HPTPC and ND280, but a singificant improvement from using the STVs.
+
+No parameter has a larger uncertainty for the HPTPC STV fit than the ND280 $p_{\mu}$-cos$\theta_{\mu}$ fit.
+
+These results show that lowering detection thresholds, and using more kinematic information than just the lepton variables, can improve the constraint of systematic uncertainties in the fit. However, this is not a complete study, for a number of reasons. Firstly, without detector systematics in the fit the results do not tell the full story. These could correlate with the other parameters differently for the two detectors, altering the uncertainties in each fit.
+
+There is also low statistics used in this study compared to the full T2K oscillation analysis. Using the entire runs 2-9 MC to produce HPTPC-like events would give a better comparison of the potential sensitivities.
+
+Furthermore, the HPTPC events are truth-smeared ND280 FGD1 events, and so the target is carbon. Future studies aiming for a more complete comparison of the sensitivity of the detectors should use a full simulation of an HPTPC with different target gasses. The HPTPC would also be larger than ND280, which is not accounted for in this study. 
+
+Further improvements to the fitting framework could also help achieve the full potential of an HPTPC. With the increase in statistics future experiments will benefit from, events could be binned in more than two variables. This would allow better characterisation of interactions, and so systematics could be applied to the target events more accurately. The systematics themselves could also be generated to be more appropriate for use with transverse kinematics. The systematics used in this study were designed to depend on the leptonic information in the event. As the lower detection thresholds allow better measurements of the hadronic side of interactions, models constructed to use this information would better use the full constraining power of an HPTPC.
+
+However, this study does show that just by lowering detection thresholds, systematic uncertainties gain some improvement in constraint, which will allow better distinguishing of models.
 
 %Asimov in Pmu comp with STVs
-%look at 1ds for 'problem' parameters?
 %caveats: no det systs, low stats, events only on C, xs systs for lepton kin vars, hptpc will be bigger
 %future studies: gas mixture, scale by size, 3 variables? 
 \newpage
