@@ -62,13 +62,6 @@ void thstack(std::string filename) {
 	  TH1D *dathistX = (TH1D*) file_->Get((momname).c_str())->Clone();
 	  TH1D *dathistY = (TH1D*) file_->Get((thname).c_str())->Clone();
 
-	  for (int i=1; i<dathistX->GetXaxis()->GetNbins()+1; i++){
-	    dathistX->SetBinError(i, dathistX->GetMaximum()/40);
-	  }
-	  for (int i=1;i<dathistY->GetXaxis()->GetNbins()+1; i++){
-            dathistY->SetBinError(i, dathistY->GetMaximum()/40);
-          }
-
 	  dathistX->SetMarkerColor(kBlack);
 	  dathistY->SetMarkerColor(kBlack);
 	  dathistX->SetMarkerStyle(2);
@@ -113,14 +106,14 @@ void thstack(std::string filename) {
 	  mcname = "MC_" + samp[s];
 	  momname = mcname+"_x";
           thname = mcname+"_y";
-	  TH1D *mcratioX = (TH1D*) file_->Get((momname).c_str())->Clone();
+	  /*TH1D *mcratioX = (TH1D*) file_->Get((momname).c_str())->Clone();
 	  mcratioX->Divide(mchistX);
           TH1D *mcratioY = (TH1D*) file_->Get((thname).c_str())->Clone();
 	  mcratioY->Divide(mchistY);
 	  mcratioX->SetLineColor(kRed);
           mcratioY->SetLineColor(kRed);
 	  mcratioX->SetFillStyle(0);
-          mcratioY->SetFillStyle(0);
+          mcratioY->SetFillStyle(0);*/
 	}
 	
 	else {
@@ -235,7 +228,7 @@ void thstack(std::string filename) {
       dathistX->SetTitle("");
       dathistX->Draw("e");
       MomStack->Draw("same");
-      mchistX->Draw("same");
+      mchistX->Draw("h same");
       dathistX->Draw("e same");
       dathistX->SetTitle("");
       dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
@@ -271,7 +264,7 @@ void thstack(std::string filename) {
       dathistY->SetTitle("");
       dathistY->Draw("e");
       ThStack->Draw("same");
-      mchistY->Draw("e same");
+      mchistY->Draw("h same");
       dathistY->Draw("e same");
       dathistY->SetTitle("");
       dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
