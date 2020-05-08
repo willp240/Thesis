@@ -804,12 +804,12 @@ The results for the interaction parameters are shown in Figure \ref{fig:asmvxsec
 \label{fig:asmvxsec}
 \end{figure}
 
-The postfit covariance matrix for flux and interaction parameters is shown in Figure \ref{fig:asmvpostfitcov}. There are strong correlations between parameters which control interactions with similar topologies, such as the $M^{QE}_A$, 2p2h, and $Q^2$ parameters. These all affect different regions of $Q^2$, but also all correlate with the flux parameters, causing them to correlate with other. The CC coherent parameters correlate with each other, as do the $\pi$ FSI and single $\pi$ production parameters. The $E_b$ parameters are correlated with each other, and most other parameters. There are also slight correlations between CCQE and CC 1$\pi$ parameters, due to the contamination of CC $1\pi$ events in the CC 0$\pi$ samples. The flux parameters have strong internal correlations from their priors.
+The postfit correlation matrix for flux and interaction parameters is shown in Figure \ref{fig:asmvpostfitcov}. There are strong correlations between uncertainties which control interactions with similar topologies, such as the $M^{QE}_A$, 2p2h, and $Q^2$ parameters. These all affect different regions of $Q^2$, but also all correlate with the flux parameters, causing them to correlate with other. The CC coherent parameters correlate with each other, and the CC 1$\pi$ parameters. There are strong internal correlations for the $E_b$, $\pi$ FSI and single $\pi$ production parameters. There are also slight correlations between CCQE and CC 1$\pi$ parameters, due to the contamination of CC $1\pi$ events in the CC 0$\pi$ samples. The flux parameters have strong internal correlations from their priors, and are anti-correlated with many interaction parameters, particularly normalisations.
 
 \begin{figure}
 \centering
-\includegraphics*[width=0.9\textwidth,clip]{figs/asmvpostfitcov}
-\caption{Asimov postfit covariance matrix for flux and interaction parameters.}\label{fig:asmvpostfitcov}
+\includegraphics*[width=0.9\textwidth,clip]{figs/asmvcorr}
+\caption{Asimov postfit correlation matrix for flux and interaction parameters.}\label{fig:asmvpostfitcov}
 \end{figure}
 
 \section{Data Fit}\label{sec:datafit}
@@ -1117,7 +1117,7 @@ The CC coherent, NC, and $\pi$ FSI parameters are all within $1\sigma$ of their 
 
 The post-data-fit covariance for the flux and interaction parameters is shown in Figure \ref{fig:datpostfitcov}. The overall trends are similar to what was seen for the Asimov fit in Figure \ref{fig:asmvpostfitcov}. The fluxes are strongly internally correlated, and anti-correlated with interaction normalisations. 
 
-$M^{QE}_A$ correlates with the lowest $Q^2$ normalisation, which decreases as $Q^2$ increases, becoming an anti-correlation for the higher $Q^2$ parameters. This is expected as $M^{QE}_A$ affects higher $Q^2$ events, with the low $Q^2$ anti-correlation likely due to the mutual correlation with the flux parameters. $M^{QE}_A$ now also correlates highly with the $E_b$ parameters, having been anti-correlated with them in the Asimov fit.
+$M^{QE}_A$ correlates with the lowest $Q^2$ normalisation, which decreases as $Q^2$ increases, becoming a strong anti-correlation for the higher $Q^2$ parameters. This is expected as $M^{QE}_A$ affects higher $Q^2$ events, with the low $Q^2$ anti-correlation likely due to the mutual correlation with the flux parameters. $M^{QE}_A$ now also correlates highly with the $E_b$ parameters, having been anti-correlated with them in the Asimov fit.
 
 The strength of the $E_b$ correlations and anti-correlations has increased since the Asimov fit. $E_b$ is correlated with the low energy, and anti-correlated with the high energy flux parameters. This is because as the $E_b$ parameters increase, the number of low lepton momentum events increases as events shifts to lower momentum. This can be compensated by low energy flux parameters decreasing, as lower energy neutrino events are likely to produce lower momentum leptons, and so the anti-correlations arise. The opposite is true for higher energies, causing positive correlations.
 
@@ -1127,8 +1127,8 @@ The $Q^2$ normalisations, DIS and mult-$\pi$, and $\pi$ FSI parameters all have 
 
 \begin{figure}
 \centering
-\includegraphics*[width=0.9\textwidth,clip]{figs/datpostfitcov}
-\caption{Data postfit covariance matrix for flux and interaction parameters.}\label{fig:datpostfitcov}
+\includegraphics*[width=0.9\textwidth,clip]{figs/CorrData}
+\caption{Data postfit correlation matrix for flux and interaction parameters.}\label{fig:datpostfitcov}
 \end{figure}
 
 \section{Posterior Predictions}\label{sec:respostpred}
