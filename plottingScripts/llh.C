@@ -43,7 +43,7 @@ void llh(std::string file0) {
   TH1D *h1 = (TH1D*)gDirectory->Get("h1");
   h1->GetXaxis()->SetRangeUser(0,600000);
   h1->Draw("colz");
-  h1->GetYaxis()->SetTitle("-2LogL_{Flux}");
+  h1->GetYaxis()->SetTitle("-LogL_{Flux}");
   h1->GetYaxis()->SetTitleOffset(1.0);
   h1->GetXaxis()->SetTitle("Step");
   h1->GetZaxis()->SetRangeUser(-1,250);
