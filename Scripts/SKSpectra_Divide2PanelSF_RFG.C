@@ -215,5 +215,5 @@ void DivideUnosc_all(char *file_osc, char *file_unosc, char *file_data, char *ou
  SKSpectra_Divide2PanelSF_RFG(file_osc, file_unosc, outfile+"_numubar.root", "numubar",1);
  SKSpectra_Divide2PanelSF_RFG(file_osc, file_unosc, outfile+"_nue.root", "nue",2);
  SKSpectra_Divide2PanelSF_RFG(file_osc, file_unosc, outfile+"_nuebar.root", "nuebar",3);
- // SKSpectra_Divide2PanelSF_RFG(file_osc, file_unosc, outfile+"_nue1pi.root", "nue1pi",4);
+ SKSpectra_Divide2PanelSF_RFG(file_osc, file_unosc, outfile+"_nue1pi.root", "nue1pi",4);
 }
