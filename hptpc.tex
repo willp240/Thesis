@@ -1,10 +1,10 @@
-\chapter{Future Near Detectors for Long Baseline Neutrino Oscillation Experiments}
+\chapter{Future Near Detectors for Long Baseline Neutrino Oscillation Experiments}\label{sec:hptpc}
 
 For T2K, the statistical error is still the largest uncertainty on oscillation measurements. This will not be the case for the future long baseline neutrino oscillation experiments, HK and DUNE, and so they aim to perform 5$\sigma$ measurements of $\delta_{CP}$. However, as the statistical error becomes less significant, it is ever more important that systematic uncertainties are reduced. To achieve the target sensitivity, systematic errors will need to be reduced to the 1-2$\%$ level.
 
 As discussed in Section \ref{}, cross-section uncertainties are the dominant systematic, and these depend heavily on theoretical nuclear models. This is because the target nucleon resides inside a nucleus, and so nuclear effects and final state interactions (FSI) alter the measured kinematics of final state particles. As shown in Section \ref{sec:interactions}, FSI effects cause the neutrino energy to be reconstructed incorrectly, and interactions to be misclassified, contributing a large systematic uncertainty. To reduce these uncertainties, tensions in nuclear models must be resolved, which can only be done with improved measurements of the multiplicity and momentum distributions of final state particles \cite{nustecscat}.
 
-The NEUT, GENIE, and NuWro \cite{nuwro} neutrino event generators use cascade models tuned to hadron-nucleus scattering measurements to simulate final-state particles leaving the target nucleus. However, these measurements are sparse, as shown in Figure \ref{fig:nucxsec}, and so semi-empirical parametrisations are used to extrapolate to the relevant momentum ranges and target nuclei. The parametrisations are different in the two generators, leading to significant differences in the multiplicity of final state protons, as shown in Figure \ref{fig:generators}. Below 100 MeV, the proton momentum distributions diverge considerably, but this is below the detection threshold of current detectors.
+The NEUT, GENIE, and NuWro \cite{nuwro} neutrino event generators use cascade models tuned to hadron-nucleus scattering measurements to simulate final-state particles leaving the target nucleus. However, these measurements are sparse, as shown in Figure \ref{fig:nucxsec}, and so semi-empirical parametrisations are used to extrapolate to the relevant momentum ranges and target nuclei. The parametrisations are different in the three generators, leading to significant differences in the multiplicity of final state protons, as shown in Figure \ref{fig:generators}. Below 100 MeV, the proton momentum distributions diverge considerably, but this is below the detection threshold of current detectors.
 
 \begin{figure}
 \centering
@@ -22,7 +22,7 @@ It is therefore crucial that future near detectors are able to accurately measur
 
 \section{High Pressure Time Projection Chamber}
 
-A high pressure time projection chamber (HPTPC) is a proposed near detector for future long baseline neutrino oscillation experiments. It is designed to be able to probe the low momentum region of parameter space to resolve nuclear model tensions and reduce neutrino interaction cross section uncertainties.
+A high pressure time projection chamber (HPTPC) is a proposed near detector for future long baseline neutrino oscillation experiments. It is designed to be able to probe the low momentum region of parameter space to resolve nuclear model tensions and reduce neutrino interaction cross-section uncertainties.
 
 Gas TPCs have lower momentum thresholds for detecting secondary particles as low energy hadrons travel further from the interaction point in gas than in denser detectors. The proton detection threshold is $\sim$110 MeV in water Cerenkov detectors, and $\sim$400 MeV in liquid argon TPCs. These are both too high to resolve model discrepancies. 
 
@@ -127,7 +127,7 @@ The selected events are then divided by pion and proton multiplicity, giving sev
 
 \end{itemize}
 
-The cross-section and flux systematics from the 2015 T2K oscillation analysis, described in \cite{tn265} and \cite{tn217} respectively, were applied. Detector systematics have not been developed for the HPTPC, and so none were applied to either the HPTPC or ND280 MC.
+The cross-section and flux systematics from the 2015 T2K oscillation analysis, described in \cite{tn265} and \cite{tn217} respectively, were applied. Detector systematics have not been developed for the HPTPC, so weren't applied to either the HPTPC or ND280 MC.
 
 The total number of events in each sample, for each detector, are shown in Table \ref{tab:hptpcrates}.
 
@@ -451,19 +451,16 @@ Of the 1 $\pi$ parameters, the $I_{1/2}$ non-resonant background is the only unc
 
 The FSI parameters all have similar constraints for the HPTPC and ND280, but a singificant improvement from using the STVs.
 
-No parameter has a larger uncertainty for the HPTPC STV fit than the ND280 $p_{\mu}$-cos$\theta_{\mu}$ fit.
+The majority of parameters have a smaller uncertainty for the HPTPC STV fit than the ND280 $p_{\mu}$-cos$\theta_{\mu}$ fit.
 
 These results show that lowering detection thresholds, and using more kinematic information than just the lepton variables, can improve the constraint of systematic uncertainties in the fit. However, this is not a complete study, for a number of reasons. Firstly, without detector systematics in the fit the results do not tell the full story. These could correlate with the other parameters differently for the two detectors, altering the uncertainties in each fit.
 
 There is also low statistics used in this study compared to the full T2K oscillation analysis. Using the entire runs 2-9 MC to produce HPTPC-like events would give a better comparison of the potential sensitivities.
 
-Furthermore, the HPTPC events are truth-smeared ND280 FGD1 events, and so the target is carbon. Future studies aiming for a more complete comparison of the sensitivity of the detectors should use a full simulation of an HPTPC with different target gasses. The HPTPC would also be larger than ND280, which is not accounted for in this study. 
+Furthermore, the HPTPC events are truth-smeared ND280 FGD1 events, and so the target is carbon. Future studies aiming for a more complete comparison of the sensitivity of the detectors should use a full simulation of an HPTPC with different target gasses. The target volume of an HPTPC would also be larger than that of ND280, which is not accounted for in this study. 
 
 Further improvements to the fitting framework could also help achieve the full potential of an HPTPC. With the increase in statistics future experiments will benefit from, events could be binned in more than two variables. This would allow better characterisation of interactions, and so systematics could be applied to the target events more accurately. The systematics themselves could also be generated to be more appropriate for use with transverse kinematics. The systematics used in this study were designed to depend on the leptonic information in the event. As the lower detection thresholds allow better measurements of the hadronic side of interactions, models constructed to use this information would better use the full constraining power of an HPTPC.
 
-However, this study does show that just by lowering detection thresholds, systematic uncertainties gain some improvement in constraint, which will allow better distinguishing of models.
+However, this study does show that just by lowering detection thresholds, systematic uncertainties gain an improvement in constraint, which will allow better distinguishing of models.
 
-%Asimov in Pmu comp with STVs
-%caveats: no det systs, low stats, events only on C, xs systs for lepton kin vars, hptpc will be bigger
-%future studies: gas mixture, scale by size, 3 variables? 
 \newpage

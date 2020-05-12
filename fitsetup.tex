@@ -11,7 +11,7 @@ N^{\nu_{\beta}}_{SK} = \phi^{\nu_\alpha}_{SK} \cdot \sigma^{\nu_{\beta}} \cdot \
 
 where $N^{\nu_\beta}_{SK}$ is the number of neutrinos of flavour $\beta$, $\phi^{\nu_\alpha}_{SK}$ is the flux of neutrinos of flavour $\alpha$ at SK without oscillation, $\sigma^{\nu_{\beta}}$ is the interaction cross-section for neutrinos of flavour $\beta$ at SK, $\epsilon^{\nu_\beta}_{SK} $ is the detector efficiency of SK for neutrinos of flavour $\beta$, and $P_{PMNS}(\nu_{\alpha}\rightarrow\nu_{\beta})$ is the probability that a neutrino produced as flavour $\alpha$ oscillates to flavour $\beta$ before reaching SK.
 
-There are degeneracies between the flux, cross-section, and detector efficiency models, and the PMNS parameters. A change in one of the nuisance parameters mimics the effect of a change in one of the parameters of interest. Therefore it is crucial to constrain the model parameters as much as possible. This is done using near detector data, where the number of neutrinos is measured before oscillation and so the  nuisance parameters can be disentangled from the oscillation parameters. The near detector samples also have higher statistics than the SK statistics, and using them to constrain nuisance parameters decreases the uncertainty on the predicted event rate at SK from \red{$X\%$ to $Y\%$}. The constraint on systematic uncertainties at T2K comes almost entirely from the use of near detector data, as shown in Figure \ref{fig:ndskconstraint} by the postfit uncertainties of cross-section parameters from a near detector only fit, and joint near and far detector fit from the 2018 oscillation analysis. Figure \ref{fig:ndconstraint}, also from the 2018 oscillation analysis, shows the SK prediction with and without the near detector constraint. The uncertainty bands are much narrower when using near detector data in the prediction, further showing the significance of the near detector on the full fit. Without the near detector constraint, T2K would not be able to make the world leading oscillation measurements it does.
+There are degeneracies between the flux, cross-section, and detector efficiency models, and the PMNS parameters. A change in one of the nuisance parameters mimics the effect of a change in one of the parameters of interest. Therefore it is crucial to constrain the model parameters as much as possible. This is done using near detector data, where the number of neutrinos is measured before oscillation and so the  nuisance parameters can be disentangled from the oscillation parameters. The near detector samples also have higher statistics than the SK statistics, and using them to constrain nuisance parameters decreases the uncertainty on the predicted event rate at SK from $\sim$15$\%$ to $\sim$5$\%$. The constraint on systematic uncertainties at T2K comes almost entirely from the use of near detector data, as shown in Figure \ref{fig:ndskconstraint} by the postfit uncertainties of cross-section parameters from a near detector only fit, and joint near and far detector fit from the 2018 oscillation analysis. Figure \ref{fig:ndconstraint}, also from the 2018 oscillation analysis, shows the SK prediction with and without the near detector constraint. The uncertainty bands are much narrower when using near detector data in the prediction, further showing the significance of the near detector on the full fit. Without the near detector constraint, T2K would not be able to make the world leading oscillation measurements it does.
 
 \begin{figure}[!htbp]
 \centering
@@ -864,8 +864,8 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics*[width=0.7\textwidth,clip]{figs/xseccov}
-\caption{The cross-section correlation matrix.}\label{fig:xseccorr}
+\includegraphics*[width=0.7\textwidth,clip]{figs/xseccorr}
+\caption{The cross-section correlation matrix.}\label{fig:xseccov}
 \end{figure}
 
 \subsubsection{Binding Energy}\label{sec:eb}
@@ -1030,27 +1030,79 @@ There are six sources of flux uncertainty:
 
 \end{itemize}
 
-The fractional sizes of the different sources of ND280 flux systematic are shown in Figure \ref{fig:fluxsourceND}, for different neutrino signs. The hadron production contribution dominates, and the total uncertainty is $\sim10\%$ around the beam peak energy at 600 MeV. The proton beam alignment becomes more significant around 1 GeV. The black dotted line shows the total flux uncertainty using the previous version of the model. This also used the full replica target tuning; the improvement comes from using the latest FLUKA\cite{fluka} release. Similar results are seen for the SK flux uncertainties, shown in Figure \ref{fig:fluxsourceSK}.\red{Get better quality Plots}
+The fractional sizes of the different sources of ND280 flux systematic are shown in Figure \ref{fig:fluxsourceND}, for different neutrino signs. The hadron production contribution dominates, and the total uncertainty is $\sim10\%$ around the beam peak energy at 600 MeV. The proton beam alignment becomes more significant around 1 GeV. The black dotted line shows the total flux uncertainty using the previous version of the model. This also used the full replica target tuning; the improvement comes from using the latest FLUKA\cite{fluka} release. Similar results are seen for the SK flux uncertainties, shown in Figure \ref{fig:fluxsourceSK}.
 
-\begin{center}
 \begin{figure}[!htbp]
-\begin{adjustwidth}{-.9in}{-.9in}
-\centering
-\includegraphics*[width=0.95\textwidth,clip]{figs/fluxsourceND}
-\caption{Relative sizes of the sources of flux uncertainties in the ND280 flux parameters.}\label{fig:fluxsourceND}
-\end{adjustwidth}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_fhc_numu}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_fhc_numubar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_fhc_nue}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_fhc_nuebar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_rhc_numu}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_rhc_numubar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_rhc_nue}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_rhc_nuebar}
+\end{subfigure}
+\caption{Relative sizes of the sources of uncertainties in the ND280 flux parameters. "13av7.1" (black solid line) is the version used in this analysis, and is compared with the previous version, "13v6" (dotted line).}\label{fig:fluxsourceND}
 \end{figure}
-\end{center}
 
-\begin{center}
 \begin{figure}[!htbp]
-\begin{adjustwidth}{-.9in}{-.9in}
-\centering
-\includegraphics*[width=0.95\textwidth,clip]{figs/fluxsourceSK}
-\caption{Relative sizes of the sources of flux uncertainties in the SK flux parameters.}\label{fig:fluxsourceSK}
-\end{adjustwidth}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_fhc_numu}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_fhc_numubar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_fhc_nue}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_fhc_nuebar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_rhc_numu}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_rhc_numubar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_rhc_nue}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_rhc_nuebar}
+\end{subfigure}
+\caption{Relative sizes of the sources of uncertainties in the SK flux parameters. "13av7.1" (black solid line) is the version used in this analysis, and is compared with the previous version, "13v6" (dotted line). }\label{fig:fluxsourceSK}
 \end{figure}
-\end{center}
 
 The flux uncertainty model is parametrised as 100 true neutrino energy bin normalisations for each neutrino species, horn current mode, and detector. The binnings are as follows:
 

@@ -1,10 +1,10 @@
 \chapter{2020 Near Detector Fit Results}\label{sec:2020Fit}
 
-The results of the analysis are presented in this Chapter, starting with the nominal MC prediction and fit validations in Sections \ref{sec:nommc}, \ref{sec:llhscan}, \ref{sec:sigvar}, and \ref{sec:asimov}. The data fit is presented in \ref{sec:datafit}, and the posterior predictive distributions and p-values are are shown in \ref{sec:respostpred}. Results from fits with updated binnings are then compared in Section \ref{sec:newbin}.
+The results of the analysis are presented in this Chapter, starting with the nominal MC prediction and fit validations in Sections \ref{sec:nommc}, \ref{sec:llhscan}, \ref{sec:sigvar}, and \ref{sec:asimov}. The data fit is presented in \ref{sec:datafit}, and the posterior predictive distributions and p-values are are shown in \ref{sec:respostpred}. Results from fits with updated binnings are then compared in Section \ref{sec:newbin}. Finally, the impact on the sensitivity to oscillation parameters are shown in Section \ref{sec:oscpar}.
 
 \section{Nominal MC}\label{sec:nommc}
 
-The data, unweighted MC, and nominal MC event rates for each sample are shown in Table \ref{tab:nomrates}. The CC 0$\pi$ samples are consistently underestimated in the MC prediction by $\sim$20$\%$, the CC 1$\pi$ samples are overestimated by $\sim$10$\%$ for FHC and underestimated by $\sim$5-10$\%$ for RHC, and the CC Other samples are underestimated by $\sim$20-30$\%$. The differences to data are consistent across the FGDs to within $\sim$2$\%$. Overall, the MC prediction is $16\%$ lower than the observed data.
+The data, unweighted MC, and nominal MC event rates for each sample are shown in Table \ref{tab:nomrates}. The CC 0$\pi$ samples are consistently underestimated in the MC prediction by $\sim$15-20$\%$, the CC 1$\pi$ samples are overestimated by $\sim$10$\%$ for FHC and underestimated by $\sim$5-10$\%$ for RHC, and the CC Other samples are underestimated by $\sim$20-30$\%$. The differences to data are consistent across the FGDs to within $\sim$5$\%$. Overall, the MC prediction is $15\%$ lower than the observed data.
 
 \begin{center}
 \begin{table}
@@ -455,7 +455,7 @@ Log-likelihood scans are also run as part of the validations. The nominal MC is 
 
 After each scan, the parameter is reset, and the next parameter in question varied. The likelihood response is expected to be fairly Gaussian for each parameter, as the prior uncertainty is either Gaussian or flat, and most parameters are expected to have a symmetric effect on the number of events in individual bins. The minimum should be at the prior central value of the parameter, and the log-likelihood here should be 0, as at this point the reweighted MC is identical to the nominal MC. No variation of a single parameter should be able to produce a set of distributions more similar to the nominal MC than itself.
 
-The log-likelihood scans for four selected interaction parameters are shown in Figure \ref{fig:llhxsec}. As expected, the test statistic minimises to 0 at the prior central value of each parameter. The penalty contribution to the log-likelihood dominates for the CC normalisation parameter, due to the prior uncertainty being so small. Conversely, the 2p2h $^{12}$C to $^{16}$O normalisation parameter has a weaker prior and therefore a larger contribution from the sample likelihood. The likelihood for the $0.0 < Q^2 < 0.05$ GeV$^2$ normalisation parameter is entirely dominated by the sample contribution, as the prior is flat. The CC DIS and mult-$\pi$ $\bar{\nu}$ normalisation parameter has more balanced contributions from both the sample and penalty likelihoods.
+The log-likelihood scans for four selected interaction parameters are shown in Figure \ref{fig:llhxsec}. As expected, the test statistic minimises to 0 at the prior central value of each parameter. The penalty contribution to the log-likelihood dominates for the CC normalisation parameter, due to the prior uncertainty being so small. Conversely, the 2p2h $^{12}$C to $^{16}$O normalisation parameter has a weaker prior and therefore a larger contribution from the sample likelihood. The likelihood for the $0.05 < Q^2 < 0.10$ GeV$^2$ normalisation parameter is entirely dominated by the sample contribution, as the prior is flat. The CC DIS and mult-$\pi$ $\bar{\nu}$ normalisation parameter has more balanced contributions from both the sample and penalty likelihoods.
 
 \begin{figure}
 \centering
@@ -472,7 +472,7 @@ The log-likelihood scans for four selected interaction parameters are shown in F
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.7\linewidth]{figs/llh/Q2_norm_1_llh.pdf}
-  \caption{$0.0 < Q^2 < 0.05$ normalisation}
+  \caption{$0.05 < Q^2 < 0.10$ normalisation}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -607,7 +607,7 @@ One varied interaction parameter for each sample is shown in Figure \ref{fig:sig
 \begin{subfigure}{.32\textwidth}
   \centering
   \includegraphics[width=0.85\linewidth]{figs/sig/FGD2_anti-numuCC_0pi_EB_dial_O_nubar_+1sig.pdf}
-  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 0$\pi$: E$_{b}$ $^{16}$O $\bar{\nu}$ += $1\sigma$}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 0$\pi$: $E_{b}$ $^{16}$O $\bar{\nu}$ += $1\sigma$}
   \label{fig:sigvar_FGD2_anti-numuCC_0pi}
 \end{subfigure}
 \begin{subfigure}{.32\textwidth}
@@ -808,7 +808,7 @@ The postfit correlation matrix for flux and interaction parameters is shown in F
 
 \begin{figure}
 \centering
-\includegraphics*[width=0.9\textwidth,clip]{figs/asmvcorr}
+\includegraphics*[width=0.9\textwidth,clip]{figs/Mach3AsmvCorr}
 \caption{Asimov postfit correlation matrix for flux and interaction parameters.}\label{fig:asmvpostfitcov}
 \end{figure}
 
@@ -943,7 +943,7 @@ The MC was then fitted to the real data. The postfit flux parameter values are s
 
 The RHC $\bar{\nu_{\mu}}$ parameters are also pulled significantly upwards, to $\sim$15$\%$. The pull oscillates around $\sim$10$\%$ as energy increases. The RHC $\bar{\nu_e}$ parameters oscillate around nominal below 1 GeV, but increase to $\sim$10$\%$ at higher energies. The RHC $\nu_{\mu}$ parameters are pulled to $\sim$10$\%$, but are closer to nominal above 2.5 GeV. Similar behaviour is seen for the ND280 and SK parameters, as would be expected due to their prefit correlations.
 
-Although many of the flux parameters are pulled significantly away from their prior central values, and beyond the prefit $\pm1\sigma$ range, these results do not represent a strong bias in the fit. As the flux parameters are so strongly correlated, a pull in one translates to many of them moving. The flux penalty contribution to the log-likelihood at each step in the Markov Chain is shown in Figure \ref{fig:llh_fluxdat}. The stationary distribution is at -2LLH$\approx$50, which for 100 flux parameters corresponds to $\sim1\chi^2$ per degree of freedom.
+Although many of the flux parameters are pulled significantly away from their prior central values, and beyond the prefit $\pm1\sigma$ range, these results do not represent a strong bias in the fit. As the flux parameters are so strongly correlated, a pull in one translates to many of them moving. The flux penalty contribution to the log-likelihood at each step in the Markov Chain is shown in Figure \ref{fig:llh_fluxdat}. The stationary distribution is at -LLH$\approx$50, which for 100 flux parameters corresponds to $\sim1\chi^2$ per degree of freedom.
 
 \begin{figure}
 \centering
@@ -1044,15 +1044,15 @@ Although many of the flux parameters are pulled significantly away from their pr
 
 The interaction parameters are shown in Figure \ref{fig:datxsec}. The $M^{QE}_A$ parameter is pulled above its prior central value to much closer to the nominal generated value (corresponding to 1.2 GeV$^2$). The 2p2h normalisations are all consistent with the nominal value within the postfit uncertainty. 2p2h shape $^{12}$C is the only 2p2h parameter pulled significantly away from nominal, to $\sim$1.7, favouring the Nieves model. This is not consistent with the 2p2h shape $^{16}$O parameter which is much closer to nominal.
 
-The $Q^2$ normalisations all sit slightly above their prior central values, and the shape of the increase in parameter value with increasing $Q^2$ is similar to the priors. The $Q^2>1.0$ GeV is the only $Q^2$ normalisation pulled significantly away from the prior.
+The $Q^2$ normalisations all sit slightly above their prior central values, and the shape of the increase in parameter value with increasing $Q^2$ is similar to the priors. The $Q^2>1.0$ GeV$^2$ is the only $Q^2$ normalisation pulled significantly away from the prior.
 
-The 1D distributions for the $E_b$ parameters are shown in Figure \ref{fig:Ebdatares}. Although the distributions are non-Gaussian, making it difficult to extract a single central value, the highest posterior density, and arithmetic means are all within $1\sigma$ of the prior.
+The 1D distributions for the $E_b$ parameters are shown in Figure \ref{fig:Ebdatares}. Although the distributions are non-Gaussian, making it difficult to extract a single central value, the highest posterior densities, and arithmetic means are all within $1\sigma$ of the prior.
 
 The $M_A^{RES}$ parameter is pulled down, beyond the prior uncertainty, while the other single $\pi$ production parameters are all consistent with their nominal values. This could suggest $M_A^{RES}$ is soaking up deficiencies in the single $\pi$ production model.
 
 There is tension between the BY corrections, with the BY DIS parameter being pulled to the edge of its 100$\%$ prior uncertainty, and the BY mult-$\pi$ parameter staying at its nominal value. The CC misc. parameter is also pushed high, but has a large prior uncertainty. The other parameters targeting events in the CC Other samples are very consistent with their prior central values. 
 
-The CC coherent, NC, and $\pi$ FSI parameters are all within $1\sigma$ of their nominal values, apart from NC Other ND280, which has very little constraint from ND280 data due to low statistics. 
+The CC coherent, NC, and $\pi$ FSI parameters are all within $1\sigma$ of their nominal values, apart from NC Other ND280, which has very little constraint from the data due to low statistics. 
 
 \begin{figure}
 \centering
@@ -1123,11 +1123,13 @@ The strength of the $E_b$ correlations and anti-correlations has increased since
 
 There are strong correlations between the 2p2h and CC 1$\pi$ parameters. This is likely due to final state interactions in which a $\pi$ is absorbed, causing CC 1$\pi$ events to be detected as CC 0$\pi$. The 2p2h shape parameters are more anti-correlated than for the Asimov fit. 2p2h shape $^{12}$C is still correlated with the $Q^2$ normalisations, with increasing strength at lower $Q^2$, whereas 2p2h shape $^{16}$O is now anti-correlated with them, with increasing strength at higher $Q^2$. Both 2p2h shape parameters are correlated with the fluxes, having been anti-correlated in the Asimov fit.
 
+The $M_{A}^{RES}$ and $C_{A}^5$ parameters have a stronger anti-correlation with each other than in the data fit.
+
 The $Q^2$ normalisations, DIS and mult-$\pi$, and $\pi$ FSI parameters all have internal correlations and anti-correlations, with a slight increase in strength compared to the Asimov fit. 
 
 \begin{figure}
 \centering
-\includegraphics*[width=0.9\textwidth,clip]{figs/CorrData}
+\includegraphics*[width=0.9\textwidth,clip]{figs/MaCh3DataCorr}
 \caption{Data postfit correlation matrix for flux and interaction parameters.}\label{fig:datpostfitcov}
 \end{figure}
 
@@ -1331,7 +1333,7 @@ Posterior predictions are produced using the method described in Section \ref{se
 
 \subsection{Posterior Predictive p-values}
 
-Posterior predictive p-values were calculated using the methods described in Section \ref{sec:pval}. Discouragingly, the total p-value is 0.00 for both methods, as shown in Figure \ref{fig:pval}. The $y=x$ line is shown in red, below which steps contribute to the p-value. Furthermore, the individual p-values are low for the majority of samples, as shown in Table \ref{tab:pval}. All but two of the CC 0$\pi$ samples have a p-value $<5\%$, and for RHC $\bar{\nu}$ the p-values $=0.0\%$. The CC $1\pi$ samples are generally higher, but are $<5\%$ for FGD2 FHC $\nu$, and both RHC $\nu$ samples. For CC Other, only the FGD1 RHC $\bar{\nu}$ and RHC $\nu$ samples have p-values $>0.05\%$. The p-values are not consistent across FGD1 and 2, suggesting differences in how well the two modelled.
+Posterior predictive p-values were calculated using the methods described in Section \ref{sec:pval}. Discouragingly, the total p-value is 0.00 for both methods, as shown in Figure \ref{fig:pval}. The $y=x$ line is shown in red, below which steps contribute to the p-value. Furthermore, the individual p-values are low for the majority of samples, as shown in Table \ref{tab:pval}. All but two of the CC 0$\pi$ samples have a p-value $<5\%$, and for RHC $\bar{\nu}$ the p-values $=0.0\%$. The CC $1\pi$ samples are generally higher, but are $<5\%$ for FGD2 FHC $\nu$, and both RHC $\nu$ samples. For CC Other, only the FGD1 RHC $\bar{\nu}$ and RHC $\nu$ samples have p-values $>0.05\%$. The p-values are not consistent across FGD1 and 2, suggesting differences in how well the two are modelled.
 
 The two methods of calculating the p-value are consistent. Although they are not all identical, they follow the same trends and are within $5\%$ of each other for every sample. This suggests the 2000 drawn steps describe the posterior distribution sufficiently.
 
@@ -1390,7 +1392,7 @@ However, it is difficult to identify any definitive trends which could explain a
 
 For CC $1\pi$, the distributions for the low p-value RHC $\nu$ samples both have large contributions from individual bins, but in different regions of $p_{\mu}$-cos$\theta_{\mu}$ space. The FHC $\nu$ and RHC $\bar{\nu}$ log-likelihood distributions are more uniform, but there is a large contribution from one bin in the peak for FGD1 FHC $\nu$ despite the high p-value.
 
-Overall the high log-likelihoods aren't coming from a consistent region in $p_{\mu}$-cos$\theta_{\mu}$, so the low p-values are not just driven by a single set of kinematics being badly modelled or reconstructed. 
+Overall, the high log-likelihoods aren't coming from a consistent region in $p_{\mu}$-cos$\theta_{\mu}$, so the low p-values are not just driven by a single set of kinematics being badly modelled or reconstructed. 
 
 \begin{figure}
 \centering
@@ -1539,7 +1541,7 @@ $\delta_{CP}$ & -1.601 \\
 
 The SK MC used corresponds to the same run periods as for ND280, but for a higher POT as the detector was on line for a larger proportion of these runs. The total data POT is 1.966x$10^{21}$ for FHC and 1.635x$10^{21}$ for RHC.
 
-The total prior and posterior event rates for each of the SK samples are shown in Table \ref{tab:skrates}. The total number of events has been increased beyond the prior uncertainty for all samples except 1R$e$ 1d.e. This is expected given the nominal ND280 MC underestimated the data. The uncertainties for all samples have been reduced significantly, as shown in Table \ref{tab:SKerr}, and the overall event rate uncertainty has been reduced from $11.84\%$ to $2.00\%$ by the near detector fit. 
+The total prior and posterior event rates for each of the SK samples are shown in Table \ref{tab:skrates}. The total number of events has been increased beyond the prior uncertainty for all samples except 1R$e$ 1d.e. This is expected given the nominal ND280 MC underestimated the data. The uncertainties for all samples have been reduced significantly, as shown in Table \ref{tab:SKerr}, and the overall event rate uncertainty has been reduced from $11.84\%$ to $1.93\%$ by the near detector fit. 
 
 \begin{center}
 \begin{table}
@@ -1556,12 +1558,12 @@ The total prior and posterior event rates for each of the SK samples are shown i
 & \multicolumn{3}{c}{\textbf{Prior}} & \multicolumn{3}{c}{\textbf{Posterior}} \\
 \hline
 \hline
-\textbf{1R$_{\mu}$} & 286.62& $\pm$ &38.24 & 348.38& $\pm$ &6.78 \\
-\textbf{RHC 1R$_{\mu}$} & 120.82& $\pm$ &14.61 & 138.32& $\pm$ &3.49\\
-\textbf{1R$_{e}$} & 73.52& $\pm$ &9.96 & 95.14& $\pm$ &3.14\\
-\textbf{RHC 1R$_{e}$} & 14.13& $\pm$ &1.76 & 16.49& $\pm$ &0.64\\
-\textbf{1R$_{e}$ 1d.e.} & 10.48 & $\pm$ &2.34 & 9.09& $\pm$ &0.43\\ \hline
-\textbf{Total} & 505.56 & $\pm$ & 59.88 & 607.43 & $\pm$ & 12.12 \\ \hline\hline
+\textbf{1R$_{\mu}$} & 286.62& $\pm$ &38.24 & 347.46& $\pm$ &6.92 \\
+\textbf{RHC 1R$_{\mu}$} & 120.82& $\pm$ &14.61 & 134.94& $\pm$ &3.00\\
+\textbf{1R$_{e}$} & 73.52& $\pm$ &9.96 & 94.56& $\pm$ &3.16\\
+\textbf{RHC 1R$_{e}$} & 14.13& $\pm$ &1.76 & 15.96& $\pm$ &0.55\\
+\textbf{1R$_{e}$ 1d.e.} & 10.48 & $\pm$ &2.34 & 9.04& $\pm$ &0.42\\ \hline
+\textbf{Total} & 505.56 & $\pm$ & 59.88 & 601.96& $\pm$ &11.60 \\ \hline\hline
 \end{tabular}
 \caption{Prior and posterior predictive SK event rates.}
 \label{tab:skrates}
@@ -1576,12 +1578,12 @@ The total prior and posterior event rates for each of the SK samples are shown i
 \multicolumn{1}{c||}{\textbf{Sample}} & \multicolumn{2}{c}{$\delta N/N (\%)$}\\
 & \multicolumn{1}{c}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}} \\
 \hline\hline
-\textbf{1R$_{\mu}$} & 13.33 & 1.95\\
-\textbf{RHC 1R$_{\mu}$} & 12.09 & 2.52 \\ 
-\textbf{1R$_{e}$} & 13.55 & 3.30\\
-\textbf{RHC 1R$_{e}$} & 12.46 & 3.88\\
-\textbf{1R$_{e}$ 1d.e.} & 22.33 & 4.73\\ \hline
-\textbf{Total} & 11.84 & 2.00\\ \hline\hline
+\textbf{1R$_{\mu}$} & 13.33 & 1.99\\
+\textbf{RHC 1R$_{\mu}$} & 12.09 & 2.22 \\ 
+\textbf{1R$_{e}$} & 13.55 & 3.34\\
+\textbf{RHC 1R$_{e}$} & 12.46 & 3.45\\
+\textbf{1R$_{e}$ 1d.e.} & 22.33 & 4.65\\ \hline
+\textbf{Total} & 11.84 & 1.93\\ \hline\hline
 \end{tabular}
 \caption{Fractional uncertainties on the prior and posterior predictive SK event rates.}
 \label{tab:SKerr}
@@ -1590,7 +1592,7 @@ The total prior and posterior event rates for each of the SK samples are shown i
 
 The prior and posterior distributions are shown in Figure \ref{fig:skpp}. There is significant enhancement in the the 1R$_{\mu}$ samples at all energies for both FHC and RHC. For RHC, the posterior prediction in the oscillation dip at $E_{rec}\sim0.6$ GeV agrees with the prior. The decrease in depth of the dip in FHC will directly impact the measurement of $\Delta m_{32}^2$, but will not affect sin$^{2}\theta_{23}$ as the location of the dip in $E_{rec}$ is unmoved. 
 
-The 1R$_{e}$ samples are also consistent for FHC and RHC, both showing an enhancement of $\sim1.5$ at the peak energy, around $E_{rec}\sim0.6$ GeV. Below the peak the posterior predictions are within the uncertainty of the priors, whereas above the peak there is a slight enhancement for both samples. The posterior prediction is consistently within the prior uncertainty for the 1R$e$ 1d.e. sample, consistent with the nominal MC prediction for the ND280 CC $1\pi$ samples being closer to data than for CC $0\pi$ and CC Other.
+The 1R$_{e}$ samples are also consistent for FHC and RHC, both showing an enhancement of $\sim1.5$ at the peak energy, around $E_{rec}\sim0.6$ GeV. Below the peak the posterior predictions are within the uncertainty of the priors, whereas above the peak the enhancement is slightly above the uncertainty for both samples. The posterior prediction is consistently within the prior uncertainty for the 1R$e$ 1d.e. sample, consistent with the nominal MC prediction for the ND280 CC $1\pi$ samples being closer to data than for CC $0\pi$ and CC Other.
 
 The error band on the prediction has been reduced for all samples across all energies, particularly in the dip in the 1R$_{\mu}$ samples and peak in 1R$_{e}$ samples.
 
@@ -1627,7 +1629,7 @@ The error band on the prediction has been reduced for all samples across all ene
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/skspecnue1pi}
-   \caption{RHC 1R$_{e}$ 1d.e.}
+   \caption{1R$_{e}$ 1d.e.}
   \label{fig:skppnue1pi}
 \end{subfigure}
 \caption{Prior and posterior predictive SK distributions.}
@@ -1911,7 +1913,7 @@ The interaction parameters are shown in Figure \ref{fig:polyasmvsxsec}. The post
 
 The MC prediction was then fitted to the data using both detector binnings, and compared to the previous fit described in Section \ref{sec:datafit}. The results for all three fits are shown in Figures \ref{fig:polydataflux} and \ref{fig:polydataxsec}. 
 
-The flux parameters are mostly compatible between the three fits. Similar high pulls are seen for all the seen for each, particularly at high energy. The shape of the pulls in energy change slightly, with the two non-uniform fit binning fits lying closer to each other than for the uniform-binning. Only at very high energy for FHC $\nu_{\mu}$ are the postfit values outside $1\sigma$ of each other, but this region has fairly low statistics.
+The flux parameters are mostly compatible between the three fits. Similar high pulls are seen for each, particularly at high energy. The shape of the pulls in energy change slightly, with the two non-uniform fit binning fits lying closer to each other than for the uniform-binning. Only at very high energy for FHC $\nu_{\mu}$ are the postfit values outside $1\sigma$ of each other, but this region has fairly low statistics.
 
 \begin{figure}
 \centering
@@ -2093,7 +2095,7 @@ The posterior predictive event rates for the non-uniform fit binning fits are sh
                 p{0.26cm}
                 r
                 |c
-                c}
+                |c}
 \hline \hline
 \multicolumn{1}{c||}{\textbf{Sample}} & \multicolumn{6}{c|}{\textbf{Posterior Predictive Event Rates}} & \multicolumn{2}{c}{\textbf{-2LLH}}\\
 & \multicolumn{3}{c}{\textbf{Merged-Uniform}} & \multicolumn{3}{c|}{\textbf{Non-Uniform}} & \multicolumn{1}{c}{\textbf{Merged-Uniform}} & \multicolumn{1}{c}{\textbf{Non-Uniform}}\\
@@ -2207,9 +2209,120 @@ In general the largest improvements in p-values occur for samples which already 
 \end{table}
 \end{center}
 
-The SK posterior predictions are shown in Figure \ref{}. %describe distributions and trends
-%reductions in uncertainty
+The SK posterior predictive event rates are shown in Table \ref{tab:skratespoly}. The 1R$_{e}$ 1d.e. sample is the only sample for which the non-uniform fit and detector binning prediction is not higher than the non-uniform fit and uniform detector binning prediction. However, the differences are smaller than the uncertainty for all samples. Comparing to Table \ref{tab:skrates}, the event rates for the two non-uniform binning fits are within uncertainty of the event rates for the uniform binning fit for every sample.
 
-\section{Oscillation Parameter Sensitivity}
+\begin{center}
+\begin{table}
+\center
+\begin{tabular}{S||
+                r
+                p{0.2cm}
+                r
+                |r
+                p{0.5cm}
+                r}
+\hline \hline
+\multicolumn{1}{c||}{\textbf{Sample}} & \multicolumn{6}{c}{\textbf{Event Rates}} \\
+& \multicolumn{3}{c}{\textbf{Non-Uniform}} & \multicolumn{3}{c}{\textbf{Non-Uniform}}\\
+& \multicolumn{3}{c}{\textbf{Fit Bins}} & \multicolumn{3}{c}{\textbf{Fit and Det. Bins}}\\
+\hline
+\hline
+\textbf{1R$_{\mu}$} & 347.67& $\pm$ &8.05 & 351.25& $\pm$ &7.13 \\
+\textbf{RHC 1R$_{\mu}$} & 134.81& $\pm$ &3.59 & 136.57& $\pm$ &3.12\\
+\textbf{1R$_{e}$} & 95.49& $\pm$ &3.69 & 96.63& $\pm$ &3.18\\
+\textbf{RHC 1R$_{e}$} & 16.17& $\pm$ &0.65 & 16.33& $\pm$ &0.55\\
+\textbf{1R$_{e}$ 1d.e.} & 8.89& $\pm$ &0.47 & 8.62& $\pm$ &0.42\\ \hline
+\textbf{Total} & 603.03& $\pm$ &13.96 & 609.41& $\pm$ &11.76 \\ \hline\hline
+\end{tabular}
+\caption{Prior and posterior predictive SK event rates.}
+\label{tab:skratespoly}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}
+\center
+\begin{tabular}{l||c c}
+\hline \hline
+\multicolumn{1}{c||}{\textbf{Sample}} & \multicolumn{2}{c}{$\delta N/N (\%)$}\\
+& \multicolumn{1}{c}{\textbf{Non-Uniform}} & \multicolumn{1}{c}{\textbf{Non-Uniform}}\\
+& \multicolumn{1}{c}{\textbf{Fit Bins}} & \multicolumn{1}{c}{\textbf{Fit and Det. Bins}}\\
+\hline\hline
+\textbf{1R$_{\mu}$} & 2.32 & 2.03\\
+\textbf{RHC 1R$_{\mu}$} & 2.66 & 2.28 \\ 
+\textbf{1R$_{e}$} & 3.86 & 3.30\\
+\textbf{RHC 1R$_{e}$} & 4.02 & 3.37\\
+\textbf{1R$_{e}$ 1d.e.} & 5.29 & 4.87\\ \hline
+\textbf{Total} & 2.31 & 1.93\\ \hline\hline
+\end{tabular}
+\caption{Fractional uncertainties on the prior and posterior predictive SK event rates.}
+\label{tab:SKerr}
+\end{table}
+\end{center}
+
+The posterior predictive distributions are shown in Figure \ref{fig:skpppoly}. There is a general trend of the non-uniform fit binning fits producing very similar predictions at SK to each other, with more prominent differences to the prediction from the uniform fit binning, as was seen in the postfit parameter values.
+
+For the FHC 1R$_{\mu}$ sample, the height of the peak is slightly higher and is at a slightly lower energy for the uniform fit binning. The dip is at the same energy in all three fits, but is lower for the uniform fit binning. At energies above the dip, the three predictions are very consistent, with the non-uniform fit and detector binning prediction being a very small amount higher. The differences in the RHC 1R$_{\mu}$ sample are very similar as for FHC 1R$_{\mu}$, but the height of the peaks are identical in all three fits.
+
+The predictions for the FHC 1R$_e$ sample has a higher peak for the uniform fit binning fit. Above and below the peak energy, the non-uniform fit binning predictions are slightly higher. This is a larger effect at lower energies.
+
+For the RHC 1R$_e$ sample, the three predictions are very consistent. For the uniform fit binning, the event rate is slightly smaller at low energies than for the other fits, but the difference is very small.
+
+The predictions for the 1R$e$ 1d.e. sample are also compatible across all energies. However, the peak is lower for the non-uniform fit and detector binning. This is the only region in any of the samples where the two non-uniform fit binning predictions aren't closer to each other than the uniform binning. Here, the non-uniform fit and merged-uniform detector binning event rate is slightly lower than the for the uniform binning, but this difference is smaller than the difference to the non-uniform fit and detector binning. 
+
+Overall, the three fit predictions are very compatible, with similar shapes and differences to the prior prediction. All the differences between the three posterior predictions are within the predicted uncertainties.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.95\textwidth}
+  \centering
+  \includegraphics[width=0.29\linewidth]{figs/polyskspecleg}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/polySKnumu}
+  \caption{1R$_{\mu}$}
+  \label{fig:skppnumu}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/polySKnumubar}
+   \caption{RHC 1R$_{\mu}$}
+  \label{fig:skppnumubar}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/polySKnue}
+  \caption{1R$_{e}$}
+  \label{fig:skppnue}
+\end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/polySKnuebar}
+   \caption{RHC 1R$_{e}$}
+  \label{fig:skppnuebar}
+  \end{subfigure}
+\begin{subfigure}{.49\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/polySKnue1pi}
+   \caption{1R$_{e}$ 1d.e.}
+  \label{fig:skppnue1pi}
+\end{subfigure}
+\caption{Posterior predictive SK distributions with non-uniform binnings.}
+\label{fig:skpppoly}
+\end{figure}
+
+\section{Oscillation Parameter Sensitivity}\label{sec:oscpar}
+
+To see the full effect of the updates to the near detector fit on the oscillation analysis, joint Asimov fits were run. These fit the ND280 and SK MC to the ND280 data and SK nominal MC. 
+
+Like for the SK posterior predictions, the oscillation parameters are set to the values in Table \ref{tab:oscpar}, and the SK detector parameters are set to their nominal values. 
+
+The results are compared to those from the 2018 oscillation analysis, with the improvement in sensitivity coming from the increase in data and updates to the input models, fitting framework, and systematic treatments described in this thesis. 
+
+Figure \ref{} shows the credible intervals of the disappearance parameters $\Delta^{2}_{23}$ and sin$^{2}\theta_{23}$...
+
+\red{First show flux/xsec comparison for nd only vs joint fit. Then oscillation parameter contours and discuss more}
+
 
 \newpage
