@@ -11,80 +11,74 @@ double WrongSignMu[nBinsWrongSignMu+1]  = {0.3, 0.7, 1.0, 1.5, 2.5, 30.0};
 double WrongSignE[nBinsWrongSignE+1]    = {0.3, 2.5, 30.0};
 
 TH1D* PrettifyMe(TH1D *One, int which) {
-
   TH1D* OneCopy = NULL;
   std::string Name = One->GetName();
-
   int offset = -1;
   switch (which) {
-    case 0:
-      OneCopy = new TH1D((Name+"_ND280_FHC_numu").c_str(), "ND280 FHC #nu_{#mu}", nBinsSameSignMu, SameSignMu);
-      offset = 0;
-      break;
-    case 1:
-      OneCopy = new TH1D((Name+"_ND280_FHC_nue").c_str(), "ND280 FHC #nu_{e}", nBinsSameSignE, SameSignE);
-      offset = nBinsSameSignMu;
-      break;
-    case 2:
-      OneCopy = new TH1D((Name+"_ND280_FHC_numubar").c_str(), "ND280 FHC #bar{#nu}_{#mu}", nBinsWrongSignMu, WrongSignMu);
-      offset = nBinsSameSignE+nBinsSameSignMu;
-      break;
-    case 3:
-      OneCopy = new TH1D((Name+"_ND280_FHC_nuebar").c_str(), "ND280 FHC #bar{#nu}_{e}", nBinsWrongSignE, WrongSignE);
-      offset = nBinsWrongSignMu+nBinsSameSignE+nBinsSameSignMu;
-      break;
-
-    case 4:
-      OneCopy = new TH1D((Name+"_ND280_RHC_numubar").c_str(), "ND280 RHC #bar{#nu}_{#mu}", nBinsSameSignMu, SameSignMu);
-      offset = nBinsWrongSignE+nBinsWrongSignMu+nBinsSameSignE+nBinsSameSignMu;
-      break;
-    case 5:
-      OneCopy = new TH1D((Name+"_ND280_RHC_nuebar").c_str(), "ND280 RHC #bar{#nu}_{e}", nBinsSameSignE, SameSignE);
-      offset = nBinsWrongSignE+nBinsWrongSignMu+nBinsSameSignE+nBinsSameSignMu*2;
-      break;
-    case 6:
-      OneCopy = new TH1D((Name+"_ND280_RHC_numu").c_str(), "ND280 RHC #nu_{#mu}", nBinsWrongSignMu, WrongSignMu);
-      offset = nBinsWrongSignE+nBinsWrongSignMu+nBinsSameSignE*2+nBinsSameSignMu*2;
-      break;
-    case 7:
-      OneCopy = new TH1D((Name+"_ND280_RHC_nue").c_str(), "ND280 RHC #nu_{e}", nBinsWrongSignE, WrongSignE);
-      offset = nBinsWrongSignE+nBinsWrongSignMu*2+nBinsSameSignE*2+nBinsSameSignMu*2;
-      break;
-
-
-    case 8:
-      OneCopy = new TH1D((Name+"_SK_FHC_numu").c_str(), "SK FHC #nu_{#mu}", nBinsSameSignMu, SameSignMu);
-      offset = nBinsWrongSignE*2+nBinsWrongSignMu*2+nBinsSameSignE*2+nBinsSameSignMu*2;
-      break;
-    case 9:
-      OneCopy = new TH1D((Name+"_SK_FHC_nue").c_str(), "SK FHC #nu_{e}", nBinsSameSignE, SameSignE);
-      offset = nBinsWrongSignE*2+nBinsWrongSignMu*2+nBinsSameSignE*2+nBinsSameSignMu*3;
-      break;
-    case 10:
-      OneCopy = new TH1D((Name+"_SK_FHC_numubar").c_str(), "SK FHC #bar{#nu}_{#mu}", nBinsWrongSignMu, WrongSignMu);
-      offset = nBinsWrongSignE*2+nBinsWrongSignMu*2+nBinsSameSignE*3+nBinsSameSignMu*3;
-      break;
-    case 11:
-      OneCopy = new TH1D((Name+"_SK_FHC_nuebar").c_str(), "SK FHC #bar{#nu}_{e}", nBinsWrongSignE, WrongSignE);
-      offset = nBinsWrongSignE*2+nBinsWrongSignMu*3+nBinsSameSignE*3+nBinsSameSignMu*3;
-      break;
-
-    case 12:
-      OneCopy = new TH1D((Name+"_SK_RHC_numubar").c_str(), "SK RHC #bar{#nu}_{#mu}", nBinsSameSignMu, SameSignMu);
-      offset = nBinsWrongSignE*3+nBinsWrongSignMu*3+nBinsSameSignE*3+nBinsSameSignMu*3;
-      break;
-    case 13:
-      OneCopy = new TH1D((Name+"_SK_RHC_nuebar").c_str(), "SK RHC #bar{#nu}_{e}", nBinsSameSignE, SameSignE);
-      offset = nBinsWrongSignE*3+nBinsWrongSignMu*3+nBinsSameSignE*3+nBinsSameSignMu*4;
-      break;
-    case 14:
-      OneCopy = new TH1D((Name+"_SK_RHC_numu").c_str(), "SK RHC #nu_{#mu}", nBinsWrongSignMu, WrongSignMu);
-      offset = nBinsWrongSignE*3+nBinsWrongSignMu*3+nBinsSameSignE*4+nBinsSameSignMu*4;
-      break;
-    case 15:
-      OneCopy = new TH1D((Name+"_SK_RHC_nue").c_str(), "SK RHC #nu_{e}", nBinsWrongSignE, WrongSignE);
-      offset = nBinsWrongSignE*3+nBinsWrongSignMu*4+nBinsSameSignE*4+nBinsSameSignMu*4;
-      break;
+  case 0:
+    OneCopy = new TH1D((Name+"_ND280_FHC_numu").c_str(), "ND280 FHC #nu_{#mu}", nBinsSameSignMu, SameSignMu);
+    offset = 0;
+    break;
+  case 1:
+    OneCopy = new TH1D((Name+"_ND280_FHC_numubar").c_str(), "ND280 FHC #bar{#nu}_{#mu}", nBinsWrongSignMu, WrongSignMu);
+    offset = nBinsSameSignMu;
+    break;
+  case 2:
+    OneCopy = new TH1D((Name+"_ND280_FHC_nue").c_str(), "ND280 FHC #nu_{e}", nBinsSameSignE, SameSignE);
+    offset = nBinsSameSignMu+nBinsWrongSignMu;
+    break;
+  case 3:
+    OneCopy = new TH1D((Name+"_ND280_FHC_nuebar").c_str(), "ND280 FHC #bar{#nu}_{e}", nBinsWrongSignE, WrongSignE);
+    offset = nBinsSameSignMu+nBinsWrongSignMu+nBinsSameSignE;
+    break;
+  case 4:
+    OneCopy = new TH1D((Name+"_ND280_RHC_numu").c_str(), "ND280 RHC #nu_{#mu}", nBinsWrongSignMu, WrongSignMu);
+    offset = nBinsSameSignMu+nBinsWrongSignMu+nBinsSameSignE+nBinsWrongSignE;
+    break;
+  case 5:
+    OneCopy = new TH1D((Name+"_ND280_RHC_numubar").c_str(), "ND280 RHC #bar{#nu}_{#mu}", nBinsSameSignMu, SameSignMu);
+    offset = nBinsSameSignMu+nBinsWrongSignMu*2+nBinsSameSignE+nBinsWrongSignE;
+    break;
+  case 6:
+    OneCopy = new TH1D((Name+"_ND280_RHC_nue").c_str(), "ND280 RHC #nu_{e}", nBinsWrongSignE, WrongSignE);
+    offset = nBinsSameSignMu*2+nBinsWrongSignMu*2+nBinsSameSignE+nBinsWrongSignE;
+    break;
+  case 7:
+    OneCopy = new TH1D((Name+"_ND280_RHC_nuebar").c_str(), "ND280 RHC #bar{#nu}_{e}", nBinsSameSignE, SameSignE);
+    offset = nBinsSameSignMu*2+nBinsWrongSignMu*2+nBinsSameSignE+nBinsWrongSignE*2;
+    break;
+  case 8:
+    OneCopy = new TH1D((Name+"_SK_FHC_numu").c_str(), "SK FHC #nu_{#mu}", nBinsSameSignMu, SameSignMu);
+    offset = nBinsSameSignMu*2+nBinsWrongSignMu*2+nBinsSameSignE*2+nBinsWrongSignE*2;
+    break;
+  case 9:
+    OneCopy = new TH1D((Name+"_SK_FHC_numubar").c_str(), "SK FHC #bar{#nu}_{#mu}", nBinsWrongSignMu, WrongSignMu);
+    offset = nBinsSameSignMu*3+nBinsWrongSignMu*2+nBinsSameSignE*2+nBinsWrongSignE*2;
+    break;
+  case 10:
+    OneCopy = new TH1D((Name+"_SK_FHC_nue").c_str(), "SK FHC #nu_{e}", nBinsSameSignE, SameSignE);
+    offset = nBinsSameSignMu*3+nBinsWrongSignMu*3+nBinsSameSignE*2+nBinsWrongSignE*2;
+    break;
+  case 11:
+    OneCopy = new TH1D((Name+"_SK_FHC_nuebar").c_str(), "SK FHC #bar{#nu}_{e}", nBinsWrongSignE, WrongSignE);
+    offset = nBinsSameSignMu*3+nBinsWrongSignMu*3+nBinsSameSignE*3+nBinsWrongSignE*2;
+    break;
+  case 12:
+    OneCopy = new TH1D((Name+"_SK_RHC_numu").c_str(), "SK RHC #nu_{#mu}", nBinsWrongSignMu, WrongSignMu);
+    offset = nBinsSameSignMu*3+nBinsWrongSignMu*3+nBinsSameSignE*3+nBinsWrongSignE*3;
+    break;
+  case 13:
+    OneCopy = new TH1D((Name+"_SK_RHC_numubar").c_str(), "SK RHC #bar{#nu}_{#mu}", nBinsSameSignMu, SameSignMu);
+    offset = nBinsSameSignMu*3+nBinsWrongSignMu*4+nBinsSameSignE*3+nBinsWrongSignE*3;
+    break;
+  case 14:
+    OneCopy = new TH1D((Name+"_SK_RHC_nue").c_str(), "SK RHC #nu_{e}", nBinsWrongSignE, WrongSignE);
+    offset = nBinsSameSignMu*4+nBinsWrongSignMu*4+nBinsSameSignE*3+nBinsWrongSignE*3;
+    break;
+  case 15:
+    OneCopy = new TH1D((Name+"_SK_RHC_nuebar").c_str(), "SK RHC #bar{#nu}_{e}", nBinsSameSignE, SameSignE);
+    offset = nBinsSameSignMu*4+nBinsWrongSignMu*4+nBinsSameSignE*3+nBinsWrongSignE*4;
+    break;
   }
   OneCopy->GetYaxis()->SetTitle("Variation rel. nom.");
   OneCopy->GetXaxis()->SetTitle("E_{#nu} (GeV)");

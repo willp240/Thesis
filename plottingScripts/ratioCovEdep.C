@@ -32,7 +32,7 @@ void ratioCovEdep() {
   c1->SetRightMargin(0.16);
 
   TFile *m3file = TFile::Open("/vols/t2k/users/wparker2/OA2019/Cedar/27AprTH2D574Data/27AprTH2D574Data_drawCorr.root");
-  TFile *bfile = TFile::Open("/vols/t2k/users/wparker2/irods-legacy/iRODS/BANFF_postfit_OA2020_AllParams_20200409.root");  
+  TFile *bfile = TFile::Open("inputFiles/BANFF_postfit_OA2020_AllParams_20200409.root");  
 
   TObjArray* param_list = (TObjArray*)bfile->Get("param_list");
 
@@ -84,33 +84,33 @@ void ratioCovEdep() {
   ratio->GetZaxis()->SetRangeUser(-1,1);
   PrettifyTitles(ratio);
   ratio->Draw("colz");
-  c1->Print("ratio.png");
+  c1->Print("Mach3BanffDataCorrDifference.png");
   ratio->GetXaxis()->SetRangeUser(100,147);
   ratio->GetYaxis()->SetRangeUser(100,147);
   ratio->Draw("colz");
-  c1->Print("ratioxsec.png");
+  c1->Print("Mach3BanffDataCorrDifferenceXsec.png");
 
   banffcov2->SetTitle("");
   banffcov2->GetZaxis()->SetTitle("Correlation");
   banffcov2->GetZaxis()->SetRangeUser(-1.0,1.0);
   PrettifyTitles(banffcov2);
   banffcov2->Draw("colz");
-  c1->Print("banff.png");
+  c1->Print("BanffDataCorr.png");
   banffcov2->GetXaxis()->SetRangeUser(100,147);
   banffcov2->GetYaxis()->SetRangeUser(100,147);
   banffcov2->Draw("colz");
-  c1->Print("banffxsec.png");
+  c1->Print("BanffDataCorrXsec.png");
   c->cd();
   mach3cov2->SetTitle("");
   mach3cov2->GetZaxis()->SetTitle("Correlation");
   mach3cov2->GetZaxis()->SetRangeUser(-1.0,1.0);
   PrettifyTitles(mach3cov2);
   mach3cov2->Draw("colz");
-  c->Print("mach3.png");
+  c->Print("MaCh3DataCorr.png");
   mach3cov2->GetXaxis()->SetRangeUser(100,147);
   mach3cov2->GetYaxis()->SetRangeUser(100,147);
   mach3cov2->Draw("colz");
-  c->Print("mach3xsec.png");
+  c->Print("MaCh3DataCorrXsec.png");
   c->cd();
 }
 
@@ -184,38 +184,38 @@ void PrettifyTitles(TH2D *Hist) {
   }
 
   Hist->GetXaxis()->SetBinLabel(1,"ND280 FHC #nu_{#mu}");//11
-  Hist->GetXaxis()->SetBinLabel(12,"ND280 FHC #nu_{e}");//7
-  Hist->GetXaxis()->SetBinLabel(19,"ND280 FHC #bar{#nu_{#mu}}");//5
+  Hist->GetXaxis()->SetBinLabel(12,"ND280 FHC #bar{#nu_{#mu}}");//5
+  Hist->GetXaxis()->SetBinLabel(17,"ND280 FHC #nu_{e}");//7
   Hist->GetXaxis()->SetBinLabel(24,"ND280 FHC #bar{#nu_{e}}");//2
-  Hist->GetXaxis()->SetBinLabel(26,"ND280 RHC #bar{#nu_{#mu}}");//11
-  Hist->GetXaxis()->SetBinLabel(37,"ND280 RHC #bar{#nu_{e}}");//7
-  Hist->GetXaxis()->SetBinLabel(44,"ND280 RHC #nu_{#mu}");//5
-  Hist->GetXaxis()->SetBinLabel(49,"ND280 RHC #nu_{e}");//2
+  Hist->GetXaxis()->SetBinLabel(26,"ND280 RHC #nu_{#mu}");//5
+  Hist->GetXaxis()->SetBinLabel(31,"ND280 RHC #bar{#nu_{#mu}}");//11
+  Hist->GetXaxis()->SetBinLabel(42,"ND280 RHC #nu_{e}");//2
+  Hist->GetXaxis()->SetBinLabel(44,"ND280 RHC #bar{#nu_{e}}");//7
   Hist->GetXaxis()->SetBinLabel(51,"SK FHC #nu_{#mu}");//11
-  Hist->GetXaxis()->SetBinLabel(62,"SK FHC #nu_{e}");//7
-  Hist->GetXaxis()->SetBinLabel(69,"SK FHC #bar{#nu_{#mu}}");//5
+  Hist->GetXaxis()->SetBinLabel(62,"SK FHC #bar{#nu_{#mu}}");//5
+  Hist->GetXaxis()->SetBinLabel(67,"SK FHC #nu_{e}");//7
   Hist->GetXaxis()->SetBinLabel(74,"SK FHC #bar{#nu_{e}}");//2
-  Hist->GetXaxis()->SetBinLabel(76,"SK RHC #bar{#nu_{#mu}}");//11
-  Hist->GetXaxis()->SetBinLabel(87,"SK RHC #bar{#nu_{e}}");//7
-  Hist->GetXaxis()->SetBinLabel(94,"SK RHC #nu_{#mu}");//5
-  Hist->GetXaxis()->SetBinLabel(99,"SK RHC #nu_{e}");//2
+  Hist->GetXaxis()->SetBinLabel(76,"SK RHC #nu_{#mu}");//5
+  Hist->GetXaxis()->SetBinLabel(81,"SK RHC #bar{#nu_{#mu}}");//11
+  Hist->GetXaxis()->SetBinLabel(92,"SK RHC #nu_{e}");//2
+  Hist->GetXaxis()->SetBinLabel(94,"SK RHC #bar{#nu_{e}}");//7
 
   Hist->GetYaxis()->SetBinLabel(1,"ND280 FHC #nu_{#mu}");//11
-  Hist->GetYaxis()->SetBinLabel(12,"ND280 FHC #nu_{e}");//7
-  Hist->GetYaxis()->SetBinLabel(19,"ND280 FHC #bar{#nu_{#mu}}");//5
+  Hist->GetYaxis()->SetBinLabel(12,"ND280 FHC #bar{#nu_{#mu}}");//5
+  Hist->GetYaxis()->SetBinLabel(17,"ND280 FHC #nu_{e}");//7
   Hist->GetYaxis()->SetBinLabel(24,"ND280 FHC #bar{#nu_{e}}");//2
-  Hist->GetYaxis()->SetBinLabel(26,"ND280 RHC #bar{#nu_{#mu}}");//11
-  Hist->GetYaxis()->SetBinLabel(37,"ND280 RHC #bar{#nu_{e}}");//7
-  Hist->GetYaxis()->SetBinLabel(44,"ND280 RHC #nu_{#mu}");//5
-  Hist->GetYaxis()->SetBinLabel(49,"ND280 RHC #nu_{e}");//2
+  Hist->GetYaxis()->SetBinLabel(26,"ND280 RHC #nu_{#mu}");//5
+  Hist->GetYaxis()->SetBinLabel(31,"ND280 RHC #bar{#nu_{#mu}}");//11
+  Hist->GetYaxis()->SetBinLabel(42,"ND280 RHC #nu_{e}");//2
+  Hist->GetYaxis()->SetBinLabel(44,"ND280 RHC #bar{#nu_{e}}");//7
   Hist->GetYaxis()->SetBinLabel(51,"SK FHC #nu_{#mu}");//11
-  Hist->GetYaxis()->SetBinLabel(62,"SK FHC #nu_{e}");//7
-  Hist->GetYaxis()->SetBinLabel(69,"SK FHC #bar{#nu_{#mu}}");//5
+  Hist->GetYaxis()->SetBinLabel(62,"SK FHC #bar{#nu_{#mu}}");//5
+  Hist->GetYaxis()->SetBinLabel(67,"SK FHC #nu_{e}");//7
   Hist->GetYaxis()->SetBinLabel(74,"SK FHC #bar{#nu_{e}}");//2
-  Hist->GetYaxis()->SetBinLabel(76,"SK RHC #bar{#nu_{#mu}}");//11
-  Hist->GetYaxis()->SetBinLabel(87,"SK RHC #bar{#nu_{e}}");//7
-  Hist->GetYaxis()->SetBinLabel(94,"SK RHC #nu_{#mu}");//5
-  Hist->GetYaxis()->SetBinLabel(99,"SK RHC #nu_{e}");//2
+  Hist->GetYaxis()->SetBinLabel(76,"SK RHC #nu_{#mu}");//5
+  Hist->GetYaxis()->SetBinLabel(81,"SK RHC #bar{#nu_{#mu}}");//11
+  Hist->GetYaxis()->SetBinLabel(92,"SK RHC #nu_{e}");//2
+  Hist->GetYaxis()->SetBinLabel(94,"SK RHC #bar{#nu_{e}}");//7
   
 }
 

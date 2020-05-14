@@ -45,39 +45,39 @@ void fluxcorr(std::string file0) {
   }
   
   corr->GetXaxis()->SetBinLabel(1,"ND280 FHC #nu_{#mu}");//11
-  corr->GetXaxis()->SetBinLabel(12,"ND280 FHC #nu_{e}");//7
-  corr->GetXaxis()->SetBinLabel(19,"ND280 FHC #bar{#nu_{#mu}}");//5
+  corr->GetXaxis()->SetBinLabel(12,"ND280 FHC #bar{#nu_{#mu}}");//5
+  corr->GetXaxis()->SetBinLabel(17,"ND280 FHC #nu_{e}");//7
   corr->GetXaxis()->SetBinLabel(24,"ND280 FHC #bar{#nu_{e}}");//2
-  corr->GetXaxis()->SetBinLabel(26,"ND280 RHC #bar{#nu_{#mu}}");//11
-  corr->GetXaxis()->SetBinLabel(37,"ND280 RHC #bar{#nu_{e}}");//7
-  corr->GetXaxis()->SetBinLabel(44,"ND280 RHC #nu_{#mu}");//5
-  corr->GetXaxis()->SetBinLabel(49,"ND280 RHC #nu_{e}");//2
+  corr->GetXaxis()->SetBinLabel(26,"ND280 RHC #nu_{#mu}");//5
+  corr->GetXaxis()->SetBinLabel(31,"ND280 RHC #bar{#nu_{#mu}}");//11
+  corr->GetXaxis()->SetBinLabel(42,"ND280 RHC #nu_{e}");//2
+  corr->GetXaxis()->SetBinLabel(44,"ND280 RHC #bar{#nu_{e}}");//7
   corr->GetXaxis()->SetBinLabel(51,"SK FHC #nu_{#mu}");//11
-  corr->GetXaxis()->SetBinLabel(62,"SK FHC #nu_{e}");//7
-  corr->GetXaxis()->SetBinLabel(69,"SK FHC #bar{#nu_{#mu}}");//5
+  corr->GetXaxis()->SetBinLabel(62,"SK FHC #bar{#nu_{#mu}}");//5
+  corr->GetXaxis()->SetBinLabel(67,"SK FHC #nu_{e}");//7
   corr->GetXaxis()->SetBinLabel(74,"SK FHC #bar{#nu_{e}}");//2
-  corr->GetXaxis()->SetBinLabel(76,"SK RHC #bar{#nu_{#mu}}");//11
-  corr->GetXaxis()->SetBinLabel(87,"SK RHC #bar{#nu_{e}}");//7
-  corr->GetXaxis()->SetBinLabel(94,"SK RHC #nu_{#mu}");//5
-  corr->GetXaxis()->SetBinLabel(99,"SK RHC #nu_{e}");//2
+  corr->GetXaxis()->SetBinLabel(76,"SK RHC #nu_{#mu}");//5
+  corr->GetXaxis()->SetBinLabel(81,"SK RHC #bar{#nu_{#mu}}");//11
+  corr->GetXaxis()->SetBinLabel(92,"SK RHC #nu_{e}");//2
+  corr->GetXaxis()->SetBinLabel(94,"SK RHC #bar{#nu_{e}}");//7
 
   corr->GetYaxis()->SetBinLabel(1,"ND280 FHC #nu_{#mu}");//11
-  corr->GetYaxis()->SetBinLabel(12,"ND280 FHC #nu_{e}");//7
-  corr->GetYaxis()->SetBinLabel(19,"ND280 FHC #bar{#nu_{#mu}}");//5
+  corr->GetYaxis()->SetBinLabel(12,"ND280 FHC #bar{#nu_{#mu}}");//5
+  corr->GetYaxis()->SetBinLabel(17,"ND280 FHC #nu_{e}");//7
   corr->GetYaxis()->SetBinLabel(24,"ND280 FHC #bar{#nu_{e}}");//2
-  corr->GetYaxis()->SetBinLabel(26,"ND280 RHC #bar{#nu_{#mu}}");//11
-  corr->GetYaxis()->SetBinLabel(37,"ND280 RHC #bar{#nu_{e}}");//7
-  corr->GetYaxis()->SetBinLabel(44,"ND280 RHC #nu_{#mu}");//5
-  corr->GetYaxis()->SetBinLabel(49,"ND280 RHC #nu_{e}");//2
+  corr->GetYaxis()->SetBinLabel(26,"ND280 RHC #nu_{#mu}");//5
+  corr->GetYaxis()->SetBinLabel(31,"ND280 RHC #bar{#nu_{#mu}}");//11
+  corr->GetYaxis()->SetBinLabel(42,"ND280 RHC #nu_{e}");//2
+  corr->GetYaxis()->SetBinLabel(44,"ND280 RHC #bar{#nu_{e}}");//7
   corr->GetYaxis()->SetBinLabel(51,"SK FHC #nu_{#mu}");//11
-  corr->GetYaxis()->SetBinLabel(62,"SK FHC #nu_{e}");//7
-  corr->GetYaxis()->SetBinLabel(69,"SK FHC #bar{#nu_{#mu}}");//5
+  corr->GetYaxis()->SetBinLabel(62,"SK FHC #bar{#nu_{#mu}}");//5
+  corr->GetYaxis()->SetBinLabel(67,"SK FHC #nu_{e}");//7
   corr->GetYaxis()->SetBinLabel(74,"SK FHC #bar{#nu_{e}}");//2
-  corr->GetYaxis()->SetBinLabel(76,"SK RHC #bar{#nu_{#mu}}");//11
-  corr->GetYaxis()->SetBinLabel(87,"SK RHC #bar{#nu_{e}}");//7
-  corr->GetYaxis()->SetBinLabel(94,"SK RHC #nu_{#mu}");//5
-  corr->GetYaxis()->SetBinLabel(99,"SK RHC #nu_{e}");//2
-  
+  corr->GetYaxis()->SetBinLabel(76,"SK RHC #nu_{#mu}");//5
+  corr->GetYaxis()->SetBinLabel(81,"SK RHC #bar{#nu_{#mu}}");//11
+  corr->GetYaxis()->SetBinLabel(92,"SK RHC #nu_{e}");//2
+  corr->GetYaxis()->SetBinLabel(94,"SK RHC #bar{#nu_{e}}");//7
+
   corr->GetXaxis()->SetLabelSize(0.03);
   corr->GetYaxis()->SetLabelSize(0.03);
   corr->GetXaxis()->SetNdivisions(1010);
