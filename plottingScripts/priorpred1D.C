@@ -123,8 +123,8 @@ void priorpred1D(std::string file0, std::string file1) {
     p1->cd();
     dathistX->SetTitle("");
     dathistX->Draw("e");
-    priorX->Draw("same");
-    postX->Draw("same");
+    priorX->Draw("hist same");
+    postX->Draw("hist same");
     dathistX->SetTitle("");
     dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     dathistX->GetYaxis()->SetTitle("Events");
@@ -149,8 +149,8 @@ void priorpred1D(std::string file0, std::string file1) {
     priorratioX->GetYaxis()->SetTitleSize(0.15);
     priorratioX->GetXaxis()->SetLabelSize(0.12);
     priorratioX->GetXaxis()->SetTitleSize(0.15);
-    priorratioX->Draw("e");
-    postratioX->Draw("esame");
+    priorratioX->Draw("hist");
+    postratioX->Draw("hist same");
     TLine *line = new TLine(0.7, 1.0, 1.0, 1.0);
     line->SetLineColor(kBlack);
     line->Draw("same");
@@ -160,8 +160,8 @@ void priorpred1D(std::string file0, std::string file1) {
     p1->cd();
     dathistY->SetTitle("");
     dathistY->Draw("e");
-    priorY->Draw("same");
-    postY->Draw("same");
+    priorY->Draw("histsame");
+    postY->Draw("histsame");
     dathistY->SetTitle("");
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
     dathistY->GetYaxis()->SetTitle("Events");
@@ -186,8 +186,8 @@ void priorpred1D(std::string file0, std::string file1) {
     priorratioY->GetYaxis()->SetTitleSize(0.15);
     priorratioY->GetXaxis()->SetLabelSize(0.12);
     priorratioY->GetXaxis()->SetTitleSize(0.15);
-    priorratioY->Draw("e");
-    postratioY->Draw("esame");
+    priorratioY->Draw("hist");
+    postratioY->Draw("hist same");
     TLine *line2 = new TLine(0.7, 1.0, 1.0, 1.0);
     line2->SetLineColor(kBlack);
     line2->Draw("same");
