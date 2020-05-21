@@ -47,6 +47,7 @@ void pvalsample(std::string file0) {
     hist->GetXaxis()->SetTitleSize(0.05);
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
+    hist->SetMinimum(hist->GetMinimum()-1);
     hist->GetXaxis()->SetTitle("-2LLH_{Draw, Data}");
     hist->GetYaxis()->SetTitle("-2LLH_{Draw, Draw Fluc}");
     hist->Draw("colz");

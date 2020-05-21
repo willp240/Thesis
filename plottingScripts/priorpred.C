@@ -34,6 +34,7 @@ void priorpred(std::string file0) {
     //    name = "FGD1 numuCC 0pi/FGD1_numuCC_0pi_nom_mean_ratio";
     TH2Poly* hist = (TH2Poly*)file_->Get(name.c_str())->Clone();
 
+
     hist->SetTitle("");
     hist->GetYaxis()->SetTitleOffset(0.85);
     hist->GetXaxis()->SetTitleOffset(1.1);
@@ -46,6 +47,8 @@ void priorpred(std::string file0) {
     hist->GetZaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     hist->Draw("colz");
+
     c->Print((std::string("priorpred_")+samp_us[s]+std::string(".pdf")).c_str());
+
   }
 }

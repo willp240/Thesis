@@ -394,7 +394,7 @@ void hptpcFits(std::string FileName1, std::string FileName2, std::string FileNam
     ss << i;
     std::string fluxnum = ss.str();
 
-    canv->Print(("hptpcfits_flux"+fluxnum+".pdf").c_str());
+    canv->Print(("hptpcfitsflux_"+fluxnum+".pdf").c_str());
     //canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
 
     nFluxParams += OneCopy[i]->GetXaxis()->GetNbins();
@@ -584,7 +584,7 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     ss << i;
     std::string xsecnum = ss.str();
 
-    canv->Print(("hptpcfits_xsec"+xsecnum+".pdf").c_str());
+    canv->Print(("hptpcfitsxsec_"+xsecnum+".pdf").c_str());
     //canv->Print((FileName1+"_"+FileName2+"_"+FileName3+".pdf").c_str());
     delete axis;
     delete line;
