@@ -1,2 +1,19 @@
 \chapter{Conclusions}
+
+This thesis has presented a Bayesian analysis of T2K near detector data, using Markov Chain Monte Carlo methods to constrain systematic uncertainties for oscillation measurements. Parametrised models of interaction, flux, and detector systematics were fit to near detector data, and the results are propagated to the far detector by a joint ND280 and SK fit. The constraint on systematics in the full joint fit comes almost entirely from near detector data. The uncertainties on predicted SK event rates are reduced from 12-14$\%$ to 2-3$\%$ by this analysis. 
+
+Since the last oscillation analysis, there have been several updates to the near detector fit. This has included improved interaction, flux and detector models, new near detector samples, non-rectangular fit binning, and doubling the amount of data. Implementing these updates into the near detector framework has been the work of this thesis.
+
+In particular, the treatment of the binding energy systematic has been overhauled for this analysis. Having a parameter directly shift the kinematics of an MC event, rather than just reweighting, has not been done before in a T2K oscillation analysis. This implementation has reduced the binding energy from being a dominant systematic in the previous analysis, to being sub-dominant in this analysis.
+
+Although the Bayesian p-value for this analysis was low for several samples, the frequentist p-value, calculated by the other near detector fitting group on T2K, was increased significantly since the last analysis. It is not expected that the two p-values calculations give the same results, as they answer different questions. As the frequentist p-value uses a more accurate treatment of detector systematics, it is used as the main indicator of goodness-of-fit. The improvement in frequentist p-value is largely due to the improvements to the fit and input models since the last analysis.
+
+Updating the binning to be non-uniform did not have a significant impact on the far detector event rate prediction uncertainty, but achieved the same results with fewer fit bins, and therefore with a more efficient convergence. In the future, as more data is taken, the impact of non-uniform binning will increase.
+
+The full effect of all the updates to the fit implemented for this analysis, was a significant improvement in the sensitivity of the measurement of oscillation parameters, particularly for the disappearance parameters, $\Delta m^{2}_{23}$ and sin$^2 \theta_{23}$. \red{say something qualitative about asimov A comparison to 2018.}
+
+In future analyses, using Principle Component Analysis to reduce the number of fitted detector parameters would allow the full fit binning to be used as the detector binning in joint fits. This would allow more accurate application of ND280 detector systematics. Although the merged detector binning produced very similar results to the full fit binning as detector binning in near detector only fits, there was an improvement in Bayesian p-value for several samples. 
+
+In the longer term future, using new technologies, such as an HPTPC, in combination with fitting in Single Transverse Variables would enable better distinguishing of final state interaction models, which diverge at low momentum. With increased statistics, it would be possible to fit in more than two dimensions, allowing further improvements in distinguishing interaction types and therefore providing a better distinction of signal and background. This would therefore provide a better constraint on systematics, which will be even more vital with the higher statistics future long baseline neutrino oscillation experiments will benefit from. 
+
 \newpage
