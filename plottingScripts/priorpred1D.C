@@ -12,13 +12,13 @@
 #include <algorithm>
 #include "TH2Poly.h"
 
-void priorpred1D(std::string file0, std::string file1) {
+void priorpred1D(std::string priorfile, std::string postfile) {
 
   //  gStyle->SetPalette(51);
 
   TCanvas *c = new TCanvas("canv", "canv", 1580, 1080);
-  TFile *fileprior = TFile::Open(file0.c_str());//priorpred
-  TFile *filepost = TFile::Open(file1.c_str());//postpred
+  TFile *fileprior = TFile::Open(priorfile.c_str());//priorpred
+  TFile *filepost = TFile::Open(postfile.c_str());//postpred
  
   c->SetTopMargin(0.1);
   c->SetBottomMargin(0.16);
@@ -27,12 +27,12 @@ void priorpred1D(std::string file0, std::string file1) {
 
   TPad *p1 = new TPad("p1", "p1", 0.0, 0.3, 1.0, 1.0);
   TPad *p2 = new TPad("p2", "p2", 0.0, 0.0, 1.0, 0.3);
-  p1->SetLeftMargin(canv->GetLeftMargin());
-  p1->SetRightMargin(canv->GetRightMargin());
-  p1->SetTopMargin(canv->GetTopMargin());
+  p1->SetLeftMargin(c->GetLeftMargin());
+  p1->SetRightMargin(c->GetRightMargin());
+  p1->SetTopMargin(c->GetTopMargin());
   p1->SetBottomMargin(0);
-  p2->SetLeftMargin(canv->GetLeftMargin());
-  p2->SetRightMargin(canv->GetRightMargin());
+  p2->SetLeftMargin(c->GetLeftMargin());
+  p2->SetRightMargin(c->GetRightMargin());
   p2->SetTopMargin(0);
   p2->SetBottomMargin(0.35);
   
@@ -54,8 +54,12 @@ void priorpred1D(std::string file0, std::string file1) {
 
     std::string datname = samp[s] + "/" + samp_us[s] + "_data_x_x";
     TH1D* dathistX = (TH1D*)filepost->Get(datname.c_str())->Clone();
+    for(int i=1; i<=dathistX->GetXaxis()->GetNbins(); i++)
+      dathistX->SetBinError(i,0);
     datname = samp[s] + "/" + samp_us[s] + "_data_y_y";
     TH1D* dathistY = (TH1D*)filepost->Get(datname.c_str())->Clone();
+    for(int i=1; i<=dathistY->GetXaxis()->GetNbins(); i++)
+      dathistY->SetBinError(i,0);
 
     priorX->Sumw2();
     postX->Sumw2();
@@ -122,9 +126,9 @@ void priorpred1D(std::string file0, std::string file1) {
     p1->Draw();
     p1->cd();
     dathistX->SetTitle("");
-    dathistX->Draw("e");
-    priorX->Draw("hist same");
-    postX->Draw("hist same");
+    dathistX->Draw("hist");
+    priorX->Draw("e same");
+    postX->Draw("e same");
     dathistX->SetTitle("");
     dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     dathistX->GetYaxis()->SetTitle("Events");
@@ -143,15 +147,15 @@ void priorpred1D(std::string file0, std::string file1) {
     priorratioX->GetYaxis()->SetTitle("MC/Data");
     priorratioX->GetYaxis()->SetTitleOffset(0.36);
     priorratioX->GetXaxis()->SetRangeUser(0,maxX);
-    priorratioX->GetYaxis()->SetRangeUser(0.01,1.99);
+    priorratioX->GetYaxis()->SetRangeUser(0.51,1.49);
     priorratioX->GetYaxis()->SetLabelSize(0.12);
     priorratioX->GetYaxis()->SetNdivisions(305);
     priorratioX->GetYaxis()->SetTitleSize(0.15);
     priorratioX->GetXaxis()->SetLabelSize(0.12);
     priorratioX->GetXaxis()->SetTitleSize(0.15);
-    priorratioX->Draw("hist");
-    postratioX->Draw("hist same");
-    TLine *line = new TLine(0.7, 1.0, 1.0, 1.0);
+    priorratioX->Draw("e");
+    postratioX->Draw("e same");
+    TLine *line = new TLine(0, 1.0, maxX, 1.0);
     line->SetLineColor(kBlack);
     line->Draw("same");
     
@@ -159,9 +163,9 @@ void priorpred1D(std::string file0, std::string file1) {
 
     p1->cd();
     dathistY->SetTitle("");
-    dathistY->Draw("e");
-    priorY->Draw("histsame");
-    postY->Draw("histsame");
+    dathistY->Draw("hist");
+    priorY->Draw("esame");
+    postY->Draw("esame");
     dathistY->SetTitle("");
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
     dathistY->GetYaxis()->SetTitle("Events");
@@ -180,14 +184,14 @@ void priorpred1D(std::string file0, std::string file1) {
     priorratioY->GetYaxis()->SetTitle("MC/Data");
     priorratioY->GetYaxis()->SetTitleOffset(0.36);
     priorratioY->GetXaxis()->SetRangeUser(0.7,1.0);
-    priorratioY->GetYaxis()->SetRangeUser(0.01,1.99);
+    priorratioY->GetYaxis()->SetRangeUser(0.51,1.49);
     priorratioY->GetYaxis()->SetLabelSize(0.12);
     priorratioY->GetYaxis()->SetNdivisions(305);
     priorratioY->GetYaxis()->SetTitleSize(0.15);
     priorratioY->GetXaxis()->SetLabelSize(0.12);
     priorratioY->GetXaxis()->SetTitleSize(0.15);
-    priorratioY->Draw("hist");
-    postratioY->Draw("hist same");
+    priorratioY->Draw("e");
+    postratioY->Draw("e same");
     TLine *line2 = new TLine(0.7, 1.0, 1.0, 1.0);
     line2->SetLineColor(kBlack);
     line2->Draw("same");

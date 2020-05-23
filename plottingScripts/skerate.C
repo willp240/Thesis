@@ -24,7 +24,7 @@ void skerate(std::string file0) {
   for(int i=0; i<2000; i++)
     totvec[i]=0.0;
 
-  for(int s=0; s<5; s++){
+  for(int s=0; s<1; s++){
 
     TH1D *rates = new TH1D("","", 1000,0,1000); 
 
@@ -47,5 +47,5 @@ void skerate(std::string file0) {
 
   total->Fit("gaus");
   std::cout < <"Total Mean: " << total->GetMean() << ", RMS: " << total->GetRMS() << std::endl;
-
+  
 }
