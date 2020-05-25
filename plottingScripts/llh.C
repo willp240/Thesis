@@ -46,7 +46,7 @@ void llh(std::string file0) {
   h1->GetYaxis()->SetTitle("-LogL_{Flux}");
   h1->GetYaxis()->SetTitleOffset(1.0);
   h1->GetXaxis()->SetTitle("Step");
-  h1->GetZaxis()->SetRangeUser(-1,250);
+  h1->GetZaxis()->SetRangeUser(-1,150);
   h1->SetTitle("");
   h1->GetXaxis()->SetNoExponent(1);
   c->Print("llh_fluxdat.png");
