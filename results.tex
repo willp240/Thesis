@@ -63,7 +63,7 @@ The number of unweighted events for each interaction mode are shown in Table \re
 \textbf{NC Other} & 61334 \\ \hline
 \textbf{Total} & 1903943\\ \hline\hline
 \end{tabular}
-\caption{MC and data event rates for the ND280 samples.}
+\caption{MC event rates broken down by interaction mode.}
 \label{tab:modes}
 \end{table}
 \end{center}
@@ -464,8 +464,8 @@ The log-likelihood scans for four selected interaction parameters are shown in F
   \includegraphics[width=0.7\linewidth]{figs/llh/CC_DIS_MultPi_Norm_Nubar_llh.pdf}
   \caption{CC DIS and mult-$\pi$ normalisation}
 \end{subfigure}
-\caption{Log-likelihood scans for selected interaction parameters.}
-\label{fig:llhxsec}
+\caption{Log-likelihood scans for selected interaction parameters. CC norm. $\nu$ has a tight prior uncertainty that dominates the likelihood, whereas the low $Q^2$ normalisations have a flat prior so the sample is the only contribution. The 2p2h $^{12}$C to $^{16}$O and CC DIS and mult-$\pi$ normalisations have significant contributions from both the sample and prior uncertainty.}
+\label{fig:llhxsec} 
 \end{figure}
 
 The log-likelihood scans for four selected flux parameters are shown in Figure \ref{fig:llhflux}. The test statistic again minimises to 0 at the prior central value of each parameter, as expected. These parameters all have tight prior uncertainties, and so the penalty terms dominate the likelihoods. For the SK flux parameters, there is no sample contribution to the likelihood. This is expected as the SK flux parameters should have no effect on the ND280 samples (apart from through the correlations with ND280 flux parameters, which are not included in these scans). 
@@ -492,7 +492,7 @@ The log-likelihood scans for four selected flux parameters are shown in Figure \
   \includegraphics[width=0.7\linewidth]{figs/llh/b_52_llh.pdf}
   \caption{SK RHC $\bar{\nu_{\mu}}$ 0.5-0.6 GeV}
 \end{subfigure}
-\caption{Log-likelihood scans for selected flux parameters.}
+\caption{Log-likelihood scans for selected flux parameters. }
 \label{fig:llhflux}
 \end{figure}
 
@@ -528,7 +528,7 @@ The log-likelihood scans for four selected ND280 detector parameters are shown i
 
 As a further validation of the fitting framework and models, the parameters are again each set to $\pm1\sigma$, one by one, while all others are held at nominal. Instead of the change in likelihood, here the effect on the event distributions in $p_{\mu}$-cos$\theta_{\mu}$ is inspected. 
 
-One varied interaction parameter for each sample is shown in Figure \ref{fig:sigvars}. The combinations of parameter and sample were selected such that the parameter controls interactions targeted by the sample. The parameter in question is set to $+1\sigma$ above its nominal value, and the ratio of the reweighted MC to the nominal MC is taken.
+One varied interaction parameter for each sample is shown in Figure \ref{fig:sigvars}. The combinations of parameter and sample were selected such that the parameter controls interactions targeted by the sample. The parameter is therefore expected to have a significant and well-understood impact on the shown sample. The selection of parameter and sample was also made such that no parameters are shown more than once. The parameter in question is set to $+1\sigma$ above its nominal value, and the ratio of the reweighted MC to the nominal MC is taken.
 
 \begin{figure}
 \centering
@@ -643,7 +643,7 @@ One varied interaction parameter for each sample is shown in Figure \ref{fig:sig
   \caption{FGD2 RHC $\nu_{\mu}$ Other: BY mult-$\pi$ += $1\sigma$}
   \label{fig:sigvar_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
 \end{subfigure}
-\caption{Ratio of each sample to nominal with one parameter set to $+1\sigma$. The  selected parameters shown all affect events which the sample they're shown for target.}
+\caption{Ratio of each sample to nominal with one parameter set to $+1\sigma$. The selected parameters shown all affect interactions which the sample they are shown for target.}
 \label{fig:sigvars}
 \end{figure}
 
@@ -657,7 +657,7 @@ All the variations are causing changes to the event distributions in the regions
 
 \section{Asimov Fit}\label{sec:asimov}
 
-For an Asimov fit\footnote{Named after the Isaac Asimov short story, \textit{Franchise}, in which an individual is chosen as the sole voter as their views represent those of the whole population.}, the nominal MC prediction is set to be the `data'. The MC is then fitted to itself. This is completely unphysical, as there can be a non-integer number of `data' events, but means there are no statistical fluctuations in the dataset, and the expected result of the fit is known. Therefore any deviations from the expected result indicate problems with the fitter. The results can also be used to obtain the maximum sensitivity of the fit. The constraint on each parameter shows the reduction in systematic uncertainties that would be achieved if the models perfectly described the true data.
+The Asimov dataset\footnote{Named after the Isaac Asimov short story, \textit{Franchise} \cite{asmv}, in which an individual is chosen as the sole voter as their views represent those of the whole population.} is defined as the MC prediction with all systematic parameters set to their nominal values \cite{Cowan_2011}. For an Asimov fit, the nominal MC prediction is set to be the `data', and is then fitted to itself. This is completely unphysical, as there can be a non-integer number of `data' events, but means there are no statistical fluctuations in the dataset, and the expected result of the fit is known. Therefore any deviations from the expected result indicate problems with the fitter. The results can also be used to obtain the maximum sensitivity of the fit. The constraint on each parameter shows the reduction in systematic uncertainties that would be achieved if the models perfectly described the true data.
 
 The results of the Asimov fit for the flux parameters are shown in Figure \ref{fig:asmvfluxSK}. As described in Section \ref{sec:stats}, the fit does not find a single best-fit set of parameters, but single parameter values are extracted from the posterior distribution by marginalising over all but one parameter, one by one. Marginalisation effects cause the postfit parameter values to not exactly equal the nominal inputs, but the discrepancies are small. The flux parameters with the largest discrepancies are those that apply to rarer events at ND280, such as for high energies, and so are constrained mostly by the prior uncertainty only. The constraint on the SK flux parameters comes entirely from the correlation with the ND280 flux parameters, and so the postfit values have the same behaviour.
 
@@ -748,7 +748,7 @@ The results of the Asimov fit for the flux parameters are shown in Figure \ref{f
   \includegraphics[width=0.95\linewidth]{figs/asmvflux15}
   \caption{SK RHC $\bar{\nu_e}$}
 \end{subfigure}
-\caption{Flux parameters for the Asimov Fit.}
+\caption{Flux parameters for the Asimov fit.}
 \label{fig:asmvfluxSK}
 \end{figure}
 
@@ -1017,7 +1017,7 @@ Although many of the flux parameters are pulled significantly away from their pr
   \includegraphics[width=0.95\linewidth]{figs/datflux15}
   \caption{SK RHC $\bar{\nu_e}$}
 \end{subfigure}
-\caption{Flux parameters for the data Fit.}
+\caption{Flux parameters for the data fit.}
 \label{fig:datfluxSK}
 \end{figure}
 
@@ -1257,25 +1257,25 @@ Posterior predictions are produced using the method described in Section \ref{se
 & \multicolumn{3}{c}{\textbf{Prior}} & \multicolumn{3}{c|}{\textbf{Posterior}} & \multicolumn{1}{c}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}}\\
 \hline
 \hline
-\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 31819.0 & $\pm$ & 1382.2 & 33375.4 & $\pm$ & 159.6 & 1697.2 & 877.22 \\ 
-\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 8336.2 & $\pm$ & 521.1 & 7951.9 & $\pm$ & 64.2 & 429.59 & 293.07 \\
-\textbf{FGD1 FHC $\nu$ CC Other} & 7575.1 & $\pm$ & 430.4 & 7917.0 & $\pm$ & 71.4 & 525.28 & 430.51\\ \hline
-\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 31500.7 & $\pm$ & 1311.2 & 33125.4 & $\pm$ & 157.6 & 1792.37 & 869.49 \\
-\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 6628.7 & $\pm$ & 346.2 & 6434.1 & $\pm$ & 56.8 & 406.06 & 315.77 \\
-\textbf{FGD2 FHC $\nu$ CC Other} & 6968.4 & $\pm$ & 531.2 & 7281.8 & $\pm$ & 64.8 & 548.11 & 404.94 \\ \hline
-\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 7971.4 & $\pm$ & 404.5 & 8431.2 & $\pm$ & 69.5 & 494.51 & 377.92\\
-\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 722.9 & $\pm$ & 34.8 & 677.1 & $\pm$ & 13.4 & 59.45 & 58.99 \\
-\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 1378.2 & $\pm$ & 86.3 & 1468.4 & $\pm$ & 23.0 & 116.37 & 93.92 \\ \hline
-\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 7756.3 & $\pm$ & 435.5 & 8179.5 & $\pm$ & 66.3 & 509.88 & 381.58\\
-\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 655.0 & $\pm$ & 20.7 & 633.8 & $\pm$ & 11.3 & 51.48 & 55.89 \\
-\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 1248.5 & $\pm$ & 81.3 & 1371.7 & $\pm$ & 19.6 & 120.65 & 119.59\\ \hline
-\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 3371.5 & $\pm$ & 170.4 & 3576.0 & $\pm$ & 37.6 & 191.37 & 133.15\\
-\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 1150.3 & $\pm$ & 50.8 & 1156.2 & $\pm$ & 14.7 & 64.73 & 60.10\\
-\textbf{FGD1 RHC $\nu$ CC Other} & 1171.4 & $\pm$ & 101.3 & 1285.2 & $\pm$ & 18.3 & 92.67 & 60.51\\ \hline
-\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 3318.4 & $\pm$ & 135.0 & 3531.9 & $\pm$ & 36.6 & 148.68 & 136.10\\
-\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 928.6 & $\pm$ & 26.1 & 923.0 & $\pm$ & 11.1 & 55.90 & 56.28\\
-\textbf{FGD2 RHC $\nu$ CC Other} & 1087.1 & $\pm$ & 94.8 & 1190.7 & $\pm$ & 15.9 & 76.27 & 53.13 \\ \hline
-\textbf{Total} & 115130.5 & $\pm$ & 6130.7 & 128510.3 & $\pm$ & 367.5 & 7380.57 & 4778.16 \\ \hline\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 28912.3 & $\pm$ & 3049.9 & 33375.4 & $\pm$ & 159.6 & 1699.87 & 877.22 \\ 
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 8691.5 & $\pm$ & 1013.2 & 7951.9 & $\pm$ & 64.2 & 436.38 & 293.07 \\
+\textbf{FGD1 FHC $\nu$ CC Other} & 7343.3 & $\pm$ & 1004.0 & 7917.0 & $\pm$ & 71.4 & 519.01 & 430.51\\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 28461.0 & $\pm$ & 2998.9 & 33125.4 & $\pm$ & 157.6 & 1801.15 & 869.49 \\
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 6965.6 & $\pm$ & 791.5 & 6434.1 & $\pm$ & 56.8 & 411.05 & 315.77 \\
+\textbf{FGD2 FHC $\nu$ CC Other} & 6740.4 & $\pm$ & 893.0 & 7281.8 & $\pm$ & 64.8 & 541.39 & 404.94 \\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 7665.0 & $\pm$ & 872.3 & 8431.2 & $\pm$ & 69.5 & 506.12 & 377.92\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 736.0 & $\pm$ & 94.2 & 677.1 & $\pm$ & 13.4 & 64.84 & 58.99 \\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 1360.3 & $\pm$ & 179.1 & 1468.4 & $\pm$ & 23.0 & 116.38 & 93.92 \\ \hline
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 7393.5 & $\pm$ & 816.7 & 8179.5 & $\pm$ & 66.3 & 522.58 & 381.58\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 660.2 & $\pm$ & 84.1 & 633.8 & $\pm$ & 11.3 & 54.42 & 55.89 \\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 1251.9 & $\pm$ & 164.9 & 1371.7 & $\pm$ & 19.6 & 120.95 & 119.59\\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 3175.4 & $\pm$ & 333.8 & 3576.0 & $\pm$ & 37.6 & 193.31 & 133.15\\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 1216.9 & $\pm$ & 144.7 & 1156.2 & $\pm$ & 14.7 & 65.29 & 60.10\\
+\textbf{FGD1 RHC $\nu$ CC Other} & 1131.0 & $\pm$ & 153.9 & 1285.2 & $\pm$ & 18.3 & 95.29 & 60.51\\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 3151.3 & $\pm$ & 329.4 & 3531.9 & $\pm$ & 36.6 & 152.49 & 136.10\\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 977.1 & $\pm$ & 116.8 & 923.0 & $\pm$ & 11.1 & 57.27 & 56.28\\
+\textbf{FGD2 RHC $\nu$ CC Other} & 1058.5 & $\pm$ & 147.0 & 1190.7 & $\pm$ & 15.9 & 78.36 & 53.13 \\ \hline
+\textbf{Total} & 117237.9 & $\pm$ & 10925.7 & 128510.3 & $\pm$ & 367.5 & 7436.15 & 4778.16 \\ \hline\hline
 \end{tabular}
 \end{adjustbox}
 \caption{Prior and posterior predictive event rates and log-likelihood to data.}
@@ -1291,25 +1291,25 @@ Posterior predictions are produced using the method described in Section \ref{se
 \multicolumn{1}{c||}{\textbf{Sample}} & \multicolumn{2}{c}{$\delta N/N(\%)$}\\
 & \multicolumn{1}{c}{\textbf{Prior}} & \multicolumn{1}{c}{\textbf{Posterior}} \\
 \hline\hline
-\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 4.25 & 0.49\\
-\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 6.25 & 0.81\\ 
-\textbf{FGD1 FHC $\nu$ CC Other} & 5.68 & 0.90\\ \hline
-\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 4.16 & 0.48\\
-\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 5.22 & 0.88\\
-\textbf{FGD2 FHC $\nu$ CC Other} & 7.62 & 0.89\\ \hline
-\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 5.07 & 0.82\\
-\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 4.81 & 1.98\\
-\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 6.26 & 1.57\\ \hline
-\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 5.61 & 0.81\\
-\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 3.16 & 1.78\\
-\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 6.51 & 1.43\\ \hline
-\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 5.05 & 1.05\\
-\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 4.42 & 1.27\\
-\textbf{FGD1 RHC $\nu$ CC Other} & 8.65 & 1.42\\ \hline
-\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 4.07 & 1.04\\
-\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 6.38 & 1.20\\ 
-\textbf{FGD2 RHC $\nu$ CC Other} & 8.72 & 1.34\\ \hline
-\textbf{Total} & 5.33 & 0.29 \\ \hline\hline
+\textbf{FGD1 FHC $\nu$ CC 0$\pi$} & 10.55 & 0.49\\
+\textbf{FGD1 FHC $\nu$ CC 1$\pi$} & 10.45 & 0.81\\ 
+\textbf{FGD1 FHC $\nu$ CC Other} & 13.67 & 0.90\\ \hline
+\textbf{FGD2 FHC $\nu$ CC 0$\pi$} & 10.54 & 0.48\\
+\textbf{FGD2 FHC $\nu$ CC 1$\pi$} & 11.36 & 0.88\\
+\textbf{FGD2 FHC $\nu$ CC Other} & 13.25 & 0.89\\ \hline
+\textbf{FGD1 RHC $\bar{\nu}$ CC 0$\pi$} & 11.38 & 0.82\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC 1$\pi$} & 12.80 & 1.98\\
+\textbf{FGD1 RHC $\bar{\nu}$ CC Other} & 13.17 & 1.57\\ \hline
+\textbf{FGD2 RHC $\bar{\nu}$ CC 0$\pi$} & 11.05 & 0.81\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC 1$\pi$} & 12.74 & 1.78\\
+\textbf{FGD2 RHC $\bar{\nu}$ CC Other} & 13.17 & 1.43\\ \hline
+\textbf{FGD1 RHC $\nu$ CC 0$\pi$} & 10.51 & 1.05\\
+\textbf{FGD1 RHC $\nu$ CC 1$\pi$} & 11.89 & 1.27\\
+\textbf{FGD1 RHC $\nu$ CC Other} & 13.61 & 1.42\\ \hline
+\textbf{FGD2 RHC $\nu$ CC 0$\pi$} & 10.45 & 1.04\\
+\textbf{FGD2 RHC $\nu$ CC 1$\pi$} & 11.95 & 1.20\\ 
+\textbf{FGD2 RHC $\nu$ CC Other} & 13.89 & 1.34\\ \hline
+\textbf{Total} & 9.32 & 0.29 \\ \hline\hline
 \end{tabular}
 \caption{Fractional uncertainties on the prior and posterior predictive event rates.}
 \label{tab:prederr}
