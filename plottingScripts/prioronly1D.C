@@ -1,0 +1,180 @@
+#include "TH1D.h"
+#include "TPad.h"
+#include "TCanvas.h"
+#include "TGraphErrors.h"
+#include "TLegend.h"
+#include "TFile.h"
+#include "TKey.h"
+#include "THStack.h"
+#include "TROOT.h"
+#include "TGaxis.h"
+#include <iostream>
+#include <algorithm>
+#include "TH2Poly.h"
+
+void prioronly1D(std::string priorfile) {
+
+  //  gStyle->SetPalette(51);
+
+  TCanvas *c = new TCanvas("canv", "canv", 1580, 1080);
+  TFile *fileprior = TFile::Open(priorfile.c_str());//priorpred
+ 
+  c->SetTopMargin(0.1);
+  c->SetBottomMargin(0.16);
+  c->SetLeftMargin(0.12);
+  c->SetRightMargin(0.1);
+
+  TPad *p1 = new TPad("p1", "p1", 0.0, 0.3, 1.0, 1.0);
+  TPad *p2 = new TPad("p2", "p2", 0.0, 0.0, 1.0, 0.3);
+  p1->SetLeftMargin(c->GetLeftMargin());
+  p1->SetRightMargin(c->GetRightMargin());
+  p1->SetTopMargin(c->GetTopMargin());
+  p1->SetBottomMargin(0);
+  p2->SetLeftMargin(c->GetLeftMargin());
+  p2->SetRightMargin(c->GetRightMargin());
+  p2->SetTopMargin(0);
+  p2->SetBottomMargin(0.35);
+  
+  std::string samp[18] = {"FGD1 numuCC 0pi", "FGD1 numuCC 1pi", "FGD1 numuCC other", "FGD1 anti-numuCC 0pi", "FGD1 anti-numuCC 1pi", "FGD1 anti-numuCC other", "FGD1 NuMuBkg CC0pi in AntiNu Mode", "FGD1 NuMuBkg CC1pi in AntiNu Mode", "FGD1 NuMuBkg CCother in AntiNu Mode", "FGD2 numuCC 0pi", "FGD2 numuCC 1pi", "FGD2 numuCC other", "FGD2 anti-numuCC 0pi","FGD2 anti-numuCC 1pi", "FGD2 anti-numuCC other", "FGD2 NuMuBkg CC0pi in AntiNu Mode", "FGD2 NuMuBkg CC1pi in AntiNu Mode", "FGD2 NuMuBkg CCother in AntiNu Mode"};  
+
+  std::string samp_us[18] = {"FGD1_numuCC_0pi", "FGD1_numuCC_1pi", "FGD1_numuCC_other", "FGD1_anti-numuCC_0pi", "FGD1_anti-numuCC_1pi", "FGD1_anti-numuCC_other", "FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode", "FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode", "FGD1_NuMuBkg_CCother_in_AntiNu_Mode", "FGD2_numuCC_0pi", "FGD2_numuCC_1pi", "FGD2_numuCC_other", "FGD2_anti-numuCC_0pi","FGD2_anti-numuCC_1pi", "FGD2_anti-numuCC_other", "FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode", "FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode", "FGD2_NuMuBkg_CCother_in_AntiNu_Mode"};
+
+  TLegend *leg = new TLegend(0.0, 0.0, 1.0, 1.0);
+
+  for(int s=0; s<18; s++){
+
+    std::string name = samp[s] + "/" + samp_us[s] + "_nom_mean_x_x";
+    //    name = "FGD1 numuCC 0pi/FGD1_numuCC_0pi_nom_mean_ratio";
+    TH1D* priorX = (TH1D*)fileprior->Get(name.c_str())->Clone();
+    name = samp[s] + "/" + samp_us[s] + "_nom_mean_y_y";
+    TH1D* priorY = (TH1D*)fileprior->Get(name.c_str())->Clone();
+
+    std::string datname = samp[s] + "/" + samp_us[s] + "_data_x_x";
+    TH1D* dathistX = (TH1D*)fileprior->Get(datname.c_str())->Clone();
+    for(int i=1; i<=dathistX->GetXaxis()->GetNbins(); i++)
+      dathistX->SetBinError(i,0);
+    datname = samp[s] + "/" + samp_us[s] + "_data_y_y";
+    TH1D* dathistY = (TH1D*)fileprior->Get(datname.c_str())->Clone();
+    for(int i=1; i<=dathistY->GetXaxis()->GetNbins(); i++)
+      dathistY->SetBinError(i,0);
+
+    priorX->Sumw2();
+    dathistX->Sumw2();
+    priorY->Sumw2();
+    dathistY->Sumw2();
+
+    priorX->Scale(1, "width");
+    dathistX->Scale(1, "width");
+    priorY->Scale(1, "width");
+    dathistY->Scale(1, "width");
+
+    dathistX->SetLineColor(kBlack);
+    dathistX->SetLineWidth(2);
+    priorX->SetLineColor(kRed);
+    priorX->SetLineWidth(2);
+    dathistY->SetLineColor(kBlack);
+    dathistY->SetLineWidth(2);
+    priorY->SetLineColor(kRed);
+    priorY->SetLineWidth(2);
+
+    if(s==0){
+      leg->AddEntry(dathistX, "Data", "lp");
+      leg->AddEntry(priorX, "Prior Prediction", "lp");
+      leg->Draw();
+      c->Print((std::string("prioronly1dleg.pdf")).c_str());
+    }
+
+    TH1D* priorratioX = (TH1D*)priorX->Clone();
+    TH1D* priorratioY = (TH1D*)priorY->Clone();
+    
+    priorratioX->Sumw2();
+    priorratioX->Divide(dathistX);
+    priorratioY->Sumw2();
+    priorratioY->Divide(dathistY);
+    
+    int maxX;
+    if(s<2 || (s>8 && s<12))
+      maxX=5000;
+    else if(s==3||s==12||s==5||s==14||s==6||s==15||s==8||s==17)
+      maxX=4000;
+    else if(s==4||s==13)
+      maxX=2500;
+    else if(s==7||s==16)
+      maxX=1500;
+
+    gPad->Clear();
+
+    c->cd();
+    p1->Draw();
+    p1->cd();
+    dathistX->SetTitle("");
+    dathistX->Draw("hist");
+    priorX->Draw("e same");
+    dathistX->SetTitle("");
+    dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
+    dathistX->GetYaxis()->SetTitle("Events");
+    dathistX->GetYaxis()->SetTitleOffset(0.77);
+    dathistX->GetXaxis()->SetRangeUser(0,maxX);
+    dathistX->GetYaxis()->SetRangeUser(0.1,1.25*dathistX->GetMaximum());
+    dathistX->GetYaxis()->SetLabelSize(0.05);
+    dathistX->GetYaxis()->SetTitleSize(0.07);
+    c->Update();
+
+    c->cd();
+    p2->Draw();
+    p2->cd();
+    priorratioX->SetTitle("");
+    priorratioX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
+    priorratioX->GetYaxis()->SetTitle("MC/Data");
+    priorratioX->GetYaxis()->SetTitleOffset(0.36);
+    priorratioX->GetXaxis()->SetRangeUser(0,maxX);
+    priorratioX->GetYaxis()->SetRangeUser(0.51,1.49);
+    priorratioX->GetYaxis()->SetLabelSize(0.12);
+    priorratioX->GetYaxis()->SetNdivisions(305);
+    priorratioX->GetYaxis()->SetTitleSize(0.15);
+    priorratioX->GetXaxis()->SetLabelSize(0.12);
+    priorratioX->GetXaxis()->SetTitleSize(0.15);
+    priorratioX->Draw("e");
+    TLine *line = new TLine(0, 1.0, maxX, 1.0);
+    line->SetLineColor(kBlack);
+    line->Draw("same");
+    
+    c->Print((std::string("prioronly1D_p_")+samp_us[s]+std::string(".pdf")).c_str());
+
+    p1->cd();
+    dathistY->SetTitle("");
+    dathistY->Draw("hist");
+    priorY->Draw("esame");
+    dathistY->SetTitle("");
+    dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
+    dathistY->GetYaxis()->SetTitle("Events");
+    dathistY->GetYaxis()->SetTitleOffset(0.77);
+    dathistY->GetXaxis()->SetRangeUser(0.6,1.0);
+    dathistY->GetYaxis()->SetRangeUser(0.1,1.25*dathistY->GetMaximum());
+    dathistY->GetYaxis()->SetLabelSize(0.05);
+    dathistY->GetYaxis()->SetTitleSize(0.07);
+    c->Update();
+
+    c->cd();
+    p2->Draw();
+    p2->cd();
+    priorratioY->SetTitle("");
+    priorratioY->GetXaxis()->SetTitle("cos #theta_{#mu}");
+    priorratioY->GetYaxis()->SetTitle("MC/Data");
+    priorratioY->GetYaxis()->SetTitleOffset(0.36);
+    priorratioY->GetXaxis()->SetRangeUser(0.7,1.0);
+    priorratioY->GetYaxis()->SetRangeUser(0.51,1.49);
+    priorratioY->GetYaxis()->SetLabelSize(0.12);
+    priorratioY->GetYaxis()->SetNdivisions(305);
+    priorratioY->GetYaxis()->SetTitleSize(0.15);
+    priorratioY->GetXaxis()->SetLabelSize(0.12);
+    priorratioY->GetXaxis()->SetTitleSize(0.15);
+    priorratioY->Draw("e");
+    TLine *line2 = new TLine(0.7, 1.0, 1.0, 1.0);
+    line2->SetLineColor(kBlack);
+    line2->Draw("same");
+
+    c->Print((std::string("prioronly1D_t_")+samp_us[s]+std::string(".pdf")).c_str());
+
+  }
+}
