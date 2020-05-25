@@ -170,7 +170,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
     dathistY->GetYaxis()->SetTitle("Events");
     dathistY->GetYaxis()->SetTitleOffset(0.77);
-    dathistY->GetXaxis()->SetRangeUser(0.6,1.0);
+    dathistY->GetXaxis()->SetRangeUser(0.7,1.0);
     dathistY->GetYaxis()->SetRangeUser(0.1,1.25*dathistY->GetMaximum());
     dathistY->GetYaxis()->SetLabelSize(0.05);
     dathistY->GetYaxis()->SetTitleSize(0.07);
