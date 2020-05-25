@@ -426,15 +426,15 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
   
   for (int i=7; i<11; i++) { 
     Two->SetBinContent(nFluxParams+i,-999);
-    Two->SetBinError(nFluxParams+i,0);
+    Two->SetBinError(nFluxParams+i,1);
     Three->SetBinContent(nFluxParams+i,-999);
-    Three->SetBinError(nFluxParams+i,0);
+    Three->SetBinError(nFluxParams+i,1);
   }
 
   Two->SetBinContent(nFluxParams+25,-999);
-  Two->SetBinError(nFluxParams+25,0);
+  Two->SetBinError(nFluxParams+25,1);
   Three->SetBinContent(nFluxParams+22,-999);
-  Three->SetBinError(nFluxParams+22,0);
+  Three->SetBinError(nFluxParams+22,1);
 
   //Flat prior for low Q2s
   for (int i=11; i<16; i++) {
@@ -449,13 +449,13 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
   //and now hard code for plotting 4/7 Q2 Norms
   for(int i=16;i<19;i++){
     Three->SetBinContent(nFluxParams+i,-999);
-    Three->SetBinError(nFluxParams+i,0);
+    Three->SetBinError(nFluxParams+i,1);
   }
   //  for(int i=Two->GetNbinsX()+2;i>18;i--){
   //Three->SetBinContent(nFluxParams+i,Three->GetBinContent(nFluxParams+i-3));
   // Three->SetBinError(nFluxParams+i,Three->GetBinError(nFluxParams+i-3));
   // }
-  
+
   /////////////////////////////////////////////////// Done hard coding
 
   // Do some fancy replacements
@@ -492,7 +492,7 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     One->GetXaxis()->SetRangeUser(XsecOffset[i-1], XsecOffset[i]);
     One->GetYaxis()->SetRangeUser(0, 2.0);
     if(i==3)
-      One->GetYaxis()->SetRangeUser(0, 2.3);
+      One->GetYaxis()->SetRangeUser(0, 2.5);
     One->GetYaxis()->SetLabelSize(0.);
     One->GetYaxis()->SetTitleSize(0.05);
     One->GetYaxis()->SetTitleOffset(1.3);
@@ -558,5 +558,5 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     delete RatioTwo;
    }
 
-  canv->Print((FileName1+"_"+FileName2+".pdf]").c_str());
+  //  canv->Print((FileName1+"_"+FileName2+".pdf]").c_str());
 }

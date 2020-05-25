@@ -230,7 +230,7 @@ TH1D* MakeRatioPlot(TH1D* OneCopy, TH1D *TwoCopy) {
   return Ratio;
 }
 
-void GetAsimovPlots_HPDOnly2Fits8Q2(std::string FileName1, std::string FileName2) {
+void GetAsimovPlots_HPDOnly2Fits8Q25Q2(std::string FileName1, std::string FileName2) {
 
   TFile *File1 = new TFile(FileName1.c_str());
   TFile *File2 = new TFile(FileName2.c_str());
