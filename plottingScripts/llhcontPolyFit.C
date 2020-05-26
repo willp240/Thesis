@@ -12,7 +12,7 @@
 #include <algorithm>
 #include "TH2Poly.h"
 
-void llhcont(std::string file0) {
+void llhcontPolyFit(std::string file0) {
 
   //  gStyle->SetPalette(56);
 
@@ -47,6 +47,6 @@ void llhcont(std::string file0) {
     hist->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     hist->GetZaxis()->SetTitle("-2LLH_{Sample} x sign(MC-Data)");
     hist->Draw("colz");
-    c->Print((std::string("llhcont")+samp_us[s]+std::string(".pdf")).c_str());
+    c->Print((std::string("llhcont_PolyFit_")+samp_us[s]+std::string(".pdf")).c_str());
   }
 }
