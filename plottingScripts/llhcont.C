@@ -14,7 +14,7 @@
 
 void llhcont(std::string file0) {
 
-  gStyle->SetPalette(56);
+  //  gStyle->SetPalette(56);
 
   TCanvas *c = new TCanvas("canv", "canv", 1580, 1080);
   TFile *file_ = TFile::Open(file0.c_str());
