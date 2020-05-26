@@ -14,7 +14,7 @@
 
 void llhcont(std::string file0) {
 
-  gStyle->SetPalette(51);
+  gStyle->SetPalette(56);
 
   TCanvas *c = new TCanvas("canv", "canv", 1580, 1080);
   TFile *file_ = TFile::Open(file0.c_str());
@@ -40,7 +40,7 @@ void llhcont(std::string file0) {
     hist->GetZaxis()->SetTitleOffset(1.0);
     hist->GetXaxis()->SetTitleSize(0.05);
     hist->GetXaxis()->SetRangeUser(0,5000);
-    hist->GetZaxis()->SetRangeUser(0,15);
+    hist->GetZaxis()->SetRangeUser(-1,15);
     hist->GetYaxis()->SetRangeUser(0.7,1.0);
     hist->GetYaxis()->SetTitleSize(0.05);
     hist->GetZaxis()->SetTitleSize(0.05);
