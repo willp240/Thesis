@@ -1311,104 +1311,125 @@ A covariance using the fit binning as the detector binning was also produced. As
 
 Fits were run using each of these 4 detector covariances, using an intermediate cross-section model including parts of the 2017 analysis parametrisation described in \cite{tn315}, and parts of the 2020 analysis parametrisation described in Section \ref{sec:xsec}. To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the nominal MC. The MC was then fitted to this fake data.
 
-The result of the fits are shown in Figure \ref{fig:detcovbinfluxSK} for the flux parameters, and Figure \ref{fig:detcovbinxsec} for the cross-section parameters. Although there are several differences between the postfit parameter values, there is no consistent trend of having more bins being closer to the fit binning result, and they are all consistent within uncertainties. Although the 179 fit bin fit is often the most different from the 4238 (fit binning) detector bin fit.
+The result of the fits are shown in Figures \ref{fig:detcovbinfluxND} and \ref{fig:detcovbinfluxSK} for the flux parameters, and Figure \ref{fig:detcovbinxsec} for the cross-section parameters. Although there are several differences between the postfit parameter values, there is no consistent trend of having more bins being closer to the fit binning result, and they are all consistent within uncertainties. Although the 179 fit bin fit is often the most different from the 4238 (fit binning) detector bin fit.
 
 \begin{figure}[t]
 \centering
-\begin{subfigure}{0.95\textwidth}
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.24\linewidth]{figs/detcovbin_leg}
+  \includegraphics[width=0.8\linewidth, trim={5mm  65mm 0mm 0mm}, clip]{figs/detcovbin_leg}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_0}
+  \includegraphics[width=0.8\linewidth, trim={5mm  0mm 0mm 105mm}, clip]{figs/detcovbin_leg}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_0}
   \caption{ND FHC $\nu_{\mu}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_1}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_1}
   \caption{ND FHC $\bar{\nu_{\mu}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_2}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_2}
   \caption{ND FHC $\nu_e$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_3}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_3}
   \caption{ND FHC $\bar{\nu_{e}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_4}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_4}
   \caption{ND RHC $\nu_{\mu}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_5}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_5}
   \caption{ND RHC $\bar{\nu_{\mu}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_6}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_6}
   \caption{ND RHC $\nu_e$}
 \end{subfigure}
-\vspace{15mm}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_7}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_7}
   \caption{ND RHC $\bar{\nu_e}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\caption{ND280 flux parameters for fake data fits using different detector binnings.}
+\label{fig:detcovbinfluxND}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_8}
+  \includegraphics[width=0.8\linewidth, trim={5mm  65mm 0mm 0mm}, clip]{figs/detcovbin_leg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth, trim={5mm  0mm 0mm 105mm}, clip]{figs/detcovbin_leg}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_8}
   \caption{SK FHC $\nu_{\mu}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_9}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_9}
   \caption{SK FHC $\bar{\nu_{\mu}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_10}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_10}
   \caption{SK FHC $\nu_e$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_11}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_11}
   \caption{SK FHC $\bar{\nu_{e}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_12}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_12}
   \caption{SK RHC $\nu_{\mu}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_13}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_13}
   \caption{SK RHC $\bar{\nu_{\mu}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_14}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_14}
   \caption{SK RHC $\nu_e$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/detcovbinflux_15}
+  \includegraphics[width=0.75\linewidth]{figs/detcovbinflux_15}
   \caption{SK RHC $\bar{\nu_e}$}
 \end{subfigure}
-\caption{Flux parameters for fake data fits using different detector binnings.}
+\caption{SK flux parameters for fake data fits using different detector binnings.}
 \label{fig:detcovbinfluxSK}
 \end{figure}
 
 \begin{figure}
 \centering
-\begin{subfigure}{0.95\textwidth}
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.25\linewidth]{figs/detcovbin_leg}
+  \includegraphics[width=0.8\linewidth, trim={5mm  65mm 0mm 0mm}, clip]{figs/detcovbin_leg}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth, trim={5mm  0mm 0mm 105mm}, clip]{figs/detcovbin_leg}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \centering

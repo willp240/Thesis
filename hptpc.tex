@@ -319,104 +319,125 @@ The samples binned in $p_{p}$ and $p_{\pi}$ have hard cuts at low momentum, beyo
 
 Three Asimov fits were ran to compare the sensitivities of the two detectors. The ND280 and HPTPC nominal MC distributions were fit in $p_{\mu}$-cos$\theta_{\mu}$, and the HPTPC MC was also fit in the combination of single transverse variables for each sample shown in Figure \ref{fig:hptpcsigvar}.
 
-The fit results are shown in Figures \ref{fig:hptpcflux} and \ref{fig:hptpcxsec}.
+The fit results are shown in Figures \ref{fig:hptpcfluxND}, \ref{fig:hptpcfluxSK} and \ref{fig:hptpcxsec}.
 
 \begin{figure}[t]
 \centering
-\begin{subfigure}{0.95\textwidth}
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.24\linewidth]{figs/hptpcfits_leg}	
+  \includegraphics[width=1.0\linewidth, trim={5mm  90mm 0mm 0mm}, clip]{figs/hptpcfits_leg}	
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_0}
+  \includegraphics[width=1.0\linewidth, trim={5mm  0mm 0mm 95mm}, clip]{figs/hptpcfits_leg}	
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_0}
   \caption{ND FHC $\nu_{\mu}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_1}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_1}
   \caption{ND FHC $\bar{\nu_{\mu}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_2}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_2}
   \caption{ND FHC $\nu_e$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_3}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_3}
   \caption{ND FHC $\bar{\nu_{e}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_4}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_4}
   \caption{ND RHC $\nu_{\mu}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_5}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_5}
   \caption{ND RHC $\bar{\nu_{\mu}}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_6}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_6}
   \caption{ND RHC $\nu_{e}$}
 \end{subfigure}
-\vspace{15mm}
-\begin{subfigure}{0.24\textwidth}
+\begin{subfigure}{0.45\textwidth}
   \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_7}
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_7}
   \caption{ND RHC $\bar{\nu_e}$}
 \end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_8}
-  \caption{SK FHC $\nu_{\mu}$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_9}
-  \caption{SK FHC $\bar{\nu_{\mu}}$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_10}
-  \caption{SK FHC $\nu_e$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_11}
-  \caption{SK FHC $\bar{\nu_e}$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_12}
-  \caption{SK RHC $\nu_{\mu}$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_13}
-  \caption{SK RHC $\bar{\nu_{\mu}}$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_14}
-  \caption{SK RHC $\nu_{e}$}
-\end{subfigure}
-\begin{subfigure}{0.24\textwidth}
-  \centering
-  \includegraphics[width=0.95\linewidth]{figs/hptpcfitsflux_15}
-  \caption{SK RHC $\bar{\nu_e}$}
-\end{subfigure}
-\caption{Flux parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
-\label{fig:hptpcflux}
+\caption{ND280 flux parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
+\label{fig:hptpcfluxND}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
 \centering
-\begin{subfigure}{0.95\textwidth}
+\begin{subfigure}{0.3\textwidth}
   \centering
-  \includegraphics[width=0.25\linewidth]{figs/hptpcfits_leg}	
+  \includegraphics[width=1.0\linewidth, trim={5mm  90mm 0mm 0mm}, clip]{figs/hptpcfits_leg}	
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth, trim={5mm  0mm 0mm 95mm}, clip]{figs/hptpcfits_leg}	
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_8}
+  \caption{SK FHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_9}
+  \caption{SK FHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_10}
+  \caption{SK FHC $\nu_e$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_11}
+  \caption{SK FHC $\bar{\nu_e}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_12}
+  \caption{SK RHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_13}
+  \caption{SK RHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_14}
+  \caption{SK RHC $\nu_{e}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/hptpcfitsflux_15}
+  \caption{SK RHC $\bar{\nu_e}$}
+\end{subfigure}
+\caption{SK flux parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
+\label{fig:hptpcfluxSK}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\begin{subfigure}{0.3\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth, trim={5mm  90mm 0mm 0mm}, clip]{figs/hptpcfits_leg}	
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+  \centering
+  \includegraphics[width=1.0\linewidth, trim={5mm  0mm 0mm 95mm}, clip]{figs/hptpcfits_leg}	
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \centering
