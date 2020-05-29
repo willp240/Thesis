@@ -102,13 +102,19 @@ void prioronly1D(std::string priorfile) {
     else if(s==7||s==16)
       maxX=1500;
 
+    int minY;
+    if(s<8)
+      minY=0.7;
+    else
+      minY=0.8;
+
     gPad->Clear();
 
     c->cd();
     p1->Draw();
     p1->cd();
     dathistX->SetTitle("");
-    dathistX->Draw("hist");
+    dathistX->Draw("e");
     priorX->Draw("e same");
     dathistX->SetTitle("");
     dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
@@ -143,13 +149,13 @@ void prioronly1D(std::string priorfile) {
 
     p1->cd();
     dathistY->SetTitle("");
-    dathistY->Draw("hist");
+    dathistY->Draw("e");
     priorY->Draw("esame");
     dathistY->SetTitle("");
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
     dathistY->GetYaxis()->SetTitle("Events");
     dathistY->GetYaxis()->SetTitleOffset(0.77);
-    dathistY->GetXaxis()->SetRangeUser(0.6,1.0);
+    dathistY->GetXaxis()->SetRangeUser(0.7,1.0);
     dathistY->GetYaxis()->SetRangeUser(0.1,1.25*dathistY->GetMaximum());
     dathistY->GetYaxis()->SetLabelSize(0.05);
     dathistY->GetYaxis()->SetTitleSize(0.07);

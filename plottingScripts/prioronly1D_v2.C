@@ -12,13 +12,12 @@
 #include <algorithm>
 #include "TH2Poly.h"
 
-void priorpred1D(std::string priorfile, std::string postfile) {
+void prioronly1D_v2(std::string pfile) {
 
   //  gStyle->SetPalette(51);
 
   TCanvas *c = new TCanvas("canv", "canv", 1580, 1080);
-  TFile *fileprior = TFile::Open(priorfile.c_str());//priorpred
-  TFile *filepost = TFile::Open(postfile.c_str());//postpred
+  TFile *filep = TFile::Open(pfile.c_str());//d
  
   c->SetTopMargin(0.1);
   c->SetBottomMargin(0.16);
@@ -44,22 +43,19 @@ void priorpred1D(std::string priorfile, std::string postfile) {
 
   for(int s=0; s<18; s++){
 
-    std::string name = samp[s] + "/" + samp_us[s] + "_nom_mean_x_x";
-    //    name = "FGD1 numuCC 0pi/FGD1_numuCC_0pi_nom_mean_ratio";
-    TH1D* priorX = (TH1D*)fileprior->Get(name.c_str())->Clone();
-    TH1D* postX = (TH1D*)filepost->Get(name.c_str())->Clone();
-    name = samp[s] + "/" + samp_us[s] + "_nom_mean_y_y";
-    TH1D* priorY = (TH1D*)fileprior->Get(name.c_str())->Clone();
-    TH1D* postY = (TH1D*)filepost->Get(name.c_str())->Clone();
+    std::string name = samp_us[s] + "_prior_x";
+    TH1D* priorX = (TH1D*)filep->Get(name.c_str())->Clone();
+    name = samp_us[s] + "_post_x";
+    TH1D* postX = (TH1D*)filep->Get(name.c_str())->Clone();
+    name = samp_us[s] + "_prior_y";
+    TH1D* priorY = (TH1D*)filep->Get(name.c_str())->Clone();
+    name = samp_us[s] + "_post_y";
+    TH1D* postY = (TH1D*)filep->Get(name.c_str())->Clone();
 
-    std::string datname = samp[s] + "/" + samp_us[s] + "_data_x_x";
-    TH1D* dathistX = (TH1D*)filepost->Get(datname.c_str())->Clone();
-    //    for(int i=1; i<=dathistX->GetXaxis()->GetNbins(); i++)
-    //dathistX->SetBinError(i,0);
-    datname = samp[s] + "/" + samp_us[s] + "_data_y_y";
-    TH1D* dathistY = (TH1D*)filepost->Get(datname.c_str())->Clone();
-    // for(int i=1; i<=dathistY->GetXaxis()->GetNbins(); i++)
-    //dathistY->SetBinError(i,0);
+    std::string datname = samp_us[s] + "_data_x";
+    TH1D* dathistX = (TH1D*)filep->Get(datname.c_str())->Clone();
+    datname = samp_us[s] + "_data_y";
+    TH1D* dathistY = (TH1D*)filep->Get(datname.c_str())->Clone();
 
     priorX->Sumw2();
     postX->Sumw2();
@@ -68,13 +64,13 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     postY->Sumw2();
     dathistY->Sumw2();
 
-    priorX->Scale(1, "width");
+    /*    priorX->Scale(1, "width");
     postX->Scale(1, "width");
     dathistX->Scale(1, "width");
     priorY->Scale(1, "width");
     postY->Scale(1, "width");
     dathistY->Scale(1, "width");
-
+    */
     dathistX->SetLineColor(kBlack);
     //dathistX->SetLineWidth(2);
     priorX->SetLineColor(kRed);
@@ -91,12 +87,12 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     if(s==0){
       leg->AddEntry(dathistX, "Data", "lp");
       leg->AddEntry(priorX, "Prior Prediction", "lp");
-      leg->AddEntry(postX, "Posterior Prediction", "lp");
+      //leg->AddEntry(postX, "Posterior Prediction", "lp");
       leg->Draw();
       c->Print((std::string("prior1dleg.pdf")).c_str());
-      for (int b=1; b<=postX->GetNbinsX(); b++){
-	std::cout << b << " " << postX->GetBinError(b) << std::endl;
-      }
+      //      for (int b=1; b<=postX->GetNbinsX(); b++){
+      //std::cout << b << " " << postX->GetBinError(b) << std::endl;
+      //      }
     }
 
     TH1D* priorratioX = (TH1D*)priorX->Clone();
@@ -137,7 +133,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     dathistX->SetTitle("");
     dathistX->Draw("e");
     priorX->Draw("e same");
-    postX->Draw("e same");
+    //    postX->Draw("e same");
     dathistX->SetTitle("");
     dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
     dathistX->GetYaxis()->SetTitle("Events");
@@ -163,7 +159,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     priorratioX->GetXaxis()->SetLabelSize(0.12);
     priorratioX->GetXaxis()->SetTitleSize(0.15);
     priorratioX->Draw("e");
-    postratioX->Draw("e same");
+    //postratioX->Draw("e same");
     dataratioX->SetFillStyle(3144);
     dataratioX->SetFillColor(kBlack);
     dataratioX->SetFillStyle(3003);
@@ -181,7 +177,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     dathistY->SetTitle("");
     dathistY->Draw("e");
     priorY->Draw("esame");
-    postY->Draw("esame");
+    //postY->Draw("esame");
     dathistY->SetTitle("");
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
     dathistY->GetYaxis()->SetTitle("Events");
@@ -207,7 +203,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     priorratioY->GetXaxis()->SetLabelSize(0.12);
     priorratioY->GetXaxis()->SetTitleSize(0.15);
     priorratioY->Draw("e");
-    postratioY->Draw("e same");
+    //postratioY->Draw("e same");
     dataratioY->Draw("e2 same");
     dataratioY->SetFillStyle(3144);
     dataratioY->SetFillColor(kBlack);
