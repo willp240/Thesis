@@ -171,7 +171,7 @@ void prioronly1D_v2(std::string pfile) {
     line->SetLineColor(kBlack);
     // line->Draw("same");
     
-    c->Print((std::string("priorpred1D_p_")+samp_us[s]+std::string(".pdf")).c_str());
+    c->Print((std::string("prioronly1D_p_")+samp_us[s]+std::string(".pdf")).c_str());
 
     p1->cd();
     dathistY->SetTitle("");
