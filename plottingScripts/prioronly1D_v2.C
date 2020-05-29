@@ -215,7 +215,7 @@ void prioronly1D_v2(std::string pfile) {
     line2->SetLineColor(kBlack);
     //    line2->Draw("same");
 
-    c->Print((std::string("priorpred1D_t_")+samp_us[s]+std::string(".pdf")).c_str());
+    c->Print((std::string("prioronly1D_t_")+samp_us[s]+std::string(".pdf")).c_str());
   }
 
 
