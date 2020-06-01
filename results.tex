@@ -2206,7 +2206,7 @@ Like the flux parameters, there is an overall trend of the postfit values for th
 \begin{subfigure}{.48\textwidth}
   \centering
   \includegraphics[width=0.73\linewidth]{figs/PolyComp_EB_dial_O_nu}
-  \caption{$E_{b}\nu$ O}
+  \caption{$E_{b}\nu$ O}\label{fig:polyEbOnu}
 \end{subfigure}
 \begin{subfigure}{.48\textwidth}
   \centering
@@ -2407,7 +2407,7 @@ The SK posterior predictive event rates are shown in Table \ref{tab:skratespoly}
 
 The posterior predictive distributions are shown in Figure \ref{fig:skpppoly}. There is a general trend of the non-uniform fit binning fits producing very similar predictions at SK to each other, with more prominent differences to the prediction from the uniform fit binning, as was seen in the postfit parameter values.
 
-For the FHC 1R$_{\mu}$ sample, the height of the peak is slightly higher and is at a slightly lower energy for the uniform fit binning. The dip is at the same energy in all three fits, but is lower for the uniform fit binning. At energies above the dip, the three predictions are very consistent, with the non-uniform fit and detector binning prediction being a very small amount higher. The differences in the RHC 1R$_{\mu}$ sample are very similar as for FHC 1R$_{\mu}$, but the height of the peaks are identical in all three fits.
+For the FHC 1R$_{\mu}$ sample, the height of the peak is slightly higher and is at a slightly lower energy for the uniform fit binning. The dip is at the same energy in all three fits, but is lower and wider for the uniform fit binning. At energies above the dip, the three predictions are very consistent, with the non-uniform fit and detector binning prediction being a very small amount higher. The differences in the RHC 1R$_{\mu}$ sample are very similar as for FHC 1R$_{\mu}$, but the height of the peaks are identical in all three fits.
 
 The predictions for the FHC 1R$_e$ sample has a higher peak for the uniform fit binning fit. Above and below the peak energy, the non-uniform fit binning predictions are slightly higher. This is a larger effect at lower energies.
 
@@ -2416,6 +2416,8 @@ For the RHC 1R$_e$ sample, the three predictions are very consistent. For the un
 The predictions for the 1R$e$ 1d.e. sample are also compatible across all energies. However, the peak is lower for the non-uniform fit and detector binning. This is the only region in any of the samples where the two non-uniform fit binning predictions aren't closer to each other than the uniform binning. Here, the non-uniform fit and merged-uniform detector binning event rate is slightly lower than the for the uniform binning, but this difference is smaller than the difference to the non-uniform fit and detector binning. 
 
 Overall, the three fit predictions are very compatible, with similar shapes and differences to the prior prediction. All the differences between the three posterior predictions are within the predicted uncertainties.
+
+As the aim of the non-uniform binning was to improve the sensitivity, it is perhaps disappointing that the uncertainty on the event rates at SK has not decreased for the additional fits. However, looking at just the event rate does not take into account any change in shape and so does not tell the whole story. The full impact on the sensitivity to oscillation measurements is discussed in Section \ref{sec:jointEb}.
 
 \begin{figure}
 \centering
@@ -2467,15 +2469,337 @@ To see the full effect of the updates to the near detector fit on the oscillatio
 
 Like for the SK posterior predictions, the oscillation parameters are set to the values in Table \ref{tab:oscpar}, and the SK detector parameters are set to their nominal values. 
 
-The ND280 fit binning used is the non-uniform binning described in Section \ref{sec:nonrecbinning}. However, the detector binning is the 574 merged-uniform bins, as the fit binning as detector binning introduces too many parameters for the full joint fit to converge in a feasible amount of time. As the joint fits have an increased number of samples and systematics, longer Markov Chains are needed to reach the stationary distribution. The joint fit presented here is \red{X} steps. 
+The ND280 fit binning used is the non-uniform binning described in Section \ref{sec:nonrecbinning}. However, the detector binning is the 574 merged-uniform bins, as the fit binning as detector binning introduces too many parameters for the full joint fit to converge in a feasible amount of time. As the joint fits have an increased number of samples and systematics, longer Markov Chains are needed to reach the stationary distribution. The joint fit presented here consists of $\sim$21 million steps. 
 
-The results are compared to those from the 2018 oscillation analysis, with the improvement in sensitivity coming from the increase in data and updates to the input models, fitting framework, and systematic treatments described in this thesis. 
+The interaction and flux systematics are compared to the near detector only fit in Figures \ref{fig:jointfluxND}, \ref{fig:jointfluxSK} and  \ref{fig:jointxsec}. The postfit central values are very similar and the uncertainties are not reduced further, showing that almost the entire constraint on the systematic parameters is coming from the near detector samples. Interestingly, many parameters have a slightly larger postfit uncertainty for the joint fit than for the near detector only fit. This is likely due to correlations with SK only parameters causing marginalisation effects.
 
-The interaction and flux systematics are compared to the near detector only fit in Figure \ref{}. The results are very similar, showing that 
+\begin{figure}
+\centering
+\begin{subfigure}{0.8\textwidth}
+  \centering
+  \includegraphics[width=0.24\linewidth]{figs/joint_leg}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux0}
+  \caption{ND FHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux1}
+  \caption{ND FHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux2}
+  \caption{ND FHC $\nu_{e}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux3}
+  \caption{ND FHC $\bar{\nu_{e}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux4}
+  \caption{ND RHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux5}
+  \caption{ND RHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux6}
+  \caption{ND RHC $\nu_{e}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux7}
+  \caption{ND RHC $\bar{\nu_e}$}
+\end{subfigure}
+\caption{ND280 flux parameters for the joint and near detector only fits.}
+\label{fig:jointfluxND}
+\end{figure}
 
-Figure \ref{} shows the credible intervals of the disappearance parameters $\Delta^{2}_{23}$ and sin$^{2}\theta_{23}$...
+\begin{figure}
+\centering
+\begin{subfigure}{0.8\textwidth}
+  \centering
+  \includegraphics[width=0.24\linewidth]{figs/joint_leg}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux8}
+  \caption{SK FHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux9}
+  \caption{SK FHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux10}
+  \caption{SK FHC $\nu_{e}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux11}
+  \caption{SK FHC $\bar{\nu_{e}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux12}
+  \caption{SK RHC $\nu_{\mu}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux13}
+  \caption{SK RHC $\bar{\nu_{\mu}}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux14}
+  \caption{SK RHC $\nu_{e}$}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{figs/jointflux15}
+  \caption{SK RHC $\bar{\nu_e}$}
+\end{subfigure}
+\caption{SK flux parameters for the joint and near detector only fits.}
+\label{fig:jointfluxSK}
+\end{figure}
 
-\red{First show flux/xsec comparison for nd only vs joint fit. Then oscillation parameter contours and discuss more}
+\begin{figure}
+\centering
+\begin{subfigure}{0.95\textwidth}
+  \centering
+  \includegraphics[width=0.25\linewidth]{figs/joint_leg}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figs/jointxsec1}
+  \caption{CC0$\pi$}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figs/jointxsec2}
+  \caption{$Q^2$ and $E_b$}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figs/jointxsec3}
+  \caption{CC1$\pi$, $\nu_e$, CC DIS, CC mult-$\pi$ and CC coh.}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figs/jointxsec4}
+  \caption{NC}
+\end{subfigure}
+\begin{subfigure}{0.49\textwidth}
+  \centering
+  \includegraphics[width=0.9\linewidth]{figs/jointxsec5}
+  \caption{$\pi$ FSI}
+\end{subfigure}
+\caption{Interaction parameters for the joint and near detector only fits.}
+\label{fig:jointxsec}
+\end{figure}
 
+\subsection{Comparison to the 2018 Oscillation Analysis}
+
+The joint Asimov fit results were compared to those from the 2018 oscillation analysis, with the improvement in sensitivity coming from the increase in data and updates to the input models, fitting framework, and systematic treatments described in this thesis. Part of the improvement will also be due to the increased SK data and updated SK detector covariance.
+
+Figure \ref{fig:20182020Dis} shows the posterior probability distribution for the disappearance parameters, $\Delta^{2}_{23}$ and sin$^{2}\theta_{23}$, with all other parameters marginalised over. Figure \ref{fig:20182020DisNH} shows steps for the normal hierarchy, with $\Delta m^{2}_{23}<0$,  and Figure \ref{fig:20182020DisIH} shows steps for the inverted hierarchy, with $\Delta m^{2}_{23}>0$. The solid dashed lines show the 90$\%$ and 68$\%$ credible intervals respectively. The best fit points are shown by the triangles, for both analyses. 
+
+There is significant improvement on the potential constraint for both parameters, with the 90$\%$ interval for this analysis now lying almost entirely inside the 68$\%$ interval for the previous analysis for both hierarchies.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_2018vs2020Kevin/comparedmach3contours_RCeff_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:20182020DisNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_2018vs2020Kevin/comparedmach3contours_RCeff_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:20182020DisIH}
+\end{subfigure}
+\caption{Comparison of the disappearance parameter credible intervals from joint Asimov fits for the 2018 and 2020 oscillation analyses. The solid (dashed) lines show the 90$\%$ ($68\%$) credible intervals.}
+\label{fig:20182020Dis}
+\end{figure}
+
+The comparison of the appearance parameters, $\delta_{CP}$ and sin$^{2}\theta_{13}$, are shown in Figure \ref{fig:20182020App}. The constraint on sin$^{2}\theta_{13}$ has improved significantly, but not by as much as the disappearance parameters. The $\delta_{CP}$ constraint is very similar for the two analyses. This is because the appearance parameters are dominated by the statistical uncertainty, and so the considerable updates to the systematic treatments has a smaller effect. The one dimensional posterior probability distributions for $\delta_{CP}$ are shown in Figure \ref{fig:20182020dcp}. There is a slightly narrower peak for the 2020 analysis, but this a very small difference.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_2018vs2020Kevin/comparedmach3contours_RCeff_app_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:20182020AppNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_2018vs2020Kevin/comparedmach3contours_RCeff_app_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:20182020AppIH}
+\end{subfigure}
+\caption{Comparison of the appearance parameter credible intervals from joint Asimov fits for the 2018 and 2020 oscillation analyses. The solid (dashed) lines show the 90$\%$ ($68\%$) credible intervals.}
+\label{fig:20182020App}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_2018vs2020Kevin/comparedmach3contours_RCeff_dcp_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:20182020dcpNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_2018vs2020Kevin/comparedmach3contours_RCeff_dcp_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:20182020dcpIH}
+\end{subfigure}
+\caption{Comparison of the $\delta_{CP}$ posterior probability distribution from joint Asimov fits for the 2018 and 2020 oscillation analyses.}
+\label{fig:20182020dcp}
+\end{figure}
+
+\subsection{Impact of Non-Uniform Near Detector Binning}\label{sec:jointEb}
+
+Although the uncertainty on the predicted SK event rate was not reduced by using non-rectangular fit binning at the near, this was a single bin analysis which did not take into account any shape information. The full impact of the updated binning on the potential sensitivity is seen in the posterior probability distributions from joint Asimov fits. An identical joint Asimov fit was run, but with the uniform near detector fit binning. All other aspects of the systematics and samples for both the near and far detector were the same, and both fits used the 574 merged near detector covariance binning.
+
+The credible intervals for the appearance parameters are compared in Figure \ref{fig:TH2DPolyDis}, for both the normal and inverted hierarchies. There is a better constraint on sin$^{2}\theta_{23}$ for the fit using non-uniform near detector fit binning for both hierarchies. This is due to the dip in the FHC $\nu_{\mu}$ prediction being slightly lower in the posterior prediction for the no-uniform fits. The constraint on $\Delta m_{23}^{2}$ is also slightly stronger for the non-uniform fits, particularly for the normal hierarchy, but this is a smaller effect
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_PolyvsTH2DKevin/comparedmach3contours_RCeff_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:TH2DPolyDisNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_PolyvsTH2DKevin/comparedmach3contours_RCeff_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:TH2DPolyDisIH}
+\end{subfigure}
+\caption{Comparison of the disappearance parameter credible intervals from joint Asimov fits using uniform (TH2D) and non-uniform (TH2Poly) near detector fit binning. The solid (dashed) lines show the 90$\%$ ($68\%$) credible intervals.}
+\label{fig:TH2DPolyDis}
+\end{figure}
+
+The posterior distributions for the appearance parameters are shown in Figure \ref{fig:TH2DPolydcp}. Particularly for the inverted hierarchy, the constraint is slightly weaker for the non-uniform fits, but the difference is very small. The 1D posterior distributions for $\delta_{CP}$, shown in Figure \ref{fig:TH2DPolydcp}, also display a marginally weaker constraint for the non-uniform near detector binning fits.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_PolyvsTH2DKevin/comparedmach3contours_RCeff_app_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:TH2DPolyAppNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_PolyvsTH2DKevin/comparedmach3contours_RCeff_app_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:TH2DPolyAppIH}
+\end{subfigure}
+\caption{Comparison of the appearance parameter credible intervals from joint Asimov fits using uniform (TH2D) and non-uniform (TH2Poly) near detector fit binning. The solid (dashed) lines show the 90$\%$ ($68\%$) credible intervals.}
+\label{fig:TH2DPolyApp}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_PolyvsTH2DKevin/comparedmach3contours_RCeff_dcp_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:TH2DPolydcpNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_PolyvsTH2DKevin/comparedmach3contours_RCeff_dcp_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:TH2DPolydcpIH}
+\end{subfigure}
+\caption{Comparison of the $\delta_{CP}$ posterior probability distribution from from joint Asimov fits using uniform and non-uniform near detector fit binning.}
+\label{fig:TH2DPolydcp}
+\end{figure}
+
+\subsection{Impact of $E_{b}$}\label{secc:jointeb}
+
+As discussed in Section \ref{sec:eb}, was the largest individual systematic uncertainty in the previous T2K oscillation analysis. Simulated data studies have shown that the effect of varying this systematic has a significant impact on the oscillation parameter contours \cite{tn331}.
+
+To inspect the impact of the new treatment of the binding energy on the full oscillation analysis, the $E_b \nu ^{16}$O parameter was fixed to the post near detecctor fit value and the same oscillation parameter contours were produced. Fixing the parameter was simulated by using only steps with $E_b \nu ^{16}$O between -3.2 and -1.6 (corresponding to a range of 23.8-25.4 MeV), a thin region around the peak in Figure \ref{fig:polyEbOnu} at -2.41. The region was chosen to be as small as possible while still having enough steps to produce stable contours. The number of steps contained in this region was $\sim$4 million.
+
+Only $E_b \nu ^{16}$O was fixed to ensure enough steps were selected, but the correlations mean the other $E_{b}$ parameters will be somewhat fixed. Furthermore, as there is no $^{12}$C in SK, and there is a larger POT FHC than RHC, $E_b \nu ^{16}$O is the dominant $E_b$ parameter.
+
+The comparison of the posterior distributions for disappearance parameter is shown in Figure \ref{fig:EBDis}. The $E_b$ fixed contours are not as smooth as much fewer steps were used to produce them, but the shape and size is very consistent with the full fit. 
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_Eb_m1.6_3.2/comparedmach3contours_RCeff_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:EBDisNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_Eb_m1.6_3.2/comparedmach3contours_RCeff_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:EBDisIH}
+\end{subfigure}
+\caption{Comparison of the disappearance parameter credible intervals from joint Asimov fits using steps with $ -3.2 < E_b \nu ^{16}$O $< -1.6$, and using all steps. The solid (dashed) lines show the 90$\%$ ($68\%$) credible intervals.}
+\label{fig:EBDis}
+\end{figure}
+
+The appearance contours, shown in Figure \ref{fig:EBApp}, are also very compatible. The 90$\%$ credible interval is slightly tighter in sin$^{2}\theta_{13}$ for the fixed $E_{b}$ fit, but this is a very small difference, which may be at least in part due to the lack of steps and the subsequent un-smoothness of the contours. The 1D posteriors for $\delta_{CP}$, shown in Figure \ref{fig:EBdcp} are also mostly unchanged. 
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_Eb_m1.6_3.2/comparedmach3contours_RCeff_app_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:EBAppNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_Eb_m1.6_3.2/comparedmach3contours_RCeff_app_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:EBAppIH}
+\end{subfigure}
+\caption{Comparison of the disappearance parameter credible intervals from joint Asimov fits using steps with $ -3.2 < E_b \nu ^{16}$O $< -1.6$, and using all steps. The solid (dashed) lines show the 90$\%$ ($68\%$) credible intervals.}
+\label{fig:EBApp}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_Eb_m1.6_3.2/comparedmach3contours_RCeff_dcp_asimovA_NH}
+  \caption{Normal Hierarchy.}
+  \label{fig:EBdcpNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/comparedmach3contours_Eb_m1.6_3.2/comparedmach3contours_RCeff_dcp_asimovA_IH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:EBdcpIH}
+\end{subfigure}
+\caption{Comparison of the $\delta_{CP}$ posterior probability distribution from from joint Asimov fits using steps with $ -3.2 < E_b \nu ^{16}$O $< -1.6$, and using all steps.}
+\label{fig:EBdcp}
+\end{figure}
+
+The fact that fixing the binding energy does not change the credible intervals demonstrates it is no longer the significant uncertainty it was in previous analyses. With the new treatment, it has gone from being a dominant, to a sub-dominant systematic uncertainty in the oscillation analysis.
 
 \newpage
