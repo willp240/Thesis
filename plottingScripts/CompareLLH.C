@@ -40,7 +40,7 @@ void LoopDirectory(TDirectory *dir) {
     if (name.find("ndd") != std::string::npos) continue;
     //    if (name.find("b_") != std::string::npos) continue;
 
-    if((name.find("b_0") == std::string::npos)&&(name.find("b_18")== std::string::npos)&&((name.find("b_40")== std::string::npos))&&(name.find("2p2h_shape_O") == std::string::npos)&&(name.find("FEFCX") == std::string::npos)&&(name.find("FEFINEL") == std::string::npos) )continue;
+    if((name.find("b_0") == std::string::npos)&&(name.find("b_18")== std::string::npos)&&((name.find("b_40")== std::string::npos))&&(name.find("2p2h_shape_O") == std::string::npos)&&(name.find("FEFCX") == std::string::npos)&&(name.find("FEFINEL") == std::string::npos) &&(name.find("b_30") == std::string::npos))continue;
     param=name;
     name = std::string(dir->GetName())+"/"+name;
     if (name.find(".root") != std::string::npos) continue;
