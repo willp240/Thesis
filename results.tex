@@ -68,7 +68,7 @@ The number of unweighted events for each interaction mode are shown in Table \re
 \end{table}
 \end{center}
 
-The 2D nominal MC distributions are shown for the FGD1 CC-0$\pi$ and FGD2 CC-0$\pi$ samples in Figure \ref{fig:2dnom}. The other samples are shown in Appendix \ref{app:nomMC} The uniform-rectangular binning described in Appendix \ref{app:bintemplates} is used for the initial fits. 
+The 2D nominal MC distributions are shown for the FGD1 CC 0$\pi$ and FGD2 CC 0$\pi$ samples in Figure \ref{fig:2dnom}. The other samples are shown in Appendix \ref{app:nomMC}. The uniform-rectangular binning described in Appendix \ref{app:bintemplates} is used for the initial fits. 
 
 \begin{figure}
 \centering
@@ -88,7 +88,7 @@ The 2D nominal MC distributions are shown for the FGD1 CC-0$\pi$ and FGD2 CC-0$\
 \label{fig:2dnom}
 \end{figure}
 
-The projection of these distributions onto the $p_{\mu}$ axis are shown in Figure \ref{fig:pstack}, along with the data and interaction mode breakdown.
+The projection of these distributions onto the $p_{\mu}$ axis are shown in Figures \ref{fig:pstack_fhc}, \ref{fig:pstack_rhc_numub}, and \ref{fig:pstack_rhc_numu}, along with the data and interaction mode breakdown.
 
 The CC 0$\pi$ and CC Other samples show slightly oscillatory behaviour in the ratio of data to MC at low momentum. The ratio is consistently $>1$, but is slightly increased at the peak momentum for FHC and RHC $\nu$, and decreased at the peak for RHC $\bar{\nu}$. The ratio for the CC 1$\pi$ samples is more flat in momentum, but shows a small oscillation $<1$ at low momentum for FHC $\nu$, and $>1$ for RHC $\nu$ and $\bar{\nu}$. The behaviour is similar across the FGDs.
 
@@ -261,11 +261,11 @@ The FHC $\nu$ and RHC $\bar{\nu}$ CC 0$\pi$ samples are dominated by the target 
 \end{figure}
 
 
-The projections onto the cos$\theta_{\mu}$ axis are shown in Figure \ref{fig:tstack}, along with the data and interaction mode breakdown.
+The projections onto the cos$\theta_{\mu}$ axis are shown in Figures \ref{fig:pstack_fhc}, \ref{fig:pstack_rhc_numub}, and \ref{fig:pstack_rhc_numu}, along with the data and interaction mode breakdown.
 
 The CC 0$\pi$ and CC Other samples again show slight oscillatory behaviour in the ratio of data to MC within statistical uncertainty. At high angle, the ratio increases and decreases, but always remains $>1$. For the CC 1$\pi$ samples,  the ratio is more flat, but at high angle oscillates between the MC over and underestimating the data. The behaviour is consistent across the FGDs.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{.24\textwidth}
   \centering
@@ -321,7 +321,7 @@ The CC 0$\pi$ and CC Other samples again show slight oscillatory behaviour in th
 \label{fig:tstack_fhc}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{.24\textwidth}
   \centering
@@ -377,7 +377,7 @@ The CC 0$\pi$ and CC Other samples again show slight oscillatory behaviour in th
 \label{fig:tstack_rhc_numub}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{.24\textwidth}
   \centering
@@ -432,6 +432,7 @@ The CC 0$\pi$ and CC Other samples again show slight oscillatory behaviour in th
 \label{fig:tstack_rhc_numu}
 \end{figure}
 
+\FloatBarrier
 \section{Log-likelihood Scans}\label{sec:llhscan}
 
 As described in Section \ref{sec:extrac}, the marginalisation effects from extracting correlated and non-Gaussian parameters from the full posterior distribution can cause the fit to appear biased. A full Asimov fit alone, described in Section \ref{sec:asimov}, is therefore not a good method of validating the framework.
@@ -1605,9 +1606,9 @@ Overall, the high log-likelihoods aren't coming from a consistent region in $p_{
 \label{fig:llhconts}
 \end{figure}
 
-As discussed in Section \ref{sec:pval}, there is no definitive gauge for what does or does not constitute an acceptable value for the goodness of fit. Furthermore, by construction the Bayesian p-value is a 'demanding' test, and so the low p-values do not necessarily mean the fit results are invalid. 
+As discussed in Section \ref{sec:pval}, there is no definitive gauge for what does or does not constitute an acceptable value for the goodness of fit. Furthermore, as the Bayesian p-value measures how likely it would be that a repeat of the experiment would observe data consistent with the postfit model, and as such is a more stringent test than a traditional p-value, the low p-values presented here do not necessarily mean the fit results are invalid.
 
-The frequentist p-value, calculated in the BANFF framework, was significantly higher, at 0.74 \cite{tn395}. This result does suggest that the best fit set of parameter values is consistent with the model, and is increased since the last oscillation analysis \cite{tn324}. As previously discussed, this frequentist p-value is the more traditional interpretation of the goodness of fit, indicating the compatibility of the model to fit the data, and the construction uses a more rigorous treatment of the detector systematics. Therefore, as the frequentist p-value was high, and the low Bayesian p-value was driven by the CC Other and RHC CC $0\pi$ samples rather than being consistently 0.00, it can be concluded that an acceptable level of goodness of fit has been achieved.
+The frequentist p-value, calculated in the BANFF framework, was significantly higher, at 0.74 \cite{tn395}. This result does suggest that the best fit set of parameter values is consistent with the prior model, and is increased since the last oscillation analysis \cite{tn324}. As previously discussed, this frequentist p-value is the more traditional interpretation of the goodness of fit, indicating the compatibility of the model to fit the data, and the construction uses a more rigorous treatment of the detector systematics. Therefore, as the frequentist p-value was high, and the low Bayesian p-value was driven by the CC Other and RHC CC $0\pi$ samples rather than being consistently 0.00, it can be concluded that an acceptable level of goodness of fit has been achieved.
 
 \subsection{Propagating to SK}
 
@@ -2672,6 +2673,48 @@ The comparison of the appearance parameters, $\delta_{CP}$ and sin$^{2}\theta_{1
 \label{fig:20182020dcp}
 \end{figure}
 
+To show exactly where the improvement in sensitivity is coming from, one of the far detector fitting groups produced contours adding in updates in a piecewise manner \cite{tn397}. These contours include a prior\cite{pdg} on sin$\theta_{13}$ using data from reactor experiments, which also had an update for this analysis. The results in Figures \ref{fig:20182020Dis}-\ref{fig:20182020dcp} only use T2K data, and so do not agree exactly with these contours. Furthermore, these were produced using one of the frequentist far detector fitting groups which takes the BANFF near detector fit result as an input. There are therefore expected to be differences to the Markov Chain result because of differences in the implementation. Marginalisation effects, the different near detector fit binning, and the different $E_b$ treatments will all cause discrepancies in the results. However, the relative size of changes from the different updates will be the same for each analysis.
+
+The disappearance parameters in Figure \ref{fig:20182020DisPT} show a large increase in constraint for fixing the binding energy parameter, demonstrating how big an impact the old treatment of the uncertainty had on the oscillation analysis. There are then smaller improvements for moving to the updated interaction model (including the new binding energy parameter), and the new near detector fit results. The update to the reactor constraint, which sets a tighter prior on sin$\theta_{13}$, does not have a significant effect on the disappearance parameters. Finally, adding the new SK data improves the sensitivity, but the change is not as large as for fixing the binding energy. There are similar relative improvements from each update for the normal and inverted hierarchies. 
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth, trim={0.5mm 0.5mm 0mm 0mm}, clip]{figs/jointPTheta_disNH}
+  \caption{Normal Hierarchy.}
+  \label{fig:20182020PTDisNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth, trim={1mm 0.5mm 0.5mm 0mm},clip]{figs/jointPTheta_disIH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:20182020PTDisIH}
+\end{subfigure}
+\caption{Asimov sensitivity for the disappearance parameters with incremental updates from the 2018 oscillation analysis \cite{t2knature}. Figure from \cite{tn397}.}
+\label{fig:20182020DisPT}
+\end{figure}
+
+For the appearance parameters in Figure \ref{fig:20182020AppPT}, the update to the reactor constraint has the most significant impact. The contours get tighter in sin$\theta_{13}$, but slightly wider in $\delta_{CP}$. They also move to a higher value in sin$\theta_{13}$. 
+
+\begin{figure}
+\centering
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth, trim={0.5mm 0.5mm 0mm 0mm}, clip]{figs/jointPTheta_appNH}
+  \caption{Normal Hierarchy.}
+  \label{fig:20182020PTAppNH}
+\end{subfigure}
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth, trim={0mm 0mm 0.5mm 0mm}, clip]{figs/jointPTheta_appIH}
+  \caption{Inverted Hierarchy.}
+  \label{fig:20182020PTAppIH}
+\end{subfigure}
+\caption{Asimov sensitivity for the appearance parameters with incremental updates from the 2018 oscillation analysis \cite{t2knature}. Figure from \cite{tn397}.}
+\label{fig:20182020AppPT}
+\end{figure}
+
 \subsection{Impact of Non-Uniform Near Detector Binning}\label{sec:jointEb}
 
 Although the uncertainty on the predicted SK event rate was not reduced by using non-rectangular fit binning at the near, this was a single bin analysis which did not take into account any shape information. The full impact of the updated binning on the potential sensitivity is seen in the posterior probability distributions from joint Asimov fits. An identical joint Asimov fit was run, but with the uniform near detector fit binning. All other aspects of the systematics and samples for both the near and far detector were the same, and both fits used the 574 merged near detector covariance binning.
@@ -2738,11 +2781,11 @@ The posterior distributions for the appearance parameters are shown in Figure \r
 
 As discussed in Section \ref{sec:eb}, was the largest individual systematic uncertainty in the previous T2K oscillation analysis. Simulated data studies have shown that the effect of varying this systematic has a significant impact on the oscillation parameter contours \cite{tn331}.
 
-To inspect the impact of the new treatment of the binding energy on the full oscillation analysis, the $E_b \nu ^{16}$O parameter was fixed to the post near detecctor fit value and the same oscillation parameter contours were produced. Fixing the parameter was simulated by using only steps with $E_b \nu ^{16}$O between -3.2 and -1.6 (corresponding to a range of 23.8-25.4 MeV), a thin region around the peak in Figure \ref{fig:polyEbOnu} at -2.41. The region was chosen to be as small as possible while still having enough steps to produce stable contours. The number of steps contained in this region was $\sim$4 million.
+To inspect the impact of the new treatment of the binding energy on the full oscillation analysis, the $E_b \nu ^{16}$O parameter was fixed to the post near detector fit value and the same oscillation parameter contours were produced. Fixing the parameter was simulated by using only steps with $E_b \nu ^{16}$O between -3.2 and -1.6 (corresponding to a range of 23.8-25.4 MeV), a thin region around the peak in Figure \ref{fig:polyEbOnu} at -2.41. The region was chosen to be as small as possible while still having enough steps to produce stable contours. The number of steps contained in this region was $\sim$4 million.
 
 Only $E_b \nu ^{16}$O was fixed to ensure enough steps were selected, but the correlations mean the other $E_{b}$ parameters will be somewhat fixed. Furthermore, as there is no $^{12}$C in SK, and there is a larger POT FHC than RHC, $E_b \nu ^{16}$O is the dominant $E_b$ parameter.
 
-The comparison of the posterior distributions for disappearance parameter is shown in Figure \ref{fig:EBDis}. The $E_b$ fixed contours are not as smooth as much fewer steps were used to produce them, but the shape and size is very consistent with the full fit. 
+The comparison of the posterior distributions for disappearance parameter is shown in Figure \ref{fig:EBDis}. The $E_b$ fixed contours are not as smooth as much fewer steps were used to produce them, but the shape and size is very consistent with the full fit. Any changes are much smaller than for fixing the previous $E_b$ implementation in Figure \ref{fig:20182020DisPT}.
 
 \begin{figure}
 \centering
@@ -2762,7 +2805,7 @@ The comparison of the posterior distributions for disappearance parameter is sho
 \label{fig:EBDis}
 \end{figure}
 
-The appearance contours, shown in Figure \ref{fig:EBApp}, are also very compatible. The 90$\%$ credible interval is slightly tighter in sin$^{2}\theta_{13}$ for the fixed $E_{b}$ fit, but this is a very small difference, which may be at least in part due to the lack of steps and the subsequent un-smoothness of the contours. The 1D posteriors for $\delta_{CP}$, shown in Figure \ref{fig:EBdcp} are also mostly unchanged. 
+The appearance contours, shown in Figure \ref{fig:EBApp}, are also very compatible. The 90$\%$ credible interval is slightly tighter in sin$^{2}\theta_{13}$ for the fixed $E_{b}$ fit, but this is a very small difference, which may be at least in part due to the lack of steps and the subsequent un-smoothness of the contours. The change is much smaller than for fixing the previous implementation in Figure \ref{fig:20182020AppPT}. The 1D posteriors for $\delta_{CP}$, shown in Figure \ref{fig:EBdcp} are also mostly unchanged. 
 
 \begin{figure}
 \centering
@@ -2800,6 +2843,6 @@ The appearance contours, shown in Figure \ref{fig:EBApp}, are also very compatib
 \label{fig:EBdcp}
 \end{figure}
 
-The fact that fixing the binding energy does not change the credible intervals demonstrates it is no longer the significant uncertainty it was in previous analyses. With the new treatment, it has gone from being a dominant, to a sub-dominant systematic uncertainty in the oscillation analysis.
+The fact that fixing the binding energy does not change the credible intervals demonstrates it is no longer the significant uncertainty it was in previous analyses. In 2018, the binding energy could not be fit at the near detector, and so a very large effective parameter was applied at SK. With the new treatment described in Section \ref{sec:eb}, the binding energy can be fit at the near detector, reducing its impact on the fit. It has now gone from being a dominant, to a sub-dominant systematic uncertainty in the oscillation analysis.
 
 \newpage

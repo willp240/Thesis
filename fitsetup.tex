@@ -3,7 +3,7 @@
 \chapter{The Near Detector Fit Setup}\label{sec:FitSetup}
 \section{Motivation}
 
-When the number of neutrinos are measured at the far detector, it is a convolution of the beam flux, cross-section, detector efficiency, and the probability of oscillation:
+The number of neutrinos measured at the far detector, is a convolution of the beam flux, cross-section, detector efficiency, and the probability of oscillation:
 
 \begin{equation}
 N^{\nu_{\beta}}_{SK} = \phi^{\nu_\alpha}_{SK} \cdot \sigma^{\nu_{\beta}} \cdot \epsilon^{\nu_{\beta}}_{SK} \cdot P_{PMNS}(\nu_{\alpha}\rightarrow\nu_{\beta}),
@@ -11,13 +11,7 @@ N^{\nu_{\beta}}_{SK} = \phi^{\nu_\alpha}_{SK} \cdot \sigma^{\nu_{\beta}} \cdot \
 
 where $N^{\nu_\beta}_{SK}$ is the number of neutrinos of flavour $\beta$, $\phi^{\nu_\alpha}_{SK}$ is the flux of neutrinos of flavour $\alpha$ at SK without oscillation, $\sigma^{\nu_{\beta}}$ is the interaction cross-section for neutrinos of flavour $\beta$ at SK, $\epsilon^{\nu_\beta}_{SK} $ is the detector efficiency of SK for neutrinos of flavour $\beta$, and $P_{PMNS}(\nu_{\alpha}\rightarrow\nu_{\beta})$ is the probability that a neutrino produced as flavour $\alpha$ oscillates to flavour $\beta$ before reaching SK.
 
-There are degeneracies between the flux, cross-section, and detector efficiency models, and the PMNS parameters. A change in one of the nuisance parameters mimics the effect of a change in one of the parameters of interest. Therefore it is crucial to constrain the model parameters as much as possible. This is done using near detector data, where the number of neutrinos is measured before oscillation and so the  nuisance parameters can be disentangled from the oscillation parameters. The near detector samples also have higher statistics than the SK statistics, and using them to constrain nuisance parameters decreases the uncertainty on the predicted event rate at SK from $\sim$15$\%$ to $\sim$5$\%$. The constraint on systematic uncertainties at T2K comes almost entirely from the use of near detector data, as shown in Figure \ref{fig:ndskconstraint} by the postfit uncertainties of cross-section parameters from a near detector only fit, and joint near and far detector fit from the 2018 oscillation analysis. Figure \ref{fig:ndconstraint}, also from the 2018 oscillation analysis, shows the SK prediction with and without the near detector constraint. The uncertainty bands are much narrower when using near detector data in the prediction, further showing the significance of the near detector on the full fit. Without the near detector constraint, T2K would not be able to make the world leading oscillation measurements it does.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics*[width=0.8\textwidth,clip]{figs/NDSKConstraint}
-\caption{The pre and postfit cross-section parameter uncertainties from a near detector only, and joint near and far detector fit for the 2018 oscillation analysis. The prior uncertainties are significantly reduced by the near detector only fit, but the inclusion of SK data does provide any further constraint.}\label{fig:ndskconstraint}
-\end{figure}
+There are degeneracies between the flux, cross-section, and detector efficiency models, and the PMNS parameters. A change in one of the nuisance parameters mimics the effect of a change in one of the parameters of interest. Therefore it is crucial to constrain the model parameters as much as possible. This is done using near detector data, where the number of neutrinos is measured before oscillation and so the  nuisance parameters can be disentangled from the oscillation parameters. The near detector samples also have higher statistics than the SK statistics, and using them to constrain nuisance parameters decreases the uncertainty on the predicted event rate at SK from $\sim$15$\%$ to $\sim$5$\%$. Figure \ref{fig:ndconstraint} shows the SK prediction for the 2018 oscillation analysis with and without the near detector constraint. The uncertainty bands are much narrower when using near detector data in the prediction, showing the significance of the near detector on the full fit. Without the near detector constraint, T2K would not be able to make the world leading oscillation measurements it does.
 
 \begin{figure}[!htbp]
 \centering
@@ -463,11 +457,11 @@ The following algorithm was used to define a non-uniform but still rectangular b
 
 \begin{itemize}
 
-\item The bin edges on the cos$\theta$ axis are hard coded and constant, guided by the previous binning. This keeps the bins rectangular.
+\item The bin edges on the cos$\theta$ axis are hard coded and constant, guided by the previous binning, keeping the bins rectangular. The reasons for this are discussed later in this section.
 
 \item For each cos$\theta$ row, scroll across from 30 GeV down 0 GeV in 100 MeV steps.
 
-\item Once 50 unscaled MC events are reached, start a new bin
+\item Once 50 unscaled MC events are reached, start a new bin.
 
 \item If the last bin a row (the lowest momentum bin) has $<20$ unscaled MC events, merge with the previous bin. Scroll through this merged bin in 5 MeV steps and split once half the events in the bin are reached.
 
@@ -475,7 +469,7 @@ The following algorithm was used to define a non-uniform but still rectangular b
 
 The aim of this process was to produce as uniform a distribution of events in each bin as possible. This was not always possible, as regions of high density would require bins so small that they go below the resolution of the detector. The hard coded cos$\theta$ bin edges and momentum step sizes of 100 MeV were driven by this minimum bin size limit. The resolutions are calculated by plotting the reconstructed vs true kinematic variables, as shown in Figure \ref{fig:res2d}, and taking the RMS at different slices of the 2D Gaussian. These RMSs, shown in Figures \ref{fig:res1d}, give a gauge of the detector resolution, and so the minimum bin width for each variable in different regions.
 
-For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $> 1000$ MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos$\theta$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. 
+For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $> 1000$ MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos$\theta$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. Furthermore, as the cos$\theta$ systematics are better controlled than for $p_{\mu}$, and for aiding the simplicity of optimising the binning algorithm, the bins were kept constant in cos$\theta$.
 
 \begin{figure}[t]
 \centering
@@ -632,7 +626,7 @@ The distribution of events binned by the scheme produced using the algorithm are
 \label{fig:th2polybin}
 \end{figure}
 
-Using non-uniform binning significantly improves the sensitivity of the fit to changes in parameter values. This is evident in the Log-likelihood scans shown in Figure \ref{fig:polyllhscans} for two selected interaction and flux parameters. A single parameter is set to different values while all others are kept at nominal, and the sample contribution to the LLH between the reweighted MC and nominal MC is calculated for each parameter value. The LLH scan process, and the parameters themselves, are described in more detail in Section \ref{sec:llhscan} and Section \ref{sec:syst} respectively.
+Using non-uniform binning significantly improves the sensitivity of the fit to changes in parameter values. This is evident in the log-likelihood scans shown in Figure \ref{fig:polyllhscans} for two selected interaction and flux parameters. A single parameter is set to different values while all others are kept at nominal, and the sample contribution to the LLH between the reweighted MC and nominal MC is calculated for each parameter value. The LLH scan process, and the parameters themselves, are described in more detail in Section \ref{sec:llhscan} and Section \ref{sec:syst} respectively.
 
 The narrower likelihood distributions show that by using the non-uniform binning, moving a parameter further away from the nominal value will be less favoured than by using uniform binning. The ratio panel shows that the improvement is fairly constant across the range of the scan.
 
@@ -655,13 +649,13 @@ Further studies could be undergone to develop a non-rectangular fit binning. For
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/b_18_sampolyLLH}
-  \caption{ND FHC $\bar{\nu_{\mu}}$ 0-700 MeV}
-  \label{fig:b_18_sampolyLLH}
+  \caption{ND RHC $\nu_{\mu}$ 2500-30000 MeV Flux}
+  \label{fig:b_30_sampolyLLH}
 \end{subfigure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/b_40_sampolyLLH}
-  \caption{ND RHC $\bar{\nu_{e}}$ 1500-2500 MeV}
+  \caption{ND RHC $\bar{\nu_{e}}$ 1500-2500 MeV Flux}
   \label{fig:b_40_sampolyLLH}
 \end{subfigure}
 \caption{Comparison of LLH scans using uniform and non-uniform rectangular fit binning, for two selected interaction and beam parameters.}
@@ -1006,7 +1000,7 @@ Furthermore, Figure \ref{fig:Ebfluc} also shows the $E_b$ distributions for a fl
 \label{fig:Ebfluc}
 \end{figure}
 
-In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{sec:jointeb}.
+In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{sec:jointEb}.
 
 \subsection{Flux}\label{sec:flux}
 
@@ -1313,7 +1307,7 @@ Fits were run using each of these 4 detector covariances, using an intermediate 
 
 The result of the fits are shown in Figures \ref{fig:detcovbinfluxND} and \ref{fig:detcovbinfluxSK} for the flux parameters, and Figure \ref{fig:detcovbinxsec} for the cross-section parameters. Although there are several differences between the postfit parameter values, there is no consistent trend of having more bins being closer to the fit binning result, and they are all consistent within uncertainties. Although the 179 fit bin fit is often the most different from the 4238 (fit binning) detector bin fit.
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{0.3\textwidth}
   \centering
@@ -1367,7 +1361,7 @@ The result of the fits are shown in Figures \ref{fig:detcovbinfluxND} and \ref{f
 \label{fig:detcovbinfluxND}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{0.3\textwidth}
   \centering
@@ -1421,7 +1415,7 @@ The result of the fits are shown in Figures \ref{fig:detcovbinfluxND} and \ref{f
 \label{fig:detcovbinfluxSK}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{0.3\textwidth}
   \centering
@@ -1457,7 +1451,7 @@ The result of the fits are shown in Figures \ref{fig:detcovbinfluxND} and \ref{f
 
 Furthermore, when the postfit chains are used to produce posterior predictive distributions at the far detector, there is very little difference seen, as shown in Figure \ref{fig:detbinSK}. This suggests that there are several regions of minima in the $\sim$700 dimensional parameter space which correspond to the same result at SK. 
 
-\begin{figure}
+\begin{figure}[!htbp]
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -1488,7 +1482,7 @@ Furthermore, when the postfit chains are used to produce posterior predictive di
 \label{fig:detbinSK}
 \end{figure}
 
-As the far detector prediction was robust to the different detector bin mergings, and previous analyses have shown that having $\sim600$ detector parameters does not cause any issues with fit convergence\footnote{For the 2017 analysis, 556 detector bins were used.}, the 574 bin detector covariance was chosen as the optimum bin merging. The binning is as follows:
+As the far detector prediction was robust to the different detector bin mergings, and previous analyses have shown that having $\sim$600 detector parameters does not cause any issues with fit convergence\footnote{For the 2017 analysis, 556 detector bins were used.}, the 574 bin detector covariance was chosen as the optimum bin merging. The binning is as follows:
 
 \begin{itemize}
 \setlength\itemsep{1mm}
@@ -1530,15 +1524,15 @@ As the far detector prediction was robust to the different detector bin mergings
 
 \end{itemize}
 
-In this analysis, another detector covariance was also used for separate fits ran in parallel with the 574 detector bin fits. These fits used the full non-uniform fit binning as the detector binning. This was possible in this analysis as the MC statistics uncertainty was taken out of the detector covariance. This reduced the terms in the diagonal of the covariance, allowing the number of fit parameters to be reduced using principal component analysis. The two detector covariances used are shown in Figures \ref{fig:detcov574} and \ref{fig:detcovFit}.
+In this analysis, another detector covariance was also used for separate fits ran in parallel with the 574 detector bin fits. These fits used the full non-uniform fit binning as the detector binning. This was possible in this analysis as the MC statistics uncertainty was taken out of the detector covariance. This reduced the terms in the diagonal of the covariance, allowing the number of fit parameters to be reduced using principal component analysis. The two detector covariances used are shown in Figures \ref{fig:detcorr574} and \ref{fig:detcorrFit}.
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/detcov574}
 \caption{The ND280 detector covariance matrix with 574 merged bins.}\label{fig:detcorr574}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/detcovFit}
 \caption{The ND280 detector covariance matrix with the full 3071-bin non-uniform fit binning.}\label{fig:detcorrFit}
