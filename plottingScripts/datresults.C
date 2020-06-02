@@ -331,7 +331,7 @@ void datresults(std::string FileName1) {
     ss << i;
     std::string fluxnum = ss.str();
 
-    canv->Print(("datflux"+fluxnum+".pdf").c_str());   
+    canv->Print(("datfluxpoly"+fluxnum+".pdf").c_str());   
     //    canv->Print((FileName1+".pdf").c_str());
 
     nFluxParams += OneCopy[i]->GetXaxis()->GetNbins();
@@ -471,7 +471,7 @@ Then for the postfits (Histo named Two) they haven't been shifted yet. So we do 
     std::string xsecnum = ss.str();
 
     //    canv->Print((FileName1+".pdf").c_str());
-    canv->Print(("datxsec"+xsecnum+".pdf").c_str());    
+    canv->Print(("datxsecpoly"+xsecnum+".pdf").c_str());    
 
     delete axis;
     delete line;
