@@ -60,8 +60,12 @@ These kinematics are also less dependent on the true incoming neutrino energy, w
 
 HPTPC MC was produced to explore the potential sensitivity improvement from using an HPTPC. This was done by smearing the true kinematics of a subset of ND280 FGD1 MC events. For each event, for both the momentum and angle of the final state lepton, a random number was drawn from a Gaussian with mean equal to the value of the variable in the ND280 MC, and width equal to the assumed resolution of the HPTPC. The assumed resolutions are shown in Table \ref{tab:hptpcres}.
 
+The selection of events is similar to that described in Section \ref{sec:sel}, but using the full FGD1 volume. The assumed detection thresholds were different for the ND280 and HPTPC selections, as shown in Table \ref{tab:hptpcthresh}. The thresholds are the only differences between the ND280 and HPTPC MC.
+
+The selected events are then divided by pion and proton multiplicity, giving seven samples in total:
+
 \begin{center}
-\begin{table}
+\begin{table}[!htbp]
 \center
 \begin{tabular}{l l||c}
 \hline \hline
@@ -87,8 +91,6 @@ cos$\theta_{\mu}$ & $<1$, $>-1$ & 0.040 \\
 \end{table}
 \end{center}
 
-The selection of events is similar to that described in Section \ref{sec:sel}, but using the full FGD1 volume. The assumed detection thresholds were different for the ND280 and HPTPC selections, as shown in Table \ref{tab:hptpcthresh}. The thresholds are the only differences between the ND280 and HPTPC MC.
-
 \begin{center}
 \begin{table}[!htpb]
 \center
@@ -107,8 +109,7 @@ $p$ & 450 & 60 \\
 \end{table}
 \end{center}
 
-The selected events are then divided by pion and proton multiplicity, giving seven samples in total:
-
+\vspace{-1cm}
 \begin{itemize}
 
 \item \textbf{CC 0$\pi$ 0p:} 1 muon above threshold, 0 charged pions above threshold, 0 protons above threshold.
@@ -132,7 +133,7 @@ The cross-section and flux systematics from the 2015 T2K oscillation analysis, d
 The total number of events in each sample, for each detector, are shown in Table \ref{tab:hptpcrates}.
 
 \begin{center}
-\begin{table}
+\begin{table}[!htbp]
 \center
 \begin{tabular}{l ||c c}
 \hline \hline
@@ -248,7 +249,7 @@ The full potential sensitivity of the HPTPC to resolving nuclear model tensions 
 The transverse variables are calculated for each event from the smeared true lepton momentum and angle. For each sample, the combination of interaction parameter and kinematic variables which caused the largest changed in the total number of events is shown in Table \ref{tab:hptpcsigvar}. 
 
 \begin{center}
-\begin{table}
+\begin{table}[!htbp]
 \center
 \begin{tabular}{l ||c c}
 \hline \hline
