@@ -1,6 +1,6 @@
 \chapter{Statistical Treatment}\label{sec:stats}
 
-The number of events measured at the far detector is a convolution of the cross-section, flux, detector efficiency, and probability of oscillation. As discussed in Section \ref{sec:NeutrinoPhysics}, neutrino interactions are rare and so the cross-section, flux, and detector models all compose of parameters with large uncertainties. The parameters of these models are degenerate with the oscillation parameters being calculated; a change in a single nuisance parameter mimics a change in oscillation parameter in terms of the effect on the kinematic distributions measured.
+The number of events measured at the far detector is a convolution of the cross-section, flux, detector efficiency, and probability of oscillation. As discussed in Section \ref{sec:NeutrinoPhysics}, neutrino interactions are rare and so the cross-section, flux, and detector models all compose of parameters with large uncertainties. The parameters of these models are degenerate with the oscillation parameters being calculated; a change in a single nuisance parameter mimics a change in oscillation parameters in terms of the effect on the kinematic distributions measured.
 
 The aim of the near detector fit is to constrain the cross-section, flux, and detector systematics before oscillation, allowing more precise measurements of the oscillation parameters at SK. However, as there are several hundred nuisance parameters, fitting them all requires careful statistical treatment.
 
@@ -46,7 +46,7 @@ Fitting a new parameter, $\beta$, for each bin would introduce $\sim$3000 new fi
 
 where $\sigma_{\beta}$ is the fractional uncertainty on the MC in a given bin. Equations \ref{eqn:llhbb} and \ref{eqn:bbquad} are derived in \cite{beestonbarlow}.
 
-$P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is driven by previous and external measurements. This is calculated as either a Gaussian or Flat uncertainty for each parameter, along with inter-parameter correlations:
+$P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is driven by previous and external measurements. This is calculated as either a Gaussian or flat uncertainty for each parameter, along with inter-parameter correlations:
 
 \begin{equation}
 -\log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)],
@@ -63,7 +63,7 @@ P(D|\bar{\theta}) P(\bar{\theta}) = \prod \mathcal{L}_{total} = \prod (\mathcal{
  and so:
 
 \begin{equation}
--\log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}] + \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)].
+-\log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}+ \frac{(\beta -1)^2}{2\sigma^{2}_\beta}] + \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)].
 \end{equation}
 
 The integral in Equation \ref{eqn:bayes} is often not analytically solvable in practice, and so Monte-Carlo methods are required to sample from the posterior to produce a distribution proportional to the posterior probability distribution up to a normalisation constant. 
@@ -85,7 +85,7 @@ The aim of MCMC methods is to produce a Markov chain with the posterior distribu
 
 This way, the choosing of points at which to evaluate the distribution is done much more efficiently than just random sampling. The individual steps have a density proportional to the target distribution as the Markov chain performs a semi-random walk through the parameter space, and so less time is wasted sampling areas of low probability.  The stationary distribution is only an approximation to the desired posterior, but more closely matches it as more steps are added. 
 
-MCMC methods are dependent on producing a Markov chain that converges. To reach convergence, it is necessary that 3 conditions are met:
+MCMC methods are dependent on producing a Markov chain that converges. To reach convergence, it is necessary that three conditions are met:
 
 \begin{itemize}
    \item \textbf{Irreducibility:} From any initial state, there is non-zero probability of reaching any other state. This prevents the chain getting stuck in local minima.
@@ -109,10 +109,10 @@ The Metropolis Hastings algorithm was first developed by N. Metropolis for symme
 \alpha = min[1, \log\mathcal{L}_{n+1} - \log \mathcal{L}_{n}].
 \end{equation}
  A random number is thrown from a uniform distribution in the range [0,1]. If this is $\geq \alpha$ the step is accepted. Otherwise the step is rejected, and the parameters are set back to the previous values.  \\
-\item \textbf{Repeat:} Steps 2 to 3 are repeated N times. \\
+\item \textbf{Repeat:} Steps 2 to 3 are repeated $N$ times. \\
 \end{enumerate}
 
-Steps with an improved likelihood are therefore always accepted. Steps to points with a lower posterior probability are less likely to be accepted, but crucially don't have a non-zero acceptance probability to prevent the chain from getting stuck in local minima. In this way the algorithm builds a distribution of points in the parameter space, with more points in regions of higher posterior probability and fewer points in regions of lower posterior probability. If the parameter space has been sufficiently explored, the density of points in the final chain is therefore proportional to the posterior probability distribution. 
+Steps with an improved likelihood are therefore always accepted. Steps to points with a lower posterior probability are less likely to be accepted, but crucially don't have a non-zero acceptance probability to prevent the chain from getting stuck in local minima. In this way, the algorithm builds a distribution of points in the parameter space, with more points in regions of higher posterior probability and fewer points in regions of lower posterior probability. If the parameter space has been sufficiently explored, the density of points in the final chain is therefore proportional to the posterior probability distribution. 
 
 \subsection{Step Proposal}\label{sec:stepprop}
 
@@ -142,7 +142,7 @@ where $X_i$ is the parameter value for the $i^{th}$ step, $\bar{X}$ is the mean 
 \caption{The autocorrelation function for a low energy flux at parameter, at different values for the scaling applied to the step size.}\label{fig:autocorr}
 \end{figure}
 
-The trace of the parameter is the plot of its value at each step in the chain. This is used to ensure good mixing is achieved, and so the parameter space is well explored. The trace of a low energy flux at parameter is shown in Figure \ref{fig:traces} for different step sizes. This shows how decreasing the step size, affects how the chain samples different regions of the posterior distribution.
+The trace of the parameter is the plot of its value at each step in the chain. This is used to ensure good mixing has been achieved, and so the parameter space is well explored. The trace of a low energy flux parameter is shown in Figure \ref{fig:traces} for different step sizes. This shows how decreasing the step size, affects how the chain samples different regions of the posterior distribution.
 
 \begin{figure}
 \centering
@@ -174,7 +174,7 @@ The trace of the parameter is the plot of its value at each step in the chain. T
 \label{fig:traces}
 \end{figure}
 
-Finally, batched means are also used to test the chain has converged. These are the mean of a given parameter over smaller consecutive subsets of steps. Once converged, these should be fairly constant, as shown in Figure \ref{fig:batch} for a low energy flux parameter. In the second half of the chain, the batched means are within $\sim 2\%$. If the mean was varying drastically between batches, it would suggest stationarity had not been reached.
+Finally, batched means are also used to test the chain has converged. These are the mean of a given parameter over smaller consecutive subsets of steps. Once converged, these should be fairly constant, as shown in Figure \ref{fig:batch} for a low energy flux parameter. In the second half of the chain, the batched means are within $\sim2\%$. If the mean was varying drastically between batches, or if there were regions of consistent bias beyond statistical fluctuation, it would suggest stationarity had not been reached.
 
 \begin{figure}[!htbp]
 \centering
@@ -184,7 +184,7 @@ Finally, batched means are also used to test the chain has converged. These are 
 
 In this analysis, the general method used for step size tuning was to individually alter the width of the proposal function for each individual cross-section parameter until the autocorrelations were similar for all parameters. Then a further global scaling was applied to achieve the desired acceptance rate. Step size tuning, however, is not an exact science. When trying to reduce one parameter's autocorrelation, another parameter's could unexpectedly increase due to high dimensional correlations. One could always endeavour to further reduce autocorrelations, but once a reasonable set of tunings was found with good mixing, fairly consistent autocorrelations, and an acceptance rate close to the optimal value, no further time was spent trying to tune further.
 
-Even with a well tuned Markov Chain, it is still desirable to run for as many steps as possible, to ensure good coverage. In this analysis, 6 chains of 800,000 steps were run in parallel and then merged. However, not all steps are used in the final results. As the initial values of parameters in the chain are not necessarily in a region of high posterior probability, there is a `burn-in' period before the chain reaches its stationary distribution.
+Even with a well tuned Markov Chain, it is still desirable to run for as many steps as possible, to ensure good coverage. In this analysis, six chains of 800,000 steps were run in parallel and then merged. However, not all steps are used in the final results. As the initial values of parameters in the chain are not necessarily in a region of high posterior probability, there is a `burn-in' period before the chain reaches its stationary distribution.
 
 The batched means and traces for individual parameters can be used to monitor the number of steps in the burn-in. Figure \ref{fig:batch} shows the means initially being lower than the final converged values, while Figure \ref{fig:burnin} shows the parameter value starting higher than it's final value, but quickly converging after 10,000 steps and then exploring the surrounding region. 
 
@@ -194,7 +194,7 @@ The batched means and traces for individual parameters can be used to monitor th
 \caption{The trace of the first 50,000 steps of high energy flux parameter, showing the initial burn-in phase before reaching the stationary distribution.}\label{fig:burnin}
 \end{figure}
 
-The trace of the systematic and sample contributions to the log-likelihood are also a good measure of when the burn-in period has finished. These are shown in Figure \ref{fig:llhs}, for 6 merged chains each with 600,000 steps. The negative log-likelihoods converge once the stationary distribution has been reached after $\sim$20,000 steps.
+The trace of the systematic and sample contributions to the log-likelihood are also a good measure of when the burn-in period has finished. These are shown in Figure \ref{fig:llhs}, for six merged chains each with 600,000 steps. The negative log-likelihoods converge once the stationary distribution has been reached after $\sim$20,000 steps.
 
 \begin{figure}
 \centering
@@ -238,14 +238,14 @@ P(\theta|D) = \int P(\bar{\theta}',\theta_i|D)d\bar{\theta}',
 
 where $\bar{\theta}'$ is the parameter space over all model parameters but $\theta_i$.
 
-Figure \ref{fig:1dposts} shows the resulting 1-dimensional projections for two individual fit parameters. This is equivalent to the parameter value at each step in the Markov Chain after burn-in. Central values and uncertainties for each parameter are extracted by three different methods. Firstly, the arithmetic mean and RMS of the histogram are calculated and used as the postfit parameter value and error. Secondly, the highest posterior density, or mode, of the histogram is taken as the central value. The number of events in each bin is summed outwards from mode to obtain an asymmetric uncertainty. Finally, a Gaussian is fitted to the histogram and its mean and width are taken as the central value and uncertainty.
+Figure \ref{fig:1dposts} shows the resulting 1-dimensional projections for two individual fit parameters. This is equivalent to the parameter value at each step in the Markov Chain after burn-in. Central values and uncertainties for each parameter are extracted by three different methods. Firstly, the arithmetic mean and RMS of the histogram are calculated and used as the postfit parameter value and error. Secondly, the highest posterior density, or mode, of the histogram is taken as the central value. The number of events in each bin is summed outwards from the mode to obtain an asymmetric uncertainty. Finally, a Gaussian is fitted to the histogram and its mean and width are taken as the central value and uncertainty.
 
 \begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=0.95\linewidth]{figs/b_10}
-  \caption{A high energy FHC near detector beam parameter.}
+  \caption{A high energy FHC near detector flux parameter.}
   \label{fig:b10}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
@@ -290,7 +290,7 @@ Although reducing each of these 2-dimensional marginal posteriors to a single nu
 
 \subsection{Posterior Predictions}\label{sec:postpred}
 
-Once the fit has finished, the results are used to produce the posterior predictive distributions with the final fitted parameters. However, as discussed in the previous sections, just marginalising over all but one parameter, one by one removes significant information from the full posterior. Although this is useful for intuitively interpreting the fit, removing information is not necessary for producing postfit event distributions. The method used in this analysis is as follows:
+Once the fit has finished, the results are used to produce the posterior predictive distributions with the final fitted parameters. However, as discussed in the previous sections, just marginalising over all but one parameter, one by one, removes significant information from the full posterior. Although this is useful for intuitively interpreting the fit, removing information is not necessary for producing postfit event distributions. The method used in this analysis is as follows:
 
 \begin{itemize}
    \item Draw 2000 post burn-in steps from the Markov Chain
@@ -341,6 +341,6 @@ Generally a higher p-value is desirable and indicates a better fit to data, but 
 
 Furthermore, this Bayesian p-value is not the same as a 'traditional' p-value. Here, the p-value answers a very specific question: if the experiment was ran again, how likely is it that data consistent with the post-fit model would be observed? This is, by construction, a stringent test. As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid.
 
-The other near detector fitting group at T2K also produce a p-value, using the method described in \cite{tn324}. This is a strictly frequentist construction, calculated using throws of the systematics from their priors, giving an indication of how well the prior model can fit the data. As well as this, this p-value uses throws of the underlying detector systematics, rather than the effective bin-by-bin normalisations, giving more accurate variations. The frequentist p-value answers a different question to the Bayesian version: how likely is the observed data using information on the systematics before the fit is run? The two p-values are therefore not expected to give the same results. For this analysis, the frequentist p-value is used to determine if an acceptable goodness of fit has been achieved, while the Bayesian p-value is used to inspect the fit result in more detail and determine for which samples and regions of phase space the fit performs well for.
+The other near detector fitting group at T2K also produce a p-value, using the method described in \cite{tn324}. This is a strictly frequentist construction, calculated using throws of the systematics from their priors, giving an indication of how well the prior model can fit the data. As well as this, this p-value uses throws of the underlying detector systematics, rather than the effective bin-by-bin normalisations, giving more accurate variations. The frequentist p-value answers a different question to the Bayesian version: using information on the systematics before the fit is run, how likely is the observed data? The two p-values are therefore not expected to give the same results. For this analysis, the frequentist p-value is used to determine if an acceptable goodness of fit has been achieved, while the Bayesian p-value is used to inspect the fit result in more detail and determine for which samples and regions of phase space the fit performs well for.
 
 \newpage
