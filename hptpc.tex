@@ -2,7 +2,7 @@
 
 For T2K, the statistical error is still the largest uncertainty on oscillation measurements. This will not be the case for the future long baseline neutrino oscillation experiments, HK and DUNE, and so they aim to perform 5$\sigma$ measurements of $\delta_{CP}$. However, as the statistical error becomes less significant, it is ever more important that systematic uncertainties are reduced. To achieve the target sensitivity, systematic errors will need to be reduced to the 1-2$\%$ level.
 
-As discussed in Section \ref{sec:eb}, cross-section uncertainties are the dominant systematic, and these depend heavily on theoretical nuclear models. This is because the target nucleon resides inside a nucleus, and so nuclear effects and final state interactions (FSI) alter the measured kinematics of final state particles. As shown in Section \ref{sec:interactions}, FSI effects cause the neutrino energy to be reconstructed incorrectly, and interactions to be misclassified, contributing a large systematic uncertainty. To reduce these uncertainties, tensions in nuclear models must be resolved, which can only be done with improved measurements of the multiplicity and momentum distributions of final state particles \cite{nustecscat}.
+As discussed in Section \ref{sec:eb}, cross-section uncertainties are the dominant systematic, and these depend heavily on theoretical nuclear models. This is because the target nucleon resides inside a nucleus, and so nuclear effects and final state interactions (FSI) alter the measured kinematics of final state particles. As discussed in Section \ref{sec:interactions}, FSI effects cause the neutrino energy to be reconstructed incorrectly, and interactions to be misclassified, contributing a large systematic uncertainty. To reduce these uncertainties, tensions in nuclear models must be resolved, which can only be done with improved measurements of the multiplicity and momentum distributions of final state particles \cite{nustecscat}.
 
 The NEUT, GENIE, and NuWro \cite{nuwro} neutrino event generators use cascade models tuned to hadron-nucleus scattering measurements to simulate final-state particles leaving the target nucleus. However, these measurements are sparse, as shown in Figure \ref{fig:nucxsec}, and so semi-empirical parametrisations are used to extrapolate to the relevant momentum ranges and target nuclei. The parametrisations are different in the three generators, leading to significant differences in the multiplicity of final state protons, as shown in Figure \ref{fig:generators}. Below 100 MeV, the proton momentum distributions diverge considerably, but this is below the detection threshold of current detectors.
 
@@ -15,7 +15,7 @@ The NEUT, GENIE, and NuWro \cite{nuwro} neutrino event generators use cascade mo
 \begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/neutgenienuwro}
-\caption{Predicted proton energy distributions at the DUNE far detector using GENIE, NEUT and NuWro. The dotted and solid lines show the expected reconstruction thresholds in liquid and 10 atm gaseous argon detectors respecctively. Figure from \cite{dunehptpc}.}\label{fig:generators}
+\caption{Predicted proton energy distributions at the DUNE far detector using GENIE, NEUT and NuWro. The dashed and solid lines show the expected reconstruction thresholds in liquid and 10 atm gaseous argon detectors respecctively. Figure from \cite{dunehptpc}.}\label{fig:generators}
 \end{figure}
 
 It is therefore crucial that future near detectors are able to accurately measure final state particles, particularly at low momentum, to distinguish between nuclear models and reduce the effects of FSI.
@@ -96,8 +96,8 @@ cos$\theta_{\mu}$ & $<1$, $>-1$ & 0.040 \\
 \center
 \begin{tabular}{c ||c c}
 \hline \hline
-\textbf{Particle} & \multicolumn{2}{c}{\textbf{Detection Threshold (MeV)}}\\
- & \textbf{ND280} & \textbf{HPTPC} \\
+ & \multicolumn{2}{c}{\textbf{Detection Threshold (MeV)}}\\
+\textbf{Particle} & \textbf{ND280} & \textbf{HPTPC} \\
  \hline \hline
 $\mu^{\pm}$ & 100 & 15 \\
 $\pi^{\pm}$ & 120 & 16 \\
@@ -314,7 +314,7 @@ The distributions in these pairs of kinematics for the HPTPC MC samples are show
 \label{fig:hptpcsigvar}
 \end{figure}
 
-The samples binned in $p_{p}$ and $p_{\pi}$ have hard cuts at low momentum, beyond which there are very few events. However, these are significantly below the ND280 detection thresholds. These samples, along with the $\delta p_{T}$ binned CC 1$\pi$ 1p  sample, have much narrower momentum distributions than those binned in $p_{\mu}$. The `gaps' in the distributions at cos$\theta_{\mu}\sim0.8$ are binning effects, whereby bins in the peak regions are finer, so have fewer events. The binnings have not been fully tuned to the new kinematic variables. 
+The samples binned in $p_{p}$ and $p_{\pi}$ have hard cuts at low momentum, beyond which there are very few events. However, these are significantly below the ND280 detection thresholds. These samples, along with the $\delta p_{T}$ binned CC 1$\pi$ 1p  sample, have much narrower momentum distributions than those binned in $p_{\mu}$. The `gaps' in the distributions at cos$\theta_{\mu}\sim$0.8 are binning effects, whereby bins in the peak regions are finer, so have fewer events. The binnings have not been fully tuned to the new kinematic variables. 
 
 \subsubsection{Asimov Fits}
 
@@ -455,7 +455,7 @@ The fit results are shown in Figures \ref{fig:hptpcfluxND}, \ref{fig:hptpcfluxSK
   \includegraphics[width=0.95\linewidth]{figs/hptpcfitsxsec_3}
   \caption{FSI}
 \end{subfigure}
-\caption{Flux parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
+\caption{Interaction parameters for ND280 $p_{\mu}$-cos$\theta_{\mu}$, HPTPC $p_{\mu}$-cos$\theta_{\mu}$, and HPTPC mixed STV fits.}
 \label{fig:hptpcxsec}
 \end{figure}
 
@@ -467,13 +467,13 @@ There is also a further reduction in the majority of postfit flux uncertainties 
 
 Several of the interaction parameters also have a general trend of the HPTPC seeing better constraint than ND280, and the STVs being a slight improvement on just the lepton variables.
 
-The size of the $M_{A}^{QE}$, carbon Fermi momentum, and carbon binding energy uncertainties are very similar in the three fits. The MEC C uncertainty has a stronger constraint for the HPTPC, but only a small improvement from the STVs. The oxygen parameters have very little constraint in any of the fits as only FGD1 MC is used. 
+The size of the $M_{A}^{QE}$, Fermi momentum $^{12}$C, and binding energy $^{12}$C uncertainties are very similar in the three fits. The MEC $^{12}$C uncertainty has a stronger constraint for the HPTPC, but only a small improvement from the STVs. The $^{16}$O parameters have very little constraint in any of the fits as only FGD1 MC is used. 
 
-Of the 1 $\pi$ parameters, the $I_{1/2}$ non-resonant background is the only uncertainty to reduce for the HPTPC compared to ND280. The STVs do not improve the constraint any further. The CC DIS and CC coh. C parameters have small improvements in constraint for HPTPC, but this is not reduced any further by the STVs. The CC coh. O has a similar postfit uncertainty for all three fits, as the constraint comes entirely from the prior. The NC parameters have similar postfit uncertainties for all three fits.
+Of the 1 $\pi$ parameters, the $I_{1/2}$ non-resonant background is the only uncertainty to reduce for the HPTPC compared to ND280. The STVs do not improve the constraint any further. The CC DIS and CC coh. $^{12}$C parameters have small improvements in constraint for HPTPC, but this is not reduced any further by the STVs. The CC coh. $^{16}$O has a similar postfit uncertainty for all three fits, as the constraint comes entirely from the prior. The NC parameters have similar postfit uncertainties for each of the fits.
 
-The FSI parameters all have similar constraints for the HPTPC and ND280, but a singificant improvement from using the STVs.
+The FSI parameters all have similar constraints for the HPTPC and ND280, but a significant improvement from using the STVs.
 
-The majority of parameters have a smaller uncertainty for the HPTPC STV fit than the ND280 $p_{\mu}$-cos$\theta_{\mu}$ fit.
+Overall, the majority of parameters have a smaller uncertainty for the HPTPC STV fit than the ND280 $p_{\mu}$-cos$\theta_{\mu}$ fit.
 
 These results show that lowering detection thresholds, and using more kinematic information than just the lepton variables, can improve the constraint of systematic uncertainties in the fit. However, this is not a complete study, for a number of reasons. Firstly, without detector systematics in the fit the results do not tell the full story. These could correlate with the other parameters differently for the two detectors, altering the uncertainties in each fit.
 
@@ -483,6 +483,6 @@ Furthermore, the HPTPC events are truth-smeared ND280 FGD1 events, and so the ta
 
 Further improvements to the fitting framework could also help achieve the full potential of an HPTPC. With the increase in statistics future experiments will benefit from, events could be binned in more than two variables. This would allow better characterisation of interactions, and so systematics could be applied to the target events more accurately. The systematics themselves could also be generated to be more appropriate for use with transverse kinematics. The systematics used in this study were designed to depend on the leptonic information in the event. As the lower detection thresholds allow better measurements of the hadronic side of interactions, models constructed to use this information would better use the full constraining power of an HPTPC.
 
-However, this study does show that just by lowering detection thresholds, systematic uncertainties gain an improvement in constraint, which will allow better distinguishing of models.
+However, this study does show that just by lowering detection thresholds and using different kinematic variables, systematic uncertainties gain an improvement in constraint, which will allow better distinguishing of models.
 
 \newpage
