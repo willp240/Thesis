@@ -52,7 +52,7 @@ $P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is
 -\log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)],
 \end{equation}\label{eqn:systllh}
 
-where $X_i$ is the value of parameter $i$ with central value $\mu_i$, and $\textbf{V}$ is the covariance matrix describing the relation between parameters $i$ and $j$ with $\textbf{V}_{ij}$. In this analysis, the systematics are grouped by 3 covariance matrices from the beam flux, cross-section, and ND280 detector models.
+where $X_i$ is the value of parameter $i$ with central value $\mu_i$, and $\textbf{V}$ is the covariance matrix describing the relation between parameters $i$ and $j$ with $\textbf{V}_{ij}$. In this analysis, the systematics are grouped by three covariance matrices from the beam flux, cross-section, and ND280 detector models.
 
 The joint probability distribution is therefore given by:
 
@@ -134,7 +134,7 @@ The acceptance rate alone, however, is not a good gauge of how well the step siz
 a = \frac{\Sigma^{N-k}_{i=1}(X_i - \bar{X})(X_{i+k} - \bar{X})}{\Sigma^N_{i=1}(X_i-\bar{X})^2},
 \end{equation}
 
-where $X_i$ is the parameter value for the $i^{th}$ step, $\bar{X}$ is the mean parameter value in the chain, and $N$ is the total number of steps. The autocorrelation for a single flux parameter is shown in Figure \ref{fig:autocorr} for a number of different step sizes. Increasing the step size causes the autocorrelation to reduce quicker, though this would decrease the acceptance rate. In general, in this analysis the aim was for the autocorrelation of each parameter to reach $< 0.2$ at a lag of $10,000$.
+where $X_i$ is the parameter value for the $i^{th}$ step, $\bar{X}$ is the mean parameter value in the chain, and $N$ is the total number of steps. The autocorrelation for a single flux parameter is shown in Figure \ref{fig:autocorr} for a number of different step sizes. Increasing the step size causes the autocorrelation to reduce quicker, though this would decrease the acceptance rate. In general, in this analysis the aim was for the autocorrelation of each parameter to reach $<0.2$ at a lag of $10,000$.
 
 \begin{figure}[!htbp]
 \centering
@@ -174,7 +174,7 @@ The trace of the parameter is the plot of its value at each step in the chain. T
 \label{fig:traces}
 \end{figure}
 
-Finally, batched means are also used to test the chain has converged. These are the mean of a given parameter over smaller consecutive subsets of steps. Once converged, these should be fairly constant, as shown in Figure \ref{fig:batch} for a low energy flux parameter. In the second half of the chain, the batched means are within $\sim2\%$. If the mean was varying drastically between batches, or if there were regions of consistent bias beyond statistical fluctuation, it would suggest stationarity had not been reached.
+Finally, batched means are also used to test the chain has converged. These are the mean of a given parameter over smaller consecutive subsets of steps. Once converged, these should be fairly constant, as shown in Figure \ref{fig:batch} for a low energy flux parameter. In the second half of the chain, the batched means are within $\sim$2$\%$. If the mean was varying drastically between batches, or if there were regions of consistent bias beyond statistical fluctuation, it would suggest stationarity had not been reached.
 
 \begin{figure}[!htbp]
 \centering
