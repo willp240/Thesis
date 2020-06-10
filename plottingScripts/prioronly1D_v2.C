@@ -65,13 +65,13 @@ void prioronly1D_v2(std::string pfile) {
     //postY->Sumw2();
     dathistY->Sumw2();
 
-    /*    priorX->Scale(1, "width");
-    postX->Scale(1, "width");
+    priorX->Scale(1, "width");
+    // postX->Scale(1, "width");
     dathistX->Scale(1, "width");
     priorY->Scale(1, "width");
-    postY->Scale(1, "width");
+    //postY->Scale(1, "width");
     dathistY->Scale(1, "width");
-    */
+    
     dathistX->SetLineColor(kBlack);
     //dathistX->SetLineWidth(2);
     priorX->SetLineColor(kRed);
@@ -137,7 +137,7 @@ void prioronly1D_v2(std::string pfile) {
     //    postX->Draw("e same");
     dathistX->SetTitle("");
     dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
-    dathistX->GetYaxis()->SetTitle("Events");
+    dathistX->GetYaxis()->SetTitle("Events/MeV");
     dathistX->GetYaxis()->SetTitleOffset(0.77);
     dathistX->GetXaxis()->SetRangeUser(0,maxX);
     dathistX->GetYaxis()->SetRangeUser(0.1,1.25*dathistX->GetMaximum());
@@ -181,7 +181,7 @@ void prioronly1D_v2(std::string pfile) {
     //postY->Draw("esame");
     dathistY->SetTitle("");
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
-    dathistY->GetYaxis()->SetTitle("Events");
+    dathistY->GetYaxis()->SetTitle("Events/MeV");
     dathistY->GetYaxis()->SetTitleOffset(0.77);
     dathistY->GetXaxis()->SetRangeUser(0.7,1.0);
     dathistY->GetYaxis()->SetRangeUser(0.1,1.25*dathistY->GetMaximum());
