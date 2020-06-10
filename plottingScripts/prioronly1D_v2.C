@@ -43,25 +43,26 @@ void prioronly1D_v2(std::string pfile) {
 
   for(int s=0; s<18; s++){
 
-    std::string name = samp_us[s] + "_prior_x";
+    std::string name = samp[s] + "/" + samp_us[s] + "_nom_mean_x_x";
+    std::cout << name << std::endl;
     TH1D* priorX = (TH1D*)filep->Get(name.c_str())->Clone();
-    name = samp_us[s] + "_post_x";
-    TH1D* postX = (TH1D*)filep->Get(name.c_str())->Clone();
-    name = samp_us[s] + "_prior_y";
+    //    name = samp_us[s] + "_post_x";
+    //TH1D* postX = (TH1D*)filep->Get(name.c_str())->Clone();
+    name = samp[s] + "/" + samp_us[s] + "_nom_mean_y_y";
     TH1D* priorY = (TH1D*)filep->Get(name.c_str())->Clone();
-    name = samp_us[s] + "_post_y";
-    TH1D* postY = (TH1D*)filep->Get(name.c_str())->Clone();
+    //name = samp_us[s] + "_post_y";
+    //TH1D* postY = (TH1D*)filep->Get(name.c_str())->Clone();
 
-    std::string datname = samp_us[s] + "_data_x";
+    std::string datname = samp[s] + "/" + samp_us[s] + "_data_x_x";
     TH1D* dathistX = (TH1D*)filep->Get(datname.c_str())->Clone();
-    datname = samp_us[s] + "_data_y";
+    datname = samp[s] + "/" +samp_us[s] + "_data_y_y";
     TH1D* dathistY = (TH1D*)filep->Get(datname.c_str())->Clone();
 
     priorX->Sumw2();
-    postX->Sumw2();
+    //postX->Sumw2();
     dathistX->Sumw2();
     priorY->Sumw2();
-    postY->Sumw2();
+    //postY->Sumw2();
     dathistY->Sumw2();
 
     /*    priorX->Scale(1, "width");
@@ -75,13 +76,13 @@ void prioronly1D_v2(std::string pfile) {
     //dathistX->SetLineWidth(2);
     priorX->SetLineColor(kRed);
     //priorX->SetLineWidth(2);
-    postX->SetLineColor(kBlue);
+    //postX->SetLineColor(kBlue);
     //postX->SetLineWidth(2);
     dathistY->SetLineColor(kBlack);
     //dathistY->SetLineWidth(2);
     priorY->SetLineColor(kRed);
     //priorY->SetLineWidth(2);
-    postY->SetLineColor(kBlue);
+    //postY->SetLineColor(kBlue);
     //    postY->SetLineWidth(2);    
 
     if(s==0){
@@ -96,20 +97,20 @@ void prioronly1D_v2(std::string pfile) {
     }
 
     TH1D* priorratioX = (TH1D*)priorX->Clone();
-    TH1D* postratioX = (TH1D*)postX->Clone();
+    //TH1D* postratioX = (TH1D*)postX->Clone();
     TH1D* priorratioY = (TH1D*)priorY->Clone();
-    TH1D* postratioY = (TH1D*)postY->Clone();
+    // TH1D* postratioY = (TH1D*)postY->Clone();
     TH1D* dataratioX = (TH1D*)dathistX->Clone();
     TH1D* dataratioY = (TH1D*)dathistY->Clone();
 
     priorratioX->Sumw2();
-    postratioX->Sumw2();
+    // postratioX->Sumw2();
     priorratioX->Divide(dathistX);
-    postratioX->Divide(dathistX);
+    //postratioX->Divide(dathistX);
     priorratioY->Sumw2();
-    postratioY->Sumw2();
+    //postratioY->Sumw2();
     priorratioY->Divide(dathistY);
-    postratioY->Divide(dathistY);
+    //postratioY->Divide(dathistY);
     dataratioY->Sumw2();
     dataratioX->Sumw2();
     dataratioY->Divide(dathistY);

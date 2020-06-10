@@ -140,7 +140,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     postX->Draw("e same");
     dathistX->SetTitle("");
     dathistX->GetXaxis()->SetTitle("p_{#mu} (MeV)");
-    dathistX->GetYaxis()->SetTitle("Events");
+    dathistX->GetYaxis()->SetTitle("Events/MeV");
     dathistX->GetYaxis()->SetTitleOffset(0.77);
     dathistX->GetXaxis()->SetRangeUser(0,maxX);
     dathistX->GetYaxis()->SetRangeUser(0.1,1.25*dathistX->GetMaximum());
@@ -184,7 +184,7 @@ void priorpred1D(std::string priorfile, std::string postfile) {
     postY->Draw("esame");
     dathistY->SetTitle("");
     dathistY->GetXaxis()->SetTitle("cos #theta_{#mu}");
-    dathistY->GetYaxis()->SetTitle("Events");
+    dathistY->GetYaxis()->SetTitle("Events/MeV");
     dathistY->GetYaxis()->SetTitleOffset(0.77);
     dathistY->GetXaxis()->SetRangeUser(0.7,1.0);
     dathistY->GetYaxis()->SetRangeUser(0.1,1.25*dathistY->GetMaximum());
