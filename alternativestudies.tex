@@ -10,7 +10,7 @@ These fits were all run using the uniform-rectangular fit binning and 574 merged
 
 As discussed in Section \ref{sec:fgd}, FGD1 and FGD2 have different target materials. FGD2 has water layers, and so contains a significant amount of $^{16}$O, whereas FGD1 has only plastic scintillator (C$_8$H$_8$) layers. The constraint on $^{16}$O only parameters therefore comes only from FGD2. 
 
-The location of the FGDs also causes differences in reconstruction between the two subdetectors. FGD1 has two TPCs downstream of it, and so performs more accurate reconstruction for forward-going tracks, whereas FGD2 has two TPCs downstream of it, and so performs more accurate reconstruction for backward going-tracks.
+The location of the FGDs also causes differences in reconstruction between the two subdetectors. FGD1 has two TPCs downstream of it, and so performs more accurate reconstruction for forward-going tracks, whereas FGD2 has two TPCs upstream of it, and so performs more accurate reconstruction for backward going-tracks.
 
 To investigate the compatibility of the FGD1 and FGD2 samples, fits were run using each independently. There is approximately the same amount of data in the FGD1 and FGD2 sample, so the constraining power of each is expected to be similar.
 
@@ -165,13 +165,13 @@ The SK flux parameters have very similar behaviour to the ND flux parameters, as
 \label{fig:fgdxsec}
 \end{figure}
 
-The interaction parameters, shown in Figure \ref{fig:FGDEbdata}, have larger differences. $M_{A}^{QE}$ is pushed higher for FGD1 than FGD2, with the full fit value lying between two. The 2p2h $\nu$ normalisation parameter is also higher for FGD1, with the FGD2 value remaining close to nominal as it is for the full fit. The 2p2h shape parameters have large differences. For FGD2, 2p2h shape C is pushed to its upper bound at $\sim$2, whereas it is only pushed to $\sim$1.3 for FGD1. This is interesting as both FGDs are able to constrain the parameter. For the full fit, the postfit value lies between the FGD1 and FGD2 values, despite not affecting any FGD1 events. This is likely driven by the prior correlations between 2p2h shape C and O.
+The interaction parameters, shown in Figure \ref{fig:FGDEbdata}, have larger differences. $M_{A}^{QE}$ is pushed higher for FGD1 than FGD2, with the full fit value lying between two. The 2p2h $\nu$ normalisation parameter is also higher for FGD1, with the FGD2 value remaining close to nominal as it is for the full fit. The 2p2h shape parameters have large differences. For FGD2, 2p2h shape C is pushed to its upper bound at $\sim$2, whereas it is only pushed to $\sim$1.3 for FGD1. This is interesting as both FGDs are able to constrain the parameter. For the full fit, the 2p2h shape C postfit value lies between the FGD1 and FGD2 values, despite not affecting any FGD1 events. This is likely driven by the prior correlations between 2p2h shape C and O.
 
 The shape of the increase in $Q^2$ parameters is slightly different between the FGD1 and FGD2 fits, but all are within uncertainty of each other.
 
-The $E_b$ parameters are significantly higher for FGD1. As discussed in Section \ref{sec:extrac}, as these parameters are non-Gaussian it is important to inspect the full distributions as well as the extracted values. These are shown in Figure \ref{fig:FGDEbdata}. For $E_b \nu$ C, there is clearly strong peak much higher than for both the FGD2 and full fits. For $E_b \bar{\nu}$ C, there is again a higher peak for FGD1, but the full fit lies between the two subdetector fits. For $E_b \nu$ O there is more overlap between the fits, which is more expected as there is no $^{16}O$ in FGD1. However, for $E_b \bar{\nu}$ O, there are different peaks for the different fits, driven by the correlations between the $E_b$ parameters.
+The $E_b$ parameters are significantly higher for FGD1. As discussed in Section \ref{sec:extrac}, as these parameters are non-Gaussian it is important to inspect the full distributions as well as the extracted values. These are shown in Figure \ref{fig:FGDEbdata}. For $E_b \nu$ C, there is clearly a strong peak much higher than for both the FGD2 and full fits. For $E_b \bar{\nu}$ C, there is again a higher peak for FGD1, but the full fit lies between the two subdetector fits. For $E_b \nu$ O there is more overlap between the fits, which is more expected as there is no $^{16}O$ in FGD1. However, for $E_b \bar{\nu}$ O, there are different peaks for the different fits, driven by the correlations between the $E_b$ parameters.
 
-The CC DIS BY parameter is higher for FGD1 than FGD2, with the full fit falling between the two. The other CC$ 1\pi$ and CC Other targetting parameters are more consistent for the two fits. NC 1$\gamma$ and NC Other show some differences, but this is not too concerning as there are low statistics for the interaction modes they affect.
+The CC DIS BY parameter is higher for FGD1 than FGD2, with the full fit falling between the two. The other CC $1\pi$ and CC Other targetting parameters are more consistent for the two fits. NC 1$\gamma$ and NC Other show some differences, but this is not too concerning as there are low statistics for the interaction modes they affect.
 
 For FSI, the charge exchange parameter has the largest discrepancy, but this is within the postfit uncertainty.
 
@@ -317,7 +317,7 @@ The results for the flux parameters are shown in Figures \ref{fig:fhcrhcfluxND} 
 \label{fig:fhcrhcfluxSK}
 \end{figure}
 
-The results for the interaction parameters are shown in Figure \ref{fig:fhcrhcxsec}. $M_{A}^{QE}$ is not pushed as high for FHC as RHC, but both are with the postfit uncertainty of the full fit value. The 2p2h $\nu$ normalisation gets a small constraint in the RHC fit from the $\nu$ in $\bar{\nu}$ samples, but the 2p2h $\bar{\nu}$ normalisation gets no constraint in the FHC only fit. The 2p2h C to O normalisation and shape parameters for the FHC and RHC only fits are $1\sigma$ either side of the full fits. 
+The results for the interaction parameters are shown in Figure \ref{fig:fhcrhcxsec}. $M_{A}^{QE}$ is not pushed as high for FHC as RHC, but both are within the postfit uncertainty of the full fit value. The 2p2h $\nu$ normalisation gets a small constraint in the RHC fit from the $\nu$ in $\bar{\nu}$ samples, but the 2p2h $\bar{\nu}$ normalisation gets no constraint in the FHC only fit. The 2p2h C to O normalisation and shape parameters for the FHC and RHC only fits are $1\sigma$ either side of the full fits. 
 
 The $Q^2$ normalisations are closer to nominal for RHC, but the shape of the increase with increasing $Q^2$ is similar. 
 
@@ -360,7 +360,7 @@ The $Q^2$ normalisations are closer to nominal for RHC, but the shape of the inc
 \label{fig:fhcrhcxsec}
 \end{figure}
 
-The $E_b$ distributions are shown in Figure \ref{fig:fhcrhcxsec}, as they are non-Gaussian and so the single extracted values do not show the whole story. The distributions for $E_b \nu$ C parameter are similar for the FHC and full fits, as would be expected. In the RHC fit, it is only constrained through the prior correlations to the FHC $E_b$ parameters and the wrong-sign background samples. Similarly, $E_b \bar{\nu}$ C is very similar for RHC only and the full fit. As there are no FHC wrong-sign samples, $E_b \bar{\nu}$ C is only constrained through the prior uncertainty and correlations in FHC only fit, and so the postfit value is close to the prior central value. The $E_b$ O parameters are both much more consistent across the three fits.
+The $E_b$ distributions are shown in Figure \ref{fig:fhcrhcxsec} as they are non-Gaussian and so the single extracted values do not show the whole story. The distributions for $E_b \nu$ C parameter are similar for the FHC and full fits, as would be expected. In the RHC fit, it is only constrained through the prior correlations to the FHC $E_b$ parameters and the wrong-sign background samples. Similarly, $E_b \bar{\nu}$ C is very similar for RHC only and the full fit. As there are no FHC wrong-sign samples, $E_b \bar{\nu}$ C is only constrained through the prior uncertainty and correlations in FHC only fit, and so the postfit value is close to the prior central value. The $E_b$ O parameters are both much more consistent across the three fits.
 
 $M_{A}^{RES}$ is much closer to nominal for RHC, but the full fit favours the FHC value. The BY parameters are both also closer to nominal for RHC, with the full fit values lying between the FHC and RHC only values. The NC parameters are all consistent for the fits, and of the FSI parameters, high energy quasi-elastic is the only systematic for which the postfit values are outside $1\sigma$ of each other, with the full fit favouring the FHC value.
 
@@ -585,7 +585,7 @@ Overall, there is some tension between these fits, but nearly all parameters are
 
 Two interaction models were proposed for this analysis. As $M_{A}^{QE}$ affects events with high $Q^{2}$, one model had only five $Q^2$ normalisations (up to 0.25 GeV), but with a flat prior on $M_{A}^{QE}$. The other model invoked a tight prior uncertainty of 0.06 GeV$^2$ on $M_{A}^{QE}$, but had extra high $Q^2$ freedom from the three additional high $Q^2$ normalisations. Fits were ran with both these models.
 
-The comparison of the results for the flux parameters are shown in Figure \ref{fig:comp5q2vs8q2flux}. The shape of the pulls in energy are similar for the two fits, but the fluxes are generally slightly lower for the fit with eight $Q^2$ normalisations.
+The comparison of the results for the flux parameters are shown in Figures \ref{fig:comp5q2vs8q2fluxND} and \ref{fig:comp5q2vs8q2fluxSK}. The shape of the pulls in energy are similar for the two fits, but the fluxes are generally slightly lower for the fit with eight $Q^2$ normalisations.
 
 Similar results are seen for the ND280 and SK flux parameters, as would be expected.
 
@@ -639,7 +639,7 @@ Similar results are seen for the ND280 and SK flux parameters, as would be expec
   \includegraphics[width=0.75\linewidth]{figs/comp5q2vs8q2flux7}
   \caption{ND RHC $\bar{\nu_e}$}
 \end{subfigure}
-\caption{Comparison of ND280 flux parameters for the 5 and 8 $Q^2$ normalisation models.}
+\caption{Comparison of ND280 flux parameters for the five and eight $Q^2$ normalisation models.}
 \label{fig:comp5q2vs8q2fluxND}
 \end{figure}
 
@@ -693,7 +693,7 @@ Similar results are seen for the ND280 and SK flux parameters, as would be expec
   \includegraphics[width=0.75\linewidth]{figs/comp5q2vs8q2flux15}
   \caption{SK RHC $\bar{\nu_e}$}
 \end{subfigure}
-\caption{Comparison of SK flux parameters for the 5 and 8 $Q^2$ normalisation models.}
+\caption{Comparison of SK flux parameters for the five and eight $Q^2$ normalisation models.}
 \label{fig:comp5q2vs8q2fluxSK}
 \end{figure}
 
@@ -732,13 +732,13 @@ Similar results are seen for the ND280 and SK flux parameters, as would be expec
   \includegraphics[width=0.9\linewidth]{figs/comp5q2vs8q2xsec5}
   \caption{$\pi$ FSI}
 \end{subfigure}
-\caption{Comparison of interaction parameters for the 5 and 8 $Q^2$ normalisation models.}
+\caption{Comparison of interaction parameters for the five and eight $Q^2$ normalisation models.}
 \label{fig:comp5q2vs8q2xsec}
 \end{figure}
 
 The interaction parameters are shown in Figure \ref{fig:Q2Ebdata}. $M_{A}^{QE}$ is pushed even higher when it does not have a prior uncertainty. The 2p2h normalisations are lower for having eight $Q^2$ normalisations, and the five low $Q^2$ normalisations themselves are slightly higher. The low $Q^2$ parameters are likely moved by their co-correlations with the fluxes, which control all regions of $Q^2$.
 
-The comparison of the 1D distributions for the $E_b$ parameters are shown in Figure \ref{fig:Q2Ebdata}. There are peaks in similar locations for $E_b \nu$ C, but the lower peak is larger for having five $Q^2$ normalisations, whereas the higher peak is larger for having eight. The other $E_b$ parameters have similar shaped distributions, but with small changes in the relative sizes of peaks causing changes in the constraints, particularly for $E_b \bar{\nu}$ C and $E_b \nu$.
+The comparison of the 1D distributions for the $E_b$ parameters are shown in Figure \ref{fig:Q2Ebdata}. There are peaks in similar locations for $E_b \nu$ C, but the lower peak is larger for having five $Q^2$ normalisations, whereas the higher peak is larger for having eight. The other $E_b$ parameters have similar shaped distributions, but with small changes in the relative sizes of peaks causing changes in the constraints, particularly for $E_b \bar{\nu}$ C and $E_b \nu$ O.
 
 The CC $1\pi$, NC, and $\pi$ FSI parameters are all unchanged.
 
@@ -766,13 +766,13 @@ The eight $Q^2$ parameters give better control over high $Q^2$ events and allows
   \includegraphics[width=0.73\linewidth]{figs/Q2_EB_dial_O_nubar}
   \caption{$E_{b}\bar{\nu}$ O}
 \end{subfigure}
-\caption{Posterior distributions from the binding energy parameters for the 5 and 8 $Q^2$ normalisation models.}
+\caption{Posterior distributions from the binding energy parameters for the five and eight $Q^2$ normalisation models.}
 \label{fig:Q2Ebdata}
 \end{figure}
 
 \section{Fixing the 2p2ph Energy Dependence Parameters}
 
-The 2p2h energy dependence parameters were found to have no constraint from the near detector fit, as shown in Figure \ref{fig:2p2hEdepdist}. This causes large marginalisation effects, and also can prevent the other near detector fitting group's gradient descent fit from converging. It was therefore decided to that the parameters would not be fitted in the near detector analysis. 
+The 2p2h energy dependence parameters were found to have no constraint from the near detector fit, as shown in Figure \ref{fig:2p2hEdepdist}. This causes large marginalisation effects, and also can prevent the other near detector fitting group's gradient descent fit from converging. It was therefore decided that the parameters would not be fitted in the near detector analysis. 
 To make sure this did not have any unintended consequences, fits were run with them free and fixed at their prior central values.
 
 \begin{figure}
@@ -801,7 +801,7 @@ To make sure this did not have any unintended consequences, fits were run with t
 \label{fig:2p2hEdepdist}
 \end{figure}
 
-The results are in Figures \ref{fig:fixed2p2hfluxND}, \ref{fig:fixed2p2hfluxSK}, \ref{fig:fixed2p2hxsec}, and \ref{fig:2p2hEbdata}. As expected, there is very little change in the postfit parameter values. The 2p2h energy dependence parameters were therefore not fitted in this analysis.
+The results are in Figures \ref{fig:fixed2p2hfluxND}, \ref{fig:fixed2p2hfluxSK}, \ref{fig:fixed2p2hxsec}, and \ref{fig:2p2hEbdata}. As expected, there is very little change in the postfit parameter values. The 2p2h energy dependence parameters were therefore fixed in this analysis, but are free for the full joint fits.
 
 \begin{figure}
 \centering
