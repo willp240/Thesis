@@ -109,7 +109,7 @@ In each mode, there is some contamination of the wrong sign neutrino due to impe
 \label{fig:modebreakdown}
 \end{figure}
 
-After the decay channel, there is a beam dump made up of 3.17 m of graphite and 2.4 m of iron. This stops all surviving mesons, and all muons below 5 GeV. Neutrinos and higher momentum muons reach the muon monitor (MUMON) beyond the beam dump. The MUMON consists of two independent detectors: Si PIN photodiodes, and ion chambers. These measure the muon profile on a bunch by bunch basis, which is a reliable measure of the beam direction and intensity as the majority of neutrinos in the beam are produced with a muon in a two-body decay. The MUMON measures the beam direction to an accuracy of 0.25 mrad, and the beam intensity to a precision of 3$\%$\cite{mumon}.
+After the decay channel, there is a beam dump made up of 3.17~m of graphite and 2.4~m of iron. This stops all surviving mesons, and all muons below 5~GeV. Neutrinos and higher momentum muons reach the muon monitor (MUMON) beyond the beam dump. The MUMON consists of two independent detectors: Si PIN photodiodes, and ion chambers. These measure the muon profile on a bunch by bunch basis, which is a reliable measure of the beam direction and intensity as the majority of neutrinos in the beam are produced with a muon in a two-body decay. The MUMON measures the beam direction to an accuracy of 0.25~mrad, and the beam intensity to a precision of 3$\%$\cite{mumon}.
 
 It's not possible to count the total number of neutrinos produced in the beam, so the number of protons impinged on the target (POT) is used as a metric for the data collected by T2K. The total accumulated POT and beam power have been increasing since data taking began in 2010, as shown in Figure \ref{fig:pot}. Near detector data from runs 2-9 is used in this analysis.
 
@@ -219,7 +219,8 @@ The two FGDs both contain 1.1 t of target mass, and consist of layers of scintil
 
 The most upstream FGD (FGD1) is composed of 15 scintillator planes. The second FGD (FGD2) has 7 scintillator planes separated by layers of hollow corrugated polycarbonate sheets. These are filled with water, providing a water-scintillator hybrid target. The FGDs therefore measure interactions on CH in the scintillator, which is a common target in external neutrino scattering experiments, and H$_2$O, the far detector target. Nuclear effects cannot be accurately extrapolated between target nuclei, and so it useful to be able measure interaction rates on water at ND280.
 
-The resolution and track length in the FGDs is too low to use d$E$/d$x$ to identify particles which don't enter the TPCs, so the combination of integrated deposited energy and track length is used. These quantities are compared to theoretical values for different particles, as shown in Figure \ref{fig:FGD1}, allowing protons to be distinguished from other charged particles. In particular, accurately distinguishing protons and pions which stop in the FGDs is vital for correctly identifying the interaction type. Figure \ref{fig:FGD1} shows data from both the neutrino beam, and cosmic trigger. The neutrino beam data contains particles identifiable as protons, muons, and pions, whereas the cosmic trigger data only contains particles identifiable as muons and pions, as would be expected.
+The resolution and track length in the FGDs is too low to use d$E$/d$x$ to identify particles which don't enter the TPCs, so the combination of integrated deposited energy and track length is used. These quantitie\
+s are compared to values from simulations of different particles, as shown in Figure \ref{fig:FGD1}, allowing protons to be distinguished from other charged particles. In particular, accurately distinguishing protons and pions which stop in the FGDs is vital for correctly identifying the interaction type. Figure \ref{fig:FGD1} shows data from both the neutrino beam, and cosmic trigger. The neutrino beam data contains particles identifiable as protons, muons, and pions, whereas the cosmic trigger data only contains particles identifiable as muons and pions, as would be expected.
 
 \begin{figure}
 \centering
@@ -256,7 +257,7 @@ The inner box contains the cathode, and the walls parallel to the cathode have a
 
 When a charged particle passes through a TPC module, ionisation electrons are produced, which drift away from the cathode to readout planes on the walls of the inner box. Here, the electrons are multiplied and detected by micromegas detectors. The time and position of the electron signals at the readout planes give a 3D image of the particle track.
 
-Particle identification is performed in the TPCs using, like in the FGDs, d$E$/d$x$. This is shown in Figure \ref{fig:tpcpid}, as a function of momentum, for different particles. The d$E$/d$x$ resolution is 7.8$\pm$0.2$\%$, allowing electrons and muons to be distinguished. 
+Particle identification is performed in the TPCs using, as in the FGDs, d$E$/d$x$. This is shown in Figure \ref{fig:tpcpid}, as a function of momentum, for different particles. The d$E$/d$x$ resolution is 7.8$\pm$0.2$\%$, allowing electrons and muons to be distinguished. 
 
 \begin{figure}[!htbp]
 \centering
@@ -295,7 +296,7 @@ The six modules of the P0D ECal have only six layers of scintillator, each paral
 
 \subsubsection{The UA1 Magnet and Side Muon Range Detector}\label{sec:mag}
 
-The TPC, FGD, P0D, and ECal all sit within the UA1 magnet, which provides a 0.2 T magnetic field. This allows the TPCs to measure the momentum of charged particles with a resolution of 10$\%$, and determine their sign, which identifies if the interaction involved a neutrino or anti-neutrino. The magnet consists of water-cooled aluminium coils, which produce the field. The coils are supported by the return yoke, which is made up of 16 C-shaped iron elements. The internal volume of the magnet is 7.0 $\times$ 3.5 $\times$ 3.6 m, and the external volume is 7.6 $\times$ 5.6 $\times$ 6.1 m.
+The TPC, FGD, P0D, and ECal all sit within the UA1\cite{UA1} magnet, which provides a 0.2 T magnetic field. This allows the TPCs to measure the momentum of charged particles with a resolution of 10$\%$, and determine their sign, which identifies if the interaction involved a neutrino or anti-neutrino. The magnet consists of water-cooled aluminium coils, which produce the field. The coils are supported by the return yoke, which is made up of 16 C-shaped iron elements. The internal volume of the magnet is 7.0 $\times$ 3.5 $\times$ 3.6 m, and the external volume is 7.6 $\times$ 5.6 $\times$ 6.1 m.
 
 The nominal current is 2.7 kA, and this is monitored regularly to accurately calculate the field. This reduces the uncertainty on momentum measurements in the TPC. The uncertainty on the field measurement is 2$\times$10$^{-4}$ T.
 
@@ -315,7 +316,7 @@ A custom software package, ElecSim, is used to simulate the response of the dete
 
 \section{Super-Kamiokande}\label{sec:SK}
 
-The far detector, Super-Kamiokande, is a water Cherenkov detector located 295 km west of the near detector suite, in the Kamioka mine inside Mt. Ikenoyama. The mine provides 1 km of rock (or 2.7 km equivalent of water), shielding the detector from cosmic ray muons below 1.3 TeV, significantly reducing background rates. The detector is filled with 50 kt of pure water (25 kt fiducial volume), and, like ND280, lies 2.5$^o$ off-axis. Figure \ref{fig:superk} shows the detector within the mine.
+The far detector, Super-Kamiokande, is a water Cherenkov detector located 295 km west of the near detector suite, in the Kamioka mine inside Mt. Ikenoyama. The mine provides 1~km of rock (or 2.7 km equivalent of water), shielding the detector from cosmic ray muons below 1.3 TeV, significantly reducing background rates. The detector is filled with 50 kt of pure water (25 kt fiducial volume), and, like ND280, lies 2.5$^o$ off-axis. Figure \ref{fig:superk} shows the detector within the mine.
 
 \begin{figure}[!htbp]
 \centering
@@ -359,6 +360,6 @@ An algorithm\cite{skrecoalg} is used to distinguish between fuzzy and sharp ring
 
 \subsection{Far Detector Simulation}
 
-Neutrino interactions in the SK tank are modelled by the NEUT event generator. The simulation of produced particles through the detector is done using the GEANT-3\cite{geant3} based SKDETSIM software \cite{skdetsim}. Like in the beam production, hadronic interactions are simulated with the GCALOR package.
+Neutrino interactions in the SK tank are modelled by the NEUT event generator. The simulation of produced particles through the detector is done using the GEANT-3\cite{geant3} based SKDETSIM software \cite{skdetsim}. As with the beam production, hadronic interactions are simulated with the GCALOR package.
 
 \newpage

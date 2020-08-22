@@ -1,0 +1,72 @@
+Original Page 1:
+Sakharov reference moved to after year
+"statistics" -> "data sets" and "sample size"
+
+Original Page 2:
+Added two paragraphs at the end of the chapter, outlining which parts are the work of others
+
+Original Page 8:
+"which would be significant modification" -> "which would be a significant modification"
+
+Original Page 17:
+"Here, the negative sign in brackets is for anti-neutrinos" -> "Here, the positive sign in brackets is for anti-neutrinos."
+
+Original Page 18:
+"but not by a sufficient amount to alone explain the asymmetry" -> "but not by a sufficient amount to completely explain the asymmetry"
+
+"increased statistics" -> "increased statistical power"
+
+Original Page 19:
+"infeasible" -> "not feasible"
+
+Original Page 23:
+"as they propagate out the nucleus" -> "as they propagate out of the nucleus"
+
+Original Page 24:
+No longer line-break between "5" and "MeV"
+
+Original Page 25:
+"more statistics are needed" -> "more data is needed"
+
+Original Page 31:
+No longer line-break between "2.4" and "m"
+
+Original Page 39:
+"These quantities are compared to theoretical values for different particles" -> "These quantities are compared to values from simulationsc of different particles"
+
+Original Page 41:
+"like in the FGDs" -> "as in the FGDs"
+
+Original Page 44:
+Add reference for UA1
+
+Original Page 45:
+No longer line-break between "1" and "km"
+
+Original Page 47:
+"Like in the beam production" ->"As with the beam production"
+
+Original Page 49:
+"the cross-section, flux, and detector models all compose of parameters with large uncertainties" -> "the cross-section, flux, and detector models all have large systematic uncertainties"
+
+"The parameters of these models are degenerate with the oscillation parameters being calculated" -> "The parameters of these models have similar effects as the oscillation parameters being calculated"
+
+Original Page 50:
+"bringing the total number of parameters to an infeasibly high amount" -> "meaning the total number of parameters would be too high to feasibly fit"
+
+Original Page 51:
+"un-analytically solvable" -> "non-analytically solvable"
+
+Original Page 56:
+Figure 4.1 caption: "a low energy flux at parameter" -> "a low energy flux parameter"
+
+"it would suggest stationarity had not been reached." -> "it would suggest the stationary distribution had not been reached."
+
+Original Page 62:
+"LLH" -> "log-likelihood (LLH)"
+
+Original Page 63:
+"The p-value is then calculated in two different ways" -> "The Bayesian p-value is then calculated in two different ways"
+
+Original Page 64:
+"As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid." -> "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid, but the individual p-values for each sample can highlight regions of phase space for which the postfit model is less compatible with the data."

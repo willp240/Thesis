@@ -1,6 +1,6 @@
 \chapter{Statistical Treatment}\label{sec:stats}
 
-The number of events measured at the far detector is a convolution of the cross-section, flux, detector efficiency, and probability of oscillation. As discussed in Section \ref{sec:NeutrinoPhysics}, neutrino interactions are rare and so the cross-section, flux, and detector models all compose of parameters with large uncertainties. The parameters of these models are degenerate with the oscillation parameters being calculated; a change in a single nuisance parameter mimics a change in oscillation parameters in terms of the effect on the kinematic distributions measured.
+The number of events measured at the far detector is a convolution of the cross-section, flux, detector efficiency, and probability of oscillation. As discussed in Section \ref{sec:NeutrinoPhysics}, neutrino interactions are rare and so the cross-section, flux, and detector models all have large systematic uncertainties. The parameters of these models have similar effects as the oscillation parameters being calculated; a change in a single nuisance parameter mimics a change in oscillation parameters in terms of the effect on the kinematic distributions measured.
 
 The aim of the near detector fit is to constrain the cross-section, flux, and detector systematics before oscillation, allowing more precise measurements of the oscillation parameters at SK. However, as there are several hundred nuisance parameters, fitting them all requires careful statistical treatment.
 
@@ -37,7 +37,7 @@ This is then modified to include the MC statistical uncertainty, which accounts 
 \label{eqn:llhbb}
 \end{equation}
 
-Fitting a new parameter, $\beta$, for each bin would introduce $\sim$3000 new fit parameters, bringing the total number of parameters to an infeasibly high amount. Instead, it is assumed $\beta$ follows a Gaussian distribution for each. By minimising $-\log\mathcal{L}$ with respect to $\beta$, $\beta$ can be calculated analytically for each bin by solving:
+Fitting a new parameter, $\beta$, for each bin would introduce $\sim$3000 new fit parameters, meaning the total number of parameters would be too high to feasibly fit. Instead, it is assumed $\beta$ follows a Gaussian distribution for each. By minimising $-\log\mathcal{L}$ with respect to $\beta$, $\beta$ can be calculated analytically for each bin by solving:
 
 \begin{equation}
 \beta^2 + (\lambda \sigma^{2}_{\beta} - 1)\beta - n \sigma^{2}_{\beta} = 0,
@@ -69,7 +69,7 @@ P(D|\bar{\theta}) P(\bar{\theta}) = \prod \mathcal{L}_{total} = \prod (\mathcal{
 The integral in Equation \ref{eqn:bayes} is often not analytically solvable in practice, and so Monte-Carlo methods are required to sample from the posterior to produce a distribution proportional to the posterior probability distribution up to a normalisation constant. 
 
 \section{Monte Carlo Methods}\label{sec:montecarlo}
-Monte Carlo simulation can be used to estimate mathematical functions and mimic the operations of complex systems with random sampling and statistical modelling. They provide a solution to the problem of high dimensionality and un-analytically solvable integrals by sampling distributions with a random walk through a given parameter space. Properties of the distribution such as parameter values and integrals can then be approximated from properties of the samples. This is often a much easier process than directly evaluating an integral, and so these methods are used in many fields from climate science, to economics, to computational biology.
+Monte Carlo simulation can be used to estimate mathematical functions and mimic the operations of complex systems with random sampling and statistical modelling. They provide a solution to the problem of high dimensionality and non-analytically solvable integrals by sampling distributions with a random walk through a given parameter space. Properties of the distribution such as parameter values and integrals can then be approximated from properties of the samples. This is often a much easier process than directly evaluating an integral, and so these methods are used in many fields from climate science, to economics, to computational biology.
 
 The simplest approach for performing an integral is to throw a random point in a region of known volume that encompasses the target region. The reliance on random numbers is where the name `MC methods' emanates from, referring to the famous casino in Monaco. The fraction of throws within the target region is multiplied by the known volume, to get an approximation of the target volume. The results are not an exact solution, and are dependent on the random throws sufficiently sampling the distribution. From the law of large numbers, the accuracy of this approximation improves with the number of points thrown. 
 
@@ -139,7 +139,7 @@ where $X_i$ is the parameter value for the $i^{th}$ step, $\bar{X}$ is the mean 
 \begin{figure}[!htbp]
 \centering
 \includegraphics*[width=0.7\textwidth,clip]{figs/autoCorr}
-\caption{The autocorrelation function for a low energy flux at parameter, at different values for the scaling applied to the step size.}\label{fig:autocorr}
+\caption{The autocorrelation function for a low energy flux parameter, at different values for the scaling applied to the step size.}\label{fig:autocorr}
 \end{figure}
 
 The trace of the parameter is the plot of its value at each step in the chain. This is used to ensure good mixing has been achieved, and so the parameter space is well explored. The trace of a low energy flux parameter is shown in Figure \ref{fig:traces} for different step sizes. This shows how decreasing the step size, affects how the chain samples different regions of the posterior distribution.
@@ -174,7 +174,7 @@ The trace of the parameter is the plot of its value at each step in the chain. T
 \label{fig:traces}
 \end{figure}
 
-Finally, batched means are also used to test the chain has converged. These are the mean of a given parameter over smaller consecutive subsets of steps. Once converged, these should be fairly constant, as shown in Figure \ref{fig:batch} for a low energy flux parameter. In the second half of the chain, the batched means are within $\sim$2$\%$. If the mean was varying drastically between batches, or if there were regions of consistent bias beyond statistical fluctuation, it would suggest stationarity had not been reached.
+Finally, batched means are also used to test the chain has converged. These are the mean of a given parameter over smaller consecutive subsets of steps. Once converged, these should be fairly constant, as shown in Figure \ref{fig:batch} for a low energy flux parameter. In the second half of the chain, the batched means are within $\sim$2$\%$. If the mean was varying drastically between batches, or if there were regions of consistent bias beyond statistical fluctuation, it would suggest the stationary distribution had not been reached.
 
 \begin{figure}[!htbp]
 \centering
@@ -299,7 +299,7 @@ Once the fit has finished, the results are used to produce the posterior predict
    \item For each bin in each sample, the mean and width of the fitted Gaussian become the central value and uncertainty for the posterior prediction
    \end{itemize}
    
-In this way, a predictive distribution representative of the draws from the stationary distribution is produced. The comparison of this prediction to the data can be used to see if the model has enough freedom to closely reproduce the data through reweighting. Furthermore, plotting the LLH contribution from the posterior prediction to data for each bin in each sample highlights which regions are affecting the LLH calculation the most. It is desired that bins containing the most bins would be having the largest impact on the fit, and when this is not the case it should be fully understood why other regions are having unexpected significance. However, more involved methods are needed to truly test how well the model has been fit to the data.
+In this way, a predictive distribution representative of the draws from the stationary distribution is produced. The comparison of this prediction to the data can be used to see if the model has enough freedom to closely reproduce the data through reweighting. Furthermore, plotting the log-likelihood (LLH) contribution from the posterior prediction to data for each bin in each sample highlights which regions are affecting the LLH calculation the most. It is desired that bins containing the most bins would be having the largest impact on the fit, and when this is not the case it should be fully understood why other regions are having unexpected significance. However, more involved methods are needed to truly test how well the model has been fit to the data.
 
 \subsection{Goodness of Fit}\label{sec:pval}
 
@@ -319,7 +319,7 @@ As well as comparing the posterior predictive distributions to data, a Bayesian 
   \end{itemize}
 \end{itemize}
 
-The LLHs are calculated using Equation \ref{eqn:llhsample}. The p-value is then calculated in two different ways:
+The LLHs are calculated using Equation \ref{eqn:llhsample}. The Bayesian p-value is then calculated in two different ways:
 
 \begin{equation}
 p = \frac{N(-2LLH_{Data, Draw} < -2LLH_{Draw Fluc, Draw})}{N_{Total}},
@@ -339,7 +339,7 @@ Neither method of calculating the p-value is individually correct or incorrect, 
 
 Generally a higher p-value is desirable and indicates a better fit to data, but there is no single threshold for which a higher p-value can be determined acceptable for all analyses. There are also deficiencies in this method of calculating the p-value which should be considered when evaluating the goodness of fit. The detector systematics are not varied individually, but instead grouped together and parametrised by their joint effect on event rates in merged fit bins, as described in Section \ref{sec:det}. As these underlying systematics are non-Gaussian, throwing using these merged bins does not necessarily describe the true distribution of these systematics. This could cause the p-value to be lower than would otherwise be measured.
 
-Furthermore, this Bayesian p-value is not the same as a 'traditional' p-value. Here, the p-value answers a very specific question: if the experiment was ran again, how likely is it that data consistent with the post-fit model would be observed? This is, by construction, a stringent test. As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid.
+Furthermore, this Bayesian p-value is not the same as a 'traditional' p-value. Here, the p-value answers a very specific question: if the experiment was ran again, how likely is it that data consistent with the post-fit model would be observed? This is, by construction, a stringent test. As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid, but the individual p-values for each sample can highlight regions of phase space for which the postfit model is less compatible with the data.
 
 The other near detector fitting group at T2K also produce a p-value, using the method described in \cite{tn324}. This is a strictly frequentist construction, calculated using throws of the systematics from their priors, giving an indication of how well the prior model can fit the data. As well as this, this p-value uses throws of the underlying detector systematics, rather than the effective bin-by-bin normalisations, giving more accurate variations. The frequentist p-value answers a different question to the Bayesian version: using information on the systematics before the fit is run, how likely is the observed data? The two p-values are therefore not expected to give the same results. For this analysis, the frequentist p-value is used to determine if an acceptable goodness of fit has been achieved, as it uses the correct detector systematics implementation, while the Bayesian p-value is used to inspect the fit result in more detail and determine for which samples and regions of phase space the fit performs well for.
 
