@@ -1,5 +1,6 @@
 Original Page 1:
 Sakharov reference moved to after year
+
 "statistics" -> "data sets" and "sample size"
 
 Original Page 2:
@@ -70,3 +71,108 @@ Original Page 63:
 
 Original Page 64:
 "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid." -> "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid, but the individual p-values for each sample can highlight regions of phase space for which the postfit model is less compatible with the data."
+
+Original Page 67:
+"The near detector samples also have higher statistics than the SK samples" -> "The near detector samples also have more data than the SK samples"
+
+Original Page 68:
+"This has the disadvantage of assuming that the systematics are not Gaussian." -> "This has the disadvantage of assuming that the systematics are Gaussian.
+
+Original Page 69:
+"However, to validate the model and fitting framework, near detector only fits are ran to compare with the BANFF." -> "However, to validate the model and fitting framework, near-detector-only fits are compared with the BANFF."
+
+Original Page 75:
+"significant amount" -> "significant number"
+
+Original Page 78:
+"These plots only show up to 5000 GeV for FHC, and 1000 GeV for RHC" -> "These plots only show up to 5000 MeV for FHC, and 1000 MeV for RHC"
+
+Original Page 81:
+Added sentence "The algorithm was tuned using data and MC from runs 2-6."
+
+Original Page 81/82:
+"Full templates of the binning for each sample are shown in Appendix A, as it is not feasible to express the bin edges in text for non-uniform binning." -> Full templates of the binning for each sample are shown in Appendix A.
+
+Original Page 86:
+Add footnote: "The ROOT TSpline3 class is used here."
+
+Original Page 87:
+"The CC DIS and multi-π cross-section is calculated from ‘Parton Distribution Func- tions’ (PDFs). In NEUT these are constructed using the GRV98 [117] model with corrections from Bodek and Yang [118]." -> "The CC DIS and multi-$\pi$ cross-section is calculated from `Structure Functions' of the nucleus, which themselves are constructed using `Parton Distribution Functions' (PDFs). The PDFs describe the probability of finding a quark with a given fraction of the nucleon momentum inside the nucleon. In NEUT, these are constructed using the GRV98 [117] model with corrections from Bodek and Yang [118]."
+
+Original Page 88:
+"At one extreme, the multi-π cross-section is entirely reweighted to the AGKY model [119], at the other extreme it is entirely the nominal custom model in NEUT." -> "At one extreme, the multi-π cross-section is entirely reweighted to the AGKY model [119] which has a smooth transition between low and high W2 parametrisations, and at the other extreme it is entirely the nominal custom model in NEUT which has a hard cut-off between high and low W2 parametrisations."
+
+"Like for CC Coherent scattering" -> "As for CC Coherent scattering"
+
+"As there is no external data to constrain the cross-section, the prior uncertainty is 100%." -> "As there is no external data to constrain the cross-section, the prior uncertainty is 100% of the nominal weight."
+
+Original Page 89:
+Added reference for electron (anti-) neutrino parameters central values and uncertainties.
+
+"The full prefit cross- section correlation matrix is shown in Figure 5.10." -> "he full prefit cross- section correlation matrix is shown in Figure 5.10, showing the central values, uncertainties, and correlations of the parameters described in this section."
+
+Original Page 91:
+"Instead, external data is used to inform removal energy distributions which contain peaks corresponding to the nuclear shell structure." -> "Instead, external data is used to inform distributions of the nuclear binding energy and initial nucleon momentum, which contain peaks corresponding to the nuclear shell structure."
+
+"However, this was infeasible to implement" -> "However, this was not feasible to implement"
+
+"e->e'p" -> "ee',p"
+
+Original Page 92:
+Add reference to Asimov dataset
+
+Original Page 95:
+"Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are." -> "Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are. Different binnings can therefore produce different fit results."
+
+Original Page 96:
+"This analysis is the first to use flux systematics developed from simulation using data from a full T2K target replica, and not just a thinner replica version." -> "This analysis is the first to use flux systematics developed from simulation tuned to data from a full T2K target replica, and not just a thinner replica version."
+
+Original Page 102:
+"This process assumes the shape of the underlying systematics is Gaussian." -> "This process assumes the shape of the underlying systematics are Gaussian."
+
+"the MC stats uncertainty" -> "the MC statistics uncertainty"
+
+Original Page 103:
+"without introducing an infeasibly large number of fit parameters." -> "without introducing too many parameters to feasibly fit."
+
+Original Page 104/105:
+"To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the nominal MC." -> "To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the runs 2-6 nominal MC."
+
+Original Page 115:
+"The CC 0π and CC Other samples show slightly oscillatory behaviour in the ratio of data to MC at low momentum, within statistical uncertainty. The ratio is consistently >1, but is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄." -> "The ratio of data to MC for fluctuates for the CC 0π and CC Other samples, but is consistently >1. It is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄."
+
+Original Page 116:
+"by mainly" -> "mainly by"
+
+Original Page 118:
+"The CC 0π and CC Other samples again show slight oscillatory behaviour in the ratio of data to MC, within statistical uncertainty. At high angle, the ratio increases and decreases, but always remains >1." -> "The ratio of data to MC for CC 0π and CC Other samples again fluctuates, but always remains >1."
+
+Original Page 119:
+"The behaviour is consistent across the FGDs." -> "The behaviour is consistent across the FGD1 and FGD2, showing that the strengths and weaknesses of the modelling are similar for both FGDs."
+
+Original Page 127:
+"This is because they are not normalisation parameters, and so the weight applied can be lower for a higher parameter value." -> "This is because they are spline parameters not normalisation parameters, and so the weight applied can be lower for a higher parameter value."
+
+Original Page 129:
+"therefore is" -> "is therefore"
+
+Remove Asimov citation as now cited at first use (original page 92)
+
+"The constraint on each parameter shows the reduction in systematic uncertainties that would be achieved if the models perfectly described the true data." -> "The constraint on each parameter shows the reduction in systematic uncertainties that would be achieved if the models perfectly described the true data. This represents the maximum possible constraint, as the sample and parameter likelihoods are each maximised for the same set of parameter values."
+
+"Marginalisation effects cause the postfit parameter values to not exactly equal the nominal inputs, but the discrepancies are small." -> "Marginalisation effects, whereby marginalising over non-Gaussian parameters shifts the highest posterior density for a given parameter, cause the postfit parameter values to not exactly equal the nominal inputs, but the discrepancies are small."
+
+Original Page 132:
+Added sentences: "For the parameters with Gaussian priors, the throws are from a Gaussian with the same central value and width as the prior. For the parameters with flat priors, the throws are from a uniform distribution between physical bounds."
+
+Original Page 144:
+"9.32% 0.29%" -> "9.32% to 0.29%"
+
+Original Page 153:
+"kinematics" -> "kinematic variables"
+
+Original Page 158:
+"Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected." -> "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected from what was seen in previous analyses.
+
+Original Page 202:
+"events could be binned in more than two variables" -> "events could be binned in more than two kinematic variables"
