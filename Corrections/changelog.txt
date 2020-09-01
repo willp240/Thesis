@@ -33,7 +33,7 @@ Original Page 31:
 No longer line-break between "2.4" and "m"
 
 Original Page 39:
-"These quantities are compared to theoretical values for different particles" -> "These quantities are compared to values from simulationsc of different particles"
+"These quantities are compared to theoretical values for different particles" -> "These quantities are compared to values from simulations of different particles"
 
 Original Page 41:
 "like in the FGDs" -> "as in the FGDs"
@@ -174,5 +174,14 @@ Original Page 153:
 Original Page 158:
 "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected." -> "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected from what was seen in previous analyses.
 
+Original Page 201:
+"Firstly, without detector systematics in the fit the results do not tell the full story." -> "Firstly, without detector systematics in the fit the results are not entirely valid."
+
+"There is also low statistics" -> "There is also a low sample size"
+
+"The target volume of an HPTPC would also be larger than that of ND280, which is not accounted for in this study." -> "The target volume of an HPTPC would also be larger than that of ND280, increasing the target mass and therefore the number of interactions, which is not accounted for in this study."
+
 Original Page 202:
 "events could be binned in more than two variables" -> "events could be binned in more than two kinematic variables"
+
+Added to conclusion (final paragraph)
