@@ -1,6 +1,6 @@
 \chapter{Neutrino Physics}\label{sec:NeutrinoPhysics}
 
-Neutrinos are spin-1/2 fermions with extremely small mass and zero electric charge. They only interact via the weak and gravitational forces, allowing them to travel great distances through matter without ever being affected by it, and so making them very difficult to detect. This has made neutrinos one of the most elusive particles, despite being one of the most abundant in the Universe. 
+Neutrinos are spin-1/2, colourless, fermions with extremely small mass and zero electric charge. They only interact via the weak and gravitational forces, allowing them to travel great distances through matter without ever being affected by it, and so making them very difficult to detect. This has made neutrinos one of the most elusive particles, despite being one of the most abundant in the Universe. 
 
 This chapter gives an overview of the history of neutrino physics, from Wolfgang Pauli's ``desperate remedy" of an undetectable particle, to the 2015 Nobel prize winning results of SK \cite{FUKUDA2002179} and SNO \cite{Ahmad_2001}, as well as the relevant theory involved. Section \ref{sec:discovery} describes the initial evidence of the existence of neutrinos, and the discovery of the different flavours. The evidence of neutrino oscillations is presented in Section \ref{sec:neutrinooscillationevidence}, separated by neutrino source. The theory behind the oscillation mechanism is introduced in Section \ref{sec:oscillationtheory}, along with a discussion on the different interaction types relevant for long baseline neutrino oscillation experiments. Finally, Section \ref{sec:status} gives an overview of the current experimental status of neutrino oscillations, and the questions yet to be answered.
 
@@ -87,7 +87,7 @@ Electron neutrinos are produced in the Sun by a number of different mechanisms. 
 \caption{Flux of solar neutrinos at Earth as a function of energy for different production mechanisms, according to Bahcall's solar model. Figure from \cite{behcallflux}.} \label{solarflux}
 \end{figure}
 
-However, the energy of the resulting neutrinos is below detection threshold. Other mechanisms produce higher energy neutrinos but with a lower flux, as shown in Figure \ref{solarflux}. Most solar neutrino experiments therefore measure the flux produced through boron decay:
+However, the energy of the resulting neutrinos is below detection threshold for most experiments. Other mechanisms produce higher energy neutrinos but with a lower flux, as shown in Figure \ref{solarflux}. Most solar neutrino experiments therefore measure the flux produced through boron decay:
 
 \begin{equation}
 ^{8}_{5}\text{B} \rightarrow  \medspace ^{8}_{4} \text{Be} + e^{+} + \nu_e.
@@ -156,9 +156,9 @@ Interactions between cosmic rays and nuclei in the Earth's atmosphere produce ne
 
 Atmospheric neutrinos typically have a higher energy than solar neutrinos, with the flux peaking between 1-10 GeV.
 
-Reines \cite{reines} first measured the atmospheric neutrino flux at the Kolar Gold Fields mines in India in 1965. The measured flux was lower than had been predicted, a result which was confirmed by the IMB \cite{imb} and Kamiokande \cite{kamiokande2} experiments. The deficit was statistically convincing, but not significant enough to be considered compelling evidence of neutrino flavour change. These results became known as the Atmospheric Neutrino Anomaly. 
+Reines \cite{reines} first measured the atmospheric neutrino flux at the Kolar Gold Fields mines in India in 1965. The measured ratio of $\nu_{\mu}$ flux to $\nu_e$ flux was lower than had been predicted, a result which was confirmed by the IMB \cite{imb} and Kamiokande \cite{kamiokande2} experiments. The deficit was statistically convincing, but not significant enough to be considered compelling evidence of neutrino flavour change. These results became known as the Atmospheric Neutrino Anomaly. 
 
-The upgrade to the Kamiokande experiment, Super Kamiokande (SK), measured the flux of atmospheric $\nu_{\mu}$ as a function of incoming angle in 1998. The data was split into upwards-going and downwards-going samples, allowing measurements at different distances from production. Upward-going neutrinos would have to travel through the Earth before reaching the detector, not just the distance from the atmosphere to the surface. In theory, since the neutrinos are produced isotropically in the atmosphere, there should be the same amount of upward-going and downward-going neutrinos. However, a large deficit of $\nu_{\mu}$ was observed in the upward sample, as shown in Figure \ref{atmosflux}.
+The upgrade to the Kamiokande experiment, Super Kamiokande (SK), measured the flux of atmospheric $\nu_{\mu}$ as a function of incoming angle in 1998. The data was split into upwards-going and downwards-going samples, allowing measurements at different distances from production. Upward-going neutrinos would have to travel through the Earth before reaching the detector, not just the distance from the atmosphere to the surface. In theory, since the neutrinos are produced isotropically in the atmosphere, there should be the same amount of upward-going and downward-going neutrinos. However, a large deficit in the ratio of $\nu_{\mu}$ to $\nu_e$ was observed in the upward sample, as shown in Figure \ref{atmosflux}.
 
 The dependence of the number of $\nu_{\mu}$ observed on the distance travelled could be explained in the context of neutrino flavour mixing. The upward-going neutrinos were changing flavour as they propagated the longer distance through the Earth to the detector. The SK result was strong evidence of $\nu_{\mu}$ disappearance through oscillation.
 
@@ -173,9 +173,21 @@ The dependence of the number of $\nu_{\mu}$ observed on the distance travelled c
 
 Reactor neutrinos have a similar energy flux to the solar neutrinos, peaking between 1-10 MeV. Like atmospheric neutrinos, experiments for detecting reactor neutrinos can measure oscillations across different baselines.
 
-The KamLAND experiment \cite{kamland} measured the $\bar{\nu_{\mu}}$ flux from 55 nuclear power reactors across Japan, with a flux-weighted average baseline of 180 km. This gave sensitivity to $\Delta m_{21}^{2}$. The number of $\bar{\nu_{\mu}}$ detected was smaller than would be expected if neutrinos could not change flavour, and the measured probability of oscillation as a function of energy and distance was in agreement with Pontercorvo's theory of neutrino flavour mixing. This provided further evidence that neutrinos oscillate while propagating through space.
+The KamLAND experiment \cite{kamland} measured the $\bar{\nu_{\mu}}$ flux from 55 nuclear power reactors across Japan at a range of different distances, with a flux-weighted average baseline of 180 km. This gave sensitivity to $\Delta m_{21}^{2}$. The number of $\bar{\nu_{\mu}}$ detected was smaller than would be expected if neutrinos could not change flavour, and the measured probability of oscillation as a function of energy and distance was in agreement with Pontercorvo's theory of neutrino flavour mixing, as shown in Figure \ref{fig:kam}. This provided further evidence that neutrinos oscillate while propagating through space.
 
-There are several reactor experiments, RENO \cite{reno}, Double Chooz \cite{doublechooz}, Daya Bay \cite{dayabay}, with a shorter baseline of $\sim$1 km, sensitive to $\theta_{13}$. These have all measured an excess of neutrinos at $E_\nu \sim$5 MeV compared to prediction, which could be due to poor flux modelling, or the existence of sterile neutrinos.
+\begin{figure}
+\centering
+\includegraphics*[width=0.7\textwidth,clip]{figs/LE-b}
+\caption{Ratio of the KamLAND measured flux to expectation for no-oscillation as a function of $L_{0}/E$ where $L_0$ is the flux-weighted average baseline ($L_{0} = 180$ km). The blue histogram and curve show the expectation asuming PMNS oscillation parameters. Figure from \cite{kamlandfig}.} \label{fig:kam}
+\end{figure}
+
+There are several reactor experiments, RENO \cite{reno}, Daya Bay \cite{dayabay}, Double Chooz \cite{doublechooz}, and its predecessor Chooz \cite{chooz}, with a shorter baseline of $\sim$1 km, sensitive to $\theta_{13}$. Chooz initially set an upper limit on sin$^2 \theta_{13}$, before the others measured a large sin$^2 \theta_{13}$, which allows long baseline neutrino oscillation experiments to observe $\nu_e$ appearance. They have all also measured an excess of neutrinos at $E_\nu \sim$5 MeV compared to prediction, as shown in Figure \ref{fig:sbanom}. This could be due to poor flux modelling, or the existence of sterile neutrinos.
+
+\begin{figure}
+\centering
+\includegraphics*[width=0.9\textwidth,clip]{figs/sbanom}
+\caption{Ratio of measured to expected $\bar{\nu_e}$ flux as a function of energy for Daya Bay and RENO (left) and Double Chooz (right). Figure from \cite{sbanom}.} \label{fig:sbanom}
+\end{figure}
 
 \subsection{Accelerator Neutrinos}\label{sec:acceleratorneutrinos}
 
@@ -214,7 +226,7 @@ U_{\tau 1} & U_{\tau 2} & U_{\tau 3}.
 \vspace{8pt}
 \end{equation}
 
-Each element, $U_{\alpha i}$, corresponds to the amplitude of the mass eigenstate $i$ within the flavour eigenstate $\alpha$. The flavour contents are shown in Figure \ref{hierarchy}, according to current best measurements. The left hand side is for the normal mass hierarchy, where $m_3^2 > m_2^2$, whereas the right handside is for the inverted mass hierarchy, where $m_2^2 > m_3^2$. It is known that $m_2^2 > m_1^2$ from solar neutrino measurements, but the nature of the mass hierarchy is not known beyond this. The signs of $\Delta m_{32}^2$ and $\Delta m_{31}^2$ are difficult to determine because the uncertainties on their values are so much larger than the size of $\Delta m_{21}^2$. The sign therefore is negligible in oscillation calculations in experiments, compared to the uncertainties.
+Each element, $U_{\alpha i}$, corresponds to the amplitude of the mass eigenstate $i$ within the flavour eigenstate $\alpha$. The flavour contents are shown in Figure \ref{hierarchy}, according to current best measurements. The left hand side is for the normal mass hierarchy, where $m_3^2 > m_2^2$, whereas the right handside is for the inverted mass hierarchy, where $m_2^2 > m_3^2$. It is known that $m_2^2 > m_1^2$ from measurements of neutrino oscillations in matter in the Sun, but the nature of the mass hierarchy is not known beyond this. As the atmospheric and reactor mass-splittings are measured through neutrino oscillations in a near-vacuum, which only depend on the absolute values, the signs of $\Delta m_{32}^2$ and $\Delta m_{31}^2$ are not yet known.
 
 \begin{figure}[!htbp]
 \vspace{20pt}

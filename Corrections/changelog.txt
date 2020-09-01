@@ -6,8 +6,29 @@ Sakharov reference moved to after year
 Original Page 2:
 Added two paragraphs at the end of the chapter, outlining which parts are the work of others
 
+Original Page 3:
+Added "colourless" to first line
+
+Original Page 7:
+"However, the energy of the resulting neutrinos is below detection threshold." -> "However, the energy of the resulting neutrinos is below detection threshold for most experiments."
+
 Original Page 8:
 "which would be significant modification" -> "which would be a significant modification"
+
+Original Page 10:
+"The measured flux was lower than had been predicted" -> "The measured ratio of νμ flux to νe flux was lower than had been predicted"
+
+"However, a large deficit of νμ was observed in the upward sample" -> "However, a large deficit in the ratio of $\nu_{\mu}$ to $\nu_e$ was observed in the upward sample"
+
+Original Page 11:
+Added figures of KamLAND result and 5 MeV excess in short baseline reactor experiments. Also mentioned Chooz and the measurements of theta_13 by the short baseline experiments.
+
+Original Page 13:
+"It is known that m2 > m21 from solar neutrino measurements" -> "It is known
+that m2 > m21 from measurements of neutrino oscillations in matter in the Sun" 
+
+"The signs of ∆m232 and ∆m231 are difficult to determine because the 2
+uncertainties on their values are so much larger than the size of ∆m21. The sign therefore is negligible in oscillation calculations in experiments, compared to the uncertainties." -> "As the atmospheric and reactor mass-splittings are measured through neutrino oscillations in a near-vacuum, which only depend on the absolute values, the signs of ∆m232 and ∆m231 are not yet known."
 
 Original Page 17:
 "Here, the negative sign in brackets is for anti-neutrinos" -> "Here, the positive sign in brackets is for anti-neutrinos."
@@ -30,6 +51,8 @@ Original Page 25:
 "more statistics are needed" -> "more data is needed"
 
 Original Page 31:
+"In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, as shown in Figure 3.5." -> "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the μ decays in Equations 3.1.1 and 3.1.1, as shown in Figure 3.5."
+
 No longer line-break between "2.4" and "m"
 
 Original Page 39:
