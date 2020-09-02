@@ -131,13 +131,13 @@ This CC-inclusive selection is then divided by $\pi$ multiplicity, which depends
 
 \item \textbf{TPC Quality:} There must be at least 18 clusters in the TPC. This cut ensures the track is large enough to be accurately reconstructed.
 
-\item \textbf{Pion PID:} The number of charged pions is determined by the number of secondary tracks with PID determined in the TPC corresponding to a pion. For positive tracks, the pion, positron and proton hypotheses are tested. For negative tracks, only the pion and electron hypotheses are tested. The pulls for each hypothesis are calculated and protons are rejected by requiring:
+\item \textbf{Pion PID:} The number of charged pions is determined by the number of secondary tracks with PID determined in the TPC corresponding to a pion. For positive tracks, the pion, positron and proton hypotheses are tested. For negative tracks, only the pion and electron hypotheses are tested. The pulls for each hypothesis are calculated and electrons are rejected by requiring:
 
 \begin{equation}
 \frac{L_{\mu}+L_{\pi}}{1-L_P} > 0.8,
 \end{equation}
 
-for tracks with $p < 500$ MeV/c. Muons are then rejected by requiring:
+for tracks with $p < 500$ MeV/c. Muons and protons are then rejected by requiring:
 
 \begin{equation}
 L_{\pi} > 0.3.
@@ -178,16 +178,16 @@ The RHC $\bar{\nu_{\mu}}$ selections are designed to initially produce a sample 
 
 \item \textbf{Upstream Background Veto:} This cut is more stringent for the RHC $\bar{\nu_{\mu}}$ samples than for FHC $\nu_{\mu}$. Events with tracks entering the fiducial volume of FGD1 from the upstream edge or coming from the P0D or magnet are rejected.
 
-\item \textbf{Muon PID:} PID is performed using the energy deposited in the TPC and calculating the likelihood for different particle hypotheses, in the same way as for FHC $\nu_{\mu}$ samples. However, there are different requirements on the likelihoods for a positive muon candidate to be confirmed. Protons are rejected by requiring:
+\item \textbf{Muon PID:} PID is performed using the energy deposited in the TPC and calculating the likelihood for different particle hypotheses, in the same way as for FHC $\nu_{\mu}$ samples. However, there are different requirements on the likelihoods for a positive muon candidate to be confirmed. Electrons are rejected by requiring:
 
 \begin{equation}
 \frac{L_{\mu}+L_{\pi}}{1-L_P} > 0.9,
 \end{equation}
 
-for tracks with  $p < 500$ MeV/c. Muons are then rejected by requiring:
+for tracks with  $p < 500$ MeV/c. Protons and pions are then rejected by requiring:
 
 \begin{equation}
-L_{\pi} > 0.1.
+L_{\mu} > 0.1.
 \end{equation}
 
 \end{itemize}
@@ -232,16 +232,16 @@ In RHC mode, there are still a significant number of $\nu$ events due to the lar
 
 \item \textbf{Upstream Background Veto:} As for the RHC $\bar{\nu_{\mu}}$ samples, events with tracks entering the fiducial volume of FGD1 from the upstream edge or coming from the P0D or magnet are rejected.
 
-\item \textbf{Muon PID:} PID is performed in the same way as for the previous samples, using the energy deposited in the TPC and calculating the likelihood for different particle hypotheses. However, there are different requirements on the likelihoods for a negative muon candidate to be confirmed. Protons are rejected by requiring:
+\item \textbf{Muon PID:} PID is performed in the same way as for the previous samples, using the energy deposited in the TPC and calculating the likelihood for different particle hypotheses. However, there are different requirements on the likelihoods for a negative muon candidate to be confirmed. Electrons are rejected by requiring:
 
 \begin{equation}
 \frac{L_{\mu}+L_{\pi}}{1-L_P} > 0.7,
 \end{equation}
 
-for tracks with  $p <$ 500 MeV/c. Muons are then rejected by requiring:
+for tracks with  $p <$ 500 MeV/c. Protons and pions are then rejected by requiring:
 
 \begin{equation}
-L_{\pi} > 0.1.
+L_{\mu} > 0.1.
 \end{equation}
 
 \end{itemize}
@@ -276,10 +276,10 @@ The efficiency of the FGD1 and FGD2 RHC $\nu_{\mu}$ CC-inclusive samples are sho
 
 \subsection{Updating to RHC Multi $\pi$ Samples}
 
-In previous analyses, the RHC CC-inclusive samples were divided by track, rather than $\pi$ multiplicity, into CC 1Track and CC NTracks. Before the 2020 analysis, there were much fewer RHC data events than FHC, and so the RHC samples could not be divided into so many sub-samples. In moving to RHC multi-$\pi$, the FHC selection criteria was unchanged, and the RHC selections only changed in the likelihood cuts for rejecting the muon hypothesis in pion identification:
+In previous analyses, the RHC CC-inclusive samples were divided by track, rather than $\pi$ multiplicity, into CC 1Track and CC NTracks. Before the 2020 analysis, there were much fewer RHC data events than FHC, and so the RHC samples could not be divided into so many sub-samples. In moving to RHC multi-$\pi$, the FHC selection criteria was unchanged, and the RHC selections only changed in the likelihood cuts for rejecting the proton and pion hypotheses in muon identification:
 
 \begin{equation}
-0.1 < L_{\pi} < 0.7.
+0.1 < L_{\mu} < 0.7.
 \end{equation}
 
 The upper bound was designed to reject low momentum wrong sign muons in RHC events, which could be misreconstructed as positive tracks.
@@ -469,7 +469,7 @@ The following algorithm was used to define a non-uniform but still rectangular b
 
 The algorithm was tuned using data and MC from runs 2-6. The aim of this process was to produce as uniform a distribution of events across the bins as possible. This was not always possible, as regions of high density would require bins so small that they go below the resolution of the detector. The hard coded cos$\theta$ bin edges and momentum step sizes of 100 MeV were driven by this minimum bin size limit. The resolutions are calculated by plotting the reconstructed vs true kinematic variables, as shown in Figure \ref{fig:res2d}, and taking the RMS at different slices of the 2D Gaussian. These RMSs, shown in Figures \ref{fig:res1d}, give a gauge of the detector resolution, and so the minimum bin width for each variable in different regions.
 
-For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $>$1000 MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos$\theta$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. Furthermore, as the cos$\theta$ systematics are better controlled than for $p_{\mu}$, and for aiding the simplicity of optimising the binning algorithm, the bins were kept constant in cos$\theta$.
+For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $>$1000 MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos$\theta$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. Furthermore, as the cos$\theta$ systematics are better controlled than for $p_{\mu}$, and for aiding the simplicity of optimising the binning algorithm, the bins were kept constant in cos$\theta$. Although these bins are conservatively large in regions with the most data, studies in reducing the bin sizes showed diminishing returns in improvements to sensitivity.
 
 \begin{figure}[t]
 \centering

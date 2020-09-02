@@ -104,14 +104,33 @@ Original Page 68:
 Original Page 69:
 "However, to validate the model and fitting framework, near detector only fits are ran to compare with the BANFF." -> "However, to validate the model and fitting framework, near-detector-only fits are compared with the BANFF."
 
+Original Page 73:
+"The pulls for each hypothesis are calculated and protons are rejected by requiring:" -> "The pulls for each hypothesis are calculated and electrons are rejected by requiring"
+
+"Muons are then rejected by requiring" -> "Muons and protons are then rejected by requiring"
+
 Original Page 75:
+"Protons are rejected by requiring:" -> "Electrons are rejected by requiring:"
+
+"Muons are then rejected by requiring:" -> "Muons and protons are then rejected by requiring:"
+
 "significant amount" -> "significant number"
+
+Original Page 76:
+"Protons are rejected by requiring:" -> "Electrons are rejected by requiring:"
+
+"Muons are then rejected by requiring:" -> "Pions and protons are then rejected by requiring:"
+
+Original Page 77:
+"rejecting the muon hypothesis in pion identification" -> "rejecting the proton and pion hypotheses in muon identification" 
 
 Original Page 78:
 "These plots only show up to 5000 GeV for FHC, and 1000 GeV for RHC" -> "These plots only show up to 5000 MeV for FHC, and 1000 MeV for RHC"
 
 Original Page 81:
 Added sentence "The algorithm was tuned using data and MC from runs 2-6."
+
+Added sentence: "Although these bins are conservatively large in regions with the most data, studies in reducing the bin sizes showed diminishing returns in improvements to sensitivity."
 
 Original Page 81/82:
 "Full templates of the binning for each sample are shown in Appendix A, as it is not feasible to express the bin edges in text for non-uniform binning." -> Full templates of the binning for each sample are shown in Appendix A.
@@ -167,6 +186,9 @@ Original Page 115:
 Original Page 116:
 "by mainly" -> "mainly by"
 
+Original Page 117:
+No longer have 'over-hanging' sentence at top of page.
+
 Original Page 118:
 "The CC 0π and CC Other samples again show slight oscillatory behaviour in the ratio of data to MC, within statistical uncertainty. At high angle, the ratio increases and decreases, but always remains >1." -> "The ratio of data to MC for CC 0π and CC Other samples again fluctuates, but always remains >1."
 
@@ -196,6 +218,18 @@ Original Page 153:
 
 Original Page 158:
 "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected." -> "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected from what was seen in previous analyses.
+
+Original Page 171:
+"However, looking at just the event rate does not take into account the changes in shape and so does not tell the whole story. The full impact on the sensitivity to oscillation measurements is discussed in Section 6.8.2." -> "However, looking at just the event rate does not take into account the changes in shape and so does not describe the the full impact on the sensitivity to oscillation measurements. The shape changes in the predicted event distributions cause the sin2 θ23 contours to be tighter, particularly for the normal hierarchy, indicating an improvement in constraint, as discussed in Section 6.8.2."
+
+Original Page 192:
+"The geometric definitions of these variables are shown in Figure 7.3." -> "The geometric definitions of these variables in the plane transverse to the neutrino direction are shown in Figure 7.3."
+
+Caption: "Definition of the single transverse variables" -> "Definition of the single transverse variables in the plane transverse to the neutrino direction."
+
+"HPTPC MC" -> "HPTPC simulation"
+
+"Gaussian with mean equal to the value of the variable" -> " Gaussian with mean equal to the true value of the variable"
 
 Original Page 201:
 "Firstly, without detector systematics in the fit the results do not tell the full story." -> "Firstly, without detector systematics in the fit the results are not entirely valid."
