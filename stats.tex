@@ -46,13 +46,13 @@ Fitting a new parameter, $\beta$, for each bin would introduce $\sim$3000 new fi
 
 where $\sigma_{\beta}$ is the fractional uncertainty on the MC in a given bin. Equations \ref{eqn:llhbb} and \ref{eqn:bbquad} are derived in \cite{beestonbarlow}.
 
-$P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is driven by previous and external measurements. This is calculated as either a Gaussian or flat uncertainty for each parameter, along with inter-parameter correlations:
+$P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is driven by previous and external measurements. This is calculated as either a Gaussian or flat\footnote{Strictly speaking flat uncertainties are actually `top hat' functions with hard cut-offs. These either represent physical boundaries for the parameter, or are capped at 0 and an arbitrary large number.} uncertainty for each parameter, along with inter-parameter correlations:
 
 \begin{equation}
--\log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)],
+-\log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(\theta_i - \mu_i) (\textbf{V})_{ij}^{-1} (\theta_j - \mu_j)],
 \end{equation}\label{eqn:systllh}
 
-where $X_i$ is the value of parameter $i$ with central value $\mu_i$, and $\textbf{V}$ is the covariance matrix describing the relation between parameters $i$ and $j$ with $\textbf{V}_{ij}$. In this analysis, the systematics are grouped by three covariance matrices from the beam flux, cross-section, and ND280 detector models.
+where $\theta_i$ is the value of parameter $i$ with central value $\mu_i$, and $\textbf{V}$ is the covariance matrix describing the relation between parameters $i$ and $j$ with $\textbf{V}_{ij}$. In this analysis, the systematics are grouped by three covariance matrices from the beam flux, cross-section, and ND280 detector models.
 
 The joint probability distribution is therefore given by:
 
@@ -63,7 +63,7 @@ P(D|\bar{\theta}) P(\bar{\theta}) = \prod \mathcal{L}_{total} = \prod (\mathcal{
  and so:
 
 \begin{equation}
--\log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}+ \frac{(\beta -1)^2}{2\sigma^{2}_\beta}] + \sum_{Systematics} \frac{1}{2} [(X_i - \mu_i) (\textbf{V})_{ij}^{-1} (X_j - \mu_j)].
+-\log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}+ \frac{(\beta -1)^2}{2\sigma^{2}_\beta}] + \sum_{Systematics} \frac{1}{2} [(\theta_i - \mu_i) (\textbf{V})_{ij}^{-1} (\theta_j - \mu_j)].
 \end{equation}
 
 The integral in Equation \ref{eqn:bayes} is often not analytically solvable in practice, and so Monte-Carlo methods are required to sample from the posterior to produce a distribution proportional to the posterior probability distribution up to a normalisation constant. 

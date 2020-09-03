@@ -33,6 +33,8 @@ uncertainties on their values are so much larger than the size of ∆m21. The si
 Original Page 17:
 "Here, the negative sign in brackets is for anti-neutrinos" -> "Here, the positive sign in brackets is for anti-neutrinos."
 
+"allowing CP violation if δCP ̸=0." -> "allowing CP violation to be measured if δCP ̸=0."
+
 Original Page 18:
 "but not by a sufficient amount to alone explain the asymmetry" -> "but not by a sufficient amount to completely explain the asymmetry"
 
@@ -55,11 +57,17 @@ Original Page 31:
 
 No longer line-break between "2.4" and "m"
 
+Original Page 36:
+"The MPPCs are avalanche photodiodes with a gain 1×106" -> "The MPPCs each contain several hundred avalanche photodiodes with a gain 1×106"
+
 Original Page 39:
 "These quantities are compared to theoretical values for different particles" -> "These quantities are compared to values from simulations of different particles"
 
 Original Page 41:
 "like in the FGDs" -> "as in the FGDs"
+
+Original Page 42:
+Figure 3.17 Caption: "MC prediction" -> "theoretical prediction"
 
 Original Page 44:
 Add reference for UA1
@@ -80,6 +88,10 @@ Original Page 50:
 
 Original Page 51:
 "un-analytically solvable" -> "non-analytically solvable"
+
+Equations 4.6 and 4.8: Changed X notation to θ to be consistent for sample and penalty LLHs
+
+Added footnote for flat uncertainties "Strictly speaking flat uncertainties are actually `top hat' functions with hard cut-offs. These either represent physical boundaries for the parameter, or are capped at 0 and an arbitrary large number."
 
 Original Page 56:
 Figure 4.1 caption: "a low energy flux at parameter" -> "a low energy flux parameter"
@@ -179,6 +191,12 @@ Original Page 103:
 
 Original Page 104/105:
 "To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the nominal MC." -> "To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the runs 2-6 nominal MC."
+
+Original Page 112:
+Added which MC runs used to produce detector covariance matrices in captions.
+
+Original Page 114:
+Table 5.4: Reduced 2 significant figures
 
 Original Page 115:
 "The CC 0π and CC Other samples show slightly oscillatory behaviour in the ratio of data to MC at low momentum, within statistical uncertainty. The ratio is consistently >1, but is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄." -> "The ratio of data to MC for fluctuates for the CC 0π and CC Other samples, but is consistently >1. It is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄."
