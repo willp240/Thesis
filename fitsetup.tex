@@ -1000,7 +1000,43 @@ Furthermore, Figure \ref{fig:Ebfluc} also shows the $E_b$ distributions for a fl
 \label{fig:Ebfluc}
 \end{figure}
 
-In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{sec:jointeb}.
+As the BANFF fit uses a gradient descent, the discontinuities in the binding energy parameter likelihoods can prevent the fit from converging. To avoid this, rather than directly shift the outgoing lepton momentum of events the BANFF use an effective reweighting. This aims to smoothly replicate the shifting of events by increasing and decreasing the events in a continuous manner. Template distributions were produced for each sample for a number of knot points for each parameter. Bin-by-bin splines were then produced by interpolating between the number of events in each bin at different knot values. This process is described in more detail in \cite{tn395}. 
+
+Figure \ref{fig:EbLLHBANFF} shows log-likelihood scans for the binding energy parameters in both the MaCh3 and BANFF frameworks. For the BANFF fit, these are smoother, but they closely trace the MaCh3 distributions. This is the intended behaviour of the splines: to smooth over discontinuities while retaining the overall shape. However, the fact that there is not perfect agreement shows that the spline process cannot completely represent the direct momentum shifts. The implementation of the binding energy uncertainty used in MaCh3 is therefore a more accurate method.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nu_full_FullLLH}
+  \caption{$E_{b}\nu$ C}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_C_nubar_full_FullLLH}
+  \caption{$E_{b}\bar{\nu}$ C}
+\end{subfigure} \\
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nu_full_FullLLH}
+  \caption{$E_{b}\nu$ O}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[width=0.73\linewidth]{figs/EB_dial_O_nubar_full_FullLLH}
+  \caption{$E_{b}\bar{\nu}$ O}
+\end{subfigure}
+\caption{Comparison of log-likelihood scans for the two near detector analysis. The good, but not perfect, agreement shows that the effective bin-by-bin reweighting the BANFF use will closely, but not perfectly, replicate the effect of the event-by-event direct shifts used in MaCh3.}
+\label{fig:EbLLHBANFF}
+\end{figure}
+
+The treatment of the binding energy is one of the main differences between the two near detector fitters, and one of the main advantages of this analysis over the BANFF. 
+
+In previous analyses, the binding energy systematic was applied as a shape parameter. The change in removal energy was propagated to a change in the $p_{\mu}-$cos$\theta_{\mu}$ distributions by reweighting events. However, this method broke down at extreme values of the kinematic variables as changes in the removal energy could change the allowed phase space in unphysical ways. With this implementation, the removal energy was one of the dominant uncertainties in the T2K oscillation analysis. With the direct lepton momentum shift, the removal energy is now a sub-dominant systematic uncertainty, as shown in Section \ref{sec:jointeb}. The treatment of the binding energy is therefore also one of the main improvements made of this analysis compared to previous T2K near detector fits.
+
+This is the first time a systematic of this type has been implemented in a T2K analysis. Now that the framework is in place to accommodate such parameters, more systematics could directly shift event kinematics in the future, as discussed in more detail in Section \ref{sec:detbin}. This work could therefore pave the way for improvements to subsequent analyses.
+
+In summary, the new treatment of the binding energy gives a more accurate implementation of the systematic, significantly reduces the uncertainty, and shows that fitting direct shifts to events is a viable method of applying new parameters in the future.
 
 \subsection{Flux}\label{sec:flux}
 

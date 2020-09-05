@@ -175,8 +175,12 @@ Original Page 91:
 Original Page 92:
 Add reference to Asimov dataset
 
+"4 paramters" -> "four parameters"
+
 Original Page 95:
 "Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are." -> "Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are. Different binnings can therefore produce different fit results."
+
+Expanded conclusion on EB to more strongly describe it's advantages over the banff fit, and previous analyses. I've also included plots comparing llh scans for the banff and mach3 implementations, and added a paragraph on how this type of parameter could now be used in the future for other systematics.
 
 Original Page 96:
 "This analysis is the first to use flux systematics developed from simulation using data from a full T2K target replica, and not just a thinner replica version." -> "This analysis is the first to use flux systematics developed from simulation tuned to data from a full T2K target replica, and not just a thinner replica version."
