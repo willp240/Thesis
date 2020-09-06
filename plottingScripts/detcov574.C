@@ -82,4 +82,26 @@ void detcov574(std::string file0) {
   cov->Draw("colz");
   //  c->Print((std::string("detcov574")+std::string(".pdf")).c_str());
   c->SaveAs("detcov574.png");  
+
+  cov->GetXaxis()->SetRangeUser(0,63);
+  cov->GetYaxis()->SetRangeUser(0,63);
+  cov->GetXaxis()->SetBinLabel(1,"0-300 MeV");
+  cov->GetXaxis()->SetBinLabel(9,"300-1000 MeV");
+  cov->GetXaxis()->SetBinLabel(17,"1000-1250 MeV");
+  cov->GetXaxis()->SetBinLabel(25,"1250-1500 MeV");
+  cov->GetXaxis()->SetBinLabel(33,"1500-2000 MeV");
+  cov->GetXaxis()->SetBinLabel(41,"2000-3000 MeV");
+  cov->GetXaxis()->SetBinLabel(49,"3000-5000 MeV");
+  cov->GetXaxis()->SetBinLabel(57,"5000-30000 MeV");
+  cov->GetYaxis()->SetBinLabel(1,"0-300 MeV");
+  cov->GetYaxis()->SetBinLabel(9,"300-1000 MeV");
+  cov->GetYaxis()->SetBinLabel(17,"1000-1250 MeV");
+  cov->GetYaxis()->SetBinLabel(25,"1250-1500 MeV");
+  cov->GetYaxis()->SetBinLabel(33,"1500-2000 MeV");
+  cov->GetYaxis()->SetBinLabel(41,"2000-3000 MeV");
+  cov->GetYaxis()->SetBinLabel(49,"3000-5000 MeV");
+  cov->GetYaxis()->SetBinLabel(57,"5000-30000 MeV");
+
+  cov->Draw("colz");
+  c->SaveAs("detcov574_1sample.png");
  }

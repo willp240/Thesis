@@ -82,4 +82,6 @@ void detcovFit(std::string file0) {
   cov->Draw("colz");
   //  c->Print((std::string("detcovFit")+std::string(".pdf")).c_str());
   c->SaveAs("detcovFit.png");
+}
+
  }
