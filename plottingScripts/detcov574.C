@@ -102,6 +102,8 @@ void detcov574(std::string file0) {
   cov->GetYaxis()->SetBinLabel(49,"3000-5000 MeV");
   cov->GetYaxis()->SetBinLabel(57,"5000-30000 MeV");
 
+  cov->GetZaxis()->SetRangeUser(-0.05,0.05);
+
   cov->Draw("colz");
   c->SaveAs("detcov574_1sample.png");
  }
