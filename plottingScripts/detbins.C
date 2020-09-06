@@ -116,8 +116,8 @@ void detbins(std::string file1, std::string file2) {
     if (i==3) le4->SetLabel("Gauss with MC Stats");
     if (i==4) le4->SetLabel("Nominal Bin Content");
   }
-  Bin_430_NEvent_Spread->Draw();
-  Bin_430_NEvent_Spread->GetListOfPrimitives()->At(5)->Delete();
+  Bin_535_NEvent_Spread->Draw();
+  Bin_535_NEvent_Spread->GetListOfPrimitives()->At(5)->Delete();
   leg4->SetTextSize(0.035);
   leg4->Draw();
   Bin_535_NEvent_Spread->Print((std::string("detbin_allsysts535")+std::string(".pdf")).c_str());
