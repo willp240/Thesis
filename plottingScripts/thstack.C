@@ -34,25 +34,32 @@ void thstack(std::string filename) {
     p2->SetTopMargin(0);
     p2->SetBottomMargin(0.35);
 
-    
+    //Sample names in objects names of input files
     std::string samp[18] = {"FGD1_numuCC_0pi", "FGD1_numuCC_1pi", "FGD1_numuCC_other", "FGD1_anti-numuCC_0pi", "FGD1_anti-numuCC_1pi", "FGD1_anti-numuCC_other", "FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode", "FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode", "FGD1_NuMuBkg_CCother_in_AntiNu_Mode", "FGD2_numuCC_0pi", "FGD2_numuCC_1pi", "FGD2_numuCC_other", "FGD2_anti-numuCC_0pi","FGD2_anti-numuCC_1pi", "FGD2_anti-numuCC_other", "FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode", "FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode", "FGD2_NuMuBkg_CCother_in_AntiNu_Mode"};  
+    //how the modes are written in input file object names (blank 0 entry is for full MC
     std::string mode[13] = {"", "CCQE", "2p2h", "CC1pi", "CCcoh", "CCMpi", "CCDIS", "CCMisc", "NC1pi0", "NC1pipm", "NCcoh", "NCoth", "NC1gam"};
 
+    //for making nicer mode labels
     std::string title[13] = {"", "CCQE", "2p2h", "CC 1#pi", "CC coherent", "CC mult-#pi", "CC DIS", "CC miscellaneous", "NC 1#pi^{0}", "NC 1#pi^{#pm}", "NC coherent", "NC other", "NC 1#gamma"}; 
 
+    // two legends looks better on tn page
     TLegend *leg = new TLegend(0.0, 0.0, 1.0, 1.0);
     TLegend *leg2 = new TLegend(0.0, 0.0, 1.0, 1.0);
 
+    //loop over samples
     for(int s=0; s<18; s++){
       
-      // Stacks for the projected samples
+      // Stacks for the projected samples, one for each kinvar
       std::string momname = samp[s]+"_x";
       std::string thname = samp[s]+"_y";
       THStack *MomStack = new THStack((momname).c_str(), (momname).c_str());
       THStack *ThStack = new THStack((thname).c_str(), (thname).c_str());
+
+      //for each sample, loop over modes
       std::cout << "start " << std::endl;
       for(int m=0; m<13; m++){
 	
+	// one-time: get data and total MC
 	if(m==0){
 	  
 	  std::string datname = "DATA_" + samp[s];
@@ -82,11 +89,14 @@ void thstack(std::string filename) {
           mchistY->SetLineColor(kRed);
 	  mchistX->SetFillStyle(0);
           mchistY->SetFillStyle(0);
+	  
+	  //one-time, if first sample add to legend
 	  if(s==0){
 	    leg->AddEntry(dathistX, "Data", "lp");
 	    leg->AddEntry(mchistX, "MC", "l");
 	  }
 
+	  //and get ratios to data
 	  datname = "DATA_" + samp[s];
           momname = datname+"_x";
           thname = datname+"_y";
@@ -116,7 +126,10 @@ void thstack(std::string filename) {
           mcratioY->SetFillStyle(0);*/
 	}
 	
+	//if not mode==0, i.e one of the actual mode breakdowns
 	else {
+
+	  //Get the MC for that mode, and projections, and do aesthetics
 	  std::string name = "MC_" + samp[s];
 	  name = name + "_" + mode[m];
 	  std::cout << "getting " << name << std::endl;
@@ -134,6 +147,7 @@ void thstack(std::string filename) {
 	  projX->SetLineWidth(0);
           projY->SetLineWidth(0);
 
+	  //dirty switch on line color
 	  switch(m){
 	   
 	  case 1:
@@ -188,7 +202,8 @@ void thstack(std::string filename) {
 
 	  projX->SetLineColor(projX->GetFillColor());
 	  projY->SetLineColor(projY->GetFillColor());
-
+	  
+	  //split legend in two
 	  if(s==0){
 	    if(m<6)
 	      leg->AddEntry(projX, title[m].c_str(), "f");
@@ -196,6 +211,7 @@ void thstack(std::string filename) {
 	      leg2->AddEntry(projX, title[m].c_str(), "f");
 	  }
 	  
+	  //Finally add to the stack
 	  MomStack->Add(projX);
 	  ThStack->Add(projY);
 	}
@@ -209,6 +225,7 @@ void thstack(std::string filename) {
         c->Print((std::string("legend2.pdf")).c_str());
       }
       
+      //Set Maximum of x axis differently for different samples. Again hacky SORRY
       int maxX;
       if(s<2 || (s>8 && s<12))
 	maxX=5000;
@@ -221,7 +238,8 @@ void thstack(std::string filename) {
 
 
       gPad->Clear();
-
+      
+      //Now draw them all
       c->cd();
       p1->Draw();
       p1->cd();

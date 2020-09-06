@@ -157,8 +157,8 @@ void detbins(std::string file1, std::string file2) {
   leg6->SetX2NDC(0.9);
   leg6->SetY1NDC(0.58);
   leg6->SetY2NDC(0.9);
-  while ((obj4 = next4())) {
-    le6 = (TLegendEntry*)obj4;
+  while ((obj6 = next6())) {
+    le6 = (TLegendEntry*)obj6;
     i++;
     if (i==1) le6->SetLabel("Bin Content from Throws");
     if (i==2) le6->SetLabel("Gauss without MC Stats");
