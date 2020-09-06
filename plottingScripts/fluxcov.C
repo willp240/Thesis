@@ -79,7 +79,36 @@ void fluxcov(std::string file0) {
   cov2->GetZaxis()->SetTitleOffset(1.5);
   cov2->Draw("colz");
   c->Print((std::string("fluxcov")+std::string(".pdf")).c_str());
-  
+
+  cov2->GetXaxis()->SetRangeUser(0,11);
+  cov2->GetYaxis()->SetRangeUser(0,11);
+
+  cov2->GetXaxis()->SetBinLabel(1,"0-0.4 GeV");
+  cov2->GetXaxis()->SetBinLabel(2,"0.4-0.5 GeV");
+  cov2->GetXaxis()->SetBinLabel(3,"0.5-0.6 GeV");
+  cov2->GetXaxis()->SetBinLabel(4,"0.6-0.7 GeV");
+  cov2->GetXaxis()->SetBinLabel(5,"0.7-1.0 GeV");
+  cov2->GetXaxis()->SetBinLabel(6,"1.0-1.5 GeV");
+  cov2->GetXaxis()->SetBinLabel(7,"1.5-2.5 GeV");
+  cov2->GetXaxis()->SetBinLabel(8,"2.5-3.5 GeV");
+  cov2->GetXaxis()->SetBinLabel(9,"3.5-5.0 GeV");
+  cov2->GetXaxis()->SetBinLabel(10,"5.0-7.0 GeV");
+  cov2->GetXaxis()->SetBinLabel(11,"7.0-30.0 GeV");
+  cov2->GetYaxis()->SetBinLabel(1,"0-0.4 GeV");
+  cov2->GetYaxis()->SetBinLabel(2,"0.4-0.5 GeV");
+  cov2->GetYaxis()->SetBinLabel(3,"0.5-0.6 GeV");
+  cov2->GetYaxis()->SetBinLabel(4,"0.6-0.7 GeV");
+  cov2->GetYaxis()->SetBinLabel(5,"0.7-1.0 GeV");
+  cov2->GetYaxis()->SetBinLabel(6,"1.0-1.5 GeV");
+  cov2->GetYaxis()->SetBinLabel(7,"1.5-2.5 GeV");
+  cov2->GetYaxis()->SetBinLabel(8,"2.5-3.5 GeV");
+  cov2->GetYaxis()->SetBinLabel(9,"3.5-5.0 GeV");
+  cov2->GetYaxis()->SetBinLabel(10,"5.0-7.0 GeV");
+  cov2->GetYaxis()->SetBinLabel(11,"7.0-30.0 GeV");
+
+  cov2->Draw("colz");
+  c->Print((std::string("fluxcov1sample")+std::string(".pdf")).c_str());  
+
   outfile->cd();
   cov2->Write();
 }
