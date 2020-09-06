@@ -102,6 +102,13 @@ void PrettifyTitles(TH2D *Hist) {
     else if (title == "FSI_CEX_LO") title = "FSI Cex lo";
     else if (title == "FSI_CEX_HI") title = "FSI Cex hi";
 
+    else if (title == "FEFQE") title = "FSI Inel lo";
+    else if (title == "FEFQEH") title = "FSI Inel hi";
+    else if (title == "FEFINEL") title = "FSI Pi Prod.";
+    else if (title == "FEFABS") title = "FSI Pi Abs.";
+    else if (title == "FEFCX") title = "FSI Cex lo";
+    else if (title == "FEFCXH") title = "FSI Cex hi";
+
     else if (title == "EB_dial_C_nu") title = "EB Dial C Nu";
     else if (title == "EB_dial_C_nubar") title = "EB Dial C Nubar";
     else if (title == "EB_dial_O_nu") title = "EB Dial O Nu";
