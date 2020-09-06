@@ -79,6 +79,8 @@ void detcovFit(std::string file0) {
   cov->GetYaxis()->SetBinLabel(2958,"FGD2 RHC #nu_{#mu} CC1#pi");
   cov->GetYaxis()->SetBinLabel(3010,"FGD2 RHC #nu_{#mu} CCOther");
 
+  cov->GetZaxis()->SetRangeUser(-0.05,0.05);
+
   cov->Draw("colz");
   //  c->Print((std::string("detcovFit")+std::string(".pdf")).c_str());
   c->SaveAs("detcovFit.png");
