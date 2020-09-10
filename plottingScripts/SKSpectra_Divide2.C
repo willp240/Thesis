@@ -94,7 +94,11 @@ void SKSpectra_Divide2(char *file_prior, char *file_post, char *outfile)
     // divided
     lower->cd();
     h_postn->SetTitle("");
-    
+
+    for (int index=0; index<h_postn->GetXaxis()->GetNbins()+2; index++){
+      if(h_postn->GetBinContent(index)>1.5 || h_postn->GetBinContent(index)<0.5)
+	h_postn->SetBinContent(index,1.0);
+    }
     h_postn->SetTitle("");
     h_postn->GetXaxis()->SetTitle("E_{rec} (GeV)");
     h_postn->GetYaxis()->SetTitle("Ratio");
