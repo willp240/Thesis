@@ -138,6 +138,15 @@ void SKSpectra_Divide3(char *file_prior, char *file_post1, char *file_post2, cha
 
     // divided
     lower->cd();
+
+    for (int index=0; index<h_post1n->GetXaxis()->GetNbins()+2; index++){
+      if(h_post1n->GetBinContent(index)>1.5 || h_post1n->GetBinContent(index)<0.5)
+        h_post1n->SetBinContent(index,1.0);
+      if(h_post2n->GetBinContent(index)>1.5 || h_post2n->GetBinContent(index)<0.5)
+        h_post2n->SetBinContent(index,1.0);
+      if(h_post3n->GetBinContent(index)>1.5 || h_post3n->GetBinContent(index)<0.5)
+        h_post3n->SetBinContent(index,1.0);
+    }
     
     h_post1n->SetTitle("");
     h_post1n->GetXaxis()->SetTitle("E_{rec} (GeV)");
