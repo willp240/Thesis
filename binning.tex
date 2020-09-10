@@ -1,5 +1,241 @@
 \chapter{Selection Binning}\label{app:bintemplates}
 
+Runs 2-8 data and MC were used to tune the algorithm for producing the non-uniform rectangular sample binning. The distribution of events binned using the original uniform binning is shown for all samples in Figure \ref{fig:th2dbinapp}. The distribution of events binned using the final non-uniform rectangular binning is shown for all samples in Figure \ref{fig:th2polybinapp}. For the non-uniform rectangular binning, the bins containing the largest amount of events are in the peak regions at high angle and $\sim$500 MeV.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_numuCC_0pi}
+  \caption{FGD1 FHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2dFGD1_numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_numuCC_1pi}
+  \caption{FGD1 FHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2dFGD1_numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_numuCC_other}
+  \caption{FGD1 FHC $\nu_{\mu}$ Other}
+  \label{fig:th2dFGD1_numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_numuCC_0pi}
+  \caption{FGD2 FHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2dFGD2_numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_numuCC_1pi}
+  \caption{FGD2 FHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2dFGD2_numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_numuCC_other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
+  \label{fig:th2dFGD2_numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_anti-numuCC_0pi}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
+  \label{fig:th2dFGD1_anti-numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_anti-numuCC_1pi}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
+  \label{fig:th2dth2dFGD1_anti-numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_anti-numuCC_other}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ Other}
+  \label{fig:th2dFGD1_anti-numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_anti-numuCC_0pi}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
+  \label{fig:th2dFGD2_anti-numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_anti-numuCC_1pi}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
+  \label{fig:th2dth2dFGD2_anti-numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_anti-numuCC_other}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ Other}
+  \label{fig:th2dFGD2_anti-numuCC_other}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
+  \caption{FGD1 RHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2dFGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
+  \caption{FGD1 RHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2dFGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
+  \caption{FGD1 RHC $\nu_{\mu}$ Other}
+  \label{fig:th2dFGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
+  \caption{FGD2 RHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2dFGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
+  \caption{FGD2 RHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2dFGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2D_MC_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
+  \caption{FGD2 RHC $\nu_{\mu}$ Other}
+  \label{fig:th2dFGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
+\end{subfigure}
+\caption{Uniform rectangular binning of MC events for T2K runs 2-8.}
+\label{fig:th2dbinapp}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_numuCC_0pi}
+  \caption{FGD1 FHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2polyFGD1_numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_numuCC_1pi}
+  \caption{FGD1 FHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2polyFGD1_numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_numuCC_other}
+  \caption{FGD1 FHC $\nu_{\mu}$ Other}
+  \label{fig:th2polyFGD1_numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_numuCC_0pi}
+  \caption{FGD2 FHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2polyFGD2_numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_numuCC_1pi}
+  \caption{FGD2 FHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2polyFGD2_numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_numuCC_other}
+  \caption{FGD2 FHC $\nu_{\mu}$ Other}
+  \label{fig:th2polyFGD2_numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_anti-numuCC_0pi}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
+  \label{fig:th2polyFGD1_anti-numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_anti-numuCC_1pi}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
+  \label{fig:th2polyth2polyFGD1_anti-numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_anti-numuCC_other}
+  \caption{FGD1 RHC $\bar{\nu_{\mu}}$ Other}
+  \label{fig:th2polyFGD1_anti-numuCC_other}
+\end{subfigure}
+\centering
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_anti-numuCC_0pi}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 0$\pi$}
+  \label{fig:th2polyFGD2_anti-numuCC_0pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_anti-numuCC_1pi}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ 1$\pi$}
+  \label{fig:th2polyth2polyFGD2_anti-numuCC_1pi}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_anti-numuCC_other}
+  \caption{FGD2 RHC $\bar{\nu_{\mu}}$ Other}
+  \label{fig:th2polyFGD2_anti-numuCC_other}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
+  \caption{FGD1 RHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2polyFGD1_NuMuBkg_CC0pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
+  \caption{FGD1 RHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2polyFGD1_NuMuBkg_CC1pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
+  \caption{FGD1 RHC $\nu_{\mu}$ Other}
+  \label{fig:th2polyFGD1_NuMuBkg_CCOther_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
+  \caption{FGD2 RHC $\nu_{\mu}$ 0$\pi$}
+  \label{fig:th2polyFGD2_NuMuBkg_CC0pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
+  \caption{FGD2 RHC $\nu_{\mu}$ 1$\pi$}
+  \label{fig:th2polyFGD2_NuMuBkg_CC1pi_in_AntiNu_Mode}
+\end{subfigure}
+\begin{subfigure}{.32\textwidth}
+  \centering
+  \includegraphics[width=0.95\linewidth]{figs/TH2Poly_MC_FGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
+  \caption{FGD2 RHC $\nu_{\mu}$ Other}
+  \label{fig:th2polyFGD2_NuMuBkg_CCOther_in_AntiNu_Mode}
+\end{subfigure}
+\caption{Non-uniform rectangular binning of MC events for T2K runs 2-8.}
+\label{fig:th2polybinapp}
+\end{figure}
+
 Templates for the non-uniform fit binning for each sample are presented in this section, as it is not feasible to express the bin edges in text for non-uniform binning. Figure \ref{fig:th2polybinreset5000} shows the $x$-axis range reduced to 0-5000 MeV so that the smaller bins in the peak can be seen. Figure \ref{fig:th2polybinreset} shows the full distributions out to 30 GeV, for each sample.
 
 \begin{figure}
