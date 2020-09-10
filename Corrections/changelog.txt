@@ -210,6 +210,9 @@ Made legend of detector bin plots larger (original Figures 5.19, 5.20 and 5.21)
 Original Page 107, 108, and 109:
 For the detector binning fits, only xsec and ND280 FHC flux parameters (and made these bigger).
 
+Original Page 110:
+Fix SK posterior predictions for the different detector binning fits so ratio plots don't 'droop'
+
 Original Page 112:
 Added which MC runs used to produce detector covariance matrices in captions.
 
@@ -272,6 +275,9 @@ Moved posterior predictive cos theta projections to appendix
 Original Page 153:
 "kinematics" -> "kinematic variables"
 
+Original Page 157:
+Fix SK posterior predictions for the main fit so ratio plots don't 'droop'
+
 Original Page 158:
 "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected." -> "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected from what was seen in previous analyses.
 
@@ -283,6 +289,9 @@ For the data fit with different fit and detector binnings, only xsec and ND280 F
 
 Original Page 171:
 "However, looking at just the event rate does not take into account the changes in shape and so does not tell the whole story. The full impact on the sensitivity to oscillation measurements is discussed in Section 6.8.2." -> "However, looking at just the event rate does not take into account the changes in shape and so does not describe the the full impact on the sensitivity to oscillation measurements. The shape changes in the predicted event distributions cause the sin2 θ23 contours to be tighter, particularly for the normal hierarchy, indicating an improvement in constraint, as discussed in Section 6.8.2."
+
+Original Page 172:
+Fix SK posterior predictions for the th2d and th2poly fits so ratio plots don't 'droop'
 
 Original Page 174, 175, 176:
 For the joint near and far detector fit, only xsec and ND280 FHC flux parameters (and made these bigger).
