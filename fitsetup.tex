@@ -538,7 +538,7 @@ NC DIS, multi-$\pi$, $1\eta$, and $1K$ are grouped together and receive the same
 As all the other systematic uncertainties are determined for $\nu_{\mu}$ or $\bar{\nu_{\mu}}$ interactions, a normalisation is applied to all $\nu_{e}$ and $\bar{\nu_{e}}$ events. This is to account for any unmodelled effects which affect $\nu_{e}$/$\bar{\nu_{e}}$ events but not $\nu_{\mu}$/$\bar{\nu_{\mu}}$. As these processes may be different for neutrinos and anti-neutrinos, there are two normalisations, one for $\nu_{e}$ and one for $\bar{\nu_{e}}$. The prior uncertainty is $2.8\%$ and the two parameters are $50\%$ anti-correlated, as calculated in \cite{nuenuebar}.
 
 \item \textbf{Final State Interactions:} \\
-The propagation of $\pi$s produced in neutrino interactions is simulated as a cascade implementation of the model described in \cite{fsicascade}. There are five shape parameters representing the probability of different interactions at each step in the cascade. The 5 types of final state interaction parametrised are quasi-elastic scattering (at low and high energy), $\pi$ production, $\pi$ absorption, and charge exchange. The prior central values and uncertainties are tuned to $\pi$-nucleon scattering data\cite{fsiscatt}.
+The propagation of $\pi$s produced in neutrino interactions is simulated as a cascade implementation of the model described in \cite{fsicascade}. There are five shape parameters representing the probability of different interactions at each step in the cascade. The five types of final state interaction parametrised are quasi-elastic scattering (at low and high energy), $\pi$ production, $\pi$ absorption, and charge exchange. The prior central values and uncertainties are tuned to $\pi$-nucleon scattering data\cite{fsiscatt}.
 
 When nucleon final state interactions produce $\pi$s, the $\pi$s are propagated with the above systematics. However, nucleon final state interactions are not accounted for in the MC.
 
@@ -964,7 +964,11 @@ In total there are 100 flux parameters, 50 for ND280 and 50 for SK. The SK flux 
 
 \subsection{Detector}\label{sec:det}
 
-The ND280 detector systematicss are modelled using bin normalisation parameters. The underlying systematics are initially varied to see the change to the number of events in each $p_{\mu} - cos \theta_{\mu}$ bin. These systematics are divided into 17 groups:
+The detector systematics are outlined in this section. Firstly, the physical underlying uncertainties are described in Section \ref{sec:detsyst}. The application of these systematics, by studying their impact on adjacent fit bins, is discussed in Section \ref{sec:detapp}, along with a brief investigation into the validity of the assumptions used in this method. The algorithm used to determine the detector binning is defined in Section \ref{sec:detbin}, and the results of fits using different detector binnings are then compared in Section \ref{sec:detbinfits}, before the final covariance matrices are presented in Section \ref{sec:detmat}. Finally, potential improvements to the treatment of detector systematics for future analyses are discussed in Section \ref{sec:detimprove}.
+
+\subsubsection{Underlying Systematics}\label{sec:detsyst}
+
+The ND280 detector systematics are modelled using bin normalisation parameters. The underlying systematics are initially varied to see the change to the number of events in each $p_{\mu} - $cos$ \theta_{\mu}$ bin. These systematics are divided into 17 groups:
 
 \begin{itemize}
 
@@ -986,7 +990,7 @@ The ND280 detector systematicss are modelled using bin normalisation parameters.
 
 \item \textbf{FGD PID:} The pulls between the measured and predicted energy loss is used to identify particles in the FGD, as discussed in Section \ref{sec:fgd}. The difference between the mean MC and data pulls is applied as a systematic uncertainty on the FGD PID.
 
-\item \textbf{FGD Time of Flight:} For tracks passing through FGD1 and FGD2, the hit times in each FGD are used to determine the direction of the track. The uncertainty on the time of flight can therefore affect which FGD the event was reconstructed as having occured in. Analysis, rather than control, samples were used to measure the time of flight for data and MC events. All reconstructed time of flights are smeared with the discrepancy as an uncertainty.
+\item \textbf{FGD Time of Flight:} For tracks passing through FGD1 and FGD2, the hit times in each FGD are used to determine the direction of the track. The uncertainty on the time of flight can therefore affect which FGD the event was reconstructed as having occurred in. Analysis, rather than control, samples were used to measure the time of flight for data and MC events. All reconstructed time of flights are smeared with the discrepancy as an uncertainty.
 
 \item \textbf{FGD Hybrid Tracking Efficiency:} The efficiency of reconstructing FGD-only tracks in the presence of FGD-TPC matched tracks is calculated for a set of GEANT-4 generated stopping protons and pions in a control sample of events with either one reconstructed track entering the TPC, or two tracks which both enter the TPC. The difference between the efficiencies for data and MC is applied as a systematic uncertainty.
 
@@ -1053,7 +1057,9 @@ Each of these systematics is applied in one of three different ways:
 
 The type of each of the 17 systematics is shown in Table \ref{tab:detsyst}, along with whether they have a Gaussian or flat prior uncertainty.
 
-In theory, these systematics could be applied on an event by event basis and fitted individually. However, this is not computationally feasible on the timescales required for the oscillation analysis. Instead, each systematic is varied 2000 times and the MC reweighted. This gives a distribution of 2000 number of events for each $p_{\mu}-$cos$\theta_{\mu}$ bin. The mean and width of a Gaussian fitted to each of these distributions becomes the prior central value and uncertainty for a normalisation parameter applying to that bin. However, the number of fit bins is large, and so to reduce the number of fit parameters, adjacent bins with similar responses to the systematic variations are merged, so the detector binning is coarser than the fit binning. Studies of different detector binnings are presented in Section \ref{sec:detbin}.
+\subsubsection{Applying the Detector Systematics}\label{sec:detapp}
+
+In theory, the systematics described above could be applied on an event by event basis and fitted individually. However, this is not computationally feasible on the timescales required for the oscillation analysis. Instead, each systematic is varied 2000 times and the MC reweighted. This gives a distribution of 2000 number of events for each $p_{\mu}-$cos$\theta_{\mu}$ bin. The mean and width of a Gaussian fitted to each of these distributions becomes the prior central value and uncertainty for a normalisation parameter applying to that bin. However, the number of fit bins is large, and so to reduce the number of fit parameters, adjacent bins with similar responses to the systematic variations are merged, so the detector binning is coarser than the fit binning. Studies of different detector binnings are presented in Section \ref{sec:detbin}.
 
 This process assumes the shape of the underlying systematics are Gaussian. This is the case for the majority of bins, four of which are shown in Figure \ref{fig:detgaussbins}. In previous analyses, the MC statistics uncertainty was included in the ND280 detector covariance instead of as an extra term in the log-likelihood calculation, and so a Gaussian fitted to the distribution of number of events in each bin with and without the MC stats uncertainty are shown.
 
@@ -1127,7 +1133,7 @@ To investigate which of the underlying detector systematics is causing the non-G
 \label{fig:detnopisibins}
 \end{figure}
 
-\subsubsection{Detector Binning}\label{sec:detbin}
+\subsubsection{Detector Binning Algorithm}\label{sec:detbin}
 
 The choice of detector binning is a trade-off of having as close to the fit binning as possible to obtain more accurate results, without introducing too many parameters to feasibly fit. To investigate the effect of merging detector bins, detector covariances with different binnings were produced. The binnings were produced by requiring different criteria to merge adjacent bins. These criteria were based on the number of events in a bin before applying the detector systematics, the change in the number of events by applying the systematics, and the difference between the covariance of bins. These correspond to merging bins with few events, bins where the effect of the systematics are small, and bins with similar response to the systematics respectively. The exact criteria for merging bins used were:
 
@@ -1143,7 +1149,9 @@ The choice of detector binning is a trade-off of having as close to the fit binn
 
 A covariance using the fit binning as the detector binning was also produced. As in these studies the fit binning used was the uniform-rectangular set defined in Appendix \ref{app:bintemplates}, this corresponded to 4238 bins.
 
-Fits were run using each of these four detector covariances, using an intermediate cross-section model including parts of the 2017 analysis parametrisation described in \cite{tn315}, and parts of the 2020 analysis parametrisation described in Section \ref{sec:xsec}. To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the runs 2-6 nominal MC. The MC was then fitted to this fake data.
+\subsubsection{Detector Binning Fits}\label{sec:detbinfits}
+
+Fits were run using each of the four detector covariances, using an intermediate cross-section model including parts of the 2017 analysis parametrisation described in \cite{tn315}, and parts of the 2020 analysis parametrisation described in Section \ref{sec:xsec}. To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the runs 2-6 nominal MC. The MC was then fitted to this fake data.
 
 The result of the fits are shown in Figure \ref{fig:detcovbinfluxND} for the ND280 FHC flux parameters, Figure \ref{fig:detcovbinxsec} for the cross-section parameters, and Appendix \ref{app:detbinsapp} for all parameters. Although there are several differences between the postfit parameter values, there is no consistent trend of having more bins being closer to the fit binning result, and they are all consistent within uncertainties. Although the 179 fit bin fit is often the most different from the 4238 (fit binning) detector bin fit.
 
@@ -1248,7 +1256,11 @@ Furthermore, when the postfit chains are used to produce posterior predictive di
 \label{fig:detbinSK}
 \end{figure}
 
-As the far detector prediction was robust to the different detector bin mergings, and previous analyses have shown that having $\sim$600 detector parameters does not cause any issues with fit convergence\footnote{For the 2017 analysis, 556 detector bins were used.}, the 574 bin detector covariance was chosen as the optimum bin merging. The binning is as follows:
+\subsubsection{Detector Systematics Covariance Matrices}\label{sec:detmat}
+
+As the far detector prediction was robust to the different detector bin mergings, and previous analyses have shown that having $\sim$600 detector parameters does not cause any issues with fit convergence\footnote{For the 2017 analysis, 556 detector bins were used.}, the 574 bin detector covariance was chosen as the optimum bin merging to use in this analysis.
+
+The binning is as follows:
 
 \begin{itemize}
 \setlength\itemsep{1mm}
@@ -1290,7 +1302,7 @@ As the far detector prediction was robust to the different detector bin mergings
 
 \end{itemize}
 
-In this analysis, another detector covariance was also used for separate fits ran in parallel with the 574 detector bin fits. These fits used the full non-uniform fit binning as the detector binning. As the MC statistics uncertainty was taken out of the detector covariance for this analysis, reducing the terms in the diagonal of the covariance, the number of fit parameters can be reduced using principal component analysis. This could then allow the full fit binning detector covariance to be used in joint near and far detector fits, which was not previously possible as it would introduce too many fit parameters. This was not done for this analysis, but the full fit detector covariances are used in parallel near detector fits (which can accommodate more fit parameters) to study the potential impact.
+In this analysis, another detector covariance was also used for separate fits ran in parallel with the 574 detector bin fits. These fits used the full non-uniform fit binning as the detector binning. As the MC statistics uncertainty was taken out of the detector covariance for this analysis, reducing the terms in the diagonal of the covariance, the number of fit parameters can be reduced using principal component analysis, as discussed in Section \ref{sec:detimprove}. This could then allow the full fit binning detector covariance to be used in joint near and far detector fits, which was not previously possible as it would introduce too many fit parameters. This was not done for this analysis, but the full fit detector covariances are used in parallel near detector fits (which can accommodate more fit parameters) to study the potential impact.
 
 The 574 binned detector covariance is shown for the FGD1 CC 0$\pi$ sample in Figure \ref{fig:detcorr5741sample}. For each momentum range, the bins correspond to the angle ranges, in increasing order, defined above for the 574 merged bins. Bins with similar angles are strongly correlated with each other, and this correlation increases with angle, particularly for bins which apply to the same momentum range. There is a slight anti-correlation between the highest angle bins, and some of the lower angle bins. Bins with similar momentum ranges are also more strongly correlated to each other than bins corresponding to higher or lower momentum.
 
@@ -1299,8 +1311,22 @@ The two full detector covariances used are shown in Appendix \ref{app:matrices},
 \begin{figure}[!htbp]
 \centering
 \includegraphics*[width=0.9\textwidth,clip]{figs/detcov574_1sample}
-\caption{The ND280 detector covariance matrix with 574 merged bins for the FGD1 CC 0$\pi$ sample, produced using runs 2-9 MC. The full matrix for all samples is shown in Appendix \ref{app:matrices}.}\label{fig:detcorr5741sample}
+\caption{The ND280 detector covariance matrix with 574 merged bins for the FGD1 CC 0$\pi$ sample, produced using runs 2-9 MC. Bins are ordered in increasing angle ranges for each momentum range. The full matrix for all samples is shown in Appendix \ref{app:matrices}.}\label{fig:detcorr5741sample}
 \end{figure}
+
+\subsubsection{Future Detector Systematics Improvements}\label{sec:detimprove}
+
+The treatment of the detector systematics is the weakest point of this analysis. It is currently not computationally feasible to include each uncertainty directly in the fit, but it is also not possible to include $\sim$4000 detector parameters by using the same fit binning for the detector bins. Therefore a compromise is needed, and this is achieved with the bin merging process. Although the results in Section \ref{sec:detbinfits} show that the analysis is fairly robust to different binnings, the studies in Section \ref{sec:detbin} show that the underlying assumption that the shapes of all the systematics are Gaussian is not strictly true. 
+
+In future analyses, this could be overcome by directly applying each underlying systematic individually, rather than by using the overall bin normalisations. The implementation of the binding energy parameter, described in Section \ref{sec:eb}, shows that fitting systematics which directly shift the kinematic variables of events is possible within the MaCh3 framework. This technique could be used particularly for the detector uncertainties that are applied as Observable Variable systematics. These already smear reconstructed variables to produce the normalisation parameters which are then fitted, so it would be natural to directly modify the appropriate variable in the fit. This would allow each detector systematic to be fit without assuming the underlying shapes are all Gaussian.
+
+On a shorter time-scale, the treatment of the detector systematics can be improved by using Principal Component Analysis (PCA) to only fit a certain amount of parameters without having to merge detector bins. PCA produces $N$ fit parameters (where $N$ is the full amount of fit bins), but in principle component basis where each parameter is orthogonal. The parameters can then be cut by the size of their corresponding eigen-value, to reduce the total number to a more feasible amount.
+
+With this method, the bin merging is avoided, allowing the systematics to more accurately apply to the correct events, while the number of fit parameters is kept to a manageable number. This is feasible now that the MC statistics uncertainty is no longer included in the detector covariance, reducing the diagonal term in the matrix. Studies have already begun on how many principle components can be cut without an excessive impact on the fit result \cite{tn395}, though this work did not converge in time for this analysis.
+
+\subsubsection{Summary}
+
+In summary, there are 17 underlying detector systematics which are currently varied 2000 times and applied to the MC, to produce bin-by-bin normalisations. This process assumes the shape of each parameter is Gaussian, which is not strictly true, particularly for the Pion SI uncertainty, but this only affects a small number of bins. The bins are merged to reduce the number of fit parameters, which reduces the accuracy with which the systematics are applied to the correct events, but this is shown to not have a significant impact on the fit results. In future analyses, the bin merging can be avoiding by using PCA to reduce the number of parameters without reducing the number of detector bins. Ultimately, fitting each uncertainty individually, and allowing them to directly shift event kinematics in a similar way to the binding energy parameter will improve the treatment of the detector systematics.
 
 \section{Prefit Corrections and Scalings}\label{sec:corr}
 

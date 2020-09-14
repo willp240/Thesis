@@ -193,6 +193,11 @@ Expanded conclusion on EB to more strongly describe it's advantages over the ban
 Original Page 96:
 "This analysis is the first to use flux systematics developed from simulation using data from a full T2K target replica, and not just a thinner replica version." -> "This analysis is the first to use flux systematics developed from simulation tuned to data from a full T2K target replica, and not just a thinner replica version."
 
+Original Page 99:
+Added paragraph outlining the detector systematics section. I've divided the whole section into smaller sections to try and improve the flow/narrative
+
+"The ND280 detector systematicss" -> "The ND280 detector systematics" 
+
 Original Page 102:
 "This process assumes the shape of the underlying systematics is Gaussian." -> "This process assumes the shape of the underlying systematics are Gaussian."
 
@@ -217,6 +222,10 @@ Original Page 112:
 Added which MC runs used to produce detector covariance matrices in captions.
 
 Moved full detector covariances to appendix. Showed it for just the FGD1 CC0Pi sample for the 574 merged detector bins here. Added paragraph discussing the patterns of the correlations.
+
+Added section discussing future improvements to the treatment of detector systematics
+
+Added section summarising the treatment of detector systematics and the studies presented
 
 Original Page 114:
 Table 5.4: Reduced to 2 significant figures
