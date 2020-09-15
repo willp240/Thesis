@@ -12,6 +12,8 @@ Added "colourless" to first line
 Original Page 7:
 "However, the energy of the resulting neutrinos is below detection threshold." -> "However, the energy of the resulting neutrinos is below detection threshold for most experiments."
 
+"In this section, the early evidence for oscillations of all flavours, and potential steriles, is discussed." -> "In this section, the early evidence for oscillations of all flavours, and potential steriles, is discussed for different neutrino sources."
+
 Original Page 8:
 "which would be significant modification" -> "which would be a significant modification"
 
@@ -22,6 +24,9 @@ Original Page 10:
 
 Original Page 11:
 Added figures of KamLAND result and 5 MeV excess in short baseline reactor experiments. Also mentioned Chooz and the measurements of theta_13 by the short baseline experiments.
+
+Original Page 12:
+Added paragraph outlining the Oscillation Theory section.
 
 Original Page 13:
 "It is known that m2 > m21 from solar neutrino measurements" -> "It is known
@@ -51,6 +56,9 @@ No longer line-break between "5" and "MeV"
 
 Original Page 25:
 "more statistics are needed" -> "more data is needed"
+
+Original Page 26:
+Added summary section to Neutrino Physics chapter
 
 Original Page 31:
 "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, as shown in Figure 3.5." -> "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the μ decays in Equations 3.1.1 and 3.1.1, as shown in Figure 3.5."
