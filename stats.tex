@@ -343,4 +343,18 @@ Furthermore, this Bayesian p-value is not the same as a 'traditional' p-value. H
 
 The other near detector fitting group at T2K also produce a p-value, using the method described in \cite{tn324}. This is a strictly frequentist construction, calculated using throws of the systematics from their priors, giving an indication of how well the prior model can fit the data. As well as this, this p-value uses throws of the underlying detector systematics, rather than the effective bin-by-bin normalisations, giving more accurate variations. The frequentist p-value answers a different question to the Bayesian version: using information on the systematics before the fit is run, how likely is the observed data? The two p-values are therefore not expected to give the same results. For this analysis, the frequentist p-value is used to determine if an acceptable goodness of fit has been achieved, as it uses the correct detector systematics implementation, while the Bayesian p-value is used to inspect the fit result in more detail and determine for which samples and regions of phase space the fit performs well for.
 
+\section{Summary}
+
+This chapter has presented an overview of the statistical methods used in this analysis. Bayesian statistics are invoked, combining prior information with the likelihood of a sample, to find the set of parameter values which best describe the data.
+
+Markov Chain Monte Carlo is used to fit the systematic uncertainties to data. The Metropolis-Hastings algorithm is used to produce a Markov Chain with a density of points proportional to the posterior probability distribution.
+
+Extensive diagnostics are performed on the Markov Chain to ensure the stationary distribution has been reached. These include step-size tuning and inspecting the autocorrelations, batched means, parameter traces, and burn-in.
+
+Postfit parameter values and uncertainties are extracted from the Markov Chain by three different methods. The first step is to marginalise over all but one parameter, one by one. The arithmetic mean, mode, and mean of a fitted Gaussian to the resulting 1D distribution can then all be used as the parameter's postfit result. The methods can produce different results if the distribution is non-Gaussian, but as the full $\sim700$ dimensional distribution is propagated to the far-detector, this is not problematic. The extracted single parameter values are only used for validating the fit and comparing to the other near detector fitting group. Postfit correlation matrices are also produced by marginalising over all but two parameters, for each combination of a pair of parameters.
+
+Posterior predictions are produced by drawing 2000 steps from the Markov Chain and fitting Gaussians to the number of events in each bin, showing the $p-$cos$\theta$ distributions the postfit model produces.
+
+Finally, the goodness of fit is calculated in two separate ways from random draws of the Markov Chain. These are not equivalent to a traditional frequentist $p$-value, and should not be interpreted as a single binary measure of whether the model can or cannot describe the data. Rather, they are used to determine for which regions of phase space the fit performs well.
+
 \newpage

@@ -86,6 +86,8 @@ No longer line-break between "1" and "km"
 Original Page 47:
 "Like in the beam production" ->"As with the beam production"
 
+Added summary section to T2K chapter
+
 Original Page 49:
 "the cross-section, flux, and detector models all compose of parameters with large uncertainties" -> "the cross-section, flux, and detector models all have large systematic uncertainties"
 
@@ -114,6 +116,9 @@ Original Page 63:
 
 Original Page 64:
 "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid." -> "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid, but the individual p-values for each sample can highlight regions of phase space for which the postfit model is less compatible with the data."
+
+Original Page 65:
+Added summary section to Stats chapter
 
 Original Page 67:
 "The near detector samples also have higher statistics than the SK samples" -> "The near detector samples also have more data than the SK samples"

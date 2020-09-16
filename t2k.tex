@@ -8,7 +8,7 @@
 
 T2K is a long baseline neutrino oscillation experiment in Japan, which has been taking data since 2010. It was designed to precisely measure sin$^2\theta_{13}$ by observing the appearance of (anti)-electron neutrinos in a (anti)-muon neutrino beam, and sin$^22\theta_{23}$ and $\Delta m^2_{23}$ by observing muon neutrino disappearance. In 2014, T2K first detected electron-neutrino appearance\cite{nova2016}. NO$\nu$A found consistent results in 2016\cite{PhysRevLett.112.061802}. Since data taking began, T2K has made world leading measurements of sin$^2\theta_{13}$, sin$^22\theta_{23}$ and $\Delta m^2_{23}$. The current main aims of T2K focus on excluding possible values of $\delta_{CP}$ and determining the neutrino mass ordering.
 
-In this chapter, the three main components of the experiment, the neutrino production beamline, the near detector suite, and the far detector, SK, are introduced. A schematic diagram of this setup is shown in Figure \ref{t2kcrosssec}. The beam is produced on the east coast of Japan, at the Japanese Proton Accelerator Research Complex (J-PARC), and is described in Section \ref{sec:beam}. The near detector (ND) suite is located 280 m upstream of the beam source, where the ND280 and INGRID detectors measure the flux, cross-section, and direction of the beam. This is described in Section \ref{sec:nd}. 295 km away in the west of Japan, the Super-Kamiokande water Cerenkov detector measures interactions after oscillation, and is described in Section \ref{sec:SK}.
+In this chapter, the three main components of the experiment, the neutrino production beamline, the near detector suite, and the far detector, SK, are introduced. A schematic diagram of this setup is shown in Figure \ref{t2kcrosssec}. The beam is produced on the east coast of Japan, at the Japanese Proton Accelerator Research Complex (J-PARC), and is described in Section \ref{sec:beam}. The near detector (ND) suite is located 280 m upstream of the beam source, where the ND280 and INGRID detectors measure the flux, cross-section, and direction of the beam. This is described in Section \ref{sec:nd}. Then, 295 km away in the west of Japan, the Super-Kamiokande water Cerenkov detector measures interactions after oscillation, and is described in Section \ref{sec:SK}.
 
 At the ND suite, there are a number of different neutrino detectors. T2K was the first experiment to use the off-axis technique, whereby SK and ND280 are located 2.5$^o$ away from the axis of the beam. This focuses the energy distribution of the beam into a narrower peak, as described in Section \ref{sec:nd}. This technique requires an accurate measurement of the beam direction, which is performed by a second, on-axis detector, INGRID.
 
@@ -361,5 +361,23 @@ An algorithm\cite{skrecoalg} is used to distinguish between fuzzy and sharp ring
 \subsection{Far Detector Simulation}
 
 Neutrino interactions in the SK tank are modelled by the NEUT event generator. The simulation of produced particles through the detector is done using the GEANT-3\cite{geant3} based SKDETSIM software \cite{skdetsim}. As with the beam production, hadronic interactions are simulated with the GCALOR package.
+
+\section{Summary}
+
+This chapter has presented an overview of the T2K experimental setup. A system of three accelerators produce 30 GeV H$^+$ ions. These are impinged on a graphite target, producing muons, pions, and kaons, which are focused by magnetic horns. Right sign particles are focused onto the beamline, while wrong sign particles are deflected away. The focused mesons then decay to primarily muons and muon neutrinos. A beam dump stops all surviving mesons and muons, leaving a directed beam of muon neutrinos.
+
+The near detectors are located 280 m downstream of the source, to measure the unoscillated neutrino beam. The on-axis INGRID precisely measures the beam profile and direction. It comprises of iron and scintillator modules, arranged in a 10 $\times$ 10 m cross shape centred on the proton beamline axis.
+
+ND280 sits 2.5$^o$ off-axis to measure a narrower neutrino energy peak. It is designed to determine the event rate of various interaction modes, and measure the flux and energy of the beam before oscillation to constrain systematics. The tracker region consists of two FGDs, which provide the neutrino target, interleaved with three TPCs, which measure the momentum of outgoing particles.
+
+Upstream of the tracker region, the P0D detects NC events on water, providing an important constraint on the cross-section of one of the major backgrounds at SK. Both the tracker region and P0D are surrounded by the ECals, which measure the energy of photons produced in the inner detectors.
+
+The whole detector sits within the UA1 magnet, allowing charge and momentum measurements in the TPCs. The SMRD modules sit within the magnet yoke, and measure high angle muons exiting the detector.
+
+The same MPCCs are used throughout INGRID and ND280 to convert photons into an electric signal. The two near detectors also share a common DAQ system, for triggering the readout and storage of data from each sub-detector. Interactions are generated using NEUT, and the detector geometries are simulated in GEANT-4. 
+
+Super-Kamiokande measures the flavour composition of the beam after oscillation, and is located 295 km away from the source of the beam, 2.5$^o$ off-axis, and 1 km underground. It consists of a 50 kt tank of pure water, and $\sim$11,000 PMTs which detect the Cherenkov radiation from leptons produced in neutrino interactions within the tank. Electrons and muons are distinguished by the shape of the Cherenkov rings seen by the PMTs, allowing the flux of electron and muon neutrinos to be measured separately. Neutrino interactions at SK are also generated in NEUT, and the detector geometry is simulated using GEANT-3.
+
+Using the constraint on systematic uncertainties provided by the near detector, oscillation parameters can be extracted from the measurement of the beam at SK.
 
 \newpage
