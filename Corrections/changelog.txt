@@ -243,6 +243,8 @@ Added section summarising the treatment of detector systematics and the studies 
 Original Page 114:
 Table 5.4: Reduced to 2 significant figures
 
+Add summary section to fit setup chapter
+
 Original Page 115:
 "The CC 0π and CC Other samples show slightly oscillatory behaviour in the ratio of data to MC at low momentum, within statistical uncertainty. The ratio is consistently >1, but is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄." -> "The ratio of data to MC for fluctuates for the CC 0π and CC Other samples, but is consistently >1. It is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄."
 
@@ -317,6 +319,9 @@ Fix SK posterior predictions for the th2d and th2poly fits so ratio plots don't 
 
 Original Page 174, 175, 176:
 For the joint near and far detector fit, only xsec and ND280 FHC flux parameters (and made these bigger).
+
+Original Page 185:
+Add summary section to results chapter
 
 Original Page 192:
 "The geometric definitions of these variables are shown in Figure 7.3." -> "The geometric definitions of these variables in the plane transverse to the neutrino direction are shown in Figure 7.3."
