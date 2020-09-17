@@ -343,3 +343,8 @@ Original Page 202:
 "events could be binned in more than two variables" -> "events could be binned in more than two kinematic variables"
 
 Added to conclusion (final paragraph)
+
+Added summary section to HPTPC chapter
+
+Original Page 205:
+Expanded conclusion chapter slightly
