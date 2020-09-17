@@ -1324,7 +1324,7 @@ On a shorter time-scale, the treatment of the detector systematics can be improv
 
 With this method, the bin merging is avoided, allowing the systematics to more accurately apply to the correct events, while the number of fit parameters is kept to a manageable number. This is feasible now that the MC statistics uncertainty is no longer included in the detector covariance, reducing the diagonal term in the matrix. Studies have already begun on how many principle components can be cut without an excessive impact on the fit result \cite{tn395}, though this work did not converge in time for this analysis.
 
-\subsubsection{Summary}
+\subsubsection{Detector Systematics Summary}
 
 In summary, there are 17 underlying detector systematics which are currently varied 2000 times and applied to the MC, to produce bin-by-bin normalisations. This process assumes the shape of each parameter is Gaussian, which is not strictly true, particularly for the Pion SI uncertainty, but this only affects a small number of bins. The bins are merged to reduce the number of fit parameters, which reduces the accuracy with which the systematics are applied to the correct events, but this is shown to not have a significant impact on the fit results. In future analyses, the bin merging can be avoiding by using PCA to reduce the number of parameters without reducing the number of detector bins. Ultimately, fitting each uncertainty individually, and allowing them to directly shift event kinematics in a similar way to the binding energy parameter will improve the treatment of the detector systematics.
 
@@ -1422,5 +1422,25 @@ Significantly more MC is produced than data, with the weights and corrections de
 Runs with an `a' or `w' suffix refer to whether the P0D was filled with air (a) or water (w) during the run. These are separated, despite being part of the same global run, as the MC production requires different geometries to be used for these two different configurations. Runs without a suffix had a consistent P0D filling for the entire run. This was water for runs 5, 7, and 9, and air for runs 3 and 6.
 
 The most recent data taking period, run 10, finished in February 2020, but had not been through the full processing in time for this analysis. Run 1 was not included as not all of the sub-detectors of ND280 were online.
+
+\section{Summary}
+
+This chapter has presented an overview of the inputs to the fit and the fitting framework itself. Prior to the near detector fit, the uncertainty on the predicted event rate at SK is $\sim15\%$. Fitting the systematics at the near detector reduces this to $\sim5\%$, without which, T2K would not be able to make the precise oscillation measurements it does.
+
+There are two near detector analyses at T2K. The analysis presented in this thesis uses MCMC methods to sample the probability distribution, while the other uses a gradient descent method to find the global minimum.
+
+ND280 data is divided into 18 samples depending on the topology of the event, the beam mode, and which FGD the interaction took place in. These are designed to separate different interaction modes so that systematic uncertainties can be applied accurately. This analysis is the first to use the same topological samples for FHC and RHC data.
+
+These selections are binned in $p_{\mu}-$cos$\theta_{\mu}$. In previous analyses, the use of uniform rectangular binning caused the bins with the highest number of events to be outside the peak region. To avoid this, non-uniform rectangular bins are used in this analysis. An algorithm was written and tuned to produce small enough bins in the peak region to have good resolution, while still having sufficient events in the bins in sparse regions to reduce the statistical uncertainty. The use of non-uniform binning is shown to improve the constraint on systematics significantly. 
+
+There are three groups of systematics applied in the fit: cross-section, flux, and detector. The cross-section systematics are provided by the Neutrino Interactions Working Group (NIWG). One of the main improvements to the cross-section model since the last analysis is in the treatment of the binding energy. A new type of parameter has been implemented into the fit, which directly shifts the lepton momentum of an event to represent the uncertainty in the binding energy. Many studies and validations of this parameter have been performed as part of this thesis. 
+
+As the binding energy systematic produces discontinuities in the likelihood distribution, it cannot be fitted as direct momentum shifts in the other near detector fitting framework, and so bin by bin splined response functions are used instead. The non-uniform binning is also only used in this analysis. These are the two main advantages of the analysis presented in this thesis over the other near detector fitter.
+
+The flux systematics are provided by the beam group in the form of a covariance matrix. These consist of 100 different normalisations, binned by neutrino energy, species, beam mode, and detector.
+
+The detector systematics are provided by the ND280 Selection, Systematics, and Validations group. These are then varied 2000 times, and the effect on the number of events in each bin used to form normalisation parameters. To reduce the total number of fit parameters, bins with similar responses are merged. The fit is shown to be fairly robust to different bin mergings. However, in future analyses, using PCA to cut parameters without reducing the number of bins will allow the systematics to be applied more accurately. 
+
+The process of throwing the detector systematics to produce normalisations assumes the shape of all underlying systematics is Gaussian. This is shown to not be strictly true. In future analyses, applying each underlying systematic individually will avoid this assumption. The studies of the binding energy parameter show that uncertainties can be fitted as direct shifts to event kinematics, and this could be a natural way of applying some of the detector systematics in the future.
 
 \newpage
