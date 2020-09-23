@@ -187,6 +187,8 @@ Added reference for electron (anti-) neutrino parameters central values and unce
 Changed FSI labels in xsec correlation matrix (original Figure 5.10)
 
 Original Page 91:
+Added to introduction to Eb section
+
 "Instead, external data is used to inform removal energy distributions which contain peaks corresponding to the nuclear shell structure." -> "Instead, external data is used to inform distributions of the nuclear binding energy and initial nucleon momentum, which contain peaks corresponding to the nuclear shell structure."
 
 "However, this was infeasible to implement" -> "However, this was not feasible to implement"
