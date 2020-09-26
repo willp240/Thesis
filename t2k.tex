@@ -6,7 +6,7 @@
 \caption{The T2K experiment: Neutrinos are produced on the east coast of Japan, and are measured 280 m upstream by the near detectors, and 295 km away at the far detector, SK. Figure from \cite{tript}.} \label{t2kcrosssec}
 \end{figure}
 
-T2K is a long baseline neutrino oscillation experiment in Japan, which has been taking data since 2010. It was designed to precisely measure sin$^2\theta_{13}$ by observing the appearance of (anti)-electron neutrinos in a (anti)-muon neutrino beam, and sin$^22\theta_{23}$ and $\Delta m^2_{23}$ by observing muon neutrino disappearance. In 2014, T2K first detected electron-neutrino appearance\cite{nova2016}. NO$\nu$A found consistent results in 2016\cite{PhysRevLett.112.061802}. Since data taking began, T2K has made world leading measurements of sin$^2\theta_{13}$, sin$^22\theta_{23}$ and $\Delta m^2_{23}$. The current main aims of T2K focus on excluding possible values of $\delta_{CP}$ and determining the neutrino mass ordering.
+T2K is a long baseline neutrino oscillation experiment in Japan, which has been taking data since 2010. It was designed to precisely measure sin$^2\theta_{13}$ by observing the appearance of (anti)-electron neutrinos in a (anti)-muon neutrino beam, and sin$^22\theta_{23}$ and $\Delta m^2_{23}$ by observing muon neutrino disappearance. In 2014, T2K first detected electron-neutrino appearance\cite{nova2016}. NOvA found consistent results in 2016\cite{PhysRevLett.112.061802}. Since data taking began, T2K has made world leading measurements of sin$^2\theta_{13}$, sin$^22\theta_{23}$ and $\Delta m^2_{23}$. The current main aims of T2K focus on excluding possible values of $\deltacp$ and determining the neutrino mass ordering.
 
 In this chapter, the three main components of the experiment, the neutrino production beamline, the near detector suite, and the far detector, SK, are introduced. A schematic diagram of this setup is shown in Figure \ref{t2kcrosssec}. The beam is produced on the east coast of Japan, at the Japanese Proton Accelerator Research Complex (J-PARC), and is described in Section \ref{sec:beam}. The near detector (ND) suite is located 280 m upstream of the beam source, where the ND280 and INGRID detectors measure the flux, cross-section, and direction of the beam. This is described in Section \ref{sec:nd}. Then, 295 km away in the west of Japan, the Super-Kamiokande water Cerenkov detector measures interactions after oscillation, and is described in Section \ref{sec:SK}.
 
@@ -111,12 +111,12 @@ In each mode, there is some contamination of the wrong sign neutrino due to impe
 
 After the decay channel, there is a beam dump made up of 3.17~m of graphite and 2.4~m of iron. This stops all surviving mesons, and all muons below 5~GeV. Neutrinos and higher momentum muons reach the muon monitor (MUMON) beyond the beam dump. The MUMON consists of two independent detectors: Si PIN photodiodes, and ion chambers. These measure the muon profile on a bunch by bunch basis, which is a reliable measure of the beam direction and intensity as the majority of neutrinos in the beam are produced with a muon in a two-body decay. The MUMON measures the beam direction to an accuracy of 0.25~mrad, and the beam intensity to a precision of 3$\%$\cite{mumon}.
 
-It's not possible to count the total number of neutrinos produced in the beam, so the number of protons impinged on the target (POT) is used as a metric for the data collected by T2K. The total accumulated POT and beam power have been increasing since data taking began in 2010, as shown in Figure \ref{fig:pot}. Near detector data from runs 2-9 is used in this analysis.
+It's not possible to count the total number of neutrinos produced in the beam, so the number of protons impinged on the target (POT) is used as a metric for the data collected by T2K. The total accumulated POT and beam power have been increasing since data taking began in 2010, as shown in Figure \ref{fig:pot}. Near detector data from runs 2--9 is used in this analysis.
 
 \begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/pow_t2k_all_toRun84}
-\caption{The total accumulated POT and beam power at T2K for runs 2-10. Figure from \cite{yasutome_2020}.} \label{fig:pot}
+\caption{The total accumulated POT and beam power at T2K for runs 2--10. Figure from \cite{yasutome_2020}.} \label{fig:pot}
 \end{figure}
 
 \subsection{Off Axis Technique}
@@ -143,7 +143,7 @@ Figure \ref{offaxisEdep} shows $E_\nu$ as a function of $E_\pi$ for different va
 
 \subsection{The Neutrino Flux Simulation}\label{sec:fluxsim}
 
-A data-driven Monte-Carlo (MC) is produced to model the neutrino flux. The FLUKA2008\cite{fluka} software package was used to simulate 30 GeV proton interactions within the target. Measurements from the NA61/SHINE\cite{na61} experiment, which measures interactions of 30 GeV protons in a replica of the T2K target, are used to tune the simulation. The components of the beamline are modelled with the GEANT-4\cite{geant4} based JNUBEAM\cite{jnubeam} software, and secondary interactions and interactions between particles which exit the target with the surrounding area are simulated with the GCALOR package\cite{gcalor}. Secondary particles are tracked until they decay to neutrinos, fall below the energy threshold to decay to neutrinos, or are absorbed in the beam dump. The predicted neutrino energy distributions for FHC mode are shown in Figure \ref{fig:modebreakdown}.
+A data-driven Monte-Carlo (MC) is produced to model the neutrino flux. The FLUKA2008\cite{fluka} software package was used to simulate 30 GeV proton interactions within the target. Measurements from the NA61/SHINE\cite{na61} experiment, which measures interactions of 30 GeV protons in a replica of the T2K target, are used to tune the simulation. The components of the beamline are modelled with the \textsc{GEANT-4}\cite{geant4} based JNUBEAM\cite{jnubeam} software, and secondary interactions and interactions between particles which exit the target with the surrounding area are simulated with the GCALOR package\cite{gcalor}. Secondary particles are tracked until they decay to neutrinos, fall below the energy threshold to decay to neutrinos, or are absorbed in the beam dump. The predicted neutrino energy distributions for FHC mode are shown in Figure \ref{fig:modebreakdown}.
 
 \section{Near Detectors}\label{sec:nd}
 
@@ -162,7 +162,7 @@ The INGRID detector is located on the beam axis, and is designed to measure the 
 \begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/ingrid_official_mumon_si_ic}
-\caption{INGRID and MUMON measurements of the beam direction and event rate for runs 1-10. Figure from \cite{kikawa_2020}.} \label{mumoningrid}
+\caption{INGRID and MUMON measurements of the beam direction and event rate for runs 1--10. Figure from \cite{kikawa_2020}.} \label{mumoningrid}
 \end{figure}
 
 INGRID achieves this precision by using 16 identical modules made of interleaved iron and scintillator. These are arranged in a 10 $\times$ 10 m cross shape centered on the primary proton beamline axis, with two modules off-axis outside the cross, as shown in Figure \ref{ingridcross}. 
@@ -310,9 +310,9 @@ There are three trigger requirements during physics runs: the beam trigger, when
 
 \subsection{Near Detector Simulation}\label{sec:ndsim}
 
-The ND280 and INGRID geometries and the paths of final-state particles from neutrino interactions are simulated in GEANT-4. The neutrino interactions themselves are simulated using NEUT \cite{neut}, an interaction generator written for the Super-Kamiokande and T2K experiments.
+The ND280 and INGRID geometries and the paths of final-state particles from neutrino interactions are simulated in \textsc{GEANT-4}. The neutrino interactions themselves are simulated using \textsc{NEUT} \cite{neut}, an interaction generator written for the Super-Kamiokande and T2K experiments.
 
-A custom software package, ElecSim, is used to simulate the response of the detector and electronics to energy deposited by particles that have propagated through the detectors. This involves simulating the light emitted from the energy deposition, the transport of that light through the bar and down the WLS fibres, and the subsequent response of the MPPCs. For the TPCs, ElecSim simulates the electron drift and response of the micromegas detectors. 
+A custom software package, \textsc{ElecSim}, is used to simulate the response of the detector and electronics to energy deposited by particles that have propagated through the detectors. This involves simulating the light emitted from the energy deposition, the transport of that light through the bar and down the WLS fibres, and the subsequent response of the MPPCs. For the TPCs, \textsc{ElecSim} simulates the electron drift and response of the micromegas detectors. 
 
 \section{Super-Kamiokande}\label{sec:SK}
 
@@ -360,7 +360,7 @@ An algorithm\cite{skrecoalg} is used to distinguish between fuzzy and sharp ring
 
 \subsection{Far Detector Simulation}
 
-Neutrino interactions in the SK tank are modelled by the NEUT event generator. The simulation of produced particles through the detector is done using the GEANT-3\cite{geant3} based SKDETSIM software \cite{skdetsim}. As with the beam production, hadronic interactions are simulated with the GCALOR package.
+Neutrino interactions in the SK tank are modelled by the \textsc{NEUT} event generator. The simulation of produced particles through the detector is done using the \textsc{GEANT-3}\cite{geant3} based \textsc{SKDETSIM} software \cite{skdetsim}. As with the beam production, hadronic interactions are simulated with the \textsc{GCALOR} package.
 
 \section{Summary}
 
@@ -374,9 +374,9 @@ Upstream of the tracker region, the P0D detects NC events on water, providing an
 
 The whole detector sits within the UA1 magnet, allowing charge and momentum measurements in the TPCs. The SMRD modules sit within the magnet yoke, and measure high angle muons exiting the detector.
 
-The same MPCCs are used throughout INGRID and ND280 to convert photons into an electric signal. The two near detectors also share a common DAQ system, for triggering the readout and storage of data from each sub-detector. Interactions are generated using NEUT, and the detector geometries are simulated in GEANT-4. 
+The same MPCCs are used throughout INGRID and ND280 to convert photons into an electric signal. The two near detectors also share a common DAQ system, for triggering the readout and storage of data from each sub-detector. Interactions are generated using \text{NEUT}, and the detector geometries are simulated in \textsc{GEANT-4}. 
 
-Super-Kamiokande measures the flavour composition of the beam after oscillation, and is located 295 km away from the source of the beam, 2.5$^o$ off-axis, and 1 km underground. It consists of a 50 kt tank of pure water, and $\sim$11,000 PMTs which detect the Cherenkov radiation from leptons produced in neutrino interactions within the tank. Electrons and muons are distinguished by the shape of the Cherenkov rings seen by the PMTs, allowing the flux of electron and muon neutrinos to be measured separately. Neutrino interactions at SK are also generated in NEUT, and the detector geometry is simulated using GEANT-3.
+Super-Kamiokande measures the flavour composition of the beam after oscillation, and is located 295 km away from the source of the beam, 2.5$^o$ off-axis, and 1 km underground. It consists of a 50 kt tank of pure water, and $\sim$11,000 PMTs which detect the Cherenkov radiation from leptons produced in neutrino interactions within the tank. Electrons and muons are distinguished by the shape of the Cherenkov rings seen by the PMTs, allowing the flux of electron and muon neutrinos to be measured separately. Neutrino interactions at SK are also generated in \textsc{NEUT}, and the detector geometry is simulated using \textsc{GEANT-3}.
 
 Using the constraint on systematic uncertainties provided by the near detector, oscillation parameters can be extracted from the measurement of the beam at SK.
 
