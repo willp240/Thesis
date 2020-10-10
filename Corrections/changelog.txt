@@ -61,7 +61,7 @@ Original Page 26:
 Added summary section to Neutrino Physics chapter
 
 Original Page 31:
-"In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, as shown in Figure 3.5." -> "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the μ decays in Equations 3.1.1 and 3.1.1, as shown in Figure 3.5."
+"In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, as shown in Figure 3.5. As this is worse for RHC mode, ..." -> "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the μ decays in Equations 3.1.1 and 3.1.1, as shown in Figure 3.5. As this is a larger effect for RHC mode, ..."
 
 No longer line-break between "2.4" and "m"
 

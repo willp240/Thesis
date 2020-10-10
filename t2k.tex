@@ -18,7 +18,7 @@ As well as ND280 and INGRID, there are also detectors at the ND suite that are n
 
 The neutrino beamline at J-PARC \cite{jparc} was newly constructed for the T2K experiment, and is fed by a system of three accelerator facilities: a linear accelerator (LINAC), a rapid cycling proton synchrotron (RCS), and the main ring synchrotron (MR). The accelerator complex is shown in Figure \ref{jparc}. H$^{-}$ ions are first accelerated to 400 MeV by the LINAC, before being converted to H$^{+}$ ions by charge stripping foils as they are injected into the RCS. Here, they are further accelerated to 3 GeV in 25 Hz cycles, with two bunches per cycle.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/jparc}
 \caption{The J-PARC accelerator complex, with the three main accelerators labelled. Figure from \cite{beamlinepic}.} \label{jparc}
@@ -30,7 +30,7 @@ Approximately 5$\%$ of the bunches are injected into the MR, where they are acce
 
 The neutrino beamline consists of two sections, the primary and secondary beamlines. These are shown in Figure \ref{beamline}. In the primary beamline, the proton beam is deflected towards the secondary beamline. It is vital the profile, position, intensity, and beam loss are known to be able to produce the stable and consistent neutrino beam required. Beam monitors in the primary beamline perform these measurements. 
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/beamline}
 \caption{The T2K neutrino beamline. Figure from \cite{decayhorns}.} \label{beamline}
@@ -71,25 +71,25 @@ in RHC.
 
 There is also a small contribution of $\nu_e$ and $\bar{\nu_e}$ from decays such as:
 
-\begin{equation}
+\begin{equation}\label{eqn:fhcdecays}
 \begin{aligned}
 \mu^{+} &\rightarrow e^+ + \nu_e + \bar{\nu_{\mu}}\\
 K^{+} &\rightarrow \pi^0 + e^{+} + \nu_e\\
  \end{aligned}
-\end{equation}\label{eqn:fhcdecays}
+\end{equation}
 
 in FHC, and:
 
-\begin{equation}
+\begin{equation}\label{eqn:rhcdecays}
 \begin{aligned}
 \mu^{-} &\rightarrow e^- + \bar{\nu_e} + \nu_{\mu}\\
 K^{-} &\rightarrow \pi^0 + e^{-} + \bar{\nu_e}\\
  \end{aligned}
-\end{equation}\label{eqn:rhcdecays}
+\end{equation}
 
 in RHC.
 
-In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the $\mu$ decays in Equations \ref{eqn:fhcdecays} and \ref{eqn:rhcdecays}, as shown in Figure \ref{fig:modebreakdown}. As this is worse for RHC mode, and as anti-neutrinos have a much smaller cross-section than neutrinos, there are many more neutrino interactions in RHC mode than anti-neutrino interactions in FHC mode.
+In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the $\mu$ decays in Equations \ref{eqn:fhcdecays} and \ref{eqn:rhcdecays}, as shown in Figure \ref{fig:modebreakdown}. As this is a larger effect for RHC mode, and as anti-neutrinos have a much smaller cross-section than neutrinos, there are many more neutrino interactions in RHC mode than anti-neutrino interactions in FHC mode.
 
 \begin{figure}
 \centering
@@ -143,7 +143,7 @@ Figure \ref{offaxisEdep} shows $E_\nu$ as a function of $E_\pi$ for different va
 
 \subsection{The Neutrino Flux Simulation}\label{sec:fluxsim}
 
-A data-driven Monte-Carlo (MC) is produced to model the neutrino flux. The FLUKA2008\cite{fluka} software package was used to simulate 30 GeV proton interactions within the target. Measurements from the NA61/SHINE\cite{na61} experiment, which measures interactions of 30 GeV protons in a replica of the T2K target, are used to tune the simulation. The components of the beamline are modelled with the \textsc{GEANT-4}\cite{geant4} based JNUBEAM\cite{jnubeam} software, and secondary interactions and interactions between particles which exit the target with the surrounding area are simulated with the GCALOR package\cite{gcalor}. Secondary particles are tracked until they decay to neutrinos, fall below the energy threshold to decay to neutrinos, or are absorbed in the beam dump. The predicted neutrino energy distributions for FHC mode are shown in Figure \ref{fig:modebreakdown}.
+A data-driven Monte-Carlo (MC) set is produced from beamline simulation to model the neutrino flux. The \textsc{FLUKA2008}~\cite{fluka} software package was used to simulate 30 GeV proton interactions within the target. Measurements from the NA61/SHINE\cite{na61} experiment, which measures interactions of 30 GeV protons in a replica of the T2K target, are used to tune the simulation. The components of the beamline are modelled with the \textsc{GEANT-4}~\cite{geant4} based \textsc{JNUBEAM}\cite{jnubeam} software, and secondary interactions and interactions between particles which exit the target with the surrounding area are simulated with the \textsc{GCALOR} package\cite{gcalor}. Secondary particles are tracked until they decay to neutrinos, fall below the energy threshold to decay to neutrinos, or are absorbed in the beam dump. The predicted neutrino energy distributions for FHC mode are shown in Figure \ref{fig:modebreakdown}.
 
 \section{Near Detectors}\label{sec:nd}
 
@@ -157,7 +157,7 @@ The beam is first measured by two near detectors, ND280 and INGRID, 280 m away f
 
 \subsection{INGRID}\label{sec:ingrid}
 
-The INGRID detector is located on the beam axis, and is designed to measure the beam profile and direction. From this, the beam angle at ND280 and \SK can be determined to within 0.2 mrad, and the beam center to within 5 cm. Neutrino event rates are also measured to within 2$\%$. These measurements are in good agreement with results from MUMON, as shown in Figure \ref{mumoningrid}. A precise determination of the beam direction is necessary as a 1 mrad uncertainty corresponds to a 2-3$\%$ uncertainty on the beam energy.
+The INGRID detector is located on the beam axis, and is designed to measure the beam profile and direction. From this, the beam angle at ND280 and \SK can be determined to within 0.2 mrad, and the beam center to within 5 cm. Neutrino event rates are also measured to within 2$\%$. These measurements are in good agreement with results from MUMON, as shown in Figure \ref{mumoningrid}. A precise determination of the beam direction is necessary as a 1~mrad uncertainty corresponds to a 2-3$\%$ uncertainty on the beam energy.
 
 \begin{figure}
 \centering
@@ -217,10 +217,9 @@ The FGDs are also used as a cosmic trigger for stopping pions, which allows the 
 
 The two FGDs both contain 1.1 t of target mass, and consist of layers of scintillator bars. Each layer is 186.4 $\times$ 186.4 $\times$ 2.02 cm, and contains 192 bars in the horizontal direction and 192 bars in the vertical direction. The bars are covered in a reflective coating containing TiO$_2$, and each are 0.96 $\times$ 0.96 $\times$ 186.4 cm. A WLS fibre runs down the centre of each bar to an MPPC at the end. The other end is mirrored by a vacuum deposition of aluminium.
 
-The most upstream FGD (FGD1) is composed of 15 scintillator planes. The second FGD (FGD2) has 7 scintillator planes separated by layers of hollow corrugated polycarbonate sheets. These are filled with water, providing a water-scintillator hybrid target. The FGDs therefore measure interactions on CH in the scintillator, which is a common target in external neutrino scattering experiments, and H$_2$O, the far detector target. Nuclear effects cannot be accurately extrapolated between target nuclei, and so it useful to be able measure interaction rates on water at ND280.
+The most upstream FGD (FGD1) is composed of 15 scintillator planes. The second FGD (FGD2) has seven scintillator planes separated by layers of hollow corrugated polycarbonate sheets. These are filled with water, providing a water-scintillator hybrid target. The FGDs therefore measure interactions on CH in the scintillator, which is a common target in external neutrino scattering experiments, and H$_2$O, the far detector target. Nuclear effects cannot be accurately extrapolated between target nuclei, and so it useful to be able measure interaction rates on water at ND280.
 
-The resolution and track length in the FGDs is too low to use d$E$/d$x$ to identify particles which don't enter the TPCs, so the combination of integrated deposited energy and track length is used. These quantitie\
-s are compared to values from simulations of different particles, as shown in Figure \ref{fig:FGD1}, allowing protons to be distinguished from other charged particles. In particular, accurately distinguishing protons and pions which stop in the FGDs is vital for correctly identifying the interaction type. Figure \ref{fig:FGD1} shows data from both the neutrino beam, and cosmic trigger. The neutrino beam data contains particles identifiable as protons, muons, and pions, whereas the cosmic trigger data only contains particles identifiable as muons and pions, as would be expected.
+The resolution and track length in the FGDs is too low to use d$E$/d$x$ to identify particles which don't enter the TPCs, so the combination of integrated deposited energy and track length is used. These quantities are compared to values from simulations of different particles, as shown in Figure \ref{fig:FGD1}, allowing protons to be distinguished from other charged particles. In particular, accurately distinguishing protons and pions which stop in the FGDs is vital for correctly identifying the interaction type. Figure \ref{fig:FGD1} shows data from both the neutrino beam, and cosmic trigger. The neutrino beam data contains particles identifiable as protons, muons, and pions, whereas the cosmic trigger data only contains particles identifiable as muons and pions, as would be expected.
 
 \begin{figure}
 \centering
@@ -268,7 +267,7 @@ Particle identification is performed in the TPCs using, as in the FGDs, d$E$/d$x
 
 \subsubsection{The $\pi^0$ Detector}\label{sec:pod}
 
-The P0D was designed to measure the cross-section of the neutral current interaction $\nu_\mu + N \rightarrow \nu_\mu + N + \pi^0 + X$ on water. This is one of the major backgrounds to $\nu_e$ appearance at the far detector, and so it is necessary to measure and constrain it.
+The P0D was designed to primarily measure the cross-section of the neutral current interaction $\nu_\mu + N \rightarrow \nu_\mu + N + \pi^0 + X$ on water. This is one of the major backgrounds to $\nu_e$ appearance at the far detector, and so it is necessary to measure and constrain it.
 
 The P0D is located upstream of the FGDs and TPCs. It consists of alternating layers of scintillator bars, brass and lead sheets, and water target bags, as shown in Figure \ref{fig:podconstruction}. There are 40 modules, each made up of two triangular scintillator bars. The first layer contains 134 vertical bars, and the second 126 horizontal bars. Each bar contains a WLS fibre which is read out by an MPPC. The horizontal and vertical bars are 234 and 220 cm long respectively.
 
@@ -290,13 +289,13 @@ Each ECal module consists of alternating layers of scintillator bars and lead sh
 
 The downstream ECal has 34 layers of scintillator, corresponding to 11 electron radiation lengths. Alternate layers are orientated perpendicularly to each other. This gives two `views', which can be combined to create 3D reconstructed tracks. The downstream ECal is 2300 $\times$ 2300 $\times$ 500 mm, and its total target mass is 4.80 t.
 
-The 6 modules of the barrel ECal have 31 layers of scintillator, corresponding to 10 electron radiation lengths. These also alternate orientations similarly to the downstream ECal. The side barrel ECal modules are 4140 $\times$ 2500 $\times$ 462 mm, and their total target masses are 9.21 t. The top and bottom barrel ECals are 4140 $\times$ 1676 $\times$ 462 mm, and their total target masses are 6.62 t.
+The six modules of the barrel ECal have 31 layers of scintillator, corresponding to 10 electron radiation lengths. These also alternate orientations similarly to the downstream ECal. The side barrel ECal modules are 4140 $\times$ 2500 $\times$ 462 mm, and their total target masses are 9.21 t. The top and bottom barrel ECals are 4140 $\times$ 1676 $\times$ 462 mm, and their total target masses are 6.62 t.
 
 The six modules of the P0D ECal have only six layers of scintillator, each parallel to the beam. These are interspersed with 4 mm thick lead sheets. The side P0D ECal modules are 2898 $\times$ 2454 $\times$ 155 mm, and their target masses are 2.64 t. The top and bottom P0D ECal modules are 1584 $\times$ 2454 $\times$ 155 mm, and their target masses are 1.5 t.
 
 \subsubsection{The UA1 Magnet and Side Muon Range Detector}\label{sec:mag}
 
-The TPC, FGD, P0D, and ECal all sit within the UA1\cite{UA1} magnet, which provides a 0.2 T magnetic field. This allows the TPCs to measure the momentum of charged particles with a resolution of 10$\%$, and determine their sign, which identifies if the interaction involved a neutrino or anti-neutrino. The magnet consists of water-cooled aluminium coils, which produce the field. The coils are supported by the return yoke, which is made up of 16 C-shaped iron elements. The internal volume of the magnet is 7.0 $\times$ 3.5 $\times$ 3.6 m, and the external volume is 7.6 $\times$ 5.6 $\times$ 6.1 m.
+The TPC, FGD, P0D, and ECal all sit within the UA1\cite{UA1} magnet, which provides a 0.2~T magnetic field. This allows the TPCs to measure the momentum of charged particles with a resolution of 10$\%$, and determine their sign, which identifies if the interaction involved a neutrino or anti-neutrino. The magnet consists of water-cooled aluminium coils, which produce the field. The coils are supported by the return yoke, which is made up of 16 C-shaped iron elements. The internal volume of the magnet is 7.0 $\times$ 3.5 $\times$ 3.6 m, and the external volume is 7.6 $\times$ 5.6 $\times$ 6.1 m.
 
 The nominal current is 2.7 kA, and this is monitored regularly to accurately calculate the field. This reduces the uncertainty on momentum measurements in the TPC. The uncertainty on the field measurement is 2$\times$10$^{-4}$ T.
 
@@ -328,7 +327,7 @@ Super-Kamiokande has been searching for proton decay and measuring solar and atm
 
 The detector is divided into the inner (ID) and outer (OD) detectors by a 55 cm cylindrical stainless steel and tyvek framework. The OD is 40.2 m in height with a radius of 35.8 m. It surrounds the ID with 2 m of water, serving as a shield from interactions in the surrounding rock. An active veto for cosmic ray muons is provided by 1885 outward-facing 20 cm PMTs. Despite the fairly sparse PMT coverage, the veto has an efficiency of almost 100$\%$. The beam timing window can be used to identify interactions in the OD from beam neutrinos.
 
-The ID is 36.2 m in height with a radius of 33.8 m. It contains 11,129 inward-facing 50 cm PMTs, each with a combined quantum and collection efficiency of 20$\%$, and a timing resolution of $\sim$2 ns. The PMT coverage of the ID is 40$\%$, which gives enough spatial resolution to sufficiently reconstruct the paths of particles produced in neutrino interactions inside the tank.
+The ID is 36.2 m in height with a radius of 33.8 m. It contains 11,129 inward-facing 50~cm PMTs, each with a combined quantum and collection efficiency of 20$\%$, and a timing resolution of $\sim$2 ns. The PMT coverage of the ID is 40$\%$, which gives enough spatial resolution to sufficiently reconstruct the paths of particles produced in neutrino interactions inside the tank.
 
 When charged particles travel through a medium of refractive index $n$ at a velocity $v_p$ larger than the speed of light in the medium, $v_\gamma = c/n$, Cherenkov radiation is emitted in a cone with opening angle $\theta_c$ = arcos$\frac{1}{n\cdot v/c}$, along the direction of the particle's path. In water, this is $\sim$42$^o$. Neutrino interactions in the \SK tank produce charged particles which, if above an energy threshold, can be detected by the emitted Cherenkov light. Photons from the cone form a ring shape on the walls of the tank, where they are detected by the PMTs. This pattern, along with the hit timing, can be used to reconstruct the interaction vertex position, and the charge, momentum and direction of the produced particle.
 

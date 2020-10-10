@@ -92,7 +92,7 @@ However, the energy of the resulting neutrinos is below detection threshold for 
 ^{8}_{5}\text{B} \rightarrow  \medspace ^{8}_{4} \text{Be} + e^{+} + \nu_e.
 \end{equation}
 
-Ray Davis and John Bahcall devised an experiment to measure the flux of neutrinos produced via this mechanism in 1968 \cite{davis2}. The design was similar to Davis' previous experiment, measuring the argon produced in the reaction in Equation \eqref{eqn:argonreact} using a $380$ m$^3$ underground tank of chlorine-based cleaning fluid (C$_{2}$Cl$_{4}$) in the Homestake Mine.
+Ray Davis and John Bahcall devised an experiment to measure the flux of neutrinos produced via this mechanism in 1968 \cite{davis2}. The design was similar to Davis' previous experiment, measuring the argon produced in the reaction in Equation \ref{eqn:argonreact} using a $380$ m$^3$ underground tank of chlorine-based cleaning fluid (C$_{2}$Cl$_{4}$) in the Homestake Mine.
 
 Bahcall calculated the predicted number of neutrinos from the Sun from the B decay chain using the Standard Solar Model, as well as the number of argon nuclei they would produce in the tank. However, consistently, only a third of the amount of neutrinos were detected than had been expected. The discrepancy between the predicted and measured number of neutrinos became known as The Solar Neutrino Problem.
 
@@ -273,13 +273,13 @@ where $E$ is the total energy of the neutrino. Therefore, taking the natural uni
 E_i t\approx L(\frac{m_i^2}{2E}+E),
 \end{equation}
 
-and so Equation \eqref{eqn:masspropagation} can be written as:
+and so Equation \ref{eqn:masspropagation} can be written as:
 
 \begin{equation}
 \ket{\nu_{i}(t)}=e^{-i\frac{m_i^2L}{2E}}\ket{\nu_i(0)}.
 \end{equation}
 
-The different mass eigenstates therefore propagate differently as they have different masses. Equation \eqref{eqn:lincomb} can be interpreted as the probability of a mass eigenstate $i$ interaction producing a charged lepton $\alpha$, as the fraction of flavour $\alpha$ in eigenstate $\nu_i$ can be calculated as $|U^\text{*}_{\alpha i}|$.  Although produced in a definite flavour state, as a neutrino travels away from its source the mass states become out of phase. The resulting interference means that the neutrino's wavefunction evolves to contain components from all three flavour states. The amplitude for a neutrino initially having flavour $\alpha$, being detected as having flavour $\beta$ after propagating a certain distance is:
+The different mass eigenstates therefore propagate differently as they have different masses. Equation \ref{eqn:lincomb} can be interpreted as the probability of a mass eigenstate $i$ interaction producing a charged lepton $\alpha$, as the fraction of flavour $\alpha$ in eigenstate $\nu_i$ can be calculated as $|U^\text{*}_{\alpha i}|$.  Although produced in a definite flavour state, as a neutrino travels away from its source the mass states become out of phase. The resulting interference means that the neutrino's wavefunction evolves to contain components from all three flavour states. The amplitude for a neutrino initially having flavour $\alpha$, being detected as having flavour $\beta$ after propagating a certain distance is:
 
 \begin{equation}
 \mathcal{A}(\nu_\alpha \rightarrow \nu_\beta) = \sum_i \sum_j \bra{\nu_j}U_{\beta j}e^{-i\frac{m_i^2}{2E}}U^{\text{*}}_{\alpha i}\ket{\nu_i}.
@@ -353,7 +353,7 @@ This has all assumed the neutrinos have been propagating through a vacuum. In mo
 
 As the Earth is made predominantly of matter rather than anti-matter, the MSW effect has a different impact for neutrinos than it does for anti-neutrinos. This produces an effect that mimics \CP violation, causing $\nu_{\alpha} \rightarrow \nu_{\beta} \neq \bar{\nu}_{\alpha} \rightarrow \bar{\nu}_{\beta}$, and so careful treatment is required for measurements of $\deltacp$. At T2K, the average matter density between the near and far detectors of 2.6 g/cm$^3$ \cite{massdensity} has very little effect on the oscillation probabilities, but the matter effects are fully taken into account nonetheless.
 
-Putting all this together, Equation \eqref{eqn:oscprob} can therefore be written for the T2K detection channels, $\nu_\mu$ ($\bar{\nu}_{\mu}$) disappearance and $\nu_e$ ($\bar{\nu}_e$) appearance, as:
+Putting all this together, Equation \ref{eqn:oscprob} can therefore be written for the T2K detection channels, $\nu_\mu$ ($\bar{\nu}_{\mu}$) disappearance and $\nu_e$ ($\bar{\nu}_e$) appearance, as:
 
 \begin{equation}
 \begin{aligned}
@@ -373,7 +373,7 @@ P(\nu_\mu \rightarrow \nu_e) &\approx \text{sin}^2\theta_{23} \: \text{sin}^2 2\
 \label{eqn:appprob}
 \end{equation}
 
-Here, the positive sign in brackets is for anti-neutrinos. The neutrino and anti-neutrino disappearance probabilities in Equation \eqref{eqn:disprob} are identical, whereas the appearance probabilities in Equation \eqref{eqn:appprob} have opposing signs for the third term, allowing \CP violation to be measured if $\deltacp \neq 0$.
+Here, the positive sign in brackets is for anti-neutrinos. The neutrino and anti-neutrino disappearance probabilities in Equation \ref{eqn:disprob} are identical, whereas the appearance probabilities in Equation \ref{eqn:appprob} have opposing signs for the third term, allowing \CP violation to be measured if $\deltacp \neq 0$.
 
 In these probabilities, the matter effect terms have been neglected as they are small, and the solar oscillation terms (involving $\Delta m_{21}^2$) have been neglected as T2K is not sensitive to these processes. They are however, taken into account in all oscillation calculations in T2K analyses.
 
@@ -415,7 +415,7 @@ Leptogenesis models \cite{lepto1}\cite{lepto2} suggest that \CP violation in the
 
 To detect neutrino oscillations, it is inherently vital that the flavour composition of a flux of neutrinos is carefully analysed. As the the number of neutrinos measured is a convolution of the flux, cross-section, detector efficiency, and oscillation probability, it is important each of these components is well understood to make an accurate measurement. Due to their low interaction rate and subsequent lack of data, neutrino cross-sections contribute significantly to the total uncertainty, and this is only going to become more pronounced with increased statistical power for oscillation experiments. It is therefore essential to study neutrino interactions for precision measurements of oscillations to be made.
 
-Equation \eqref{eqn:appprob} tells us that the probability of oscillation is dependent on the mixing angles, mass splittings, distance travelled, and energy of the neutrino. The baseline length and energy are experimental variables which can be chosen. The length is a fixed, known quantity for accelerator based neutrino experiments, but it is not feasible to produce a mono-energetic source of neutrinos, and so the energy spectrum for each flavour is used. The probability of oscillation is measured from the number of neutrinos of each flavour before and after oscillation. The oscillation parameters can then be calculated from the measured ($P(\nu_{\alpha}\rightarrow \nu_{\beta})$) and experimental ($L$ and $E$) variables.
+Equation \ref{eqn:appprob} tells us that the probability of oscillation is dependent on the mixing angles, mass splittings, distance travelled, and energy of the neutrino. The baseline length and energy are experimental variables which can be chosen. The length is a fixed, known quantity for accelerator based neutrino experiments, but it is not feasible to produce a mono-energetic source of neutrinos, and so the energy spectrum for each flavour is used. The probability of oscillation is measured from the number of neutrinos of each flavour before and after oscillation. The oscillation parameters can then be calculated from the measured ($P(\nu_{\alpha}\rightarrow \nu_{\beta})$) and experimental ($L$ and $E$) variables.
 
 As neutrinos cannot be detected directly, the number of neutrinos is inferred from the secondary particles produced when they interact. This requires a thorough understanding of all the interactions that could take place. If the cross-section for a flavour is not known accurately, the number of neutrinos of that flavour, and hence the oscillation probability, will be determined incorrectly.
 
@@ -490,7 +490,7 @@ As the energy increases, a larger $Q^2$ becomes available, and so inelastic even
 
 Final state interactions (FSI) can cause events to be miss-classified. The particles produced in the event can interact with other nucleons as they propagate out of the nucleus. This can alter their momentum and direction significantly. The multiplicity of outgoing particles can also be changed, as they can be absorbed before leaving the nucleus, or produce more particles through collisions. FSI can therefore cause the particles leaving the nucleus to be different to those produced in the original interaction.
 
-Although FSI doesn't generally affect the final state lepton, it can still have a big impact on oscillation results. For example, if the $\pi$ produced in a CC RES event is absorbed before being detected, the event could be classified as CCQE. Equation \eqref{eqn:erec} would then not be valid, and $E_\nu$ would not be reconstructed correctly. 
+Although FSI doesn't generally affect the final state lepton, it can still have a big impact on oscillation results. For example, if the $\pi$ produced in a CC RES event is absorbed before being detected, the event could be classified as CCQE. Equation \ref{eqn:erec} would then not be valid, and $E_\nu$ would not be reconstructed correctly. 
 
 \section{Current Experimental Status}\label{sec:status}
 
