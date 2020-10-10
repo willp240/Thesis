@@ -186,7 +186,7 @@ In this analysis, the general method used for step size tuning was to individual
 
 Even with a well tuned Markov Chain, it is still desirable to run for as many steps as possible, to ensure good coverage. In this analysis, six chains of 800,000 steps were run in parallel and then merged. However, not all steps are used in the final results. As the initial values of parameters in the chain are not necessarily in a region of high posterior probability, there is a `burn-in' period before the chain reaches its stationary distribution.
 
-The batched means and traces for individual parameters can be used to monitor the number of steps in the burn-in. Figure \ref{fig:batch} shows the means initially being lower than the final converged values, while Figure \ref{fig:burnin} shows the parameter value starting higher than it's final value, but quickly converging after 10,000 steps and then exploring the surrounding region. 
+The batched means and traces for individual parameters can be used to monitor the number of steps in the burn-in. Figure \ref{fig:batch} shows the means initially being lower than the final converged values, and Figure \ref{fig:burnin} shows the parameter value starting lower than it's final value, but quickly converging after 10,000 steps and then exploring the surrounding region. 
 
 \begin{figure}[!htbp]
 \centering
