@@ -184,7 +184,7 @@ Added reference for electron (anti-) neutrino parameters central values and unce
 
 "The full prefit cross- section correlation matrix is shown in Figure 5.10." -> "he full prefit cross- section correlation matrix is shown in Figure 5.10, showing the central values, uncertainties, and correlations of the parameters described in this section."
 
-Changed FSI labels in xsec correlation matrix (original Figure 5.10)
+Changed FSI labels in xsec correlation matrix and made image bigger (original Figure 5.10)
 
 Original Page 91:
 Added to introduction to Eb section
