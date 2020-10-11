@@ -48,9 +48,9 @@ where $\sigma_{\beta}$ is the fractional uncertainty on the MC in a given bin. E
 
 $P(\bar{\theta})$ contains the prior knowledge of the model parameters, which is driven by previous and external measurements. This is calculated as either a Gaussian or flat\footnote{Strictly speaking flat uncertainties are actually `top hat' functions with hard cut-offs. These either represent physical boundaries for the parameter, or are capped at 0 and an arbitrary large number.} uncertainty for each parameter, along with inter-parameter correlations:
 
-\begin{equation}
+\begin{equation}\label{eqn:systllh}
 -\log\mathcal{L}_{Systematic} = \sum_{Systematics} \frac{1}{2} [(\theta_i - \mu_i) (\textbf{V})_{ij}^{-1} (\theta_j - \mu_j)],
-\end{equation}\label{eqn:systllh}
+\end{equation}
 
 where $\theta_i$ is the value of parameter $i$ with central value $\mu_i$, and $\textbf{V}$ is the covariance matrix describing the relation between parameters $i$ and $j$ with $\textbf{V}_{ij}$. In this analysis, the systematics are grouped by three covariance matrices from the beam flux, cross-section, and ND280 detector models.
 
@@ -62,7 +62,7 @@ P(D|\bar{\theta}) P(\bar{\theta}) = \prod \mathcal{L}_{total} = \prod (\mathcal{
 
  and so:
 
-\begin{equation}
+\begin{equation}\label{eqn:fullllh}
 -\log\mathcal{L}_{Total} = \sum_{Bins}[\lambda(\bar{\theta}) - n + n \log \frac{n}{\lambda(\bar{\theta})}+ \frac{(\beta -1)^2}{2\sigma^{2}_\beta}] + \sum_{Systematics} \frac{1}{2} [(\theta_i - \mu_i) (\textbf{V})_{ij}^{-1} (\theta_j - \mu_j)].
 \end{equation}
 
@@ -319,7 +319,7 @@ As well as comparing the posterior predictive distributions to data, a Bayesian 
   \end{itemize}
 \end{itemize}
 
-The LLHs are calculated using Equation \ref{eqn:llhsample}. The Bayesian $p$-value is then calculated in two different ways:
+The LLHs are calculated using Equation \ref{eqn:fullllh}. The Bayesian $p$-value is then calculated in two different ways:
 
 \begin{equation}
 p = \frac{N(-2LLH_{Data, Draw} < -2LLH_{Draw Fluc, Draw})}{N_{Total}},

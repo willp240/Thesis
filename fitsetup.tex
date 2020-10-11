@@ -59,7 +59,7 @@ for FGD1, and:
 |x| < 874.51 \textrm{ mm}; |y| < 929.51 \textrm{ mm}; 1481.45 < z < 1807.05 \textrm{ mm},
 \end{equation}
 
-for FGD2. Cuts on $x$ and $y$ also reject events with a vertex within 5 bars of the edge of the FGD module, and cuts in $z$ reject events in the first module of each FGD. Short tracks with fewer than 19 clusters are also rejected as the reconstruction in the TPC is less reliable.
+for FGD2. Cuts on $x$ and $y$ also reject events with a vertex within five bars of the edge of the FGD module, and cuts in $z$ reject events in the first module of each FGD. Short tracks with fewer than 19 clusters are also rejected as the reconstruction in the TPC is less reliable.
 
 \item \textbf{Upstream Background Veto:} Reconstruction failures can cause a muon that started further upstream to produce a track starting in the fiducial volume of one of the FGDs. Events with the second highest momentum track starting at least 150 mm upstream of the muon candidate are rejected to exclude such events. As well as this, events in FGD2 are rejected if a secondary track starts in the fiducial volume of FGD1.
 
@@ -151,7 +151,7 @@ There are two methods by which information from an FGD can be used to identify i
 
 \item \textbf{FGD Reconstruction:} Secondary tracks in the FGD that don't start in the fiducial volume of the same FGD as the HMNT, or that aren't fully contained within the FGD, are rejected. Tracks that pass this cut and are in the same time bunch as the muon candidate are considered as pion candidates. The deposited energy in the FGD is then used to discriminate charged pions from protons.
 
-\item \textbf{Michel Electron:} Lower momentum pions which don't produce a track in an FGD can be identified from the Michel electron produced from the muon produced in the pion decay. To be identified as the delayed signal from a Michel electron, the hit cluster must have at least 7 hits in FGD1 or 6 hits in FGD2, and be outside the beam bunch window\footnote{The muon has a 2.19 $\mu$s decay time, causing the delay in the Michel electron signal}.
+\item \textbf{Michel Electron:} Lower momentum pions which don't produce a track in an FGD can be identified from the Michel electron produced from the muon produced in the pion decay. To be identified as the delayed signal from a Michel electron, the hit cluster must have at least seven hits in FGD1 or six hits in FGD2, and be outside the beam bunch window\footnote{The muon has a 2.19 $\mu$s decay time, causing the delay in the Michel electron signal}.
 
 \end{itemize}
 \end{itemize}
@@ -368,9 +368,9 @@ The following algorithm was used to define a non-uniform but still rectangular b
 
 \end{itemize}
 
-The algorithm was tuned using data and MC from runs 2--6. The aim of this process was to produce as uniform a distribution of events across the bins as possible. This was not always possible, as regions of high density would require bins so small that they go below the resolution of the detector. The hard coded cos$\theta$ bin edges and momentum step sizes of 100 MeV were driven by this minimum bin size limit. The resolutions are calculated by plotting the reconstructed vs true kinematic variables, as shown in Figure \ref{fig:res2d}, and taking the RMS at different slices of the 2D Gaussian. These RMSs, shown in Figures \ref{fig:res1d}, give a gauge of the detector resolution, and so the minimum bin width for each variable in different regions.
+The algorithm was tuned using data and MC from runs 2--6. The aim of this process was to produce as uniform a distribution of events across the bins as possible. This was not always possible, as regions of high density would require bins so small that they go below the resolution of the detector. The hard coded cos$\theta$ bin edges and momentum step sizes of 100~MeV were driven by this minimum bin size limit. The resolutions are calculated by plotting the reconstructed vs true kinematic variables, as shown in Figure \ref{fig:res2d}, and taking the RMS at different slices of the 2D Gaussian. These RMSs, shown in Figures \ref{fig:res1d}, give a gauge of the detector resolution, and so the minimum bin width for each variable in different regions.
 
-For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $>$1000 MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta_{\mu}$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01 cos$\theta_{\mu}$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. Furthermore, as the cos$\theta_{\mu}$ systematics are better controlled than for $p_{\mu}$, and for aiding the simplicity of optimising the binning algorithm, the bins were kept constant in cos$\theta_{\mu}$. Although these bins are conservatively large in regions with the most data, studies in reducing the bin sizes showed diminishing returns in improvements to sensitivity.
+For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $>$1000 MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta_{\mu}$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01~cos$\theta_{\mu}$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. Furthermore, as the cos$\theta_{\mu}$ systematics are better controlled than for $p_{\mu}$, and for aiding the simplicity of optimising the binning algorithm, the bins were kept constant in cos$\theta_{\mu}$. Although these bins are conservatively large in regions with the most data, studies in reducing the bin sizes showed diminishing returns in improvements to sensitivity.
 
 \begin{figure}[t]
 \centering
@@ -505,7 +505,7 @@ The neutrino energy of CCQE events is calculated using Equation \ref{eqn:erec}, 
 
 There are additional shape parameters, to account for differences in the energy dependence of 2p2h interactions. At one extreme the shape is entirely consistent with the Nieves model, and at the other it is consistent with the Martini model. There are four of these parameters in total: $\nu/\bar{\nu}$ and high/low $E_{\nu}$. However, studies showed these could not be constrained using near detector data alone, so are fixed in near detector only fits. For the joint near and far detector fits in the oscillation analysis, the parameters are free in the fit. 
 
-Three normalisations are also applied, one for $\nu$ events, one for $\bar{\nu}$, and one for $^{12}$C $\rightarrow ^{16}$O scaling. The latter is applied to events on $^{16}$O multiplicatively with the other normalisations.
+Three normalisations are also applied, one for $\nu$ events, one for $\bar{\nu}$, and one for $^{12}$C~$\rightarrow ^{16}$O scaling. The latter is applied to events on $^{16}$O multiplicatively with the other normalisations.
 
 \item \textbf{CC Resonance:}\\
 The Rein-Sehgal model\cite{reinessehgal} is used to describe resonant $\pi$ production in \textsc{NEUT}. Splines are used to parametrise the resonance axial mass, $M^{Res}_{A}$, the normalisation of the axial form factor, $C^{A}_{5}$, and the size of the $I=1/2$ non-resonant background to $I=3/2$ resonant $\pi$ production. The prior central values and uncertainties are tuned using bubble chamber data \cite{bubblechamber}. There is a prior anti-correlation of 83$\%$ between $M^{Res}_{A}$ and $C^{A}_{5}$, 1$\%$ between $M^{Res}_{A}$ and $I=1/2$, and 31$\%$ between $C^{A}_{5}$ and $I=1/2$. In the joint near and far detector fits, the $I=1/2$ parameter is split into two, one for anti-neutrino events with $p_{\pi} < 200$ MeV, and one for all other $I=1/2$ non-resonant background events. In the near detector only fit, the low $p_{\pi}$ parameter is not fit, and the other $I=1/2$ parameter applies to all $I=1/2$ non-resonant background events.
@@ -660,7 +660,7 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics*[width=0.7\textwidth,clip]{figs/xseccorr}
+\includegraphics*[width=0.9\textwidth,clip]{figs/xseccorr}
 \caption{The cross-section correlation matrix.}\label{fig:xseccov}
 \end{figure}
 
@@ -668,7 +668,7 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 
 Energy is required to remove a nucleon from a nucleus, to overcome the nucleus force holding the nucleus together. This binding energy can be measured in electron scattering experiments, but is not precisely known.
 
-The uncertainty on the binding energy was the largest individual systematic in the previous oscillation analysis. It contributed 3.7$\%$ to the uncertainty on the predicted relative number of electron neutrino and electron anti-neutrino candidates at \SK (with no decay electrons)\cite{t2knature}. Studies of simulated datasets also showed that the uncertainty had a significant impact on the credible intervals of the measured oscillation parameters \cite{tn331}. This indicated that the old cross-section model parametrisation could not account for changes to the binding energy, instead misattributing them to the flux and 2p2h model parameters. To reduce its impact, a new treatment of the uncertainty was implemented for this analysis.
+The uncertainty on the binding energy was the largest individual systematic in the previous oscillation analysis. It contributed 3.7$\%$ to the uncertainty on the predicted relative number of electron neutrino and electron anti-neutrino candidates at \SK (with no decay electrons)~\cite{t2knature}. Studies of simulated datasets also showed that the uncertainty had a significant impact on the credible intervals of the measured oscillation parameters \cite{tn331}. This indicated that the old cross-section model parametrisation could not account for changes to the binding energy, instead misattributing them to the flux and 2p2h model parameters. To reduce its impact, a new treatment of the uncertainty was implemented for this analysis.
 
 In the SF nuclear model, there isn't a single nuclear binding energy systematic uncertainty. Instead, external data is used to inform distributions of the nuclear binding energy and initial nucleon momentum, which contain peaks corresponding to the nuclear shell structure. The peaks are shown for different initial nucleon momentum for the ground state in Figure \ref{fig:sfshells}.
 
@@ -684,7 +684,7 @@ These binding energy systematics are implemented as neither shape nor normalisat
 
 The SF model used was constrained using data from $ee',p$ experiments, which only applies to initial state protons, and therefore anti-neutrino CCQE interactions. The spectral function of initial state neutrons in neutrino CCQE interactions can not be constrained in the same way. The offset between the SF and Relativistic Mean-Field model predictions \cite{RMFPred} for neutrons is $\sim$4 MeV for oxygen and $\sim$2 MeV for carbon. 
 
-There are therefore four binding energy parameters applied to CCQE events: for $^{12}$C/$^{16}$O and $\nu$/$\bar{\nu}$. The $\bar{\nu}$ parameters have a prior central value of 25 MeV for $^{12}$C, and 27 MeV for $^{16}$O. The central value of the $\nu$ parameters are offset from their $\bar{\nu}$ counterparts by 2 and 4 MeV for $^{12}$C and $^{16}$O respectively. The parameters are correlated with each other as follows:
+There are therefore four binding energy parameters applied to CCQE events: for $^{12}$C/$^{16}$O and $\nu$/$\bar{\nu}$. The $\bar{\nu}$ parameters have a prior central value of 25 MeV for $^{12}$C, and 27 MeV for $^{16}$O. The central value of the $\nu$ parameters are offset from their $\bar{\nu}$ counterparts by 2 and 4~MeV for $^{12}$C and $^{16}$O respectively. The parameters are correlated with each other as follows:
 
 \begin{itemize}
 
@@ -718,7 +718,7 @@ The effect of the $E_{\mathrm{b}} \nu$ C parameter on the FGD1 FHC CC0$\pi$ samp
 \label{fig:Ebratios}
 \end{figure}
 
-To validate the implementation of this new type of parameter, Asimov fits\cite{asmv} (where the nominal MC is fitted to itself) with binding energy included were run. The Asimov fitting process is described in more detail in Section \ref{sec:asimov}. The 1D posterior distributions for each of the 4 parameters are shown in Figure \ref{fig:Ebasimov}, with a fitted Gaussian distribution. These validations were performed using the uniform binning described in Appendix \ref{app:bintemplates}. As expected, the postfit values are close to the nominal values, and the distributions are approximately Gaussian. 
+To validate the implementation of this new type of parameter, Asimov fits\cite{asmv} (where the nominal MC is fitted to itself) with binding energy included were run. The Asimov fitting process is described in more detail in Section \ref{sec:asimov}. The 1D posterior distributions for each of the 4 four parameters are shown in Figure \ref{fig:Ebasimov}, with a fitted Gaussian distribution. These validations were performed using the uniform binning described in Appendix \ref{app:bintemplates}. As expected, the postfit values are close to the nominal values, and the distributions are approximately Gaussian. 
 
 \begin{figure}
 \centering
@@ -866,7 +866,7 @@ There are six sources of flux uncertainty:
 
 The fractional sizes of the different sources of ND280 flux systematic are shown in Figure \ref{fig:fluxsourceND}, for different neutrino signs. The hadron production contribution dominates, and the total uncertainty is $\sim$10$\%$ around the beam peak energy at 600 MeV. The proton beam alignment becomes more significant around 1 GeV. The black dotted line shows the total flux uncertainty using the previous version of the model. This also used the full replica target tuning; the improvement comes from using the latest \textsc{FLUKA}\cite{fluka} release. Similar results are seen for the \SK flux uncertainties, shown in Figure \ref{fig:fluxsourceSK}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_nd5_fhc_numu}
@@ -902,7 +902,7 @@ The fractional sizes of the different sources of ND280 flux systematic are shown
 \caption{Relative sizes of the sources of uncertainties in the ND280 flux parameters. ``13av7.1" (black solid line) is the version used in this analysis, and is compared with the previous version, ``13v6" (dotted line). Figures from \cite{tn401}.}\label{fig:fluxsourceND}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}
 \begin{subfigure}{.49\textwidth}
   \centering
   \includegraphics[width=0.99\linewidth]{figs/flux_error_t2k_sk_fhc_numu}
@@ -961,7 +961,7 @@ In total there are 100 flux parameters, 50 for ND280 and 50 for \SK. The \SK flu
 \begin{figure}[!htbp]
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/fluxcov1sample}
-\caption{The flux covariance matrix.}\label{fig:fluxcov1sample}
+\caption{The flux covariance matrix for the ND280 FHC $\nu_\mu$ parameters.}\label{fig:fluxcov1sample}
 \end{figure}
 
 \subsection{Detector}\label{sec:det}
@@ -994,7 +994,7 @@ The ND280 detector systematics are modelled using bin normalisation parameters. 
 
 \item \textbf{FGD Time of Flight:} For tracks passing through FGD1 and FGD2, the hit times in each FGD are used to determine the direction of the track. The uncertainty on the time of flight can therefore affect which FGD the event was reconstructed as having occurred in. Analysis, rather than control, samples were used to measure the time of flight for data and MC events. All reconstructed time of flights are smeared with the discrepancy as an uncertainty.
 
-\item \textbf{FGD Hybrid Tracking Efficiency:} The efficiency of reconstructing FGD-only tracks in the presence of FGD-TPC matched tracks is calculated for a set of \textsc{GEANT-4} generated stopping protons and pions in a control sample of events with either one reconstructed track entering the TPC, or two tracks which both enter the TPC. The difference between the efficiencies for data and MC is applied as a systematic uncertainty.
+\item \textbf{FGD Hybrid Tracking Efficiency:} The efficiency of reconstructing FGD-only tracks in the presence of FGD-TPC matched tracks is calculated for a sample set of \textsc{GEANT-4} generated stopping protons and pions in a control sample of events with either one reconstructed track entering the TPC, or two tracks which both enter the TPC. The difference between the efficiencies for data and MC is applied as a systematic uncertainty.
 
 \item \textbf{Michel Electron Efficiency:} The efficiency of detecting Michel electrons depends on the probability of the electron producing enough hits in the FGD to pass the selection cut, and the purity of the cut itself. The efficiency was measured for a control sample of cosmic trigger events, and was defined as the probability to detect a Michel electron that was expected from the presence of a stopped muon in the FGD.
 
@@ -1067,7 +1067,7 @@ This process assumes the shape of the underlying systematics are Gaussian. This 
 
 However, several bins exhibit non-Gaussian behaviour, as shown in Figure \ref{fig:detnongaussbins}.
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -1089,7 +1089,7 @@ However, several bins exhibit non-Gaussian behaviour, as shown in Figure \ref{fi
 \label{fig:detgaussbins}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -1113,7 +1113,7 @@ However, several bins exhibit non-Gaussian behaviour, as shown in Figure \ref{fi
 
 To investigate which of the underlying detector systematics is causing the non-Gaussianity, each was switched off one-by-one and the variations repeated. It was found that when all systematics but the Pion SI are left on, the distributions in the misbehaving bins are more Gaussian. These are shown in Figure \ref{fig:detnopisibins}. This suggests that the pion SI is the only one of the detector systematics with a significantly non-Gaussian distribution. As the effect only manifests in a small number of bins, it is not too concerning for this analysis.
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -1157,7 +1157,7 @@ Fits were run using each of the four detector covariances, using an intermediate
 
 The result of the fits are shown in Figure \ref{fig:detcovbinfluxND} for the ND280 FHC flux parameters, Figure \ref{fig:detcovbinxsec} for the cross-section parameters, and Appendix \ref{app:detbinsapp} for all parameters. Although there are several differences between the postfit parameter values, there is no consistent trend of having more bins being closer to the fit binning result, and they are all consistent within uncertainties. Although the 179 fit bin fit is often the most different from the 4238 (fit binning) detector bin fit.
 
-\begin{figure}[!htbp]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}{0.3\textwidth}
   \centering
@@ -1191,7 +1191,7 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxND} for the ND2
 \label{fig:detcovbinfluxND}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}{0.3\textwidth}
   \centering
@@ -1227,7 +1227,7 @@ The result of the fits are shown in Figure \ref{fig:detcovbinfluxND} for the ND2
 
 Furthermore, when the postfit chains are used to produce posterior predictive distributions at the far detector, there is very little difference seen, as shown in Figure \ref{fig:detbinSK}. This suggests that there are several regions of minima in the $\sim$700 dimensional parameter space which correspond to the same result at \SK. 
 
-\begin{figure}[!htbp]
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -1257,6 +1257,7 @@ Furthermore, when the postfit chains are used to produce posterior predictive di
 \caption{\SK posterior predictive distributions from near detector fits using different binnings for the detector covariance.}
 \label{fig:detbinSK}
 \end{figure}
+\FloatBarrier
 
 \subsubsection{Detector Systematics Covariance Matrices}\label{sec:detmat}
 
@@ -1310,7 +1311,7 @@ The 574 binned detector covariance is shown for the FGD1 CC 0$\pi$ sample in Fig
 
 The two full detector covariances used are shown in Appendix \ref{app:matrices}, showing similar patterns for all samples.
 
-\begin{figure}[!htbp]
+\begin{figure}[ht]
 \centering
 \includegraphics*[width=0.9\textwidth,clip]{figs/detcov574_1sample}
 \caption{The ND280 detector covariance matrix with 574 merged bins for the FGD1 CC 0$\pi$ sample, produced using runs 2--9 MC. Bins are ordered in increasing angle ranges for each momentum range. The full matrix for all samples is shown in Appendix \ref{app:matrices}.}\label{fig:detcorr5741sample}
@@ -1322,7 +1323,7 @@ The treatment of the detector systematics is the weakest point of this analysis.
 
 In future analyses, this could be overcome by directly applying each underlying systematic individually, rather than by using the overall bin normalisations. The implementation of the binding energy parameter, described in Section \ref{sec:eb}, shows that fitting systematics which directly shift the kinematic variables of events is possible within the MaCh3 framework. This technique could be used particularly for the detector uncertainties that are applied as Observable Variable systematics. These already smear reconstructed variables to produce the normalisation parameters which are then fitted, so it would be natural to directly modify the appropriate variable in the fit. This would allow each detector systematic to be fit without assuming the underlying shapes are all Gaussian.
 
-On a shorter time-scale, the treatment of the detector systematics can be improved by using Principal Component Analysis (PCA) to only fit a certain amount of parameters without having to merge detector bins. PCA produces $N$ fit parameters (where $N$ is the full amount of fit bins), but in principle component basis where each parameter is orthogonal. The parameters can then be cut by the size of their corresponding eigen-value, to reduce the total number to a more feasible amount.
+On a shorter time-scale, the treatment of the detector systematics can be improved by using Principal Component Analysis (PCA) to only fit a certain amount of parameters without having to merge detector bins. PCA produces $N$ fit parameters (where $N$ is the full amount of fit bins), but in principle component basis where each parameter is orthogonal. The parameters can then be cut by the size of their corresponding eigenvalue, to reduce the total number to a more feasible amount.
 
 With this method, the bin merging is avoided, allowing the systematics to more accurately apply to the correct events, while the number of fit parameters is kept to a manageable number. This is feasible now that the MC statistics uncertainty is no longer included in the detector covariance, reducing the diagonal term in the matrix. Studies have already begun on how many principle components can be cut without an excessive impact on the fit result \cite{tn395}, though this work did not converge in time for this analysis.
 
