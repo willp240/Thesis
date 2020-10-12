@@ -1,192 +1,192 @@
-Original Page 1:
+Original Page 1, New Page 1:
 Sakharov reference moved to after year
 
 "statistics" -> "data sets" and "sample size"
 
-Original Page 2:
+Original Page 2, New Page 2/3:
 Added two paragraphs at the end of the chapter, outlining which parts are the work of others
 
-Original Page 3:
+Original Page 3, New Page 5:
 Added "colourless" to first line
 
-Original Page 7:
+Original Page 7, New Page 9:
 "However, the energy of the resulting neutrinos is below detection threshold." -> "However, the energy of the resulting neutrinos is below detection threshold for most experiments."
 
 "In this section, the early evidence for oscillations of all flavours, and potential steriles, is discussed." -> "In this section, the early evidence for oscillations of all flavours, and potential steriles, is discussed for different neutrino sources."
 
-Original Page 8:
+Original Page 8, New Page 10:
 "which would be significant modification" -> "which would be a significant modification"
 
-Original Page 10:
+Original Page 10, New Page 12:
 "The measured flux was lower than had been predicted" -> "The measured ratio of νμ flux to νe flux was lower than had been predicted"
 
 "However, a large deficit of νμ was observed in the upward sample" -> "However, a large deficit in the ratio of $\nu_{\mu}$ to $\nu_e$ was observed in the upward sample"
 
-Original Page 11:
+Original Page 11, New Page 14/15:
 Added figures of KamLAND result and 5 MeV excess in short baseline reactor experiments. Also mentioned Chooz and the measurements of theta_13 by the short baseline experiments.
 
-Original Page 12:
+Original Page 12, New Page 15:
 Added paragraph outlining the Oscillation Theory section.
 
-Original Page 13:
+Original Page 13 New Page 16:
 "It is known that m2 > m21 from solar neutrino measurements" -> "It is known
 that m2 > m21 from measurements of neutrino oscillations in matter in the Sun" 
 
 "The signs of ∆m232 and ∆m231 are difficult to determine because the 2
 uncertainties on their values are so much larger than the size of ∆m21. The sign therefore is negligible in oscillation calculations in experiments, compared to the uncertainties." -> "As the atmospheric and reactor mass-splittings are measured through neutrino oscillations in a near-vacuum, which only depend on the absolute values, the signs of ∆m232 and ∆m231 are not yet known."
 
-Original Page 17:
+Original Page 17, New Page 20:
 "Here, the negative sign in brackets is for anti-neutrinos" -> "Here, the positive sign in brackets is for anti-neutrinos."
 
 "allowing CP violation if δCP ̸=0." -> "allowing CP violation to be measured if δCP ̸=0."
 
-Original Page 18:
+Original Page 18, New Page 21/22:
 "but not by a sufficient amount to alone explain the asymmetry" -> "but not by a sufficient amount to completely explain the asymmetry"
 
 "increased statistics" -> "increased statistical power"
 
-Original Page 19:
+Original Page 19, New Page 22:
 "infeasible" -> "not feasible"
 
-Original Page 23:
+Original Page 23, New Page 27:
 "as they propagate out the nucleus" -> "as they propagate out of the nucleus"
 
-Original Page 24:
+Original Page 24, New Page 27:
 No longer line-break between "5" and "MeV"
 
-Original Page 25:
+Original Page 25, New Page 28:
 "more statistics are needed" -> "more data is needed"
 
-Original Page 26:
+Original Page 26, New Page 29:
 Added summary section to Neutrino Physics chapter
 
-Original Page 31:
+Original Page 31, New Page 35:
 "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, as shown in Figure 3.5. As this is worse for RHC mode, ..." -> "In each mode, there is some contamination of the wrong sign neutrino due to imperfect horn focusing, and the μ decays in Equations 3.1.1 and 3.1.1, as shown in Figure 3.5. As this is a larger effect for RHC mode, ..."
 
 No longer line-break between "2.4" and "m"
 
-Original Page 36:
+Original Page 36, New Page 41:
 "The MPPCs are avalanche photodiodes with a gain 1×106" -> "The MPPCs each contain several hundred avalanche photodiodes with a gain 1×106"
 
-Original Page 39:
+Original Page 39, New Page 44:
 "These quantities are compared to theoretical values for different particles" -> "These quantities are compared to values from simulations of different particles"
 
-Original Page 41:
+Original Page 41, New Page 47:
 "like in the FGDs" -> "as in the FGDs"
 
-Original Page 42:
+Original Page 42, New Page 47:
 Figure 3.17 Caption: "MC prediction" -> "theoretical prediction"
 
-Original Page 44:
+Original Page 44, New Page 48:
 Add reference for UA1
 
-Original Page 45:
+Original Page 45, New Page 49:
 No longer line-break between "1" and "km"
 
-Original Page 47:
+Original Page 47, New Page 52:
 "Like in the beam production" ->"As with the beam production"
 
 Added summary section to T2K chapter
 
-Original Page 49:
+Original Page 49, New Page 55:
 "the cross-section, flux, and detector models all compose of parameters with large uncertainties" -> "the cross-section, flux, and detector models all have large systematic uncertainties"
 
 "The parameters of these models are degenerate with the oscillation parameters being calculated" -> "The parameters of these models have similar effects as the oscillation parameters being calculated"
 
-Original Page 50:
+Original Page 50, New Page 56:
 "bringing the total number of parameters to an infeasibly high amount" -> "meaning the total number of parameters would be too high to feasibly fit"
 
-Original Page 51:
+Original Page 51, New Page 57:
 "un-analytically solvable" -> "non-analytically solvable"
 
 Equations 4.6 and 4.8: Changed X notation to θ to be consistent for sample and penalty LLHs
 
 Added footnote for flat uncertainties "Strictly speaking flat uncertainties are actually `top hat' functions with hard cut-offs. These either represent physical boundaries for the parameter, or are capped at 0 and an arbitrary large number."
 
-Original Page 56:
+Original Page 56, New Page 62:
 Figure 4.1 caption: "a low energy flux at parameter" -> "a low energy flux parameter"
 
 "it would suggest stationarity had not been reached." -> "it would suggest the stationary distribution had not been reached."
 
-Original Page 62:
+Original Page 62, New Page 68:
 "LLH" -> "log-likelihood (LLH)"
 
-Original Page 63:
+Original Page 63, New Page 69:
 "The p-value is then calculated in two different ways" -> "The Bayesian p-value is then calculated in two different ways"
 
-Original Page 64:
+Original Page 64, New Page 70:
 "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid." -> "As SK has much lower statistics than ND280, if this p-value is low it does not necessarily mean that the extrapolation of the near detector result to the far detector is invalid, but the individual p-values for each sample can highlight regions of phase space for which the postfit model is less compatible with the data."
 
-Original Page 65:
+Original Page 65, New Page 71:
 Added summary section to Stats chapter
 
-Original Page 67:
+Original Page 67, New Page 73:
 "The near detector samples also have higher statistics than the SK samples" -> "The near detector samples also have more data than the SK samples"
 
-Original Page 68:
+Original Page 68, New Page 74:
 "This has the disadvantage of assuming that the systematics are not Gaussian." -> "This has the disadvantage of assuming that the systematics are Gaussian.
 
-Original Page 69:
+Original Page 69, New Page 74:
 "However, to validate the model and fitting framework, near detector only fits are ran to compare with the BANFF." -> "However, to validate the model and fitting framework, near-detector-only fits are compared with the BANFF."
 
-Original Pages 72 76 and 77:
+Original Pages 72 76 and 77, New Pages 78, 82, 83:
 Made efficiency plots slightly larger
 
-Original Page 73:
+Original Page 73, New Page 79:
 "The pulls for each hypothesis are calculated and protons are rejected by requiring:" -> "The pulls for each hypothesis are calculated and electrons are rejected by requiring"
 
 "Muons are then rejected by requiring" -> "Muons and protons are then rejected by requiring"
 
-Original Page 75:
+Original Page 75, New Page 81:
 "Protons are rejected by requiring:" -> "Electrons are rejected by requiring:"
 
 "Muons are then rejected by requiring:" -> "Muons and protons are then rejected by requiring:"
 
 "significant amount" -> "significant number"
 
-Original Page 76:
+Original Page 76, New Page 82:
 "Protons are rejected by requiring:" -> "Electrons are rejected by requiring:"
 
 "Muons are then rejected by requiring:" -> "Pions and protons are then rejected by requiring:"
 
-Original Page 77:
+Original Page 77, New Page 83:
 "rejecting the muon hypothesis in pion identification" -> "rejecting the proton and pion hypotheses in muon identification" 
 
-Original Page 78:
-"These plots only show up to 5000 GeV for FHC, and 1000 GeV for RHC" -> "These plots only show up to 5000 MeV for FHC, and 1000 MeV for RHC"
+Original Page 78, New Page 84:
+"These plots only show up to 5000 GeV for FHC, and 1000 GeV for RHC" -> "These plots only show up to 5000 MeV"
 
-Original Page 80 and 84:
+Original Page 80 and 84, New Page 85:
 Moving the uniform/non-uniform binned distributions to the appendix for all but the FGD1 CCC0pi and 1pi samples, and made the 2 I kept bigger.
 
-Original Page 81:
+Original Page 81, New Page 86/87:
 Added sentence "The algorithm was tuned using data and MC from runs 2-6."
 
 Added sentence: "Although these bins are conservatively large in regions with the most data, studies in reducing the bin sizes showed diminishing returns in improvements to sensitivity."
 
-Original Page 81/82:
+Original Page 81/82, New Page 87:
 "Full templates of the binning for each sample are shown in Appendix A, as it is not feasible to express the bin edges in text for non-uniform binning." -> Full templates of the binning for each sample are shown in Appendix A.
 
-Original Page 86:
+Original Page 86, New Page 90:
 Add footnote: "The ROOT TSpline3 class is used here."
 
-Original Page 87:
+Original Page 87, New Page 92:
 "The CC DIS and multi-π cross-section is calculated from ‘Parton Distribution Func- tions’ (PDFs). In NEUT these are constructed using the GRV98 [117] model with corrections from Bodek and Yang [118]." -> "The CC DIS and multi-$\pi$ cross-section is calculated from `Structure Functions' of the nucleus, which themselves are constructed using `Parton Distribution Functions' (PDFs). The PDFs describe the probability of finding a quark with a given fraction of the nucleon momentum inside the nucleon. In NEUT, these are constructed using the GRV98 [117] model with corrections from Bodek and Yang [118]."
 
-Original Page 88:
+Original Page 88, New Page 92/93:
 "At one extreme, the multi-π cross-section is entirely reweighted to the AGKY model [119], at the other extreme it is entirely the nominal custom model in NEUT." -> "At one extreme, the multi-π cross-section is entirely reweighted to the AGKY model [119] which has a smooth transition between low and high W2 parametrisations, and at the other extreme it is entirely the nominal custom model in NEUT which has a hard cut-off between high and low W2 parametrisations."
 
 "Like for CC Coherent scattering" -> "As for CC Coherent scattering"
 
 "As there is no external data to constrain the cross-section, the prior uncertainty is 100%." -> "As there is no external data to constrain the cross-section, the prior uncertainty is 100% of the nominal weight."
 
-Original Page 89:
+Original Page 89, New Page 93/94:
 Added reference for electron (anti-) neutrino parameters central values and uncertainties.
 
 "The full prefit cross- section correlation matrix is shown in Figure 5.10." -> "he full prefit cross- section correlation matrix is shown in Figure 5.10, showing the central values, uncertainties, and correlations of the parameters described in this section."
 
 Changed FSI labels in xsec correlation matrix and made image bigger (original Figure 5.10)
 
-Original Page 91:
+Original Page 91, New Page 96/97:
 Added to introduction to Eb section
 
 "Instead, external data is used to inform removal energy distributions which contain peaks corresponding to the nuclear shell structure." -> "Instead, external data is used to inform distributions of the nuclear binding energy and initial nucleon momentum, which contain peaks corresponding to the nuclear shell structure."
@@ -195,45 +195,45 @@ Added to introduction to Eb section
 
 "e->e'p" -> "ee',p"
 
-Original Page 92:
+Original Page 92, New Page 97:
 Add reference to Asimov dataset
 
 "4 paramters" -> "four parameters"
 
-Original Page 95:
+Original Page 95, New Page 100-102:
 "Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are." -> "Changes in the likelihood therefore only occur when the events cross bin boundaries, and so the parameter is sensitive to where those boundaries are. Different binnings can therefore produce different fit results."
 
 Expanded conclusion on EB to more strongly describe it's advantages over the banff fit, and previous analyses. I've also included plots comparing llh scans for the banff and mach3 implementations, and added a paragraph on how this type of parameter could now be used in the future for other systematics.
 
-Original Page 96:
+Original Page 96, New Page 102:
 "This analysis is the first to use flux systematics developed from simulation using data from a full T2K target replica, and not just a thinner replica version." -> "This analysis is the first to use flux systematics developed from simulation tuned to data from a full T2K target replica, and not just a thinner replica version."
 
-Original Page 99:
+Original Page 99, New Page 103/106:
 Added paragraph outlining the detector systematics section. I've divided the whole section into smaller sections to try and improve the flow/narrative
 
 "The ND280 detector systematicss" -> "The ND280 detector systematics" 
 
-Original Page 102:
+Original Page 102, New Page 110:
 "This process assumes the shape of the underlying systematics is Gaussian." -> "This process assumes the shape of the underlying systematics are Gaussian."
 
 "the MC stats uncertainty" -> "the MC statistics uncertainty"
 
-Original Page 103:
+Original Page 103, New Page 110:
 "without introducing an infeasibly large number of fit parameters." -> "without introducing too many parameters to feasibly fit."
 
-Original Page 104/105:
+Original Page 104/105, New Page 112:
 "To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the nominal MC." -> "To avoid tuning the detector binning on data, fake data was produced by setting the cross-section parameters to their best fit values from the 2017 analysis and reweighting the runs 2-6 nominal MC."
 
-Original Page 104, 105 and 106
+Original Page 104, 105 and 106, New Page 111/112
 Made legend of detector bin plots larger (original Figures 5.19, 5.20 and 5.21)
 
-Original Page 107, 108, and 109:
+Original Page 107, 108, and 109, New Page 113/114:
 For the detector binning fits, only xsec and ND280 FHC flux parameters (and made these bigger).
 
-Original Page 110:
+Original Page 110, New Page 115:
 Fix SK posterior predictions for the different detector binning fits so ratio plots don't 'droop'
 
-Original Page 112:
+Original Page 112, New Page 117/118:
 Added which MC runs used to produce detector covariance matrices in captions.
 
 Moved full detector covariances to appendix. Showed it for just the FGD1 CC0Pi sample for the 574 merged detector bins here. Added paragraph discussing the patterns of the correlations.
@@ -242,33 +242,33 @@ Added section discussing future improvements to the treatment of detector system
 
 Added section summarising the treatment of detector systematics and the studies presented
 
-Original Page 114:
+Original Page 114, New Page 121:
 Table 5.4: Reduced to 2 significant figures
 
 Add summary section to fit setup chapter
 
-Original Page 115:
+Original Page 115, New Page 125:
 "The CC 0π and CC Other samples show slightly oscillatory behaviour in the ratio of data to MC at low momentum, within statistical uncertainty. The ratio is consistently >1, but is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄." -> "The ratio of data to MC for fluctuates for the CC 0π and CC Other samples, but is consistently >1. It is slightly increased at the peak momentum for FHC and RHC ν, and decreased at the peak for RHC ν ̄."
 
-Original Page 116:
+Original Page 116, New Page 126:
 "by mainly" -> "mainly by"
 
 Original Page 117:
 No longer have 'over-hanging' sentence at top of page.
 
-Original Page 118:
+Original Page 118, New Page 128:
 "The CC 0π and CC Other samples again show slight oscillatory behaviour in the ratio of data to MC, within statistical uncertainty. At high angle, the ratio increases and decreases, but always remains >1." -> "The ratio of data to MC for CC 0π and CC Other samples again fluctuates, but always remains >1."
 
-Original Page 119:
+Original Page 119, New Page 128/129:
 "The behaviour is consistent across the FGDs." -> "The behaviour is consistent across the FGD1 and FGD2, showing that the strengths and weaknesses of the modelling are similar for both FGDs."
 
 Original Page 121, 122, 123:
 Moved nominal MC cos theta projections to the appendix
 
-Original Page 127:
+Original Page 127, New Page 133:
 "This is because they are not normalisation parameters, and so the weight applied can be lower for a higher parameter value." -> "This is because they are spline parameters not normalisation parameters, and so the weight applied can be lower for a higher parameter value."
 
-Original Page 129:
+Original Page 129, New Page 134/136:
 "therefore is" -> "is therefore"
 
 Remove Asimov citation as now cited at first use (original page 92)
@@ -277,55 +277,55 @@ Remove Asimov citation as now cited at first use (original page 92)
 
 "Marginalisation effects cause the postfit parameter values to not exactly equal the nominal inputs, but the discrepancies are small." -> "Marginalisation effects, whereby marginalising over non-Gaussian parameters shifts the highest posterior density for a given parameter, cause the postfit parameter values to not exactly equal the nominal inputs, but the discrepancies are small."
 
-Original Page 130, 131, 133:
+Original Page 130, 131, 133, New Page 137/138:
 For the Asimov fit, only xsec and ND280 FHC flux parameters (and made these bigger).
 
-Original Page 132:
+Original Page 132, New Page 140:
 Added sentences: "For the parameters with Gaussian priors, the throws are from a Gaussian with the same central value and width as the prior. For the parameters with flat priors, the throws are from a uniform distribution between physical bounds."
 
-Original Page 134:
+Original Page 134, New Page 139:
 Moved xsec+flux post-Asimov-fit correlation matrix to appendix (kept xsec only one in)
 
-Original Page 137, 138, 141:
+Original Page 137, 138, 141, New Page 143, 145:
 For the data fit, only xsec and ND280 FHC flux parameters (and made these bigger).
 
-Original Page 143:
+Original Page 143, New Page 147:
 Moved xsec+flux post-data-fit	correlation matrix to appendix (kept xsec only one in)
 
-Original Page 144:
+Original Page 144, New Page 148:
 "9.32% 0.29%" -> "9.32% to 0.29%"
 
 Original Page 147, 148, 149:
 Moved posterior predictive cos theta projections to appendix
 
-Original Page 153:
+Original Page 153, New Page 153:
 "kinematics" -> "kinematic variables"
 
-Original Page 157:
+Original Page 157, New Page 158:
 Fix SK posterior predictions for the main fit so ratio plots don't 'droop'
 
-Original Page 158:
+Original Page 158, New Page 159:
 "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected." -> "Marginalisation effects cause some small deviations from the exact prior, but these are no larger than would be expected from what was seen in previous analyses.
 
-Original Page 160, 161, 162:
+Original Page 160, 161, 162, New Page 161/162:
 For the Asimov fit with different fit and detector binnings, only xsec and ND280 FHC flux parameters (and made these bigger).
 
-Original Page 163, 164, 165:
+Original Page 163, 164, 165, New Page 163/164:
 For the data fit with different fit and detector binnings, only xsec and ND280 FHC flux parameters (and made these bigger).
 
-Original Page 171:
+Original Page 171, New Page 170:
 "However, looking at just the event rate does not take into account the changes in shape and so does not tell the whole story. The full impact on the sensitivity to oscillation measurements is discussed in Section 6.8.2." -> "However, looking at just the event rate does not take into account the changes in shape and so does not describe the the full impact on the sensitivity to oscillation measurements. The shape changes in the predicted event distributions cause the sin2 θ23 contours to be tighter, particularly for the normal hierarchy, indicating an improvement in constraint, as discussed in Section 6.8.2."
 
-Original Page 172:
+Original Page 172, New Page 171:
 Fix SK posterior predictions for the th2d and th2poly fits so ratio plots don't 'droop'
 
-Original Page 174, 175, 176:
+Original Page 174, 175, 176, New Page 173/174:
 For the joint near and far detector fit, only xsec and ND280 FHC flux parameters (and made these bigger).
 
-Original Page 185:
+Original Page 185, New Page 183:
 Add summary section to results chapter
 
-Original Page 192:
+Original Page 192, New Page 190:
 "The geometric definitions of these variables are shown in Figure 7.3." -> "The geometric definitions of these variables in the plane transverse to the neutrino direction are shown in Figure 7.3."
 
 Caption: "Definition of the single transverse variables" -> "Definition of the single transverse variables in the plane transverse to the neutrino direction."
@@ -334,19 +334,19 @@ Caption: "Definition of the single transverse variables" -> "Definition of the s
 
 "Gaussian with mean equal to the value of the variable" -> " Gaussian with mean equal to the true value of the variable"
 
-Original Page 201:
+Original Page 201, New Page 200:
 "Firstly, without detector systematics in the fit the results do not tell the full story." -> "Firstly, without detector systematics in the fit the results are not entirely valid."
 
 "There is also low statistics" -> "There is also a low sample size"
 
 "The target volume of an HPTPC would also be larger than that of ND280, which is not accounted for in this study." -> "The target volume of an HPTPC would also be larger than that of ND280, increasing the target mass and therefore the number of interactions, which is not accounted for in this study."
 
-Original Page 202:
+Original Page 202, New Page 200:
 "events could be binned in more than two variables" -> "events could be binned in more than two kinematic variables"
 
 Added to conclusion (final paragraph)
 
 Added summary section to HPTPC chapter
 
-Original Page 205:
+Original Page 205, New Page 203:
 Expanded conclusion chapter slightly
