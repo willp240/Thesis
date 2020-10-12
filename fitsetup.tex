@@ -13,7 +13,7 @@ where $N^{\nu_\beta}_{\SK}$ is the number of neutrinos of flavour $\beta$, $\phi
 
 There are degeneracies between the flux, cross-section, and detector efficiency models, and the PMNS parameters. A change in one of the nuisance parameters mimics the effect of a change in one of the parameters of interest. Therefore it is crucial to constrain the model parameters as much as possible. This is done using near detector data, where the number of neutrinos is measured before oscillation and so the  nuisance parameters can be disentangled from the oscillation parameters. The near detector samples also have more data than the \SK samples, and using them to constrain nuisance parameters decreases the uncertainty on the predicted event rate at \SK from $\sim$15$\%$ to $\sim$5$\%$. Figure \ref{fig:ndconstraint} shows the \SK prediction for the 2018 oscillation analysis with and without the near detector constraint. The uncertainty bands are much narrower when using near detector data in the prediction, showing the significance of the near detector on the full fit. Without the near detector constraint, T2K would not be able to make the world leading oscillation measurements it does.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/NDConstraint}
 \caption{The predicted event rate at \SK, with and without the near detector fit constraint from the 2018 oscillation analysis. Using near detector data to reduce systematics narrows the uncertainty on the prediction, allowing more precise oscillation measurements to be made. Figure from \cite{tn324}.}\label{fig:ndconstraint}
@@ -194,7 +194,7 @@ for tracks with  $p < 500$ MeV/c. Protons and pions are then rejected by requiri
 
 The efficiency of the FGD1 and FGD2 RHC $\bar{\nu_{\mu}}$ CC-inclusive samples are shown in Figure \ref{fig:numueff}.  The efficiencies are higher at larger $p_{\mu}$ and cos$\theta_{\mu}$. 
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -372,7 +372,7 @@ The algorithm was tuned using data and MC from runs 2--6. The aim of this proces
 
 For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentum $>$1000 MeV. It then reduces linearly between 1000 and 400 MeV, before levelling off at approximately 60 MeV below 300 MeV. Similarly, for the angle, the RMS is constant at approximately 0.08 below 0.96. It then reduces linearly up to a cos$\theta_{\mu}$ of 1.0. However, given there would be a large uncertainty on the gradient for each variable's RMS, rather than varying the minimum bin size to trace out the change in RMS as closely as possible, it was safer to have a constant minimum size for all regions. This was chosen to be 0.01~cos$\theta_{\mu}$ in angle, and 100 MeV in momentum to be sure they are above the resolution in all regions. Furthermore, as the cos$\theta_{\mu}$ systematics are better controlled than for $p_{\mu}$, and for aiding the simplicity of optimising the binning algorithm, the bins were kept constant in cos$\theta_{\mu}$. Although these bins are conservatively large in regions with the most data, studies in reducing the bin sizes showed diminishing returns in improvements to sensitivity.
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -390,7 +390,7 @@ For momentum, the RMS is fairly constant at approximately 100 MeV, for a momentu
 \label{fig:res2d}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -434,7 +434,7 @@ The narrower likelihood distributions show that by using the non-uniform binning
 
 Further studies could be undergone to develop a non-rectangular fit binning. For instance, given the underlying distribution of events, using bins of constant $Q^2$ in the $p_{\mu}$--cos$\theta_{\mu}$ space may allow a better representation of events. However, given that the bin sizes are already close to the resolution of the detector, and that several iterations of non-uniform rectangular binning showed diminishing returns on improvements in sensitivity, this was not investigated for this analysis.
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \begin{subfigure}{.49\textwidth}
   \centering
@@ -532,7 +532,7 @@ As for CC Coherent scattering, NC scattering events receive a normalisation with
 
 NC $\pi$ production is simulated using the same Rein-Sehgal model as for CC $\pi$ production, and the same parameters are applied: $C^{A}_{5}$, $M^{Res}_{A}$ and $I=1/2$.
 
-NC DIS, multi-$\pi$, $1\eta$, and $1K$ are grouped together and receive the same normalisation parameter (NC Other), with a $30\%$ uncertainty. In the full joint analysis, separate NC Other parameters are applied to near and far detector events.
+NC DIS, multi-$\pi$, $1\eta$, and $1K$ are grouped together and receive the same normalisation parameter (NC Other), with a $30\%$ uncertainty. In the full joint analysis, separate NC Other parameters are applied to near and far detector events. These parameters are uncorrelated.
 
 \item \textbf{Electron (Anti-)Neutrino:}\\
 As all the other systematic uncertainties are determined for $\nu_{\mu}$ or $\bar{\nu_{\mu}}$ interactions, a normalisation is applied to all $\nu_{e}$ and $\bar{\nu_{e}}$ events. This is to account for any unmodelled effects which affect $\nu_{e}$/$\bar{\nu_{e}}$ events but not $\nu_{\mu}$/$\bar{\nu_{\mu}}$. As these processes may be different for neutrinos and anti-neutrinos, there are two normalisations, one for $\nu_{e}$ and one for $\bar{\nu_{e}}$. The prior uncertainty is $2.8\%$ and the two parameters are $50\%$ anti-correlated, as calculated in \cite{nuenuebar}.
@@ -658,7 +658,7 @@ A summary of the interaction parameters is shown in Table \ref{tab:xsecparams}. 
 \end{table}
 \end{center}
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.9\textwidth,clip]{figs/xseccorr}
 \caption{The cross-section correlation matrix.}\label{fig:xseccov}
@@ -672,7 +672,7 @@ The uncertainty on the binding energy was the largest individual systematic in t
 
 In the SF nuclear model, there isn't a single nuclear binding energy systematic uncertainty. Instead, external data is used to inform distributions of the nuclear binding energy and initial nucleon momentum, which contain peaks corresponding to the nuclear shell structure. The peaks are shown for different initial nucleon momentum for the ground state in Figure \ref{fig:sfshells}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.7\textwidth,clip]{figs/SFShells}
 \caption{Removal energy (`$E$') at different values of the initial nucleon momentum (`k') for the ground state in the SF model. Figure from \cite{tn344}.}\label{fig:sfshells}
@@ -748,7 +748,7 @@ To validate the implementation of this new type of parameter, Asimov fits\cite{a
 
 However, for fits to data the posteriors contain many discontinuities as shown in Figure \ref{fig:Ebdata}. This is not seen for other parameters. When reweighting, either by spline or normalisation, the change in the log-likelihood is continuous. As the parameter varies, the change in the penalty contribution, and the change in the number of events in each bin, and therefore the sample contribution, are both smooth. However, for this direct shift in lepton momentum, the sample contribution to the likelihood only changes if an event crosses a bin boundary. There are therefore threshold values of each parameter where several events cross boundaries and cause discontinuous changes in the log-likelihood.
 
-\begin{figure}[t]
+\begin{figure}
 \centering
 \begin{subfigure}{.48\textwidth}
   \centering
@@ -958,7 +958,7 @@ $E^{true}_{\nu}$: 0, 2.5, 30
 
 In total there are 100 flux parameters, 50 for ND280 and 50 for \SK. The \SK flux systematics are used in the near detector fit because of their high correlations with their ND280 counterparts. All flux systematics have a prior central value of 1.0, and Gaussian prior uncertainty with width equal to the standard deviation in the fractional covariance matrix, shown in Figure \ref{fig:fluxcov1sample} for the ND280 FHC $\nu_\mu$ parameters. There are larger prefit correlations for parameters with similar energies, particularly at higher energies. The full flux covariance matrix for all samples is shown in Appendix \ref{app:matrices}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \includegraphics*[width=0.8\textwidth,clip]{figs/fluxcov1sample}
 \caption{The flux covariance matrix for the ND280 FHC $\nu_\mu$ parameters.}\label{fig:fluxcov1sample}
@@ -1157,7 +1157,7 @@ Fits were run using each of the four detector covariances, using an intermediate
 
 The result of the fits are shown in Figure \ref{fig:detcovbinfluxND} for the ND280 FHC flux parameters, Figure \ref{fig:detcovbinxsec} for the cross-section parameters, and Appendix \ref{app:detbinsapp} for all parameters. Although there are several differences between the postfit parameter values, there is no consistent trend of having more bins being closer to the fit binning result, and they are all consistent within uncertainties. Although the 179 fit bin fit is often the most different from the 4238 (fit binning) detector bin fit.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
 \begin{subfigure}{0.3\textwidth}
   \centering
@@ -1311,7 +1311,7 @@ The 574 binned detector covariance is shown for the FGD1 CC 0$\pi$ sample in Fig
 
 The two full detector covariances used are shown in Appendix \ref{app:matrices}, showing similar patterns for all samples.
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics*[width=0.9\textwidth,clip]{figs/detcov574_1sample}
 \caption{The ND280 detector covariance matrix with 574 merged bins for the FGD1 CC 0$\pi$ sample, produced using runs 2--9 MC. Bins are ordered in increasing angle ranges for each momentum range. The full matrix for all samples is shown in Appendix \ref{app:matrices}.}\label{fig:detcorr5741sample}
