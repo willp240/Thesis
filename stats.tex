@@ -77,7 +77,7 @@ This method is powerful as the full shape of the distribution does not need to b
 
 \section{Markov Chain Monte Carlo}\label{sec:mcmc}
 
-A Markov Chain is produced by any algorithm that generates a new point, $x_i$ which only depends on the previous generated point, $x_{i-1}$. The process is truly Markovian if predictions about future steps in the chain can be made by only knowing the current state, just as well as by knowing the whole history of the chain. 
+A Markov chain is produced by any algorithm that generates a new point, $x_i$ which only depends on the previous generated point, $x_{i-1}$. The process is truly Markovian if predictions about future steps in the chain can be made by only knowing the current state, just as well as by knowing the whole history of the chain. 
 
 If a Markov chain gradually `forgets' its initial state as more steps are added, it is said to converge. This means the initial state converges to a unique stationary distribution, such that the distribution is independent of the step number. Once convergence has been reached, all ensuing steps are samples from the stationary distribution.
 

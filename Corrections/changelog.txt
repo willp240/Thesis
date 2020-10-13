@@ -1,3 +1,28 @@
+Main Changes:
+
+In the introduction, I've made it more clear which inputs were provided by different groups, and which bits were my own work.
+
+Added signposting and summary sections to all chapters, and several sub-sections.
+
+Added introduction and conclusion on the binding energy section, to be more explicit on its advantages.
+
+Added an introduction and summary for the detector systematics section, as well as a subsection on how these could be improved in the future.
+
+For the prefit correlation matrices, I now only show one sample, and put the full matrices in an appendix.
+
+For the postfit correlation matrices, I only show the interaction systematics, and put the flux systematics in the backups.
+
+For all fits, I only the show ND280 FHC flux parameters, as we discussed how they are so correlated with the others it's not worth showing them all. The plots I've kept are now larger.  The full fit results are now all in an appendix.
+
+I've expanded the future technologies chapter conclusion.
+
+Missing references for figures have been added.
+
+I've updated all the comments from the examiner's annotated copies, and also fixed other typos and formatting inconsistencies I found.
+
+
+Line by line changes:
+
 Original Page 1, New Page 1:
 Sakharov reference moved to after year
 
@@ -290,7 +315,7 @@ Original Page 137, 138, 141, New Page 143, 145:
 For the data fit, only xsec and ND280 FHC flux parameters (and made these bigger).
 
 Original Page 143, New Page 147:
-Moved xsec+flux post-data-fit	correlation matrix to appendix (kept xsec only one in)
+Moved xsec+flux post-data-fit correlation matrix to appendix (kept xsec only one in)
 
 Original Page 144, New Page 148:
 "9.32% 0.29%" -> "9.32% to 0.29%"
