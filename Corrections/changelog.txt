@@ -21,7 +21,7 @@ Missing references for figures have been added.
 I've updated all the comments from the examiner's annotated copies, and also fixed other typos and formatting inconsistencies I found.
 
 
-Line by line changes:
+Page by page changes:
 
 Original Page 1, New Page 1:
 Sakharov reference moved to after year
